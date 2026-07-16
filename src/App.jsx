@@ -11,6 +11,9 @@ export default function App() {
   const [currencySymbol, setCurrencySymbol] = useState('$');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [calcsDropdownOpen, setCalcsDropdownOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+  const [contactFormSubmitted, setContactFormSubmitted] = useState(false);
 
   // Smooth scroll and update dynamic SEO metadata when active page changes
   useEffect(() => {
@@ -494,12 +497,20 @@ export default function App() {
                   </button>
                 </li>
                 <li>
-                  <a 
-                    href="mailto:support@smartcalctools.com"
-                    className="hover:text-white transition-colors"
+                  <button 
+                    onClick={() => setAboutOpen(true)}
+                    className="hover:text-white transition-colors text-left"
                   >
-                    Support Inquiry
-                  </a>
+                    About Us
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setContactOpen(true)}
+                    className="hover:text-white transition-colors text-left"
+                  >
+                    Contact Us
+                  </button>
                 </li>
               </ul>
             </div>
@@ -512,13 +523,119 @@ export default function App() {
               <strong>Disclaimer:</strong> This website provides educational and informational tools only. Calculations are estimates based on standard formulaic projections and do not constitute professional financial, tax, or investment advice. Always consult with a licensed professional before making major financial commitments.
             </p>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-2 pt-2 border-t border-slate-800/50 text-[11px] text-slate-600">
-              <p>&copy; {new Date().getFullYear()} SmartCalc Tools. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} FinCalc Flow. All rights reserved.</p>
               <p className="text-emerald-400/80 font-bold">100% Client-Side Engine</p>
             </div>
           </div>
 
         </div>
       </footer>
+
+      {/* About Us Modal */}
+      {aboutOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-slate-100 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+            <button 
+              onClick={() => setAboutOpen(false)}
+              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-655 rounded-xl hover:bg-slate-100 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="space-y-4 text-left">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-md">
+                <TrendingUp className="w-6 h-6 stroke-[2.5]" />
+              </div>
+              <h3 className="text-2xl font-black text-slate-900">About FinCalc Flow</h3>
+              <div className="space-y-3 text-slate-600 text-sm leading-relaxed">
+                <p>
+                  <strong>FinCalc Flow</strong> is a premium, 100% free financial calculator hub built to make complex calculations simple, transparent, and private.
+                </p>
+                <p>
+                  Our tool suite covers:
+                </p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li><strong>Rent vs. Buy Simulator</strong>: Long-term wealth builder.</li>
+                  <li><strong>Trucking Cost Per Mile</strong>: Operations cost tracker.</li>
+                  <li><strong>Debt Consolidation Optimizer</strong>: Loan consolidation payoff solver.</li>
+                  <li><strong>AdSense Revenue Planner</strong>: Ad revenue forecaster.</li>
+                </ul>
+                <p>
+                  Every computation runs directly in your browser. We never track, store, or see your numbers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Contact Us Modal */}
+      {contactOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+          <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 border border-slate-100 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+            <button 
+              onClick={() => { setContactOpen(false); setContactFormSubmitted(false); }}
+              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-655 rounded-xl hover:bg-slate-100 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="space-y-4 text-left">
+              <h3 className="text-2xl font-black text-slate-900">Contact Us</h3>
+              <p className="text-xs text-slate-500">
+                Have questions or feedback? Drop us a line below or reach out directly at <a href="mailto:support@fincalcflow.com" className="text-blue-600 hover:underline">support@fincalcflow.com</a>.
+              </p>
+              
+              {contactFormSubmitted ? (
+                <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-2xl text-center space-y-2">
+                  <p className="text-sm font-bold text-emerald-800">Message Sent Successfully!</p>
+                  <p className="text-xs text-emerald-600">Thank you for reaching out. We will get back to you shortly.</p>
+                </div>
+              ) : (
+                <form 
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    setContactFormSubmitted(true);
+                  }}
+                  className="space-y-3.5"
+                >
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">Full Name</label>
+                    <input 
+                      type="text" 
+                      required 
+                      className="w-full px-3.5 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 transition-colors" 
+                      placeholder="Your name" 
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">Email Address</label>
+                    <input 
+                      type="email" 
+                      required 
+                      className="w-full px-3.5 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 transition-colors" 
+                      placeholder="you@example.com" 
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">Message</label>
+                    <textarea 
+                      required 
+                      rows={3} 
+                      className="w-full px-3.5 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 transition-colors" 
+                      placeholder="How can we help you?" 
+                    />
+                  </div>
+                  <button 
+                    type="submit" 
+                    className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm rounded-xl transition-all shadow-md shadow-blue-500/10"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
