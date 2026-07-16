@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Landing Hub -->
   <url>
-    <loc>https://fincalcflow.com/</loc>
+    <loc>https://www.fincalcflow.com/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Rent vs. Buy Calculator Route -->
   <url>
-    <loc>https://fincalcflow.com/rent-vs-buy</loc>
+    <loc>https://www.fincalcflow.com/rent-vs-buy</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Trucking Cost Per Mile Calculator Route -->
   <url>
-    <loc>https://fincalcflow.com/cost-per-mile</loc>
+    <loc>https://www.fincalcflow.com/cost-per-mile</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Debt Consolidation Route -->
   <url>
-    <loc>https://fincalcflow.com/debt-consolidation</loc>
+    <loc>https://www.fincalcflow.com/debt-consolidation</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Google AdSense Revenue Planner Route -->
   <url>
-    <loc>https://fincalcflow.com/revenue-planner</loc>
+    <loc>https://www.fincalcflow.com/revenue-planner</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Privacy Policy Route -->
   <url>
-    <loc>https://fincalcflow.com/privacy</loc>
+    <loc>https://www.fincalcflow.com/privacy</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -140,50 +140,55 @@ export default function App() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-5">
-              <button
-                onClick={() => setActivePage('home')}
+              <a
+                href="/"
+                onClick={(e) => { e.preventDefault(); setActivePage('home'); }}
                 className={`text-sm font-bold transition-all py-2 ${
                   activePage === 'home' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 Home
-              </button>
+              </a>
 
-              <button
-                onClick={() => setActivePage('rent-vs-buy')}
+              <a
+                href="/rent-vs-buy"
+                onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); }}
                 className={`text-sm font-bold transition-all py-2 ${
                   activePage === 'rent-vs-buy' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 Rent vs. Buy
-              </button>
+              </a>
 
-              <button
-                onClick={() => setActivePage('cost-per-mile')}
+              <a
+                href="/cost-per-mile"
+                onClick={(e) => { e.preventDefault(); setActivePage('cost-per-mile'); }}
                 className={`text-sm font-bold transition-all py-2 ${
                   activePage === 'cost-per-mile' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 Cost Per Mile
-              </button>
+              </a>
 
-              <button
-                onClick={() => setActivePage('debt-consolidation')}
+              <a
+                href="/debt-consolidation"
+                onClick={(e) => { e.preventDefault(); setActivePage('debt-consolidation'); }}
                 className={`text-sm font-bold transition-all py-2 ${
                   activePage === 'debt-consolidation' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 Debt Consolidation
-              </button>
+              </a>
 
-              <button
-                onClick={() => setActivePage('revenue-planner')}
+              <a
+                href="/revenue-planner"
+                onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); }}
                 className={`text-sm font-bold transition-all py-2 ${
                   activePage === 'revenue-planner' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 Revenue Planner
-              </button>
+              </a>
             </nav>
 
             {/* Currency Selector & Get Started Button */}
@@ -244,46 +249,51 @@ export default function App() {
         {/* Mobile Navigation Panel */}
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-slate-100 bg-white px-4 pt-2 pb-4 space-y-1 shadow-inner">
-            <button
-              onClick={() => { setActivePage('home'); setMobileMenuOpen(false); }}
-              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+            <a
+              href="/"
+              onClick={(e) => { e.preventDefault(); setActivePage('home'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
                 activePage === 'home' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               Dashboard
-            </button>
-            <button
-              onClick={() => { setActivePage('rent-vs-buy'); setMobileMenuOpen(false); }}
-              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+            </a>
+            <a
+              href="/rent-vs-buy"
+              onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
                 activePage === 'rent-vs-buy' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               Rent vs. Buy Simulator
-            </button>
-            <button
-              onClick={() => { setActivePage('cost-per-mile'); setMobileMenuOpen(false); }}
-              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+            </a>
+            <a
+              href="/cost-per-mile"
+              onClick={(e) => { e.preventDefault(); setActivePage('cost-per-mile'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
                 activePage === 'cost-per-mile' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               Trucking Cost Per Mile
-            </button>
-            <button
-              onClick={() => { setActivePage('debt-consolidation'); setMobileMenuOpen(false); }}
-              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+            </a>
+            <a
+              href="/debt-consolidation"
+              onClick={(e) => { e.preventDefault(); setActivePage('debt-consolidation'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
                 activePage === 'debt-consolidation' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               Debt Consolidation Optimizer
-            </button>
-            <button
-              onClick={() => { setActivePage('revenue-planner'); setMobileMenuOpen(false); }}
-              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+            </a>
+            <a
+              href="/revenue-planner"
+              onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
                 activePage === 'revenue-planner' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               AdSense Revenue Planner
-            </button>
+            </a>
           </div>
         )}
       </header>
@@ -341,13 +351,14 @@ export default function App() {
                   Compare the costs of renting vs. buying your home. Run year-by-year estimations of asset growth and equity.
                 </p>
                 <div className="pt-2">
-                  <button
-                    onClick={() => setActivePage('rent-vs-buy')}
+                  <a
+                    href="/rent-vs-buy"
+                    onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); }}
                     className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -363,13 +374,14 @@ export default function App() {
                   Calculate your cost per mile to manage trucking expenses, fuel costs, and maximize driver profitability.
                 </p>
                 <div className="pt-2">
-                  <button
-                    onClick={() => setActivePage('cost-per-mile')}
+                  <a
+                    href="/cost-per-mile"
+                    onClick={(e) => { e.preventDefault(); setActivePage('cost-per-mile'); }}
                     className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -385,13 +397,14 @@ export default function App() {
                   Plan your debt consolidation and payoff strategy to find interest savings and clear balances sooner.
                 </p>
                 <div className="pt-2">
-                  <button
-                    onClick={() => setActivePage('debt-consolidation')}
+                  <a
+                    href="/debt-consolidation"
+                    onClick={(e) => { e.preventDefault(); setActivePage('debt-consolidation'); }}
                     className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -411,13 +424,14 @@ export default function App() {
                   Are you aiming to monetize your website or tool? Run simulation estimates for ad click rates (CTR), cost-per-click (CPC), and pageview requirements to forecast your daily, monthly, and yearly income milestones.
                 </p>
               </div>
-              <button
-                onClick={() => setActivePage('revenue-planner')}
+              <a
+                href="/revenue-planner"
+                onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); }}
                 className="flex items-center gap-2 px-6 py-4 bg-[#22c55e] hover:bg-[#16a34a] text-white rounded-2xl font-bold text-sm shadow-lg shadow-green-500/20 hover:shadow-green-500/30 transition-all flex-shrink-0 group-hover:scale-105 duration-200"
               >
                 Launch Revenue Planner
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
 
             {/* Info grid / why client side */}
@@ -482,44 +496,49 @@ export default function App() {
               <h4 className="text-xs font-black uppercase tracking-wider text-slate-200">Financial Tools</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <button 
-                    onClick={() => setActivePage('home')}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/"
+                    onClick={(e) => { e.preventDefault(); setActivePage('home'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     Main Dashboard
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setActivePage('rent-vs-buy')}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/rent-vs-buy"
+                    onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     Rent vs. Buy Simulator
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setActivePage('cost-per-mile')}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/cost-per-mile"
+                    onClick={(e) => { e.preventDefault(); setActivePage('cost-per-mile'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     Trucking Cost Per Mile
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setActivePage('debt-consolidation')}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/debt-consolidation"
+                    onClick={(e) => { e.preventDefault(); setActivePage('debt-consolidation'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     Debt Consolidation
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setActivePage('revenue-planner')}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/revenue-planner"
+                    onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     AdSense Revenue Planner
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -529,20 +548,22 @@ export default function App() {
               <h4 className="text-xs font-black uppercase tracking-wider text-slate-200">Resources</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <button 
-                    onClick={() => setActivePage('privacy')}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/privacy"
+                    onClick={(e) => { e.preventDefault(); setActivePage('privacy'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     Privacy Policy
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setActivePage('privacy')}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/privacy"
+                    onClick={(e) => { e.preventDefault(); setActivePage('privacy'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     Math Methodology
-                  </button>
+                  </a>
                 </li>
                 <li>
                   <button 
