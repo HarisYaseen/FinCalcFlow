@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Landing Hub -->
   <url>
-    <loc>https://yourfinancehub.com/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://fincalcflow.com/</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Rent vs. Buy Calculator Route -->
   <url>
-    <loc>https://yourfinancehub.com/?tool=rent-vs-buy</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://fincalcflow.com/rent-vs-buy</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Trucking Cost Per Mile Calculator Route -->
   <url>
-    <loc>https://yourfinancehub.com/?tool=cost-per-mile</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://fincalcflow.com/cost-per-mile</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Debt Consolidation Route -->
   <url>
-    <loc>https://yourfinancehub.com/?tool=debt-consolidation</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://fincalcflow.com/debt-consolidation</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Google AdSense Revenue Planner Route -->
   <url>
-    <loc>https://yourfinancehub.com/?tool=revenue-planner</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://fincalcflow.com/revenue-planner</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Privacy Policy Route -->
   <url>
-    <loc>https://yourfinancehub.com/privacy</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://fincalcflow.com/privacy</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
