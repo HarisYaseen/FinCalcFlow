@@ -15,6 +15,31 @@ export default function App() {
   const [contactOpen, setContactOpen] = useState(false);
   const [contactFormSubmitted, setContactFormSubmitted] = useState(false);
 
+  // Handle initial route on mount and popstate events (browser back/forward)
+  useEffect(() => {
+    const handleLocationChange = () => {
+      const path = window.location.pathname.replace(/^\/|\/$/g, ''); // strip leading/trailing slashes
+      if (['rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner', 'privacy'].includes(path)) {
+        setActivePage(path);
+      } else {
+        setActivePage('home');
+      }
+    };
+
+    handleLocationChange(); // Run on initial load
+    window.addEventListener('popstate', handleLocationChange);
+    return () => window.removeEventListener('popstate', handleLocationChange);
+  }, []);
+
+  // Sync page state changes back to the browser URL path
+  useEffect(() => {
+    const currentPath = window.location.pathname.replace(/^\/|\/$/g, '');
+    const targetPath = activePage === 'home' ? '' : activePage;
+    if (currentPath !== targetPath) {
+      window.history.pushState(null, '', '/' + targetPath);
+    }
+  }, [activePage]);
+
   // Smooth scroll and update dynamic SEO metadata when active page changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
