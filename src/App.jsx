@@ -77,9 +77,32 @@ export default function App() {
     }
 
     document.title = title;
+    
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute('content', desc);
+    }
+
+    // Dynamic Canonical URL
+    const canonicalPath = activePage === 'home' ? '' : activePage;
+    const canonicalUrl = `https://www.fincalcflow.com/${canonicalPath}`;
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', canonicalUrl);
+    }
+
+    // Dynamic Open Graph Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', title);
+    }
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) {
+      ogDesc.setAttribute('content', desc);
+    }
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', canonicalUrl);
     }
   }, [activePage]);
 

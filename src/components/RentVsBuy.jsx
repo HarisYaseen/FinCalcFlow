@@ -530,22 +530,61 @@ export default function RentVsBuy({ currencySymbol }) {
         </div>
       </div>
 
-      {/* How it works section */}
-      <div className="mt-12 bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-100/50 space-y-8">
-        <div className="border-b border-slate-100 pb-4">
-          <h3 className="text-xl font-extrabold text-slate-900 flex items-center gap-2.5">
-            <span className="p-2 bg-indigo-50 text-indigo-600 rounded-xl">
-              <HelpCircle className="w-5 h-5" />
-            </span>
-            How the Rent vs. Buy Simulator Works
-          </h3>
-          <p className="text-xs text-slate-400 font-semibold mt-1">
-            Understanding the underlying mathematical models and formulas behind the simulation.
-          </p>
-        </div>
+      {/* Complete Guide to Comparing Renting vs. Buying (SEO Content) */}
+      <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Buyer Card */}
+        <h2 className="text-3xl font-bold mb-4 text-slate-900 border-b pb-2">The Complete Guide to Comparing Renting vs. Buying a Home</h2>
+        <p className="mb-6 text-lg leading-relaxed text-slate-600">
+          Deciding whether to buy a home or continue renting is one of the most significant financial choices you will make in your lifetime. While homeownership is often touted as the ultimate American dream and the standard path to wealth creation, the reality is mathematically more complex. In many high-priced real estate markets, renting and investing the savings can actually yield a higher long-term net worth.
+        </p>
+        <p className="mb-6 leading-relaxed">
+          Our serverless Rent vs. Buy simulator uses detailed financial amortization and opportunity cost models to compare both paths over a set period. Below, we break down the key expenses, mathematical principles, and hidden costs that determine the optimal decision for your situation.
+        </p>
+
+        <hr className="my-8 border-slate-200" />
+
+        <h2 className="text-2xl font-bold mb-4 text-slate-900">Understanding the True Costs of Homeownership vs. Renting</h2>
+        <p className="mb-4 leading-relaxed">
+          To make an accurate comparison, you must look beyond the simple monthly mortgage payment versus monthly rent. Homeownership carries significant unrecoverable costs that do not build equity, while renting allows you to keep your capital liquid.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60">
+            <h3 className="text-xl font-bold mb-3 text-slate-900 flex items-center gap-2">
+              🔒 True Costs of Buying
+            </h3>
+            <p className="text-sm text-slate-500 mb-4 leading-relaxed">These are the ongoing, non-recoverable expenses associated with owning and maintaining property:</p>
+            <ul className="list-disc list-inside text-sm space-y-2 text-slate-700 font-semibold">
+              <li><strong>Mortgage Interest:</strong> Fees paid to the lender for borrowing.</li>
+              <li><strong>Property Taxes & Insurance:</strong> Annual civic levies and hazard cover.</li>
+              <li><strong>Home Maintenance:</strong> Average annual upkeep costs (often 1-2% of property value).</li>
+              <li><strong>Transaction Fees:</strong> Upfront closing costs (2-5% on purchase) and agent commissions (5-6% on sale).</li>
+            </ul>
+          </div>
+
+          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60">
+            <h3 className="text-xl font-bold mb-3 text-slate-900 flex items-center gap-2">
+              ⚡ True Costs of Renting
+            </h3>
+            <p className="text-sm text-slate-500 mb-4 leading-relaxed">These are the expenses of renting, offset by the growth of your investment capital:</p>
+            <ul className="list-disc list-inside text-sm space-y-2 text-slate-700 font-semibold">
+              <li><strong>Monthly Rent:</strong> The direct price of shelter, which typically increases annually.</li>
+              <li><strong>Renter's Insurance:</strong> Low-cost coverage for personal belongings.</li>
+              <li><strong>Opportunity Cost:</strong> Capital not tied up in a down payment can compound in high-return assets like stock index funds.</li>
+              <li><strong>Zero Upkeep Fees:</strong> Landlord absorbs all maintenance liabilities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr className="my-8 border-slate-200" />
+
+        <h2 className="text-2xl font-bold mb-4 text-slate-900">How the Rent vs. Buy Simulator Works</h2>
+        <p className="mb-4 leading-relaxed">
+          The simulator runs a month-by-month financial projection comparing a **Buyer** (who purchases a home using a mortgage) and a **Renter** (who rents an equivalent property and invests their surplus capital).
+        </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-6">
+          {/* Buyer Wealth Accumulation */}
           <div className="bg-emerald-50/20 border border-emerald-100/70 rounded-2xl p-6 space-y-4">
             <h4 className="font-black text-emerald-800 uppercase tracking-wider text-xs flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -578,7 +617,7 @@ export default function RentVsBuy({ currencySymbol }) {
             </div>
           </div>
 
-          {/* Renter Card */}
+          {/* Renter Wealth Accumulation */}
           <div className="bg-indigo-50/20 border border-indigo-100/70 rounded-2xl p-6 space-y-4">
             <h4 className="font-black text-indigo-800 uppercase tracking-wider text-xs flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
@@ -608,50 +647,42 @@ export default function RentVsBuy({ currencySymbol }) {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* SEO FAQ Section */}
-      <div className="mt-8 bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-100/50 space-y-6">
-        <div className="border-b border-slate-100 pb-4">
-          <h3 className="text-xl font-extrabold text-slate-900 flex items-center gap-2.5">
-            <span className="p-2 bg-indigo-50 text-indigo-600 rounded-xl">
-              <HelpCircle className="w-5 h-5" />
-            </span>
-            Renting vs. Buying: Frequently Asked Questions
-          </h3>
-        </div>
+        <hr className="my-8 border-slate-200" />
 
+        <h2 className="text-2xl font-bold mb-4 text-slate-900">Renting vs. Buying: Frequently Asked Questions</h2>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-emerald-500">
-            <h4 className="font-extrabold text-slate-800 text-sm">Is it better to rent or buy a home?</h4>
+            <h3 className="text-base font-extrabold text-slate-800">Is it better to rent or buy a home?</h3>
             <p className="text-xs text-slate-500 mt-2 leading-relaxed">
               There is no single answer. Buying allows you to build equity and benefit from property appreciation, but it comes with high upfront costs (down payment, closing costs) and recurring maintenance expenses. Renting offers flexibility, zero maintenance liability, and allows you to invest your down payment cash into liquid assets like stocks.
             </p>
           </div>
 
           <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-indigo-500">
-            <h4 className="font-extrabold text-slate-800 text-sm">What is the "opportunity cost" in the Rent vs. Buy debate?</h4>
+            <h3 className="text-base font-extrabold text-slate-800">What is the "opportunity cost" in the Rent vs. Buy debate?</h3>
             <p className="text-xs text-slate-500 mt-2 leading-relaxed">
               When you buy a home, your down payment is locked up in home equity. The opportunity cost is the investment return you could have earned if you invested that same down payment cash in the stock market (e.g., an S&P 500 index fund) instead of using it to buy a house.
             </p>
           </div>
 
           <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-emerald-500">
-            <h4 className="font-extrabold text-slate-800 text-sm">What hidden costs should homeowners expect?</h4>
+            <h3 className="text-base font-extrabold text-slate-800">What hidden costs should homeowners expect?</h3>
             <p className="text-xs text-slate-500 mt-2 leading-relaxed">
               Beyond the monthly mortgage principal and interest, homeowners pay property taxes, homeowner's insurance, and annual maintenance (estimated at 1% to 2% of the home's value annually for repairs, roofing, HVAC, etc.).
             </p>
           </div>
 
           <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-indigo-500">
-            <h4 className="font-extrabold text-slate-800 text-sm">How long do I need to live in a house to break even?</h4>
+            <h3 className="text-base font-extrabold text-slate-800">How long do I need to live in a house to break even?</h3>
             <p className="text-xs text-slate-500 mt-2 leading-relaxed">
               Typically, it takes 4 to 7 years to offset the buying transaction costs (closing fees, lender fees) and selling costs (usually a 6% agent commission). If you plan to move in under 3 years, renting is almost always more financially advantageous.
             </p>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   );
 }
