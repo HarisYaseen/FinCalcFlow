@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- PWA Mobile Theme Color and Capability -->
+    <meta name="theme-color" content="#4f46e5" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- SEO Meta Tags -->
+    <title>FinCalc Flow | Rent vs Buy, Cost Per Mile & Debt Optimizer</title>
+    <meta name="description" content="Free, serverless, and private financial calculator hub. Calculate Rent vs. Buy equity, Trucking Cost Per Mile, and Credit Card Debt Consolidation instantly in your browser." />
+    
+    <!-- JSON-LD Structured Data for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "FinCalc Flow",
+      "url": "https://www.fincalcflow.com",
+      "description": "Free serverless financial tools to model rent vs. buy equity, evaluate freight pricing, and optimize high-interest credit card debt.",
+      "applicationCategory": "FinancialApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5."
+    }
+    </script>
+    
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ==========================================
+         GOOGLE ANALYTICS (GA4) PLACEHOLDER
+         To enable:
+           1. Uncomment the lines below.
+           2. Replace "G-XXXXXXXXXX" with your GA4 Measurement ID.
+         ========================================== -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <!-- ==========================================
+         GOOGLE ADSENSE BANNER AUTO-ADS PLACEHOLDER
+         To enable:
+           1. Uncomment the lines below.
+           2. Replace "ca-pub-XXXXXXXXXXXXXXXX" with your AdSense Publisher ID.
+         ========================================== -->
+    <!--
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+    -->
+  </head>
+  <body class="bg-slate-50 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Register Service Worker for PWA (Offline Support) -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker registered. Scope:', reg.scope))
+            .catch(err => console.error('Service Worker registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
