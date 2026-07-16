@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
       </div>
 
       {/* Part 1: Privacy Policies */}
-      <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-100/50 space-y-6">
+      <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-100/50 space-y-6 text-left">
         <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2.5">
           <Lock className="w-5 h-5 text-indigo-500" />
           Data Privacy & Security
@@ -26,14 +26,19 @@ export default function PrivacyPolicy() {
 
         <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
           <p>
-            <strong>1. Serverless Operations:</strong> FinCalc Hub runs 100% in your web browser. All calculations, slider inputs, and variables are processed locally on your machine using client-side JavaScript. <strong>We do not run backend servers, databases, or API tracking calls that collect or store your inputs.</strong>
+            <strong>1. Serverless Operations:</strong> FinCalc Flow runs 100% in your web browser. All calculations, slider inputs, and variables are processed locally on your machine using client-side JavaScript. <strong>We do not run backend servers, databases, or API tracking calls that collect or store your financial inputs.</strong>
           </p>
           <p>
-            <strong>2. Local Storage:</strong> Any variables you edit are held in temporary memory (state). Once you refresh or close the page, the numbers are cleared from memory.
+            <strong>2. Local Storage & Memory:</strong> Any variables you edit are held in temporary state memory. Once you refresh or close the page, the numbers are cleared from memory.
           </p>
           <p>
-            <strong>3. Cookies and Analytics:</strong> This site uses no first-party tracking cookies. We do not track individual users. Any third-party traffic measurements are strictly anonymous.
+            <strong>3. Google AdSense & Cookies:</strong> We partner with Google AdSense to serve advertisements on our website.
           </p>
+          <ul className="list-disc pl-5 space-y-2 text-slate-500 text-xs">
+            <li>Google, as a third-party vendor, uses cookies to serve ads on our site.</li>
+            <li>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our site and/or other sites on the Internet.</li>
+            <li>Users may opt out of personalized advertising by visiting the Google <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">Ads Settings</a> page, or by visiting <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">aboutads.info</a> to opt out of a third-party vendor's use of cookies for personalized advertising.</li>
+          </ul>
         </div>
       </div>
 
