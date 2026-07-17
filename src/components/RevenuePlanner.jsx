@@ -56,9 +56,9 @@ export default function RevenuePlanner() {
           <span className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-black tracking-wider uppercase inline-block mb-2">
             MONETIZATION PLANNER
           </span>
-          <h2 className="text-3xl font-black text-slate-900 tracking-tight">
+          <h1 className="text-3xl font-black text-slate-900 tracking-tight">
             AdSense Traffic & Revenue Planner
-          </h2>
+          </h1>
           <p className="text-sm text-slate-500 mt-1">
             Simulate traffic volumes, ad click rates, and cost-per-click CPC variables to forecast website earnings.
           </p>
