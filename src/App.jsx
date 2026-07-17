@@ -368,15 +368,21 @@ export default function App() {
           <div className="w-full flex flex-col">
             
             {/* 1. Full-width Hero Banner Image from Mockup */}
-            <div className="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500">
+            <div 
+              className="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500"
+              style={{ aspectRatio: '1024/271' }}
+            >
               <div className="sr-only">
                 <h1>Powerful Financial Calculators, 100% Free</h1>
                 <p>Make informed decisions with our easy-to-use, private tools.</p>
               </div>
               <img
-                src="/hero-banner.png"
+                src="/hero-banner.jpg"
                 alt="SmartCalc Tools Banner: Powerful Financial Calculators, 100% Free"
+                width={1024}
+                height={271}
                 className="w-full h-auto object-cover"
+                style={{ aspectRatio: '1024/271' }}
               />
               
               {/* Invisible Overlay clickable button matching the position of 'Try Our Calculators' in the mockup banner */}
