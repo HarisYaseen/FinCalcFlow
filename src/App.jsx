@@ -46,31 +46,84 @@ export default function App() {
 
     let title = "FinCalc Pro Hub | Free Serverless Financial Calculators";
     let desc = "Calculate Rent vs. Buy equity, Trucking Cost Per Mile, and Credit Card Debt Consolidation instantly in your browser. 100% private, serverless financial tools.";
+    let schemaObj = {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "FinCalc Flow",
+      "url": "https://www.fincalcflow.com",
+      "description": desc,
+      "applicationCategory": "FinancialApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5."
+    };
 
     switch (activePage) {
       case 'home':
-        title = "FinCalc Pro Hub | Rent vs Buy, Cost Per Mile & Debt Optimizer";
+        title = "FinCalc Flow | Free Financial & Trucking Calculators";
         desc = "Free, serverless, and private financial calculator hub. Calculate Rent vs. Buy equity, Trucking Cost Per Mile, and Credit Card Debt Consolidation instantly in your browser.";
+        schemaObj = {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "FinCalc Flow",
+          "url": "https://www.fincalcflow.com",
+          "description": desc,
+          "applicationCategory": "FinancialApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5."
+        };
         break;
       case 'rent-vs-buy':
         title = "Rent vs. Buy Calculator | House Equity & Rent Comparison Simulator";
         desc = "Compare the long-term wealth impact of renting vs. buying a home. Simulates down payments, appreciation, maintenance costs, and investment returns.";
+        schemaObj = {
+          "@context": "https://schema.org",
+          "@type": "FinancialCalculator",
+          "name": "Rent vs. Buy Simulator",
+          "url": "https://www.fincalcflow.com/rent-vs-buy",
+          "description": desc,
+          "category": "Mortgage & Housing Calculator"
+        };
         break;
       case 'cost-per-mile':
         title = "Trucking Cost Per Mile Calculator | Freight Expense Estimator";
         desc = "Calculate your commercial trucking cost per mile. Accounts for fixed monthly costs, variable operational expenses, fuel efficiency, and driver wages.";
+        schemaObj = {
+          "@context": "https://schema.org",
+          "@type": "FinancialCalculator",
+          "name": "Trucking Cost Per Mile Calculator",
+          "url": "https://www.fincalcflow.com/cost-per-mile",
+          "description": desc,
+          "category": "Business Expense Calculator"
+        };
         break;
       case 'debt-consolidation':
         title = "Debt Consolidation Calculator | Credit Card Payoff Optimizer";
         desc = "Find out how much interest you can save by consolidating multiple credit card balances into a single low-interest personal loan.";
+        schemaObj = {
+          "@context": "https://schema.org",
+          "@type": "FinancialCalculator",
+          "name": "Debt Consolidation Calculator",
+          "url": "https://www.fincalcflow.com/debt-consolidation",
+          "description": desc,
+          "category": "Debt Payoff Calculator"
+        };
         break;
       case 'revenue-planner':
         title = "Google AdSense Revenue Calculator | Website Traffic Planner";
         desc = "Estimate your website's daily, monthly, and annual ad earnings based on traffic volume, Click-Through Rate (CTR), and Cost-Per-Click (CPC).";
+        schemaObj = {
+          "@context": "https://schema.org",
+          "@type": "FinancialCalculator",
+          "name": "AdSense Traffic & Revenue Planner",
+          "url": "https://www.fincalcflow.com/revenue-planner",
+          "description": desc,
+          "category": "Website Monetization Calculator"
+        };
         break;
       case 'privacy':
-        title = "Privacy Policy | FinCalc Pro Hub";
-        desc = "Learn how we protect your financial privacy. FinCalc Pro is a serverless application; no financial data is ever collected or sent to servers.";
+        title = "Privacy Policy | FinCalc Flow";
+        desc = "Learn how we protect your financial privacy. FinCalc Flow is a serverless application; no financial data is ever collected or sent to servers.";
+        schemaObj = null;
         break;
       default:
         break;
@@ -103,6 +156,16 @@ export default function App() {
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) {
       ogUrl.setAttribute('content', canonicalUrl);
+    }
+
+    // Dynamic Schema Injection
+    const existingSchema = document.getElementById('dynamic-schema');
+    if (existingSchema) {
+      if (schemaObj) {
+        existingSchema.textContent = JSON.stringify(schemaObj, null, 2);
+      } else {
+        existingSchema.textContent = "";
+      }
     }
   }, [activePage]);
 
