@@ -4,6 +4,7 @@ import CostPerMile from './components/CostPerMile';
 import DebtConsolidation from './components/DebtConsolidation';
 import RevenuePlanner from './components/RevenuePlanner';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import About from './components/About';
 import { Home, Truck, CreditCard, ArrowRight, ShieldAlert, Globe, Menu, X, DollarSign, ExternalLink, HelpCircle, TrendingUp, ChevronDown } from 'lucide-react';
 
 export default function App() {
@@ -11,7 +12,6 @@ export default function App() {
   const [currencySymbol, setCurrencySymbol] = useState('$');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [calcsDropdownOpen, setCalcsDropdownOpen] = useState(false);
-  const [aboutOpen, setAboutOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [contactFormSubmitted, setContactFormSubmitted] = useState(false);
 
@@ -19,7 +19,7 @@ export default function App() {
   useEffect(() => {
     const handleLocationChange = () => {
       const path = window.location.pathname.replace(/^\/|\/$/g, ''); // strip leading/trailing slashes
-      if (['rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner', 'privacy'].includes(path)) {
+      if (['rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner', 'privacy', 'about'].includes(path)) {
         setActivePage(path);
       } else {
         setActivePage('home');
@@ -125,6 +125,20 @@ export default function App() {
         desc = "Learn how we protect your financial privacy. FinCalc Flow is a serverless application; no financial data is ever collected or sent to servers.";
         schemaObj = null;
         break;
+      case 'about':
+        title = "About Us & Math Methodology | FinCalc Flow";
+        desc = "Learn about the mission behind FinCalc Flow, our approach to accuracy, and the mathematical formulas powering our calculators.";
+        schemaObj = {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "FinCalc Flow",
+          "url": "https://www.fincalcflow.com/about",
+          "description": desc,
+          "applicationCategory": "FinancialApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5."
+        };
+        break;
       default:
         break;
     }
@@ -211,6 +225,16 @@ export default function App() {
                 }`}
               >
                 Home
+              </a>
+
+              <a
+                href="/about"
+                onClick={(e) => { e.preventDefault(); setActivePage('about'); }}
+                className={`text-sm font-bold transition-all py-2 ${
+                  activePage === 'about' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                About Us
               </a>
 
               <a
@@ -320,6 +344,15 @@ export default function App() {
               }`}
             >
               Dashboard
+            </a>
+            <a
+              href="/about"
+              onClick={(e) => { e.preventDefault(); setActivePage('about'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                activePage === 'about' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+              }`}
+            >
+              About Us
             </a>
             <a
               href="/rent-vs-buy"
@@ -527,6 +560,7 @@ export default function App() {
         {activePage === 'debt-consolidation' && <DebtConsolidation currencySymbol={currencySymbol} />}
         {activePage === 'revenue-planner' && <RevenuePlanner />}
         {activePage === 'privacy' && <PrivacyPolicy />}
+        {activePage === 'about' && <About />}
       </main>
 
 
@@ -627,20 +661,21 @@ export default function App() {
                 </li>
                 <li>
                   <a 
-                    href="/privacy"
-                    onClick={(e) => { e.preventDefault(); setActivePage('privacy'); }}
+                    href="/about#methodology"
+                    onClick={(e) => { e.preventDefault(); setActivePage('about'); setTimeout(() => { const el = document.getElementById('methodology'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 50); }}
                     className="hover:text-white transition-colors text-left block"
                   >
                     Math Methodology
                   </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setAboutOpen(true)}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/about"
+                    onClick={(e) => { e.preventDefault(); setActivePage('about'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     About Us
-                  </button>
+                  </a>
                 </li>
                 <li>
                   <button 
@@ -669,42 +704,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* About Us Modal */}
-      {aboutOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-slate-100 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
-            <button 
-              onClick={() => setAboutOpen(false)}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-655 rounded-xl hover:bg-slate-100 transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-            <div className="space-y-4 text-left">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-md">
-                <TrendingUp className="w-6 h-6 stroke-[2.5]" />
-              </div>
-              <h3 className="text-2xl font-black text-slate-900">About FinCalc Flow</h3>
-              <div className="space-y-3 text-slate-600 text-sm leading-relaxed">
-                <p>
-                  <strong>FinCalc Flow</strong> is a premium, 100% free financial calculator hub built to make complex calculations simple, transparent, and private.
-                </p>
-                <p>
-                  Our tool suite covers:
-                </p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li><strong>Rent vs. Buy Simulator</strong>: Long-term wealth builder.</li>
-                  <li><strong>Trucking Cost Per Mile</strong>: Operations cost tracker.</li>
-                  <li><strong>Debt Consolidation Optimizer</strong>: Loan consolidation payoff solver.</li>
-                  <li><strong>AdSense Revenue Planner</strong>: Ad revenue forecaster.</li>
-                </ul>
-                <p>
-                  Every computation runs directly in your browser. We never track, store, or see your numbers.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+
 
       {/* Contact Us Modal */}
       {contactOpen && (

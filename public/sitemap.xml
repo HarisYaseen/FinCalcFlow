@@ -38,8 +38,15 @@
   <!-- Privacy Policy Route -->
   <url>
     <loc>https://www.fincalcflow.com/privacy</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <!-- About Us & Math Methodology Route -->
+  <url>
+    <loc>https://www.fincalcflow.com/about</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
