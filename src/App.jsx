@@ -59,8 +59,8 @@ export default function App() {
 
     switch (activePage) {
       case 'home':
-        title = "FinCalc Flow | Free Financial & Trucking Calculators";
-        desc = "Free private financial calculator hub. Model Rent vs. Buy equity, Trucking Cost Per Mile, and Credit Card Debt Consolidation instantly in your browser.";
+        title = "Rent vs Buy, Trucking Cost Per Mile & Debt Consolidation | FinCalc Flow";
+        desc = "Free monthly financial calculators by FinCalc Flow. Estimate rent vs buy home equity, trucking cost per mile, debt consolidation, and revenue planner targets.";
         schemaObj = {
           "@context": "https://schema.org",
           "@type": "WebApplication",
@@ -406,7 +406,7 @@ export default function App() {
               style={{ aspectRatio: '1024/271' }}
             >
               <div className="sr-only">
-                <h1>Rent vs Buy, Trucking Cost Per Mile & Debt Consolidation Monthly Calculators</h1>
+                <h1>Rent vs Buy, Trucking Cost Per Mile, Debt Consolidation & Revenue Planner | FinCalc Flow</h1>
                 <p>Make informed decisions with our easy-to-use, private tools.</p>
               </div>
               <img
@@ -493,7 +493,7 @@ export default function App() {
                   <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <CreditCard className="w-6 h-6 stroke-[2]" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 leading-tight">Credit Card Payoff</h3>
+                  <h3 className="text-lg font-bold text-slate-900 leading-tight">Credit Card Debt Consolidation</h3>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">
                   Plan your debt consolidation and payoff strategy to find interest savings and clear balances sooner.
@@ -521,7 +521,7 @@ export default function App() {
                 <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-[11px] font-black tracking-wider uppercase inline-block border border-indigo-500/30">
                   Creator & Webmaster Tool
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-black tracking-tight">Plan Your Google AdSense Earnings & Traffic</h3>
+                <h3 className="text-2xl sm:text-3xl font-black tracking-tight">Google AdSense Revenue Planner</h3>
                 <p className="text-slate-350 text-sm leading-relaxed">
                   Are you aiming to monetize your website or tool? Run simulation estimates for ad click rates (CTR), cost-per-click (CPC), and pageview requirements to forecast your daily, monthly, and yearly income milestones.
                 </p>
