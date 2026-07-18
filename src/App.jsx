@@ -481,6 +481,8 @@ export default function App() {
                 width={1024}
                 height={271}
                 className="w-full h-auto object-cover aspect-[1024/271]"
+                fetchPriority="high"
+                decoding="async"
               />
               
               {/* Invisible Overlay clickable button matching the position of 'Try Our Calculators' in the mockup banner */}
