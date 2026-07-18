@@ -5,7 +5,74 @@ const DebtConsolidation = lazy(() => import('./components/DebtConsolidation'));
 const RevenuePlanner = lazy(() => import('./components/RevenuePlanner'));
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const About = lazy(() => import('./components/About'));
-import { Home, Truck, CreditCard, ArrowRight, ShieldAlert, Globe, Menu, X, DollarSign, ExternalLink, HelpCircle, TrendingUp, ChevronDown } from 'lucide-react';
+// Lightweight SVG Icon Components to eliminate heavy lucide-react dependency from critical entry bundle
+const IconTrendingUp = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+    <polyline points="16 7 22 7 22 13" />
+  </svg>
+);
+
+const IconGlobe = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="12" r="10" />
+    <line x1="2" x2="22" y1="12" y2="12" />
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+  </svg>
+);
+
+const IconMenu = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <line x1="4" x2="20" y1="12" y2="12" />
+    <line x1="4" x2="20" y1="6" y2="6" />
+    <line x1="4" x2="20" y1="18" y2="18" />
+  </svg>
+);
+
+const IconX = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <line x1="18" x2="6" y1="6" y2="18" />
+    <line x1="6" x2="18" y1="6" y2="18" />
+  </svg>
+);
+
+const IconHome = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+    <polyline points="9 22 9 12 15 12 15 22" />
+  </svg>
+);
+
+const IconArrowRight = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <line x1="5" x2="19" y1="12" y2="12" />
+    <polyline points="12 5 19 12 12 19" />
+  </svg>
+);
+
+const IconTruck = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M14 18V6a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2z" />
+    <path d="M14 9h4l4 4v5a2 2 0 0 1-2 2h-6v-11z" />
+    <circle cx="5.5" cy="18.5" r="2.5" />
+    <circle cx="18.5" cy="18.5" r="2.5" />
+  </svg>
+);
+
+const IconCreditCard = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect width="20" height="14" x="2" y="5" rx="2" />
+    <line x1="2" x2="22" y1="10" y2="10" />
+  </svg>
+);
+
+const IconShieldAlert = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+    <line x1="12" x2="12" y1="8" y2="12" />
+    <line x1="12" x2="12.01" y1="16" y2="16" />
+  </svg>
+);
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
@@ -205,7 +272,7 @@ export default function App() {
               className="flex items-center gap-2.5 cursor-pointer select-none group"
             >
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-105 transition-transform duration-200">
-                <TrendingUp className="w-6 h-6 stroke-[2.5]" />
+                <IconTrendingUp className="w-6 h-6 stroke-[2.5]" />
               </div>
               <div>
                 <span className="text-lg font-black tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
@@ -281,7 +348,7 @@ export default function App() {
             {/* Currency Selector & Get Started Button */}
             <div className="hidden md:flex items-center gap-4">
               <div className="flex items-center gap-1 bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-xl">
-                <Globe className="w-4 h-4 text-slate-500" />
+                <IconGlobe className="w-4 h-4 text-slate-500" />
                 <select
                   value={currencySymbol}
                   onChange={(e) => setCurrencySymbol(e.target.value)}
@@ -326,7 +393,7 @@ export default function App() {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-slate-600 hover:text-indigo-600 rounded-lg hover:bg-slate-50 focus:outline-none"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <IconX className="w-6 h-6" /> : <IconMenu className="w-6 h-6" />}
               </button>
             </div>
 
@@ -445,7 +512,7 @@ export default function App() {
               <div className="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Home className="w-6 h-6 stroke-[2]" />
+                    <IconHome className="w-6 h-6 stroke-[2]" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 leading-tight">Rent vs. Buy Calculator</h3>
                 </div>
@@ -459,7 +526,7 @@ export default function App() {
                     className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
                     Learn More
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <IconArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
@@ -468,7 +535,7 @@ export default function App() {
               <div className="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Truck className="w-6 h-6 stroke-[2]" />
+                    <IconTruck className="w-6 h-6 stroke-[2]" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 leading-tight">Trucking Cost Per Mile</h3>
                 </div>
@@ -482,7 +549,7 @@ export default function App() {
                     className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
                     Learn More
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <IconArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
@@ -491,7 +558,7 @@ export default function App() {
               <div className="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <CreditCard className="w-6 h-6 stroke-[2]" />
+                    <IconCreditCard className="w-6 h-6 stroke-[2]" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 leading-tight">Credit Card Debt Consolidation</h3>
                 </div>
@@ -505,7 +572,7 @@ export default function App() {
                     className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
                     Learn More
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <IconArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
@@ -532,7 +599,7 @@ export default function App() {
                 className="flex items-center gap-2 px-6 py-4 bg-[#22c55e] hover:bg-[#16a34a] text-white rounded-2xl font-bold text-sm shadow-lg shadow-green-500/20 hover:shadow-green-500/30 transition-all flex-shrink-0 group-hover:scale-105 duration-200"
               >
                 Launch Revenue Planner
-                <ArrowRight className="w-4 h-4" />
+                <IconArrowRight className="w-4 h-4" />
               </a>
             </div>
 
@@ -634,8 +701,8 @@ export default function App() {
                   We don't collect, store, or transmit your financial data. All calculations run instantly in your browser's JavaScript engine. This design allows you to bookmark the tool and use it completely offline.
                 </p>
                 <div className="pt-2 flex gap-4 text-xs font-bold text-blue-200">
-                  <span className="flex items-center gap-1.5"><ShieldAlert className="w-4 h-4 text-blue-300" /> 100% Data Privacy</span>
-                  <span className="flex items-center gap-1.5"><Globe className="w-4 h-4 text-blue-300" /> 0% Cloud Dependencies</span>
+                  <span className="flex items-center gap-1.5"><IconShieldAlert className="w-4 h-4 text-blue-300" /> 100% Data Privacy</span>
+                  <span className="flex items-center gap-1.5"><IconGlobe className="w-4 h-4 text-blue-300" /> 0% Cloud Dependencies</span>
                 </div>
               </div>
             </div>
@@ -674,7 +741,7 @@ export default function App() {
                 className="flex items-center gap-2.5 cursor-pointer select-none group"
               >
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-lg flex items-center justify-center text-white">
-                  <TrendingUp className="w-5 h-5 stroke-[2.5]" />
+                  <IconTrendingUp className="w-5 h-5 stroke-[2.5]" />
                 </div>
                 <span className="text-base font-black tracking-tight text-white">
                   FinCalc <span className="text-emerald-400">Flow</span>
@@ -826,7 +893,7 @@ export default function App() {
               onClick={() => { setContactOpen(false); setContactFormSubmitted(false); }}
               className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-655 rounded-xl hover:bg-slate-100 transition-colors"
             >
-              <X className="w-5 h-5" />
+              <IconX className="w-5 h-5" />
             </button>
             <div className="space-y-4 text-left">
               <h3 className="text-2xl font-black text-slate-900">Contact Us</h3>
