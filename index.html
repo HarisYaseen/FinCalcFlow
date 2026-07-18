@@ -397,7 +397,7 @@
       </div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Register Service Worker & Defer AdSense for Mobile PageSpeed Score -->
+    <!-- Register Service Worker & Lazy Load Third Party Scripts for Mobile PageSpeed Score -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -407,23 +407,38 @@
         });
       }
 
-      // Defer loading of heavy AdSense & Facebook scripts until page has fully loaded
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          // Google AdSense
-          const adScript = document.createElement('script');
-          adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7307272587384576";
-          adScript.async = true;
-          adScript.crossOrigin = "anonymous";
-          document.body.appendChild(adScript);
+      // Lazy load AdSense & Facebook Pixel on first user interaction or long fallback timeout
+      let thirdPartyScriptsLoaded = false;
+      function initThirdPartyScripts() {
+        if (thirdPartyScriptsLoaded) return;
+        thirdPartyScriptsLoaded = true;
 
-          // Facebook Pixel SDK
-          const fbScript = document.createElement('script');
-          fbScript.src = "https://connect.facebook.net/en_US/fbevents.js";
-          fbScript.async = true;
-          document.body.appendChild(fbScript);
-        }, 1500);
-      });
+        // Clean up listeners
+        const eventNames = ['scroll', 'touchstart', 'mousemove', 'keydown'];
+        eventNames.forEach(evt => window.removeEventListener(evt, initThirdPartyScripts, { passive: true }));
+
+        console.log('Lazy loading third-party scripts (AdSense and Facebook Pixel)');
+
+        // Google AdSense
+        const adScript = document.createElement('script');
+        adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7307272587384576";
+        adScript.async = true;
+        adScript.crossOrigin = "anonymous";
+        document.body.appendChild(adScript);
+
+        // Facebook Pixel SDK
+        const fbScript = document.createElement('script');
+        fbScript.src = "https://connect.facebook.net/en_US/fbevents.js";
+        fbScript.async = true;
+        document.body.appendChild(fbScript);
+      }
+
+      // Add listeners for interaction
+      const eventNames = ['scroll', 'touchstart', 'mousemove', 'keydown'];
+      eventNames.forEach(evt => window.addEventListener(evt, initThirdPartyScripts, { passive: true }));
+
+      // Also set a 9-second fallback timeout so they eventually load even if no interaction occurs
+      setTimeout(initThirdPartyScripts, 9000);
     </script>
   </body>
 </html>
