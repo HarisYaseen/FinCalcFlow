@@ -132,6 +132,9 @@
                 <p>Make informed decisions with our easy-to-use, private tools.</p>
               </div>
               <img src="/hero-banner.jpg" alt="SmartCalc Tools Banner: Powerful Financial Calculators, 100% Free" width="1024" height="271" class="w-full h-auto object-cover" style="aspect-ratio: 1024/271" />
+              
+              <!-- Invisible Overlay clickable button matching the position of 'Try Our Calculators' in the mockup banner -->
+              <button class="absolute left-[5%] bottom-[13%] w-[20%] h-[20%] cursor-pointer opacity-0 focus:opacity-10 focus:ring-2 focus:ring-green-400 focus:outline-none rounded-lg" aria-label="Try Our Calculators"></button>
             </div>
 
             <!-- 2. Constrained Main Content Section -->
@@ -203,13 +206,13 @@
               <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-950 rounded-3xl p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 group border border-indigo-900/40">
                 <div class="absolute right-0 top-0 w-96 h-96 bg-indigo-500/10 rounded-full filter blur-3xl opacity-30 -mr-20 -mt-20"></div>
                 <div class="space-y-4 max-w-2xl relative z-10 text-left">
-                  <span class="px-3.5 py-1 bg-indigo-500/10 text-indigo-400 rounded-full text-[11px] font-extrabold tracking-wider uppercase inline-block border border-indigo-500/20">Creator & Webmaster Tool</span>
-                  <h3 class="text-2xl sm:text-3xl font-black tracking-tight leading-tight">Google AdSense Revenue Planner</h3>
-                  <p class="text-slate-400 text-sm leading-relaxed">Are you aiming to monetize your website or tool? Run simulation estimates for ad click rates (CTR), cost-per-click (CPC), and pageview requirements to forecast your daily, monthly, and yearly income milestones.</p>
+                  <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-[11px] font-black tracking-wider uppercase inline-block border border-indigo-500/30">Creator & Webmaster Tool</span>
+                  <h3 class="text-2xl sm:text-3xl font-black tracking-tight">Google AdSense Revenue Planner</h3>
+                  <p class="text-slate-350 text-sm leading-relaxed">Are you aiming to monetize your website or tool? Run simulation estimates for ad click rates (CTR), cost-per-click (CPC), and pageview requirements to forecast your daily, monthly, and yearly income milestones.</p>
                 </div>
                 <div class="relative z-10 flex-shrink-0">
-                  <a href="/revenue-planner" class="px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-sm transition-all shadow-lg shadow-blue-500/15 flex items-center gap-2 group-hover:scale-[1.02]">
-                    Launch Planner
+                  <a href="/revenue-planner" class="flex items-center gap-2 px-6 py-4 bg-[#22c55e] hover:bg-[#16a34a] text-white rounded-2xl font-bold text-sm shadow-lg shadow-green-500/20 hover:shadow-green-500/30 transition-all flex-shrink-0 group-hover:scale-105 duration-200">
+                    Launch Revenue Planner
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                   </a>
                 </div>
@@ -278,14 +281,14 @@
               </div>
 
               <!-- Info grid / why client side -->
-              <div class="bg-[#1e3a8a] text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
+              <div id="how-it-works-heading" class="bg-[#1e3a8a] text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
                 <div class="absolute right-0 bottom-0 w-80 h-80 bg-blue-900 rounded-full filter blur-3xl opacity-30 -mr-20 -mb-20"></div>
                 <div class="max-w-2xl space-y-4 relative z-10 text-left">
                   <h3 class="text-2xl font-black">Private, Lightweight, and Serverless</h3>
                   <p class="text-blue-100 text-sm leading-relaxed">We don't collect, store, or transmit your financial data. All calculations run instantly in your browser's JavaScript engine. This design allows you to bookmark the tool and use it completely offline.</p>
                   <div class="pt-2 flex gap-4 text-xs font-bold text-blue-200">
-                    <span class="flex items-center gap-1.5">100% Data Privacy</span>
-                    <span class="flex items-center gap-1.5">0% Cloud Dependencies</span>
+                    <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-blue-300"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg> 100% Data Privacy</span>
+                    <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-blue-300"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> 0% Cloud Dependencies</span>
                   </div>
                 </div>
               </div>
