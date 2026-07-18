@@ -469,8 +469,7 @@ export default function App() {
             
             {/* 1. Full-width Hero Banner Image from Mockup */}
             <div 
-              className="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500"
-              style={{ aspectRatio: '1024/271' }}
+              className="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 aspect-[1024/271]"
             >
               <div className="sr-only">
                 <h1>Rent vs Buy, Trucking Cost Per Mile, Debt Consolidation & Revenue Planner | FinCalc Flow</h1>
@@ -481,8 +480,7 @@ export default function App() {
                 alt="SmartCalc Tools Banner: Powerful Financial Calculators, 100% Free"
                 width={1024}
                 height={271}
-                className="w-full h-auto object-cover"
-                style={{ aspectRatio: '1024/271' }}
+                className="w-full h-auto object-cover aspect-[1024/271]"
               />
               
               {/* Invisible Overlay clickable button matching the position of 'Try Our Calculators' in the mockup banner */}
