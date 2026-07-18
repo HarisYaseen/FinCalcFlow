@@ -406,7 +406,7 @@ export default function App() {
               style={{ aspectRatio: '1024/271' }}
             >
               <div className="sr-only">
-                <h1>Powerful Financial Calculators, 100% Free</h1>
+                <h1>Rent vs Buy, Trucking Cost Per Mile & Debt Consolidation Monthly Calculators</h1>
                 <p>Make informed decisions with our easy-to-use, private tools.</p>
               </div>
               <img
