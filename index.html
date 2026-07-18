@@ -68,9 +68,6 @@
     </script>
     -->
 
-    <!-- Google AdSense Verification Tag -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7307272587384576"
-     crossorigin="anonymous"></script>
   </head>
   <body class="bg-slate-50 antialiased">
     <div id="root">
@@ -226,7 +223,7 @@
       </div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Register Service Worker for PWA (Offline Support) -->
+    <!-- Register Service Worker & Defer AdSense for Mobile PageSpeed Score -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -235,6 +232,17 @@
             .catch(err => console.error('Service Worker registration failed:', err));
         });
       }
+
+      // Defer loading of heavy AdSense script until page has fully loaded
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const adScript = document.createElement('script');
+          adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7307272587384576";
+          adScript.async = true;
+          adScript.crossOrigin = "anonymous";
+          document.body.appendChild(adScript);
+        }, 1500);
+      });
     </script>
   </body>
 </html>
