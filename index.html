@@ -75,148 +75,288 @@
       <div class="min-h-screen flex flex-col bg-slate-50 font-sans">
         
         <!-- Header -->
-        <header class="bg-white border-b border-slate-100 sticky top-0 z-50">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-lg flex items-center justify-center text-white font-bold">F</div>
-              <span class="text-slate-900 font-black tracking-tight text-lg">FinCalc Flow</span>
+        <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+              
+              <!-- Brand Logo -->
+              <div class="flex items-center gap-2.5 cursor-pointer select-none group">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="m22 7-8.5 8.5-5-5L2 17"></path><path d="M16 7h6v6"></path></svg>
+                </div>
+                <div>
+                  <span class="text-lg font-black tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                    FinCalc <span class="text-emerald-600">Flow</span>
+                  </span>
+                  <span class="block text-[10px] font-bold text-blue-600 uppercase tracking-widest -mt-1">100% Free Tools</span>
+                </div>
+              </div>
+
+              <!-- Desktop Navigation -->
+              <nav class="hidden md:flex items-center gap-5">
+                <a href="/" class="text-sm font-bold transition-all py-2 text-blue-600">Home</a>
+                <a href="/about" class="text-sm font-bold transition-all py-2 text-slate-600 hover:text-slate-900">About Us</a>
+                <a href="/rent-vs-buy" class="text-sm font-bold transition-all py-2 text-slate-600 hover:text-slate-900">Rent vs. Buy</a>
+                <a href="/cost-per-mile" class="text-sm font-bold transition-all py-2 text-slate-600 hover:text-slate-900">Cost Per Mile</a>
+                <a href="/debt-consolidation" class="text-sm font-bold transition-all py-2 text-slate-600 hover:text-slate-900">Debt Consolidation</a>
+                <a href="/revenue-planner" class="text-sm font-bold transition-all py-2 text-slate-600 hover:text-slate-900">Revenue Planner</a>
+              </nav>
+
+              <!-- Currency Selector & Get Started Button -->
+              <div class="hidden md:flex items-center gap-4">
+                <div class="flex items-center gap-1 bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-slate-500"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span class="text-sm font-bold text-slate-700">USD / CAD ($)</span>
+                </div>
+                <button class="px-4 py-2 bg-[#22c55e] text-white text-sm font-bold rounded-xl shadow-md shadow-green-900/10">Get Started</button>
+              </div>
+
+              <!-- Mobile Menu Button -->
+              <div class="flex md:hidden items-center gap-2">
+                <div class="bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 px-2 py-1.5 rounded-lg">USD / CAD ($)</div>
+                <button class="p-2 text-slate-600 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+              </div>
+
             </div>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
-              <a href="/rent-vs-buy" class="hover:text-blue-600">Rent vs Buy</a>
-              <a href="/cost-per-mile" class="hover:text-blue-600">Cost Per Mile</a>
-              <a href="/debt-consolidation" class="hover:text-blue-600">Debt Consolidation</a>
-              <a href="/revenue-planner" class="hover:text-blue-600">Revenue Planner</a>
-              <a href="/about" class="hover:text-blue-600">About</a>
-            </nav>
           </div>
         </header>
 
-        <!-- Hero Section -->
-        <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-          
-          <div class="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 rounded-2xl animate-pulse" style="aspect-ratio: 1024/271">
-            <!-- Reserved space for loading hero banner -->
-            <div class="w-full h-full bg-slate-700/10"></div>
-          </div>
-
-          <!-- Intro heading -->
-          <div class="text-center max-w-3xl mx-auto space-y-4">
-            <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Rent vs Buy, Trucking Cost Per Mile, Debt Consolidation & Revenue Planner | FinCalc Flow</h1>
-            <p class="text-slate-500 text-base sm:text-lg leading-relaxed">Free, serverless, and private financial calculators. Run calculations locally in your browser with 100% data privacy.</p>
-          </div>
-
-          <!-- Tool Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-lg p-8 space-y-4 flex flex-col text-left">
-              <h3 class="text-lg font-bold text-slate-900 leading-tight">Rent vs. Buy Calculator</h3>
-              <p class="text-slate-500 text-sm leading-relaxed flex-1">Compare the costs of renting vs. buying your home. Run year-by-year estimations of asset growth and equity.</p>
-              <span class="text-blue-600 font-bold text-sm">Learn More &rarr;</span>
-            </div>
-            <!-- Card 2 -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-lg p-8 space-y-4 flex flex-col text-left">
-              <h3 class="text-lg font-bold text-slate-900 leading-tight">Trucking Cost Per Mile</h3>
-              <p class="text-slate-500 text-sm leading-relaxed flex-1">Calculate your cost per mile to manage trucking expenses, fuel costs, and maximize driver profitability.</p>
-              <span class="text-blue-600 font-bold text-sm">Learn More &rarr;</span>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-lg p-8 space-y-4 flex flex-col text-left">
-              <h3 class="text-lg font-bold text-slate-900 leading-tight">Credit Card Debt Consolidation</h3>
-              <p class="text-slate-500 text-sm leading-relaxed flex-1">Plan your debt consolidation and payoff strategy to find interest savings and clear balances sooner.</p>
-              <span class="text-blue-600 font-bold text-sm">Learn More &rarr;</span>
-            </div>
-          </div>
-
-          <!-- AdSense banner -->
-          <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-950 rounded-3xl p-8 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 border border-indigo-900/40">
-            <div class="space-y-4 max-w-2xl text-left">
-              <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-[11px] font-black tracking-wider uppercase inline-block border border-indigo-500/30">Creator & Webmaster Tool</span>
-              <h3 class="text-2xl sm:text-3xl font-black tracking-tight">Google AdSense Revenue Planner</h3>
-              <p class="text-slate-300 text-sm leading-relaxed">Are you aiming to monetize your website or tool? Run simulation estimates for ad click rates (CTR), cost-per-click (CPC), and pageview requirements to forecast your daily, monthly, and yearly income milestones.</p>
-            </div>
-            <span class="px-6 py-4 bg-[#22c55e] text-white rounded-2xl font-bold text-sm transition-all flex-shrink-0">Launch Revenue Planner &rarr;</span>
-          </div>
-
-          <!-- FAQ & Guides Section -->
-          <div class="bg-white rounded-3xl border border-slate-100 shadow-xl p-8 sm:p-12 space-y-10 text-left">
-            <div class="space-y-2">
-              <h3 class="text-2xl font-black text-slate-900 tracking-tight">Financial Guides & Frequently Asked Questions</h3>
-              <p class="text-slate-500 text-sm">Deep-dive insights to help you optimize trucking margins, mortgage alternatives, and debt elimination.</p>
+        <!-- Main Content Router -->
+        <main class="flex-1">
+          <div class="w-full flex flex-col">
+            
+            <!-- 1. Full-width Hero Banner Image -->
+            <div class="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500" style="aspect-ratio: 1024/271">
+              <div class="sr-only">
+                <h1>Rent vs Buy, Trucking Cost Per Mile, Debt Consolidation & Revenue Planner | FinCalc Flow</h1>
+                <p>Make informed decisions with our easy-to-use, private tools.</p>
+              </div>
+              <img src="/hero-banner.jpg" alt="SmartCalc Tools Banner: Powerful Financial Calculators, 100% Free" width="1024" height="271" class="w-full h-auto object-cover" style="aspect-ratio: 1024/271" />
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-              <div class="space-y-2">
-                <h4 class="font-extrabold text-slate-800 text-base">How do I calculate my trucking cost per mile?</h4>
-                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">To compute your commercial cost per mile, list all fixed monthly fees (such as lease payments, truck permits, and insurance premiums) and your variable operational expenses (such as diesel fuel, driver wages, toll fees, and maintenance/tire reserves). Sum these expenses together and divide the total by your monthly driven miles. Our trucking calculator handles this instantly to help owner-operators maintain a healthy profit margin.</p>
+            <!-- 2. Constrained Main Content Section -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+              
+              <!-- Section Header -->
+              <div id="our-tools-heading" class="text-center space-y-2">
+                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Our Tools</h2>
+                <p class="text-slate-500 text-sm">Simple calculators to guide your financial choices.</p>
               </div>
-              <div class="space-y-2">
-                <h4 class="font-extrabold text-slate-800 text-base">What parameters dictate a Rent vs. Buy decision?</h4>
-                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">A Rent vs. Buy simulation models mortgage amortization, upfront down payments, closing costs, and home appreciation rates. It also incorporates hidden homeownership costs such as property tax, homeowners association (HOA) fees, insurance, and annual maintenance overhead. It compares this against rent prices, renters insurance, and the opportunity cost of investing your home down payment into index funds.</p>
-              </div>
-              <div class="space-y-2">
-                <h4 class="font-extrabold text-slate-800 text-base">How does credit card debt consolidation work?</h4>
-                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Debt consolidation merges multiple high-interest credit card balances into a single personal loan with a lower interest rate (APR). This lowers your monthly interest charges, meaning a larger portion of your monthly payment goes toward paying down the principal balance. Use our debt consolidation tool to calculate exact savings, monthly payment reductions, and your accelerated debt-free milestone.</p>
-              </div>
-              <div class="space-y-2">
-                <h4 class="font-extrabold text-slate-800 text-base">How can I forecast Google AdSense earnings?</h4>
-                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">AdSense income is modeled using three core variables: daily or monthly pageviews, click-through rate (CTR), and average cost-per-click (CPC). The formula is: pageviews × (CTR / 100) × CPC. For example, a blog with 50,000 monthly pageviews, a 1.5% CTR (750 clicks), and an average CPC of $0.60 yields $450 in monthly revenue. Run simulations with our planner to set traffic and monetization goals.</p>
-              </div>
-              <div class="space-y-2">
-                <h4 class="font-extrabold text-slate-800 text-base">What is the opportunity cost of buying a home?</h4>
-                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">When you buy a home, the money used for the down payment and closing costs is no longer available to invest elsewhere. Over 15 or 30 years, if that capital had been placed in standard stock market index funds (which historically yield an annual return of 7% to 10% after adjusting for inflation), it would compound significantly. This foregone growth is known as the opportunity cost. Our Rent vs. Buy calculator models this exact trade-off: comparing home equity growth against the potential future value of a renter's invested down payment and monthly savings difference.</p>
-              </div>
-              <div class="space-y-2">
-                <h4 class="font-extrabold text-slate-800 text-base">Why should trucking fleet operators monitor cost per mile regularly?</h4>
-                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Trucking is a low-margin, high-volume industry where operational costs fluctuate constantly. Changes in diesel prices, unexpected tire wear, insurance premium updates, and route tolls directly impact profitability. By calculating cost per mile (CPM) monthly or weekly, owner-operators and fleet managers can identify expense leaks, evaluate truck lease options, and adjust their freight rate per mile (RPM) bids to ensure they are driving profitably rather than at a loss.</p>
-              </div>
-            </div>
 
-            <!-- In-depth Editorial Articles Section -->
-            <div class="border-t border-slate-100 pt-10 space-y-8">
-              <h3 class="text-xl font-bold text-slate-900">Advanced Financial Simulation & Planning Guide</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-500 leading-relaxed">
-                <div class="space-y-4">
-                  <div>
-                    <h5 class="font-extrabold text-slate-800 mb-1">1. Trucking CPM & Operating Ratios</h5>
-                    <p>Maximizing profitability in logistics requires separating fixed expenses from variable operating costs. Fixed costs include truck lease payments, cargo insurance, ELD compliance fees, and annual vehicle registrations. Variable costs include fuel, repair reserves, driver wages, and preventative maintenance. Successful owner-operators aim for an operating ratio below 85%, meaning expenses take up less than 85% of total gross revenue.</p>
+              <!-- Tool Cards Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Rent vs Buy -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 stroke-[2]"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 leading-tight">Rent vs. Buy Calculator</h3>
                   </div>
-                  <div>
-                    <h5 class="font-extrabold text-slate-800 mb-1">2. Asset Wealth Generation (Rent vs. Buy Dynamics)</h5>
-                    <p>Deciding between renting and purchasing a home depends heavily on your planned duration of stay. Buying a home incurs high transition costs (closing fees, realtor commissions) that usually require 5 to 7 years of ownership to offset through equity appreciation. Amortization schedules show that early mortgage payments go mostly toward interest, rather than principal. Renting provides flexibility and eliminates home maintenance liabilities, which historically average 1% to 2% of the home's value annually.</p>
+                  <p class="text-slate-500 text-sm leading-relaxed flex-1">Compare the costs of renting vs. buying your home. Run year-by-year estimations of asset growth and equity.</p>
+                  <div class="pt-2">
+                    <a href="/rent-vs-buy" class="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn">
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
                   </div>
                 </div>
-                <div class="space-y-4">
-                  <div>
-                    <h5 class="font-extrabold text-slate-800 mb-1">3. Debt Payoff Acceleration (Snowball vs. Avalanche Method)</h5>
-                    <p>When consolidating debt, choosing a payoff method dictates how quickly you achieve financial freedom. The Debt Avalanche method focuses on paying off the highest interest rate balance first, saving the most money in overall interest. The Debt Snowball method focuses on clearing the smallest balance first to build emotional momentum. Personal loan consolidation combines these concepts by replacing multiple accounts with one low-interest rate payment, simplifying cash flow.</p>
+
+                <!-- Card 2: Cost Per Mile -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 stroke-[2]"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M19 18h2a1 1 0 0 0 1-1v-5.5a1 1 0 0 0-.5-.87L18 8.13a1 1 0 0 0-.75-.13H14"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 leading-tight">Trucking Cost Per Mile</h3>
                   </div>
-                  <div>
-                    <h5 class="font-extrabold text-slate-800 mb-1">4. Digital Ad Revenue Maximization (AdSense Strategies)</h5>
-                    <p>Online creators build sustainable income by analyzing pageview traffic, click rates (CTR), and cost-per-click (CPC). Niche topics (like finance or technology) attract higher CPCs due to advertiser demand, while general entertainment has lower rates. Improving user engagement, site layout, and core web vitals raises click rates and ad impressions, directly scaling monthly income milestones.</p>
+                  <p class="text-slate-500 text-sm leading-relaxed flex-1">Calculate your cost per mile to manage trucking expenses, fuel costs, and maximize driver profitability.</p>
+                  <div class="pt-2">
+                    <a href="/cost-per-mile" class="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn">
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Card 3: Debt Consolidation -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 stroke-[2]"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 leading-tight">Credit Card Debt Consolidation</h3>
+                  </div>
+                  <p class="text-slate-500 text-sm leading-relaxed flex-1">Plan your debt consolidation and payoff strategy to find interest savings and clear balances sooner.</p>
+                  <div class="pt-2">
+                    <a href="/debt-consolidation" class="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn">
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Premium Full-Width Banner: AdSense Revenue Planner -->
+              <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-950 rounded-3xl p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 group border border-indigo-900/40">
+                <div class="absolute right-0 top-0 w-96 h-96 bg-indigo-500/10 rounded-full filter blur-3xl opacity-30 -mr-20 -mt-20"></div>
+                <div class="space-y-4 max-w-2xl relative z-10 text-left">
+                  <span class="px-3.5 py-1 bg-indigo-500/10 text-indigo-400 rounded-full text-[11px] font-extrabold tracking-wider uppercase inline-block border border-indigo-500/20">Creator & Webmaster Tool</span>
+                  <h3 class="text-2xl sm:text-3xl font-black tracking-tight leading-tight">Google AdSense Revenue Planner</h3>
+                  <p class="text-slate-400 text-sm leading-relaxed">Are you aiming to monetize your website or tool? Run simulation estimates for ad click rates (CTR), cost-per-click (CPC), and pageview requirements to forecast your daily, monthly, and yearly income milestones.</p>
+                </div>
+                <div class="relative z-10 flex-shrink-0">
+                  <a href="/revenue-planner" class="px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-sm transition-all shadow-lg shadow-blue-500/15 flex items-center gap-2 group-hover:scale-[1.02]">
+                    Launch Planner
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- FAQ & Guides Section -->
+              <div class="bg-white rounded-3xl border border-slate-100 shadow-xl p-8 sm:p-12 space-y-10 text-left">
+                <div class="space-y-2">
+                  <h3 class="text-2xl font-black text-slate-900 tracking-tight">Financial Guides & Frequently Asked Questions</h3>
+                  <p class="text-slate-500 text-sm">Deep-dive insights to help you optimize trucking margins, mortgage alternatives, and debt elimination.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                  <div class="space-y-2">
+                    <h4 class="font-extrabold text-slate-800 text-base">How do I calculate my trucking cost per mile?</h4>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">To compute your commercial cost per mile, list all fixed monthly fees (such as lease payments, truck permits, and insurance premiums) and your variable operational expenses (such as diesel fuel, driver wages, toll fees, and maintenance/tire reserves). Sum these expenses together and divide the total by your monthly driven miles. Our trucking calculator handles this instantly to help owner-operators maintain a healthy profit margin.</p>
+                  </div>
+                  <div class="space-y-2">
+                    <h4 class="font-extrabold text-slate-800 text-base">What parameters dictate a Rent vs. Buy decision?</h4>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">A Rent vs. Buy simulation models mortgage amortization, upfront down payments, closing costs, and home appreciation rates. It also incorporates hidden homeownership costs such as property tax, homeowners association (HOA) fees, insurance, and annual maintenance overhead. It compares this against rent prices, renters insurance, and the opportunity cost of investing your home down payment into index funds.</p>
+                  </div>
+                  <div class="space-y-2">
+                    <h4 class="font-extrabold text-slate-800 text-base">How does credit card debt consolidation work?</h4>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Debt consolidation merges multiple high-interest credit card balances into a single personal loan with a lower interest rate (APR). This lowers your monthly interest charges, meaning a larger portion of your monthly payment goes toward paying down the principal balance. Use our debt consolidation tool to calculate exact savings, monthly payment reductions, and your accelerated debt-free milestone.</p>
+                  </div>
+                  <div class="space-y-2">
+                    <h4 class="font-extrabold text-slate-800 text-base">How can I forecast Google AdSense earnings?</h4>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">AdSense income is modeled using three core variables: daily or monthly pageviews, click-through rate (CTR), and average cost-per-click (CPC). The formula is: pageviews × (CTR / 100) × CPC. For example, a blog with 50,000 monthly pageviews, a 1.5% CTR (750 clicks), and an average CPC of $0.60 yields $450 in monthly revenue. Run simulations with our planner to set traffic and monetization goals.</p>
+                  </div>
+                  <div class="space-y-2">
+                    <h4 class="font-extrabold text-slate-800 text-base">What is the opportunity cost of buying a home?</h4>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">When you buy a home, the money used for the down payment and closing costs is no longer available to invest elsewhere. Over 15 or 30 years, if that capital had been placed in standard stock market index funds (which historically yield an annual return of 7% to 10% after adjusting for inflation), it would compound significantly. This foregone growth is known as the opportunity cost. Our Rent vs. Buy calculator models this exact trade-off: comparing home equity growth against the potential future value of a renter's invested down payment and monthly savings difference.</p>
+                  </div>
+                  <div class="space-y-2">
+                    <h4 class="font-extrabold text-slate-800 text-base">Why should trucking fleet operators monitor cost per mile regularly?</h4>
+                    <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Trucking is a low-margin, high-volume industry where operational costs fluctuate constantly. Changes in diesel prices, unexpected tire wear, insurance premium updates, and route tolls directly impact profitability. By calculating cost per mile (CPM) monthly or weekly, owner-operators and fleet managers can identify expense leaks, evaluate truck lease options, and adjust their freight rate per mile (RPM) bids to ensure they are driving profitably rather than at a loss.</p>
+                  </div>
+                </div>
+
+                <!-- In-depth Editorial Articles Section -->
+                <div class="border-t border-slate-100 pt-10 space-y-8">
+                  <h3 class="text-xl font-bold text-slate-900">Advanced Financial Simulation & Planning Guide</h3>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-500 leading-relaxed">
+                    <div class="space-y-4">
+                      <div>
+                        <h5 class="font-extrabold text-slate-800 mb-1">1. Trucking CPM & Operating Ratios</h5>
+                        <p>Maximizing profitability in logistics requires separating fixed expenses from variable operating costs. Fixed costs include truck lease payments, cargo insurance, ELD compliance fees, and annual vehicle registrations. Variable costs include fuel, repair reserves, driver wages, and preventative maintenance. Successful owner-operators aim for an operating ratio below 85%, meaning expenses take up less than 85% of total gross revenue.</p>
+                      </div>
+                      <div>
+                        <h5 class="font-extrabold text-slate-800 mb-1">2. Asset Wealth Generation (Rent vs. Buy Dynamics)</h5>
+                        <p>Deciding between renting and purchasing a home depends heavily on your planned duration of stay. Buying a home incurs high transition costs (closing fees, realtor commissions) that usually require 5 to 7 years of ownership to offset through equity appreciation. Amortization schedules show that early mortgage payments go mostly toward interest, rather than principal. Renting provides flexibility and eliminates home maintenance liabilities, which historically average 1% to 2% of the home's value annually.</p>
+                      </div>
+                    </div>
+                    <div class="space-y-4">
+                      <div>
+                        <h5 class="font-extrabold text-slate-800 mb-1">3. Debt Payoff Acceleration (Snowball vs. Avalanche Method)</h5>
+                        <p>When consolidating debt, choosing a payoff method dictates how quickly you achieve financial freedom. The Debt Avalanche method focuses on paying off the highest interest rate balance first, saving the most money in overall interest. The Debt Snowball method focuses on clearing the smallest balance first to build emotional momentum. Personal loan consolidation combines these concepts by replacing multiple accounts with one low-interest rate payment, simplifying cash flow.</p>
+                      </div>
+                      <div>
+                        <h5 class="font-extrabold text-slate-800 mb-1">4. Digital Ad Revenue Maximization (AdSense Strategies)</h5>
+                        <p>Online creators build sustainable income by analyzing pageview traffic, click rates (CTR), and cost-per-click (CPC). Niche topics (like finance or technology) attract higher CPCs due to advertiser demand, while general entertainment has lower rates. Improving user engagement, site layout, and core web vitals raises click rates and ad impressions, directly scaling monthly income milestones.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <!-- Info grid / why client side -->
-          <div class="bg-[#1e3a8a] text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
-            <div class="absolute right-0 bottom-0 w-80 h-80 bg-blue-900 rounded-full filter blur-3xl opacity-30 -mr-20 -mb-20"></div>
-            <div class="max-w-2xl space-y-4 relative z-10 text-left">
-              <h3 class="text-2xl font-black">Private, Lightweight, and Serverless</h3>
-              <p class="text-blue-100 text-sm leading-relaxed">We don't collect, store, or transmit your financial data. All calculations run instantly in your browser's JavaScript engine. This design allows you to bookmark the tool and use it completely offline.</p>
-              <div class="pt-2 flex gap-4 text-xs font-bold text-blue-200">
-                <span class="flex items-center gap-1.5">100% Data Privacy</span>
-                <span class="flex items-center gap-1.5">0% Cloud Dependencies</span>
+              <!-- Info grid / why client side -->
+              <div class="bg-[#1e3a8a] text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
+                <div class="absolute right-0 bottom-0 w-80 h-80 bg-blue-900 rounded-full filter blur-3xl opacity-30 -mr-20 -mb-20"></div>
+                <div class="max-w-2xl space-y-4 relative z-10 text-left">
+                  <h3 class="text-2xl font-black">Private, Lightweight, and Serverless</h3>
+                  <p class="text-blue-100 text-sm leading-relaxed">We don't collect, store, or transmit your financial data. All calculations run instantly in your browser's JavaScript engine. This design allows you to bookmark the tool and use it completely offline.</p>
+                  <div class="pt-2 flex gap-4 text-xs font-bold text-blue-200">
+                    <span class="flex items-center gap-1.5">100% Data Privacy</span>
+                    <span class="flex items-center gap-1.5">0% Cloud Dependencies</span>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
-
         </main>
 
-        <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 mt-auto py-16">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p>&copy; 2026 FinCalc Flow. All rights reserved. Calculations are estimates and do not constitute professional financial advice.</p>
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 mt-auto">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+              
+              <!-- Column 1: Brand & Core Promise -->
+              <div class="md:col-span-6 space-y-4">
+                <div class="flex items-center gap-2.5 cursor-pointer select-none group">
+                  <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-lg flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+                  </div>
+                  <span class="text-base font-black tracking-tight text-white">
+                    FinCalc <span class="text-emerald-400">Flow</span>
+                  </span>
+                </div>
+                <p class="text-sm text-slate-400 max-w-sm leading-relaxed text-left">
+                  Advanced serverless financial calculators engineered for clarity, speed, and privacy. 100% of calculations run securely in your web browser.
+                </p>
+                <div class="flex gap-4 text-xs font-bold text-emerald-400">
+                  <span class="flex items-center gap-1">✦ Offline Ready</span>
+                  <span class="flex items-center gap-1">✦ Zero Tracking</span>
+                  <span class="flex items-center gap-1">✦ Instant Calculations</span>
+                </div>
+              </div>
+
+              <!-- Column 2: Quick Tool Links -->
+              <div class="md:col-span-3 space-y-3">
+                <h4 class="text-xs font-black uppercase tracking-wider text-slate-200">Financial Tools</h4>
+                <ul class="space-y-2 text-sm">
+                  <li><a href="/" class="hover:text-white transition-colors text-left block">Main Dashboard</a></li>
+                  <li><a href="/rent-vs-buy" class="hover:text-white transition-colors text-left block">Rent vs. Buy Simulator</a></li>
+                  <li><a href="/cost-per-mile" class="hover:text-white transition-colors text-left block">Trucking Cost Per Mile</a></li>
+                  <li><a href="/debt-consolidation" class="hover:text-white transition-colors text-left block">Debt Consolidation</a></li>
+                  <li><a href="/revenue-planner" class="hover:text-white transition-colors text-left block">AdSense Revenue Planner</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 3: Policy & Info Resources -->
+              <div class="md:col-span-3 space-y-3">
+                <h4 class="text-xs font-black uppercase tracking-wider text-slate-200">Resources</h4>
+                <ul class="space-y-2 text-sm">
+                  <li><a href="/privacy" class="hover:text-white transition-colors text-left block">Privacy Policy</a></li>
+                  <li><a href="/about" class="hover:text-white transition-colors text-left block">Math Methodology</a></li>
+                  <li><a href="/about" class="hover:text-white transition-colors text-left block">About Us</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors text-left block">Contact Us</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Legal Disclaimer & Copyright -->
+            <div class="border-t border-slate-800 mt-12 pt-8 space-y-4">
+              <p class="text-slate-500 text-xs leading-relaxed max-w-5xl">
+                <strong>Disclaimer:</strong> This website provides educational and informational tools only. Calculations are estimates based on standard formulaic projections and do not constitute professional financial, tax, or investment advice. Always consult with a licensed professional before making major financial commitments.
+              </p>
+              <div class="flex flex-col sm:flex-row justify-between items-center gap-2 pt-2 border-t border-slate-800/50 text-[11px] text-slate-600">
+                <p>&copy; 2026 FinCalc Flow. All rights reserved.</p>
+                <p class="text-emerald-400/80 font-bold">100% Client-Side Engine</p>
+              </div>
+            </div>
+
           </div>
         </footer>
 
