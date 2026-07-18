@@ -126,7 +126,7 @@ export default function App() {
 
     switch (activePage) {
       case 'home':
-        title = "Rent vs Buy, Trucking Cost Per Mile & Debt Consolidation | FinCalc Flow";
+        title = "Free Financial Calculators & Planners | FinCalc Flow";
         desc = "Free monthly financial calculators by FinCalc Flow. Estimate rent vs buy home equity, trucking cost per mile, debt consolidation, and revenue planner targets.";
         schemaObj = {
           "@context": "https://schema.org",
