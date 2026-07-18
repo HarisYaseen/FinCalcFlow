@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import RentVsBuy from './components/RentVsBuy';
-import CostPerMile from './components/CostPerMile';
-import DebtConsolidation from './components/DebtConsolidation';
-import RevenuePlanner from './components/RevenuePlanner';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import About from './components/About';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
+const RentVsBuy = lazy(() => import('./components/RentVsBuy'));
+const CostPerMile = lazy(() => import('./components/CostPerMile'));
+const DebtConsolidation = lazy(() => import('./components/DebtConsolidation'));
+const RevenuePlanner = lazy(() => import('./components/RevenuePlanner'));
+const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
+const About = lazy(() => import('./components/About'));
 import { Home, Truck, CreditCard, ArrowRight, ShieldAlert, Globe, Menu, X, DollarSign, ExternalLink, HelpCircle, TrendingUp, ChevronDown } from 'lucide-react';
 
 export default function App() {
@@ -60,7 +60,7 @@ export default function App() {
     switch (activePage) {
       case 'home':
         title = "FinCalc Flow | Free Financial & Trucking Calculators";
-        desc = "Free, serverless, and private financial calculator hub. Calculate Rent vs. Buy equity, Trucking Cost Per Mile, and Credit Card Debt Consolidation instantly in your browser.";
+        desc = "Free private financial calculator hub. Model Rent vs. Buy equity, Trucking Cost Per Mile, and Credit Card Debt Consolidation instantly in your browser.";
         schemaObj = {
           "@context": "https://schema.org",
           "@type": "WebApplication",
@@ -593,12 +593,19 @@ export default function App() {
         </div>
       )}
 
-        {activePage === 'rent-vs-buy' && <RentVsBuy currencySymbol={currencySymbol} />}
-        {activePage === 'cost-per-mile' && <CostPerMile currencySymbol={currencySymbol} />}
-        {activePage === 'debt-consolidation' && <DebtConsolidation currencySymbol={currencySymbol} />}
-        {activePage === 'revenue-planner' && <RevenuePlanner />}
-        {activePage === 'privacy' && <PrivacyPolicy />}
-        {activePage === 'about' && <About />}
+        <Suspense fallback={
+          <div className="min-h-[60vh] w-full flex flex-col items-center justify-center space-y-4">
+            <div className="w-12 h-12 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin"></div>
+            <p className="text-slate-400 text-sm font-bold animate-pulse">Loading Calculator Engine...</p>
+          </div>
+        }>
+          {activePage === 'rent-vs-buy' && <RentVsBuy currencySymbol={currencySymbol} />}
+          {activePage === 'cost-per-mile' && <CostPerMile currencySymbol={currencySymbol} />}
+          {activePage === 'debt-consolidation' && <DebtConsolidation currencySymbol={currencySymbol} />}
+          {activePage === 'revenue-planner' && <RevenuePlanner />}
+          {activePage === 'privacy' && <PrivacyPolicy />}
+          {activePage === 'about' && <About />}
+        </Suspense>
       </main>
 
 
