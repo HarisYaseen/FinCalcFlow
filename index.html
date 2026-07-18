@@ -24,6 +24,13 @@
     <meta property="og:url" content="https://fincalcflow.com/" />
     <meta property="og:title" content="FinCalcFlow | Free Financial Calculators" />
     <meta property="og:description" content="Make informed visual financial decisions using our easy, safe, private analysis software." />
+
+    <!-- Twitter / X Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@fincalcflow" />
+    <meta name="twitter:title" content="FinCalcFlow | Free Financial & Trucking Calculators" />
+    <meta name="twitter:description" content="Calculate Rent vs. Buy equity, Trucking Cost Per Mile, and Credit Card Debt Consolidation instantly in your browser. 100% private, serverless financial tools." />
+    <meta name="twitter:image" content="https://www.fincalcflow.com/hero-banner.jpg" />
     
     <!-- JSON-LD Structured Data for Google Rich Snippets -->
     <script id="dynamic-schema" type="application/ld+json">
@@ -66,7 +73,74 @@
      crossorigin="anonymous"></script>
   </head>
   <body class="bg-slate-50 antialiased">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Pre-rendered Static Content for SEO & LLM Readability (React will replace this on load) -->
+      <header style="padding: 20px; background-color: #0f172a; color: #ffffff; text-align: center;">
+        <h1>FinCalc Flow - Free Financial & Trucking Calculators</h1>
+        <p>Your premium, 100% private, and serverless calculation suite. Model your finances directly in the browser.</p>
+        <nav>
+          <a href="/rent-vs-buy" style="color: #38bdf8; margin: 0 10px;">Rent vs. Buy Simulator</a> |
+          <a href="/cost-per-mile" style="color: #38bdf8; margin: 0 10px;">Trucking Cost Per Mile</a> |
+          <a href="/debt-consolidation" style="color: #38bdf8; margin: 0 10px;">Credit Card Payoff</a> |
+          <a href="/revenue-planner" style="color: #38bdf8; margin: 0 10px;">AdSense Revenue Planner</a> |
+          <a href="/about" style="color: #38bdf8; margin: 0 10px;">About Us</a> |
+          <a href="/privacy" style="color: #38bdf8; margin: 0 10px;">Privacy Policy</a>
+        </nav>
+      </header>
+
+      <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; line-height: 1.6; color: #334155;">
+        <h2>Powerful Financial Decision-Making Software</h2>
+        <p>FinCalc Flow offers direct calculations with 0% cloud dependencies and 100% data privacy. No user inputs are sent over the network—all equations run locally in JavaScript.</p>
+        
+        <section style="margin: 40px 0; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
+          <h3>1. Rent vs. Buy Simulator</h3>
+          <p>The Rent vs. Buy simulator evaluates housing wealth generation over time. By comparing the cost of renting a property and investing the difference to purchasing a home, it models down payments, home appreciation, annual property tax rates, homeowners insurance, maintenance costs, and renting alternatives.</p>
+          <p><strong>Primary Equation Model:</strong> Buying Costs include: Down Payment + Closing Costs + Monthly Mortgage Payments + Maintenance + Property Taxes + Home Insurance. Renting Costs include: Monthly Rent + Renters Insurance + Opportunity Cost of Down Payment invested in securities.</p>
+        </section>
+
+        <section style="margin: 40px 0; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
+          <h3>2. Trucking Cost Per Mile Calculator</h3>
+          <p>Designed for owner-operators and fleet managers, this tool solves for operational efficiency. Enter monthly fixed expenses (insurance, truck payments, permits) and variable operational expenses (fuel, tires, preventative maintenance, driver wages) alongside total miles driven to output your cost-per-mile (CPM) metric.</p>
+          <p><strong>Primary Equation Model:</strong> Total Monthly Costs = Fixed Costs + (Variable Cost per Mile * Miles Driven). Cost Per Mile (CPM) = Total Monthly Costs / Total Miles Driven.</p>
+        </section>
+
+        <section style="margin: 40px 0; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
+          <h3>3. Credit Card Debt Payoff & Consolidation</h3>
+          <p>This debt optimizer allows users to analyze loan consolidation options. Input existing high-interest balances and interest rates to calculate payoff timelines, total interest fees, and compare consolidation loans to find your exact debt-free date.</p>
+          <p><strong>Primary Equation Model:</strong> Monthly payment compound amortization formulas are used to calculate the interest paid per period: Interest_n = Balance_n * (APR / 12).</p>
+        </section>
+
+        <section style="margin: 40px 0; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
+          <h3>4. Google AdSense Revenue & Traffic Planner</h3>
+          <p>This calculator helps webmasters, bloggers, and SaaS developers estimate ad income. Enter traffic levels, Click-Through-Rate (CTR), and Cost-Per-Click (CPC) to estimate daily, monthly, and annual page revenue targets.</p>
+          <p><strong>Primary Equation Model:</strong> Estimated Earnings = Pageviews * (CTR / 100) * CPC.</p>
+        </section>
+
+        <section style="margin: 40px 0;">
+          <h3>Frequently Asked Questions & Financial Guides</h3>
+          <div style="margin-bottom: 20px;">
+            <h4>What is a good trucking cost per mile?</h4>
+            <p>A healthy trucking cost per mile (CPM) ranges between $1.50 and $2.20, depending on fuel price, equipment financing rates, maintenance history, and insurance premiums. Keeping detailed logs of fixed and variable expenses allows owner-operators to negotiate profitable freight rates.</p>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <h4>How do you compare renting vs buying?</h4>
+            <p>Comparing renting vs buying a home requires looking beyond monthly payments. Buying builds home equity through amortization and asset price appreciation, but incurs non-recoverable costs like property taxes, mortgage interest, and home maintenance. Renting eliminates maintenance risks and allows you to invest capital (like a down payment) into index funds.</p>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <h4>What is the benefit of debt consolidation?</h4>
+            <p>Consolidating high-interest credit card debt into a lower-rate personal loan reduces total interest costs and combines multiple monthly payments into a single payment. This helps you pay off the principal balance faster and save money.</p>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <h4>How is Google AdSense revenue calculated?</h4>
+            <p>AdSense earnings are calculated by multiplying page impressions by the click-through rate (CTR) and the average cost per click (CPC). For example, 10,000 pageviews with a 2% CTR (200 clicks) at $0.50 CPC generates $100 in ad revenue.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer style="padding: 20px; background-color: #0f172a; color: #94a3b8; text-align: center; font-size: 12px; margin-top: 40px; border-t: 1px solid #334155;">
+        <p>&copy; 2026 FinCalc Flow. All rights reserved. Calculations are estimates and do not constitute professional financial advice.</p>
+      </footer>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 
     <!-- Register Service Worker for PWA (Offline Support) -->

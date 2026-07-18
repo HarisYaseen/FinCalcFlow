@@ -536,6 +536,44 @@ export default function App() {
               </a>
             </div>
 
+            {/* Premium FAQ and Guide Section (SEO Content Booster) */}
+            <div className="bg-white rounded-3xl border border-slate-100 shadow-xl p-8 sm:p-12 space-y-8 text-left">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-black text-slate-900 tracking-tight">Financial Guides & Frequently Asked Questions</h3>
+                <p className="text-slate-500 text-sm">Deep-dive insights to help you optimize trucking margins, mortgage alternatives, and debt elimination.</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                <div className="space-y-2">
+                  <h4 className="font-extrabold text-slate-800 text-base">How do I calculate my trucking cost per mile?</h4>
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                    To compute your commercial cost per mile, list all fixed monthly fees (such as lease payments, truck permits, and insurance premiums) and your variable operational expenses (such as diesel fuel, driver wages, toll fees, and maintenance/tire reserves). Sum these expenses together and divide the total by your monthly driven miles. Our trucking calculator handles this instantly to help owner-operators maintain a healthy profit margin.
+                  </p>
+                </div>
+                
+                <div className="space-y-2">
+                  <h4 className="font-extrabold text-slate-800 text-base">What parameters dictate a Rent vs. Buy decision?</h4>
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                    A Rent vs. Buy simulation models mortgage amortization, upfront down payments, closing costs, and home appreciation rates. It also incorporates hidden homeownership costs such as property tax, homeowners association (HOA) fees, insurance, and annual maintenance overhead. It compares this against rent prices, renters insurance, and the opportunity cost of investing your home down payment into index funds.
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-extrabold text-slate-800 text-base">How does credit card debt consolidation work?</h4>
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                    Debt consolidation merges multiple high-interest credit card balances into a single personal loan with a lower interest rate (APR). This lowers your monthly interest charges, meaning a larger portion of your monthly payment goes toward paying down the principal balance. Use our debt consolidation tool to calculate exact savings, monthly payment reductions, and your accelerated debt-free milestone.
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-extrabold text-slate-800 text-base">How can I forecast Google AdSense earnings?</h4>
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
+                    AdSense income is modeled using three core variables: daily or monthly pageviews, click-through rate (CTR), and average cost-per-click (CPC). The formula is: pageviews × (CTR / 100) × CPC. For example, a blog with 50,000 monthly pageviews, a 1.5% CTR (750 clicks), and an average CPC of $0.60 yields $450 in monthly revenue. Run simulations with our planner to set traffic and monetization goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Info grid / why client side */}
             <div id="how-it-works-heading" className="bg-[#1e3a8a] text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
               <div className="absolute right-0 bottom-0 w-80 h-80 bg-blue-900 rounded-full filter blur-3xl opacity-30 -mr-20 -mb-20"></div>

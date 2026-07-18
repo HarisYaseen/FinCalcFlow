@@ -1,0 +1,17 @@
+# FinCalc Flow
+
+> Free, private, serverless financial calculators and simulators running entirely client-side.
+
+## Core Calculators
+- [Rent vs. Buy Simulator](https://www.fincalcflow.com/rent-vs-buy) - Simulates down payments, mortgage payments, maintenance costs, and home appreciation compared to renting and investing down payments into securities.
+- [Trucking Cost Per Mile](https://www.fincalcflow.com/cost-per-mile) - Helps owner-operators track monthly fixed costs and variable operational expenses (fuel, tires, wages) to calculate cost per mile (CPM).
+- [Debt Consolidation Planner](https://www.fincalcflow.com/debt-consolidation) - Models interest savings and accelerated payoffs of credit card debts consolidated into personal loans.
+- [AdSense Revenue Planner](https://www.fincalcflow.com/revenue-planner) - Estimates ad earnings based on traffic impressions, click-through rates (CTR), and cost-per-click (CPC).
+
+## Metadata & Policies
+- [About Us & Math Formulas](https://www.fincalcflow.com/about) - Story, accuracy approach, and formulas/equations.
+- [Privacy Policy](https://www.fincalcflow.com/privacy) - Client-side processing terms, ad cookies opt-out, COPPA, and data privacy policies.
+
+## Architectural Notes
+- **100% Client-Side Engine**: FinCalc Flow stores and processes all numerical inputs within the client browser's memory. No financial or trucking telemetry data is transmitted to external servers.
+- **Service Worker (PWA)**: Active caching for offline compatibility.
