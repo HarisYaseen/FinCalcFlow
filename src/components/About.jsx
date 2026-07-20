@@ -69,30 +69,46 @@ export default function About() {
           Our Professional-Grade Tools
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-slate-600">
-          <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-            <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-1">
-              <Landmark className="w-4 h-4 text-blue-500" /> Rent vs. Buy Simulator
+          <a
+            href="/rent-vs-buy"
+            onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/rent-vs-buy'); window.dispatchEvent(new Event('popstate')); }}
+            className="p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-indigo-200 hover:bg-indigo-50/10 block transition-all group"
+          >
+            <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-1 group-hover:text-indigo-650 transition-colors">
+              <Landmark className="w-4 h-4 text-indigo-500" /> Rent vs. Buy Simulator
             </h3>
             <p className="text-xs text-slate-500">Compare renting versus purchasing a home with comprehensive equity growth comparisons.</p>
-          </div>
-          <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-            <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-1">
-              <Truck className="w-4 h-4 text-blue-500" /> Trucking Cost Per Mile
+          </a>
+          <a
+            href="/cost-per-mile"
+            onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/cost-per-mile'); window.dispatchEvent(new Event('popstate')); }}
+            className="p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-indigo-200 hover:bg-indigo-50/10 block transition-all group"
+          >
+            <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-1 group-hover:text-indigo-650 transition-colors">
+              <Truck className="w-4 h-4 text-indigo-500" /> Trucking Cost Per Mile
             </h3>
             <p className="text-xs text-slate-500">Calculate trucking operations expenses, fuel efficiencies, and driver break-even points.</p>
-          </div>
-          <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-            <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-1">
-              <CreditCard className="w-4 h-4 text-emerald-500" /> Debt Consolidation Optimizer
+          </a>
+          <a
+            href="/debt-consolidation"
+            onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/debt-consolidation'); window.dispatchEvent(new Event('popstate')); }}
+            className="p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-indigo-200 hover:bg-indigo-50/10 block transition-all group"
+          >
+            <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-1 group-hover:text-indigo-650 transition-colors">
+              <CreditCard className="w-4 h-4 text-indigo-500" /> Debt Consolidation Optimizer
             </h3>
             <p className="text-xs text-slate-500">Calculate payoff acceleration and interest savings through personal loan consolidation.</p>
-          </div>
-          <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-            <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-1">
+          </a>
+          <a
+            href="/revenue-planner"
+            onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/revenue-planner'); window.dispatchEvent(new Event('popstate')); }}
+            className="p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-indigo-200 hover:bg-indigo-50/10 block transition-all group"
+          >
+            <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-1 group-hover:text-indigo-650 transition-colors">
               <Cpu className="w-4 h-4 text-indigo-500" /> AdSense Revenue Planner
             </h3>
             <p className="text-xs text-slate-500">Estimate traffic requirement metrics and click rate yields to hit revenue goals.</p>
-          </div>
+          </a>
         </div>
       </div>
 

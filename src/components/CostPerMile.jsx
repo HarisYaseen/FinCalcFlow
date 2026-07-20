@@ -481,6 +481,10 @@ export default function CostPerMile({ currencySymbol }) {
           </div>
         </div>
 
+        <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-500">
+          Operating a logistics enterprise requires sharp financial modeling across multiple platforms. If you run content channels or digital resources supporting the transport industry and want to evaluate your digital earning potential, try our <a href="/revenue-planner" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/revenue-planner'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-600 font-bold hover:underline">Google AdSense Revenue Planner</a>.
+        </div>
+
       </div>
 
     </div>

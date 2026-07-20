@@ -389,6 +389,10 @@ export default function RevenuePlanner() {
           </div>
         </div>
 
+        <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-500">
+          Website monetization models can be applied to physical logistics businesses that publish instructional content. If you are exploring how transportation expenses relate to online logistics blogs, utilize our <a href="/cost-per-mile" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/cost-per-mile'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-650 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.
+        </div>
+
       </div>
 
     </div>

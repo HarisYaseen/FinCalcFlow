@@ -25,17 +25,61 @@ const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
 const routes = [
   {
     path: 'rent-vs-buy',
-    title: 'Rent vs Buy Calculator 2026 – Compare Home Equity & Costs | FinCalc Flow',
-    description: 'Free rent vs buy calculator. Model mortgage amortization, home appreciation, HOA fees, and opportunity cost side-by-side to see which builds more wealth over 5, 15, or 30 years.',
+    title: 'Rent vs Buy Calculator – Compare 2026 Home Wealth | FinCalc',
+    description: 'Model your home appreciation, interest, and stock market opportunity cost. See which path builds more wealth over a 10-year timeline. Try it now.',
     canonical: 'https://www.fincalcflow.com/rent-vs-buy',
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "FinancialCalculator",
-      "name": "Rent vs. Buy Simulator",
-      "url": "https://www.fincalcflow.com/rent-vs-buy",
-      "description": "Compare renting vs buying a home. Runs amortization schedules, compounding stock market opportunity costs, property taxes, and maintenance fees.",
-      "category": "Mortgage & Housing Calculator"
-    },
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Rent vs. Buy Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is renting ever the smarter long-term choice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Renting is often superior when home transaction costs are high, home appreciation rates are low, or stock market investment returns are strong. It also offers flexibility, avoids maintenance costs (which average 1% to 2% of the home value annually), and keeps your down payment capital liquid and compounding in index funds."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does PMI (Private Mortgage Insurance) affect the numbers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If your down payment is less than 20% of the home value, lenders require PMI. This fee (ranging from 0.3% to 1.5% of the loan amount annually) is an unrecoverable expense that increases your monthly mortgage outflow without building equity, tipping the scale in favor of renting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the \"5% Rule\"?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Coined by financial experts, the 5% Rule states that the annual unrecoverable cost of homeownership is roughly 5% of the home's value (1.5% property tax, 1% maintenance, and 2.5% cost of equity capital). If renting a similar home costs less than 5% of the purchase price annually, renting is mathematically favored."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long do I need to live in a house to break even?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Typically, it takes 4 to 7 years to offset the buying transaction costs (closing fees, lender fees) and selling costs (usually a 6% agent commission). If you plan to move in under 3 years, renting is almost always more financially advantageous."
+            }
+          }
+        ]
+      }
+    ],
     body: `
       <div class="max-w-4xl mx-auto px-4 py-12 space-y-12 text-left">
         <div class="text-center space-y-4">
@@ -63,11 +107,23 @@ const routes = [
 
         <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6">
           <h2 class="text-xl font-bold text-slate-900">Renting vs. Buying: A Complete Financial Analysis</h2>
-          <p class="text-slate-655 text-sm leading-relaxed">
-            Homeownership is a classic wealth generator, but buying a house carries high upfront transaction costs (closing fees, appraisal fees) and persistent, unrecoverable monthly costs (property taxes, homeowner insurance, and HOA fees). Renting keeps your cash liquid, letting you invest your down payment in standard market indexes.
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Deciding whether to rent or buy a home is one of the most critical personal finance decisions you will face. While homeownership is often touted as the ultimate wealth builder, buying a house carries high transaction friction and ongoing unrecoverable expenses. To evaluate both sides fairly, we must look beyond the simple comparison of a monthly rent check to a monthly mortgage statement. 
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            The secret to an accurate analysis lies in calculating the <strong>unrecoverable costs</strong> of both options. For tenants, the unrecoverable cost is simple: the entirety of their monthly rent payment. For homeowners, however, unrecoverable costs are split across several categories, including mortgage interest, property taxes, homeowners insurance, HOA fees, maintenance reserves (typically 1% to 2% of the home value per year), and the opportunity cost of their invested capital. The opportunity cost represents the returns you lose by tying up a large chunk of money in a down payment instead of keeping it compounding in a low-cost stock index fund.
           </p>
 
-          <h3 class="text-base font-bold text-slate-900">Worked Numeric Example (10-Year Timeline)</h3>
+          <h3 class="text-lg font-bold text-slate-900 mt-6">How to Use This Rent vs. Buy Calculator</h3>
+          <ol class="list-decimal pl-5 text-slate-600 text-sm space-y-2">
+            <li><strong>Input Home Details:</strong> Enter the target purchase price of the home, the estimated annual property appreciation rate, and the estimated annual rent inflation rate.</li>
+            <li><strong>Specify Loan Terms:</strong> Add your down payment percentage, interest rate, and mortgage duration (standard is 30 years).</li>
+            <li><strong>Enter Ownership Costs:</strong> Estimate your annual maintenance costs (1.5% is typical), annual property taxes, annual home insurance, and any monthly HOA fees.</li>
+            <li><strong>Enter Renter Settings:</strong> Input the monthly rent of a comparable property, renters insurance, and the projected annual rate of return if you were to invest your down payment in the stock market.</li>
+            <li><strong>Review the Year-by-Year Schedule:</strong> Examine the generated net worth schedules over 10, 20, or 30 years to see when the home purchase breaks even against renting.</li>
+          </ol>
+
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Worked Numeric Example (10-Year Timeline)</h3>
           <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-600 space-y-3 leading-relaxed">
             <p><strong>Scenario:</strong> Purchase of a $400,000 home vs renting an identical property for $1,800/month over a 10-year period.</p>
             <ul class="list-disc pl-5 space-y-2">
@@ -78,12 +134,12 @@ const routes = [
             </ul>
           </div>
 
-          <h3 class="text-base font-bold text-slate-900">Frequently Asked Questions</h3>
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Frequently Asked Questions</h3>
           <div class="space-y-4">
             <div>
               <h4 class="font-extrabold text-slate-800 text-sm">Is renting ever the smarter long-term choice?</h4>
               <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
-                Yes. Renting is often superior when transaction costs are high, home appreciation rates are low, or stock market investment returns are strong. It also offers flexibility, avoids maintenance costs (which average 1% to 2% of the home value annually), and keeps your down payment capital liquid and compounding.
+                Yes. Renting is often superior when transaction costs are high, home appreciation rates are low, or stock market investment returns are strong. It also offers flexibility, avoids maintenance costs (which average 1% to 2% of the home value annually), and keeps your down payment capital liquid and compounding in index funds.
               </p>
             </div>
             <div>
@@ -98,6 +154,16 @@ const routes = [
                 Coined by financial experts, the 5% Rule states that the annual unrecoverable cost of homeownership is roughly 5% of the home's value (1.5% property tax, 1% maintenance, and 2.5% cost of equity capital). If renting a similar home costs less than 5% of the purchase price annually, renting is mathematically favored.
               </p>
             </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">How long do I need to live in a house to break even?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                Typically, it takes 4 to 7 years to offset the buying transaction costs (closing fees, lender fees) and selling costs (usually a 6% agent commission). If you plan to move in under 3 years, renting is almost always more financially advantageous.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-100 text-xs text-slate-500">
+            Evaluating long-term cash flows and debt loads is critical when planning your financial future. If you are also carrying high-interest consumer debt that impacts your ability to save for a home down payment, explore our interactive <a href="/debt-consolidation" class="text-indigo-650 font-bold hover:underline">Debt Consolidation Calculator</a> to see how much you can save on interest.
           </div>
         </div>
       </div>
@@ -105,17 +171,65 @@ const routes = [
   },
   {
     path: 'cost-per-mile',
-    title: 'Trucking Cost Per Mile Calculator | Owner-Operator Expense Planner',
-    description: 'Calculate your commercial trucking cost per mile (CPM). Model fixed monthly overhead, fuel efficiency, preventative maintenance, and driver break-even margins.',
+    title: 'Trucking Cost Per Mile Calculator – Free 2026 CPM | FinCalc',
+    description: 'Calculate your trucking cost per mile in minutes. Model fixed overhead, fuel efficiency, driver salary, and maintenance reserves. Try it today.',
     canonical: 'https://www.fincalcflow.com/cost-per-mile',
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "FinancialCalculator",
-      "name": "Trucking Cost Per Mile Calculator",
-      "url": "https://www.fincalcflow.com/cost-per-mile",
-      "description": "Calculate commercial trucking cost per mile (CPM). Computes fixed overhead, variable operational fuel costs, driver wages, and maintenance reserves.",
-      "category": "Business Expense Calculator"
-    },
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Trucking Cost Per Mile Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does deadhead mileage impact my cost per mile?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Deadhead miles are miles driven with an empty trailer, generating zero revenue. They burn fuel and wear out tires just like loaded miles. To calculate your true CPM, you must divide your total monthly expenses by the total miles driven (loaded + deadhead), not just the revenue-generating loaded miles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I pay myself a salary in my CPM calculation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many owner-operators fail because they count whatever profit is left over as their wage. By treating your targeted personal salary as an expense in your CPM, you ensure that the freight rates you accept cover both operational overhead and your hard work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I recalculate my CPM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We recommend reviewing and adjusting your trucking CPM monthly. Fuel price volatility, unexpected maintenance bills, and shifts in seasonal driving volume can rapidly alter operational margins."
+            },
+            "@type": "Question",
+            "name": "What is a good cost per mile for an owner-operator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In 2026, the average owner-operator cost per mile typically ranges between $1.60 and $2.10, depending heavily on fuel prices, equipment lease structures, and insurance history. Minimizing deadhead miles is key to keeping this figure as low as possible."
+            },
+            "@type": "Question",
+            "name": "How does fuel efficiency affect overall profitability?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because fuel represents the single largest variable expense in logistics, even a minor improvement in MPG has a huge impact. For example, moving from 6.0 MPG to 7.0 MPG at $4.00/gallon diesel drops your fuel cost from $0.67 to $0.57 per mile, saving $1,000 for every 10,000 miles driven."
+            }
+          }
+        ]
+      }
+    ],
     body: `
       <div class="max-w-4xl mx-auto px-4 py-12 space-y-12 text-left">
         <div class="text-center space-y-4">
@@ -123,7 +237,7 @@ const routes = [
             Logistics & Freight
           </span>
           <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Trucking Cost Per Mile Calculator: Determine Operational Margins
+            Trucking Cost Per Mile Calculator – Free CPM & Expense Planner
           </h1>
           <p class="text-slate-500 text-base max-w-xl mx-auto">
             Calculate your trucking operational cost per mile (CPM). Balance fixed overhead, variable fuel consumption, driver salary allocations, and preventative reserves.
@@ -143,11 +257,24 @@ const routes = [
 
         <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6">
           <h2 class="text-xl font-bold text-slate-900">How to Calculate Commercial Cost Per Mile</h2>
-          <p class="text-slate-655 text-sm leading-relaxed">
+          <p class="text-slate-600 text-sm leading-relaxed">
             In the logistics industry, knowing your Cost Per Mile (CPM) is the difference between operating a profitable carrier and filing for bankruptcy. A driver accepting freight paying $2.20 per mile may lose money if their CPM is $1.90 and they have to drive 200 unpaid "deadhead" miles to secure the load.
           </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            To figure out how much it costs to run your rig, your operating expenses must be split into two distinct categories: <strong>Fixed Costs</strong> (expenses that stay the same regardless of how many miles you drive) and <strong>Variable Costs</strong> (expenses that change dynamically based on your driving distance). Fixed costs include truck loan or lease payments, physical damage and cargo insurance premiums, permit and registration fees, and subscriptions like electronic logging devices (ELDs). Variable costs scale with mileage, including diesel fuel, tires, preventative maintenance (such as oil and filter changes), tolls, and driver wages.
+          </p>
 
-          <h3 class="text-base font-bold text-slate-900">Worked Numeric Example</h3>
+          <h3 class="text-lg font-bold text-slate-900 mt-6">How to Use This CPM Calculator</h3>
+          <ol class="list-decimal pl-5 text-slate-600 text-sm space-y-2">
+            <li><strong>Define Monthly Mileage:</strong> Enter the average number of miles your truck drives in a month, including both loaded and empty (deadhead) runs.</li>
+            <li><strong>Input Monthly Fixed Overhead:</strong> List all fixed bills that do not change based on mileage (e.g. lease payments, commercial insurance, software costs).</li>
+            <li><strong>Specify Fuel Costs:</strong> Enter your average cost per gallon of diesel and your vehicle's average fuel economy (MPG).</li>
+            <li><strong>Enter Maintenance Reserves:</strong> Add the estimated cost per mile for tires, routine maintenance, oil changes, and road tolls.</li>
+            <li><strong>Allocate Driver Pay:</strong> Input your targeted personal salary ( cents per mile) or the wage you pay to an employee driver.</li>
+            <li><strong>Calculate Break-Even Rate:</strong> Review the dashboard to see your exact operational cost per mile and breakeven rates.</li>
+          </ol>
+
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Worked Numeric Example</h3>
           <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-600 space-y-3 leading-relaxed">
             <p><strong>Scenario:</strong> Owner-operator driving 9,000 operational miles per month.</p>
             <ul class="list-disc pl-5 space-y-2">
@@ -159,7 +286,7 @@ const routes = [
             </ul>
           </div>
 
-          <h3 class="text-base font-bold text-slate-900">Frequently Asked Questions</h3>
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Frequently Asked Questions</h3>
           <div class="space-y-4">
             <div>
               <h4 class="font-extrabold text-slate-800 text-sm">How does deadhead mileage impact my cost per mile?</h4>
@@ -179,6 +306,22 @@ const routes = [
                 We recommend reviewing and adjusting your trucking CPM monthly. Fuel price volatility, unexpected maintenance bills, and shifts in seasonal driving volume can rapidly alter operational margins.
               </p>
             </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">What is a good cost per mile for an owner-operator?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                In 2026, the average owner-operator cost per mile typically ranges between $1.60 and $2.10, depending heavily on fuel prices, equipment lease structures, and insurance history. Minimizing deadhead miles is key to keeping this figure as low as possible.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">How does fuel efficiency affect overall profitability?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                Because fuel represents the single largest variable expense in logistics, even a minor improvement in MPG has a huge impact. For example, moving from 6.0 MPG to 7.0 MPG at $4.00/gallon diesel drops your fuel cost from $0.67 to $0.57 per mile, saving $1,000 for every 10,000 miles driven.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-100 text-xs text-slate-500">
+            Operating a logistics enterprise requires sharp financial modeling across multiple platforms. If you run content channels or digital resources supporting the transport industry and want to evaluate your digital earning potential, try our <a href="/revenue-planner" class="text-indigo-650 font-bold hover:underline">Google AdSense Revenue Planner</a>.
           </div>
         </div>
       </div>
@@ -186,17 +329,69 @@ const routes = [
   },
   {
     path: 'debt-consolidation',
-    title: 'Debt Consolidation Calculator | Credit Card Payoff Tracker & Optimizer',
-    description: 'Find out how much interest you can save by consolidating multiple credit card balances into a single structured low-interest personal loan.',
+    title: 'Debt Consolidation Calculator – Save Card Interest | FinCalc',
+    description: 'Find out how much interest you can save by consolidating multiple credit card balances into a single low-interest personal loan. Calculate now.',
     canonical: 'https://www.fincalcflow.com/debt-consolidation',
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "FinancialCalculator",
-      "name": "Debt Consolidation Calculator",
-      "url": "https://www.fincalcflow.com/debt-consolidation",
-      "description": "Evaluate debt consolidation loan options. Computes weighted average credit card APR and models interest savings compared to credit card minimum payments.",
-      "category": "Debt Payoff Calculator"
-    },
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Debt Consolidation Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does debt consolidation hurt my credit score?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Initially, applying for a personal loan triggers a hard credit inquiry, which may cause a minor temporary drop of 5–10 points. However, in the long term, moving credit card debt to a personal loan lowers your credit utilization ratio (which counts for 30% of your score), which can lead to a significant credit score boost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between debt consolidation and debt settlement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Debt consolidation is a new loan that pays off existing creditors in full, keeping your accounts in good standing. Debt settlement involves stopping payments, falling into delinquency, and negotiating to pay less than you owe. Settlement severely damages your credit history and carries tax liabilities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is the weighted average APR calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It aggregates cards based on size, using the formula: Sum(Card Balance * Card APR) / Total Balance. This ensures that larger balance credit cards weigh more heavily on your combined average interest rate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are there fees associated with debt consolidation loans?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many lenders charge an origination fee ranging from 1% to 8% of the loan amount, which is deducted from the loan proceeds. Make sure to factor this fee into your calculations to ensure consolidation is still mathematically beneficial."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I pay off my debt consolidation loan early?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most reputable lenders do not charge prepayment penalties. This means you can pay extra toward your principal balance whenever you have spare cash, allowing you to pay off the loan even faster and save even more on interest."
+            }
+          }
+        ]
+      }
+    ],
     body: `
       <div class="max-w-4xl mx-auto px-4 py-12 space-y-12 text-left">
         <div class="text-center space-y-4">
@@ -204,7 +399,7 @@ const routes = [
             Debt & Credit
           </span>
           <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Debt Consolidation Calculator: Optimize Credit Card Payoffs
+            Debt Consolidation Calculator – Save Money & Pay Off Balances Faster
           </h1>
           <p class="text-slate-500 text-base max-w-xl mx-auto">
             Evaluate moving multiple credit card balances to a single, lower-interest fixed-rate personal loan. See interest savings and calculate your exact debt-free date.
@@ -224,11 +419,23 @@ const routes = [
 
         <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6">
           <h2 class="text-xl font-bold text-slate-900">The Power of Revolving Debt Consolidation</h2>
-          <p class="text-slate-655 text-sm leading-relaxed">
-            Credit card companies calculate monthly minimum payments as a tiny percentage of your outstanding balance. This makes payoffs take decades and maximizes interest charges. Consolidating into an installment loan replaces variable, high-interest balances with a structured fixed rate and a guaranteed debt-free date.
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Consolidating high-interest consumer debt is one of the most effective strategies to regain control of your personal finances. Credit card companies structure monthly minimum payments to pay off only a tiny portion of your principal balance while compounding interest daily. This ensures that you remain in debt for decades while paying several times the original amount borrowed.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            By shifting high-interest revolving credit card balances into a structured, fixed-rate personal installment loan, you can simplify multiple monthly payments into one. More importantly, consolidation lowers your overall annual percentage rate (APR), ensuring that a larger portion of your monthly payment goes toward reducing your actual principal balance rather than lining the pockets of credit card companies.
           </p>
 
-          <h3 class="text-base font-bold text-slate-900">Worked Numeric Example</h3>
+          <h3 class="text-lg font-bold text-slate-900 mt-6">How to Use This Debt Calculator</h3>
+          <ol class="list-decimal pl-5 text-slate-600 text-sm space-y-2">
+            <li><strong>List Outstanding Balances:</strong> Compile your credit card accounts, noting down the current balance, APR (interest rate), and required minimum payment for each.</li>
+            <li><strong>Add Accounts to the Builder:</strong> Input the card balances and interest rates to calculate the combined weighted average interest rate of your revolving debt.</li>
+            <li><strong>Specify Consolidated Loan Details:</strong> Enter the proposed interest rate and payback terms (e.g. 36 or 60 months) of your new consolidation loan offer.</li>
+            <li><strong>Compare Results:</strong> Study the visual comparison to analyze starting payments, lifetime interest costs, and the exact month you will become debt-free.</li>
+            <li><strong>Optimize and Decide:</strong> Adjust the monthly payments to find the shortest timeline you can comfortably afford to maximize interest savings.</li>
+          </ol>
+
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Worked Numeric Example</h3>
           <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-600 space-y-3 leading-relaxed">
             <p><strong>Scenario:</strong> Consolidating $20,000 in credit card debt across three accounts.</p>
             <ul class="list-disc pl-5 space-y-2">
@@ -239,7 +446,7 @@ const routes = [
             </ul>
           </div>
 
-          <h3 class="text-base font-bold text-slate-900">Frequently Asked Questions</h3>
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Frequently Asked Questions</h3>
           <div class="space-y-4">
             <div>
               <h4 class="font-extrabold text-slate-800 text-sm">Does debt consolidation hurt my credit score?</h4>
@@ -259,6 +466,22 @@ const routes = [
                 It aggregates cards based on size, using the formula: <code class="bg-slate-100 px-1 py-0.5 rounded">∑(Card Balance × Card APR) ÷ Total Balance</code>. This ensures that larger balance credit cards weigh more heavily on your combined average interest rate.
               </p>
             </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">Are there fees associated with debt consolidation loans?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                Yes. Many lenders charge an origination fee ranging from 1% to 8% of the loan amount, which is deducted from the loan proceeds. Make sure to factor this fee into your calculations to ensure consolidation is still mathematically beneficial.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">Can I pay off my debt consolidation loan early?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                Most reputable lenders do not charge prepayment penalties. This means you can pay extra toward your principal balance whenever you have spare cash, allowing you to pay off the loan even faster and save even more on interest.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-100 text-xs text-slate-500">
+            Freeing up monthly cash flow by optimizing high-interest debt is the first step toward long-term asset building. If you are wondering whether to direct your recovered cash towards buying a home or renting and investing, check out our interactive <a href="/rent-vs-buy" class="text-indigo-650 font-bold hover:underline">Rent vs. Buy Calculator</a>.
           </div>
         </div>
       </div>
@@ -266,17 +489,69 @@ const routes = [
   },
   {
     path: 'revenue-planner',
-    title: 'Google AdSense Revenue Calculator | Website Traffic & CPM Planner',
-    description: 'Estimate your website monetization potential. Calculate daily and monthly earnings based on search traffic, Click-Through Rate (CTR), and Cost-Per-Click (CPC) variables.',
+    title: 'Google AdSense Revenue Calculator – Plan Ad Income | FinCalc',
+    description: 'Estimate your website\'s ad earnings instantly. Model pageviews, CTR, and CPC bids to find your traffic requirements. Try the simulator today.',
     canonical: 'https://www.fincalcflow.com/revenue-planner',
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "FinancialCalculator",
-      "name": "AdSense Traffic & Revenue Planner",
-      "url": "https://www.fincalcflow.com/revenue-planner",
-      "description": "Calculate projected Google AdSense ad revenue. Estimates earnings based on monthly pageviews, click-through rates (CTR), and average CPC bids.",
-      "category": "Website Monetization Calculator"
-    },
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AdSense Revenue Planner",
+        "operatingSystem": "All",
+        "applicationCategory": "WebMonetizationApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a realistic Click-Through Rate (CTR) for AdSense?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For most informational blogs, CTR ranges between 1% and 2.5%. Utility web tools and calculator pages often achieve higher CTRs (3% to 6%) because user engagement is higher and ads are positioned in high-interaction areas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Cost Per Click (CPC) vary by country?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CPC is heavily influenced by user purchasing power. Traffic from Tier 1 countries (US, UK, Canada, Australia) yields significantly higher CPC bids than Tier 2 or Tier 3 countries, as advertiser competition in those regions is intense."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I increase my website's ad RPM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Revenue Per Mille (RPM) can be increased by producing longer, high-quality content to keep users on-page, optimizing ad placements above the fold, and targeting search queries with transactional advertiser intent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between AdSense CPC and CPM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CPC (Cost Per Click) pays you only when a user clicks on an ad. CPM (Cost Per Mille) pays you a flat rate for every 1,000 times an ad is viewed, regardless of clicks. Google AdSense automatically serves a mix of both to maximize your earnings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use AdSense alongside other ad networks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many publishers use AdSense in conjunction with header bidding networks or direct sponsorship deals, provided the ads do not mimic Google's layout or violate AdSense placement policies."
+            }
+          }
+        ]
+      }
+    ],
     body: `
       <div class="max-w-4xl mx-auto px-4 py-12 space-y-12 text-left">
         <div class="text-center space-y-4">
@@ -304,11 +579,23 @@ const routes = [
 
         <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6">
           <h2 class="text-xl font-bold text-slate-900">How to Forecast Website Ad Revenue</h2>
-          <p class="text-slate-655 text-sm leading-relaxed">
-            Many website creators believe that traffic volume is the only variable that matters. However, website monetization is highly dependent on your content niche. High-value CPC niches (like finance, business insurance, and enterprise software) attract heavy advertiser bidding, while general news and entertainment niches generate very low ad yields.
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Understanding how website traffic translates into advertisement earnings is crucial for web publishers, bloggers, and digital entrepreneurs. Many new website owners believe that traffic volume is the only variable that matters. However, online advertising income is highly dependent on your specific content niche and the geographic origin of your traffic.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            High-value CPC niches (like finance, business insurance, and enterprise software) attract heavy advertiser bidding, while general news and entertainment niches generate very low ad yields. This tool uses standard industry monetization equations to help you plan your content strategy and discover how many pageviews you need to generate your target passive income.
           </p>
 
-          <h3 class="text-base font-bold text-slate-900">Niche Comparison Example (Targeting $100/Day or $3,000/Month)</h3>
+          <h3 class="text-lg font-bold text-slate-900 mt-6">How to Use This Revenue Planner</h3>
+          <ol class="list-decimal pl-5 text-slate-600 text-sm space-y-2">
+            <li><strong>Select Traffic Volume:</strong> Use the pageviews slider to specify your estimated daily or monthly website traffic.</li>
+            <li><strong>Estimate Click-Through Rate (CTR):</strong> Input your estimated CTR (percent of visitors who click on ads, usually between 1.5% and 3.5%).</li>
+            <li><strong>Specify Cost-Per-Click (CPC):</strong> Enter the targeted CPC value for your niche (e.g. $0.20 for gossip, $2.50 for legal).</li>
+            <li><strong>Observe Projected Earnings:</strong> Analyze the dashboard showing daily, monthly, and yearly income projections.</li>
+            <li><strong>Simulate and Target:</strong> Adjust variables to determine what traffic goals you need to meet target monetization thresholds.</li>
+          </ol>
+
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Niche Comparison Example (Targeting $100/Day or $3,000/Month)</h3>
           <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-600 space-y-3 leading-relaxed">
             <p>To generate $3,000 a month in Google AdSense income, let's compare two different niche websites:</p>
             <ul class="list-disc pl-5 space-y-2">
@@ -323,7 +610,7 @@ const routes = [
             </ul>
           </div>
 
-          <h3 class="text-base font-bold text-slate-900">Frequently Asked Questions</h3>
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Frequently Asked Questions</h3>
           <div class="space-y-4">
             <div>
               <h4 class="font-extrabold text-slate-800 text-sm">What is a realistic Click-Through Rate (CTR) for AdSense?</h4>
@@ -343,6 +630,22 @@ const routes = [
                 Revenue Per Mille (RPM) can be increased by producing longer, high-quality content to keep users on-page, optimizing ad placements above the fold, and targeting search queries with transactional advertiser intent.
               </p>
             </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">What is the difference between AdSense CPC and CPM?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                CPC (Cost Per Click) pays you only when a user clicks on an ad. CPM (Cost Per Mille) pays you a flat rate for every 1,000 times an ad is viewed, regardless of clicks. Google AdSense automatically serves a mix of both to maximize your earnings.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">Can I use AdSense alongside other ad networks?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                Yes. Many publishers use AdSense in conjunction with header bidding networks or direct sponsorship deals, provided the ads do not mimic Google's layout or violate AdSense placement policies.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-100 text-xs text-slate-500">
+            Website monetization models can be applied to physical logistics businesses that publish instructional content. If you are exploring how transportation expenses relate to online logistics blogs, utilize our <a href="/cost-per-mile" class="text-indigo-650 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.
           </div>
         </div>
       </div>
@@ -350,16 +653,69 @@ const routes = [
   },
   {
     path: 'about',
-    title: 'About Us & Math Methodology | FinCalc Flow',
-    description: 'Learn about the mission behind FinCalc Flow, our commitment to serverless financial privacy, and the mathematical formulas powering our calculators.',
+    title: 'About Us & Calculator Math Methodology | FinCalc Flow',
+    description: 'Learn about FinCalc Flow, our dedication to client-side data privacy, and the mathematical formulas powering our financial tools. Meet the developers.',
     canonical: 'https://www.fincalcflow.com/about',
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "name": "About FinCalc Flow",
-      "url": "https://www.fincalcflow.com/about",
-      "description": "Learn about the mission, values, privacy commitment, and math formulas behind FinCalc Flow tools."
-    },
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "FinCalc Flow Suite",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is my financial data stored on your servers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. FinCalc Flow is a serverless application. All calculation engines are written in client-side JavaScript, meaning all math is processed on your own device. We do not collect, store, or transmit any of your personal financial inputs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are the tools on FinCalc Flow free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, 100% free. There are no paywalls, hidden fees, or premium subscriptions. We display minimal Google AdSense advertisements to help cover domain registration and hosting costs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use these calculators offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Because our calculator code is packaged entirely inside your browser's initial download, you can load our website, disconnect from the internet, and continue performing calculations completely offline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you ensure the accuracy of the calculators?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All of our tools are double-checked against industry-standard financial formulas, banking APIs, and standard amortization models. However, please remember that calculations are estimates and do not constitute professional financial advice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I request a new calculator or report a bug?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We love feedback and suggestions for new tools! You can submit request forms or report errors directly through our dedicated Contact Us page, and our developer will review it."
+            }
+          }
+        ]
+      }
+    ],
     body: `
       <div class="max-w-4xl mx-auto px-4 py-12 space-y-12 text-left">
         <div class="text-center space-y-4">
@@ -367,34 +723,47 @@ const routes = [
             About Our Hub
           </span>
           <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            About FinCalc Flow & Calculator Math
+            About FinCalc Flow – Serverless Financial Calculators & Mathematical Formulas
           </h1>
           <p class="text-slate-500 text-base max-w-xl mx-auto">
-            Learn about our mission, our commitment to serverless data privacy, and the mathematical formulas powering our calculators.
+            Welcome to FinCalc Flow, a premier collection of free, high-performance financial calculators built entirely for the modern web. Our mission is to provide clear, actionable financial models with absolute privacy, running all calculations locally in your web browser.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-4">
             <h2 class="text-lg font-bold text-slate-900">Our Mission & Story</h2>
-            <p class="text-slate-655 text-sm leading-relaxed">
+            <p class="text-slate-600 text-sm leading-relaxed">
               FinCalc Flow was created out of frustration with existing online financial tools. Most calculators today are cluttered with heavy ads, pushy popup tracking consent forms, and slow backend servers that track your inputs. We built a completely free, professional-grade financial calculator hub that operates 100% on the client side.
             </p>
           </div>
           <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-4">
             <h2 class="text-lg font-bold text-slate-900">Who We Are</h2>
-            <p class="text-slate-655 text-sm leading-relaxed">
+            <p class="text-slate-600 text-sm leading-relaxed">
               FinCalc Flow is built and maintained by an independent developer dedicated to financial literacy and software excellence. Our focus is to provide standard-compliant mathematical models that require zero sign-ups or user profiles.
             </p>
           </div>
         </div>
 
         <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6">
-          <h2 class="text-xl font-bold text-slate-900">Mathematical Formulas & Methodologies</h2>
+          <h2 class="text-xl font-bold text-slate-900">How to Verify Our Mathematical Formulas</h2>
+          <ol class="list-decimal pl-5 text-slate-600 text-sm space-y-2">
+            <li><strong>Select the Formula Category:</strong> Scroll down to view formulas for housing amortization, trucking cost per mile, and debt payoff optimization.</li>
+            <li><strong>Verify Key Variables:</strong> Identify variables like interest rate (r), principal (P), monthly installments, and fuel efficiency.</li>
+            <li><strong>Run a Sample Calculation:</strong> Use standard calculator tools or Excel to run the math manually using the given formulas.</li>
+            <li><strong>Compare Results:</strong> Check your manual calculations against the dynamic output produced on our interactive tool pages.</li>
+          </ol>
+
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Worked Math Verification Example</h3>
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-600 space-y-3 leading-relaxed">
+            <p><strong>Mortgage Amortization Equation Check:</strong> For a house purchase of $300,000 with a 30-year fixed rate of 6%, the formula calculates a monthly principal and interest payment of $1,798.65. Our code calculates this client-side using standard financial functions, verifying the result down to the last decimal place before presenting it in your browser. This ensures that the results you see on FinCalc Flow match what you would receive from a commercial bank or professional financial advisor.</p>
+          </div>
+
+          <h2 class="text-xl font-bold text-slate-900 pt-6">Mathematical Formulas & Methodologies</h2>
           <div class="space-y-6">
             <div>
               <h3 class="font-bold text-slate-900 text-sm">1. Rent vs. Buy Mortgage Amortization</h3>
-              <p class="text-slate-655 text-xs sm:text-sm mt-1 leading-relaxed">
+              <p class="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
                 The monthly Principal & Interest (P&I) payment is calculated using:
                 <br><code class="block my-2 p-2 bg-slate-50 border border-slate-200 rounded font-mono text-center">M = P * [r(1+r)ⁿ] / [(1+r)ⁿ - 1]</code>
                 Where <code>P</code> is the mortgage principal, <code>r</code> is monthly interest, and <code>n</code> is total months.
@@ -402,18 +771,56 @@ const routes = [
             </div>
             <div>
               <h3 class="font-bold text-slate-900 text-sm">2. Trucking Cost Per Mile (CPM)</h3>
-              <p class="text-slate-655 text-xs sm:text-sm mt-1 leading-relaxed">
+              <p class="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
                 Our trucking calculator aggregates monthly operating costs and divides by mileage driven:
                 <br><code class="block my-2 p-2 bg-slate-50 border border-slate-200 rounded font-mono text-center">Cost Per Mile = [Fixed Costs + Fuel Costs + Maintenance Costs] / Miles Driven</code>
               </p>
             </div>
             <div>
               <h3 class="font-bold text-slate-900 text-sm">3. Debt Consolidation Loan Amortization</h3>
-              <p class="text-slate-655 text-xs sm:text-sm mt-1 leading-relaxed">
+              <p class="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
                 Compares revolving card minimum payoff schedules month-by-month against structured installment payments:
                 <br><code class="block my-2 p-2 bg-slate-50 border border-slate-200 rounded font-mono text-center">Monthly Loan Payment = Balance * [r(1+r)ⁿ] / [(1+r)ⁿ - 1]</code>
               </p>
             </div>
+          </div>
+
+          <h3 class="text-lg font-bold text-slate-900 mt-6">Frequently Asked Questions</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">Is my financial data stored on your servers?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                No. FinCalc Flow is a serverless application. All calculation engines are written in client-side JavaScript, meaning all math is processed on your own device. We do not collect, store, or transmit any of your personal financial inputs.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">Are the tools on FinCalc Flow free to use?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                Yes, 100% free. There are no paywalls, hidden fees, or premium subscriptions. We display minimal Google AdSense advertisements to help cover domain registration and hosting costs.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">Can I use these calculators offline?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                Yes. Because our calculator code is packaged entirely inside your browser's initial download, you can load our website, disconnect from the internet, and continue performing calculations completely offline.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">How do you ensure the accuracy of the calculators?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                All of our tools are double-checked against industry-standard financial formulas, banking APIs, and standard amortization models. However, please remember that calculations are estimates and do not constitute professional financial advice.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-800 text-sm">How can I request a new calculator or report a bug?</h4>
+              <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
+                We love feedback and suggestions for new tools! You can submit request forms or report errors directly through our dedicated <a href="/contact" class="text-indigo-650 font-bold hover:underline">Contact Us</a> page, and our developer will review it.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-100 text-xs text-slate-500">
+            We are constantly expanding our collection of visual tools to help you make smarter financial decisions. If you are currently dealing with credit card balances and want to see how these math formulas can help you save on interest, visit our <a href="/debt-consolidation" class="text-indigo-650 font-bold hover:underline">Debt Consolidation Calculator</a>.
           </div>
         </div>
       </div>

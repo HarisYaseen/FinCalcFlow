@@ -554,6 +554,10 @@ export default function DebtConsolidation({ currencySymbol }) {
           </div>
         </div>
 
+        <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-500">
+          Freeing up monthly cash flow by optimizing high-interest debt is the first step toward long-term asset building. If you are wondering whether to direct your recovered cash towards buying a home or renting and investing, check out our interactive <a href="/rent-vs-buy" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/rent-vs-buy'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-650 font-bold hover:underline">Rent vs. Buy Calculator</a>.
+        </div>
+
       </div>
 
     </div>

@@ -682,6 +682,10 @@ export default function RentVsBuy({ currencySymbol }) {
           </div>
         </div>
 
+        <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-500">
+          Evaluating long-term cash flows and debt loads is critical when planning your financial future. If you are also carrying high-interest consumer debt that impacts your ability to save for a home down payment, explore our interactive <a href="/debt-consolidation" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/debt-consolidation'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-600 font-bold hover:underline">Debt Consolidation Calculator</a> to see how much you can save on interest.
+        </div>
+
       </div>
     </div>
   );
