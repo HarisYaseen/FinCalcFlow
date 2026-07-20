@@ -5,6 +5,8 @@ const DebtConsolidation = lazy(() => import('./components/DebtConsolidation'));
 const RevenuePlanner = lazy(() => import('./components/RevenuePlanner'));
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const About = lazy(() => import('./components/About'));
+const Terms = lazy(() => import('./components/Terms'));
+const Contact = lazy(() => import('./components/Contact'));
 // Lightweight SVG Icon Components to eliminate heavy lucide-react dependency from critical entry bundle
 const IconTrendingUp = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -86,7 +88,7 @@ export default function App() {
   useEffect(() => {
     const handleLocationChange = () => {
       const path = window.location.pathname.replace(/^\/|\/$/g, ''); // strip leading/trailing slashes
-      if (['rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner', 'privacy', 'about'].includes(path)) {
+      if (['rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner', 'privacy', 'about', 'terms', 'contact'].includes(path)) {
         setActivePage(path);
       } else {
         setActivePage('home');
@@ -192,6 +194,11 @@ export default function App() {
         desc = "Learn how we protect your financial privacy. FinCalc Flow is a serverless application; no financial data is ever collected or sent to servers.";
         schemaObj = null;
         break;
+      case 'terms':
+        title = "Terms of Use & Legal Disclaimer | FinCalc Flow";
+        desc = "Terms of use for FinCalc Flow tools, covering our calculator disclaimer, liability limitations, and educational use policy.";
+        schemaObj = null;
+        break;
       case 'about':
         title = "About Us & Math Methodology | FinCalc Flow";
         desc = "Learn about the mission behind FinCalc Flow, our approach to accuracy, and the mathematical formulas powering our calculators.";
@@ -204,6 +211,17 @@ export default function App() {
           "applicationCategory": "FinancialApplication",
           "operatingSystem": "All",
           "browserRequirements": "Requires JavaScript. Requires HTML5."
+        };
+        break;
+      case 'contact':
+        title = "Contact Us | FinCalc Flow";
+        desc = "Reach out to the developers of FinCalc Flow. Send us feedback, calculator requests, or general inquiries.";
+        schemaObj = {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact FinCalc Flow",
+          "url": "https://www.fincalcflow.com/contact",
+          "description": desc
         };
         break;
       default:
@@ -442,7 +460,25 @@ export default function App() {
                 activePage === 'about' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
-              About Us
+              About Us & Math
+            </a>
+            <a
+              href="/terms"
+              onClick={(e) => { e.preventDefault(); setActivePage('terms'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                activePage === 'terms' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+              }`}
+            >
+              Terms of Use
+            </a>
+            <a
+              href="/contact"
+              onClick={(e) => { e.preventDefault(); setActivePage('contact'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                activePage === 'contact' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+              }`}
+            >
+              Contact Us
             </a>
           </div>
         )}
@@ -822,6 +858,8 @@ export default function App() {
           {activePage === 'revenue-planner' && <RevenuePlanner />}
           {activePage === 'privacy' && <PrivacyPolicy />}
           {activePage === 'about' && <About />}
+          {activePage === 'terms' && <Terms />}
+          {activePage === 'contact' && <Contact />}
         </Suspense>
       </main>
 
@@ -956,12 +994,22 @@ export default function App() {
                   </a>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setContactOpen(true)}
-                    className="hover:text-white transition-colors text-left"
+                  <a 
+                    href="/terms"
+                    onClick={(e) => { e.preventDefault(); setActivePage('terms'); }}
+                    className="hover:text-white transition-colors text-left block"
+                  >
+                    Terms of Use
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/contact"
+                    onClick={(e) => { e.preventDefault(); setActivePage('contact'); }}
+                    className="hover:text-white transition-colors text-left block"
                   >
                     Contact Us
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
