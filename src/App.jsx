@@ -295,16 +295,6 @@ export default function App() {
               </a>
 
               <a
-                href="/about"
-                onClick={(e) => { e.preventDefault(); setActivePage('about'); }}
-                className={`text-sm font-bold transition-all py-2 ${
-                  activePage === 'about' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                About Us
-              </a>
-
-              <a
                 href="/rent-vs-buy"
                 onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); }}
                 className={`text-sm font-bold transition-all py-2 ${
@@ -343,9 +333,19 @@ export default function App() {
               >
                 Revenue Planner
               </a>
+
+              <a
+                href="/about"
+                onClick={(e) => { e.preventDefault(); setActivePage('about'); }}
+                className={`text-sm font-bold transition-all py-2 ${
+                  activePage === 'about' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                About Us
+              </a>
             </nav>
 
-            {/* Currency Selector & Get Started Button */}
+            {/* Currency Selector */}
             <div className="hidden md:flex items-center gap-4">
               <div className="flex items-center gap-1 bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-xl">
                 <IconGlobe className="w-4 h-4 text-slate-500" />
@@ -361,19 +361,6 @@ export default function App() {
                   ))}
                 </select>
               </div>
-
-              <button
-                onClick={() => {
-                  setActivePage('home');
-                  setTimeout(() => {
-                    const target = document.getElementById('our-tools-heading');
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }}
-                className="px-4 py-2 bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm font-bold rounded-xl transition-all shadow-md shadow-green-900/10"
-              >
-                Get Started
-              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -413,15 +400,6 @@ export default function App() {
               Dashboard
             </a>
             <a
-              href="/about"
-              onClick={(e) => { e.preventDefault(); setActivePage('about'); setMobileMenuOpen(false); }}
-              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
-                activePage === 'about' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
-              }`}
-            >
-              About Us
-            </a>
-            <a
               href="/rent-vs-buy"
               onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); setMobileMenuOpen(false); }}
               className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
@@ -456,6 +434,15 @@ export default function App() {
               }`}
             >
               AdSense Revenue Planner
+            </a>
+            <a
+              href="/about"
+              onClick={(e) => { e.preventDefault(); setActivePage('about'); setMobileMenuOpen(false); }}
+              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                activePage === 'about' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+              }`}
+            >
+              About Us
             </a>
           </div>
         )}
