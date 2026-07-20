@@ -506,72 +506,107 @@ export default function App() {
               </div>
 
             {/* Tool Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               
               {/* Card 1: Rent vs Buy */}
-              <div className="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
+              <div className="bg-white rounded-3xl border border-slate-100 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col p-8 space-y-5 text-left group">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <IconHome className="w-6 h-6 stroke-[2]" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 leading-tight">Rent vs. Buy Calculator</h3>
+                  <div>
+                    <span className="text-[10px] font-black text-indigo-500 uppercase tracking-widest block">Housing Finance</span>
+                    <h3 className="text-lg font-extrabold text-slate-900 leading-tight">Rent vs. Buy Simulator</h3>
+                  </div>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">
-                  Compare the costs of renting vs. buying your home. Run year-by-year estimations of asset growth and equity.
+                  Renting isn't throwing money away, and buying isn't always a guaranteed investment. This simulator compares the real costs of renting vs. buying by modeling mortgage payments, home appreciation, property tax, maintenance, and the opportunity cost of investing your down payment in index funds.
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 border-t border-slate-50">
                   <a
                     href="/rent-vs-buy"
                     onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); }}
-                    className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
+                    className="text-indigo-600 hover:text-indigo-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
-                    Learn More
+                    Launch Simulator
                     <IconArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
 
               {/* Card 2: Cost Per Mile */}
-              <div className="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
+              <div className="bg-white rounded-3xl border border-slate-100 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col p-8 space-y-5 text-left group">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <IconTruck className="w-6 h-6 stroke-[2]" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 leading-tight">Trucking Cost Per Mile</h3>
+                  <div>
+                    <span className="text-[10px] font-black text-blue-500 uppercase tracking-widest block">Business Logistics</span>
+                    <h3 className="text-lg font-extrabold text-slate-900 leading-tight">Cost Per Mile Calculator</h3>
+                  </div>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">
-                  Calculate your cost per mile to manage trucking expenses, fuel costs, and maximize driver profitability.
+                  In trucking, guessing your operating costs is a direct route to running at a loss. This calculator helps you break down every fixed monthly overhead payment and variable operational expense to find your exact cost per mile (CPM) threshold, ensuring you always price your freight routes for profitability.
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 border-t border-slate-50">
                   <a
                     href="/cost-per-mile"
                     onClick={(e) => { e.preventDefault(); setActivePage('cost-per-mile'); }}
                     className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
-                    Learn More
+                    Calculate Margin
                     <IconArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
 
               {/* Card 3: Debt Consolidation */}
-              <div className="bg-white rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-4 text-left">
+              <div className="bg-white rounded-3xl border border-slate-100 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col p-8 space-y-5 text-left group">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <IconCreditCard className="w-6 h-6 stroke-[2]" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 leading-tight">Credit Card Debt Consolidation</h3>
+                  <div>
+                    <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest block">Debt & Credit</span>
+                    <h3 className="text-lg font-extrabold text-slate-900 leading-tight">Debt Consolidation</h3>
+                  </div>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">
-                  Plan your debt consolidation and payoff strategy to find interest savings and clear balances sooner.
+                  High-interest credit card debt can feel like quicksand. See exactly how much interest you can save and how many months you can shave off by moving multiple card balances to a single, lower-interest fixed-rate personal loan.
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 border-t border-slate-50">
                   <a
                     href="/debt-consolidation"
                     onClick={(e) => { e.preventDefault(); setActivePage('debt-consolidation'); }}
-                    className="text-blue-600 hover:text-blue-700 font-bold text-sm flex items-center gap-1 group/btn"
+                    className="text-emerald-600 hover:text-emerald-700 font-bold text-sm flex items-center gap-1 group/btn"
                   >
-                    Learn More
+                    Compare Payoffs
+                    <IconArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Card 4: AdSense Revenue Planner */}
+              <div className="bg-white rounded-3xl border border-slate-100 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col p-8 space-y-5 text-left group">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <IconTrendingUp className="w-6 h-6 stroke-[2]" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-black text-amber-500 uppercase tracking-widest block">Web Monetization</span>
+                    <h3 className="text-lg font-extrabold text-slate-900 leading-tight">AdSense Revenue Planner</h3>
+                  </div>
+                </div>
+                <p className="text-slate-500 text-sm leading-relaxed flex-1">
+                  Stop guessing how much your website's traffic is worth. This planner lets you simulate different search traffic volumes, ad click-through rates (CTR), and cost-per-click (CPC) bids to forecast daily, monthly, and yearly income milestones, letting you optimize your niche selection strategy.
+                </p>
+                <div className="pt-2 border-t border-slate-50">
+                  <a
+                    href="/revenue-planner"
+                    onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); }}
+                    className="text-amber-600 hover:text-amber-700 font-bold text-sm flex items-center gap-1 group/btn"
+                  >
+                    Plan Monetization
                     <IconArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </div>
@@ -579,28 +614,105 @@ export default function App() {
 
             </div>
 
-
-
-            {/* Premium Full-Width Banner: AdSense Revenue Planner */}
-            <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-950 rounded-3xl p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 group border border-indigo-900/40">
-              <div className="absolute right-0 top-0 w-96 h-96 bg-indigo-500/10 rounded-full filter blur-3xl opacity-30 -mr-20 -mt-20"></div>
-              <div className="space-y-4 max-w-2xl relative z-10 text-left">
-                <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-[11px] font-black tracking-wider uppercase inline-block border border-indigo-500/30">
-                  Creator & Webmaster Tool
+            {/* 3. Deep-Dive Details Section (Below the grid) */}
+            <div className="border-t border-slate-100 pt-16 space-y-12">
+              <div className="text-center space-y-3 max-w-2xl mx-auto">
+                <span className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-black tracking-wider uppercase inline-block">
+                  Calculator Reference & Specifications
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-black tracking-tight">Google AdSense Revenue Planner</h3>
-                <p className="text-slate-350 text-sm leading-relaxed">
-                  Are you aiming to monetize your website or tool? Run simulation estimates for ad click rates (CTR), cost-per-click (CPC), and pageview requirements to forecast your daily, monthly, and yearly income milestones.
+                <h2 className="text-3xl font-black text-slate-900 tracking-tight">How Our Calculators Work & Why They Matter</h2>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  Understanding the financial logic, input variables, and formulas behind each tool helps you make better-informed decisions.
                 </p>
               </div>
-              <a
-                href="/revenue-planner"
-                onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); }}
-                className="flex items-center gap-2 px-6 py-4 bg-[#22c55e] hover:bg-[#16a34a] text-white rounded-2xl font-bold text-sm shadow-lg shadow-green-500/20 hover:shadow-green-500/30 transition-all flex-shrink-0 group-hover:scale-105 duration-200"
-              >
-                Launch Revenue Planner
-                <IconArrowRight className="w-4 h-4" />
-              </a>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                {/* Detail Block 1: Rent vs Buy */}
+                <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-md hover:shadow-lg transition-all text-left space-y-4">
+                  <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2 border-b border-slate-50 pb-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                    Rent vs. Buy Simulator Details
+                  </h3>
+                  <div className="space-y-3 text-sm text-slate-600">
+                    <p>
+                      <strong>Why It Matters:</strong> Homeownership is often considered a guaranteed wealth generator, but buying carries massive upfront costs (down payments, closing fees) and ongoing unrecoverable expenses (property taxes, homeowner insurance, HOA fees, and maintenance). Renting keeps your cash liquid, allowing you to invest it in high-yield assets like index funds. This tool models the opportunity cost of both paths.
+                    </p>
+                    <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs font-semibold">
+                      <p className="text-slate-700 font-bold uppercase tracking-wider text-[10px]">Core Inputs & Calculations:</p>
+                      <ul className="list-disc list-inside space-y-1 text-slate-500">
+                        <li><strong className="text-slate-600">Down Payment Opportunity Cost:</strong> The renter starts with a portfolio equal to the buyer's down payment and compounds it at your chosen stock market return rate.</li>
+                        <li><strong className="text-slate-600">Appreciation & Maintenance:</strong> Compounds home value at the home appreciation rate while subtracting annual maintenance overhead (typically 1% to 2% of home value).</li>
+                        <li><strong className="text-slate-600">Selling Transaction Costs:</strong> Subtracts 6% realtor commission from final home value, giving the true net asset wealth for both paths.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Detail Block 2: Cost Per Mile */}
+                <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-md hover:shadow-lg transition-all text-left space-y-4">
+                  <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2 border-b border-slate-50 pb-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                    Trucking Cost Per Mile Details
+                  </h3>
+                  <div className="space-y-3 text-sm text-slate-600">
+                    <p>
+                      <strong>Why It Matters:</strong> Trucking is a low-margin business where expenses change daily. Owner-operators fail when they don't know their baseline cost per mile (CPM). If a driver accepts a load paying $2.20 per mile but has an operating CPM of $1.90, they might think they are profiting. However, if they have to drive 200 unpaid "deadhead" miles to get that load, their true profit margin evaporates.
+                    </p>
+                    <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs font-semibold">
+                      <p className="text-slate-700 font-bold uppercase tracking-wider text-[10px]">Core Inputs & Calculations:</p>
+                      <ul className="list-disc list-inside space-y-1 text-slate-500">
+                        <li><strong className="text-slate-600">Fixed Cost Overhead:</strong> Flat monthly costs (truck payment, insurance, annual license/IFTA permits) divided by total miles driven.</li>
+                        <li><strong className="text-slate-600">Variable Fuel Cost:</strong> Calculated as <code className="bg-slate-200 px-1 py-0.5 rounded text-slate-700">Fuel Price ÷ MPG</code>. This represents the immediate cash consumption of moving your truck.</li>
+                        <li><strong className="text-slate-600">Maintenance & Tire Reserve:</strong> A per-mile reserve rate (e.g. $0.15/mile) saved for mechanical work, tire replacements, and DOT compliance repairs.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Detail Block 3: Debt Consolidation */}
+                <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-md hover:shadow-lg transition-all text-left space-y-4">
+                  <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2 border-b border-slate-50 pb-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                    Credit Card Debt Consolidation Details
+                  </h3>
+                  <div className="space-y-3 text-sm text-slate-600">
+                    <p>
+                      <strong>Why It Matters:</strong> Credit card issuers profit by setting minimum monthly payments as a small percentage of your balance. As your balance drops, your payment drops, extending the payoff timeline and maximizing interest charges. By moving revolving debt to a structured, fixed-term personal loan, you secure a lower fixed interest rate and guarantee a fixed date where you will be 100% debt-free.
+                    </p>
+                    <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs font-semibold">
+                      <p className="text-slate-700 font-bold uppercase tracking-wider text-[10px]">Core Inputs & Calculations:</p>
+                      <ul className="list-disc list-inside space-y-1 text-slate-500">
+                        <li><strong className="text-slate-600">Weighted Average APR:</strong> Computes the true collective interest rate across all cards: <code className="bg-slate-200 px-1 py-0.5 rounded text-slate-700">∑(Balance × APR) ÷ Total Balance</code>.</li>
+                        <li><strong className="text-slate-600">Minimum Payoff Simulation:</strong> Runs a month-by-month loop modeling credit card minimums (interest + 1.5% principal) to map your current payoff cost.</li>
+                        <li><strong className="text-slate-600">Consolidation Loan Amortization:</strong> Calculates monthly loan payments using standard amortization to show exactly how much interest is saved.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Detail Block 4: AdSense Revenue Planner */}
+                <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-md hover:shadow-lg transition-all text-left space-y-4">
+                  <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2 border-b border-slate-50 pb-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                    Google AdSense Revenue Planner Details
+                  </h3>
+                  <div className="space-y-3 text-sm text-slate-600">
+                    <p>
+                      <strong>Why It Matters:</strong> Digital monetization is highly dependent on niche selection. High-volume niches (general entertainment/news) have cheap advertiser competition, resulting in low Cost Per Click (CPC). Target utility niches (like B2B, SaaS tools, and finance calculators) attract intense bidding, giving high CPC rates. This planner lets you project traffic requirements to hit your revenue goals.
+                    </p>
+                    <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs font-semibold">
+                      <p className="text-slate-700 font-bold uppercase tracking-wider text-[10px]">Core Inputs & Calculations:</p>
+                      <ul className="list-disc list-inside space-y-1 text-slate-500">
+                        <li><strong className="text-slate-600">Ad Click Volume:</strong> Calculated by applying the Click-Through Rate (CTR) to pageviews: <code className="bg-slate-200 px-1 py-0.5 rounded text-slate-700">Pageviews × (CTR ÷ 100)</code>.</li>
+                        <li><strong className="text-slate-600">Earnings Forecast:</strong> Multiplies total clicks by the average advertiser CPC to calculate daily, monthly, and yearly payouts.</li>
+                        <li><strong className="text-slate-600">Milestone Traffic Goal:</strong> Calculates the exact monthly pageviews required to achieve a target threshold of $100 per day ($3,000/month).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
             {/* Premium FAQ and Guide Section (SEO Content Booster) */}
