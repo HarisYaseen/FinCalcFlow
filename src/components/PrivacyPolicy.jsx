@@ -55,11 +55,19 @@ export default function PrivacyPolicy() {
             3. Google AdSense & Cookie Usage
           </h2>
           <p className="text-slate-600 text-sm leading-relaxed">
-            We display advertisements using Google AdSense to fund our development operations. Google, as a third-party advertising vendor, uses tracking cookies to serve relevant ads on our website based on your visits to this site and other websites on the internet.
+            We display advertisements served by Google AdSense to fund our website operations and keep our financial tools 100% free. Please review the following mandatory disclosures regarding Google AdSense advertising:
           </p>
-          <p className="text-slate-600 text-sm leading-relaxed">
-            You can choose to disable or customize personalized advertising settings by visiting Google's official <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline font-bold">Google Ads Settings</a> page. Alternatively, you can opt out of third-party cookie networks by visiting the Consumer Opt-Out page on <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">aboutads.info</a>.
-          </p>
+          <ul className="list-disc pl-5 text-slate-600 text-sm space-y-2 leading-relaxed">
+            <li>
+              <strong>Third-Party Vendors & Cookies:</strong> Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to FinCalc Flow or other websites on the Internet.
+            </li>
+            <li>
+              <strong>Advertising Cookies (DART Cookie):</strong> Google's use of advertising cookies enables it and its partners to serve targeted ads to users based on their visits to FinCalc Flow and/or other sites across the Internet.
+            </li>
+            <li>
+              <strong>Opting Out of Personalized Ads:</strong> Users may opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline font-bold">Google Ads Settings</a>. Alternatively, users can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline font-bold">www.aboutads.info</a>.
+            </li>
+          </ul>
         </section>
 
         {/* 4. Children's Privacy (COPPA Compliance) */}

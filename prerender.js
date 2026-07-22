@@ -864,8 +864,13 @@ const routes = [
           <section class="space-y-2">
             <h2 class="text-lg font-bold text-slate-900">3. Google AdSense & Cookie Usage</h2>
             <p class="text-slate-655 text-sm leading-relaxed">
-              We display advertisements using Google AdSense to fund our development operations. Google, as a third-party advertising vendor, uses tracking cookies to serve relevant ads on our website based on your visits to this site and other websites on the internet. You can choose to disable or customize personalized advertising settings by visiting Google's official Ads Settings page.
+              We display advertisements served by Google AdSense to fund our website operations and keep our financial tools 100% free. Please review the following mandatory disclosures regarding Google AdSense advertising:
             </p>
+            <ul class="list-disc pl-5 text-slate-655 text-sm space-y-2 leading-relaxed">
+              <li><strong>Third-Party Vendors & Cookies:</strong> Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to FinCalc Flow or other websites on the Internet.</li>
+              <li><strong>Advertising Cookies (DART Cookie):</strong> Google's use of advertising cookies enables it and its partners to serve targeted ads to users based on their visits to FinCalc Flow and/or other sites across the Internet.</li>
+              <li><strong>Opting Out of Personalized Ads:</strong> Users may opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-bold hover:underline">Google Ads Settings</a>. Alternatively, users can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-bold hover:underline">www.aboutads.info</a>.</li>
+            </ul>
           </section>
 
           <section class="space-y-2">
