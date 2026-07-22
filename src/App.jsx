@@ -7,6 +7,7 @@ const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const About = lazy(() => import('./components/About'));
 const Terms = lazy(() => import('./components/Terms'));
 const Contact = lazy(() => import('./components/Contact'));
+const Guides = lazy(() => import('./components/Guides'));
 // Lightweight SVG Icon Components to eliminate heavy lucide-react dependency from critical entry bundle
 const IconTrendingUp = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -88,7 +89,7 @@ export default function App() {
   useEffect(() => {
     const handleLocationChange = () => {
       const path = window.location.pathname.replace(/^\/|\/$/g, ''); // strip leading/trailing slashes
-      if (['rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner', 'privacy', 'about', 'terms', 'contact'].includes(path)) {
+      if (['rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner', 'privacy', 'about', 'terms', 'contact', 'guides'].includes(path) || path.startsWith('guides/')) {
         setActivePage(path);
       } else {
         setActivePage('home');
@@ -350,6 +351,16 @@ export default function App() {
                 }`}
               >
                 Revenue Planner
+              </a>
+
+              <a
+                href="/guides"
+                onClick={(e) => { e.preventDefault(); setActivePage('guides'); }}
+                className={`text-sm font-bold transition-all py-2 ${
+                  activePage === 'guides' || activePage.startsWith('guides/') ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                Financial Guides
               </a>
 
               <a
@@ -860,6 +871,8 @@ export default function App() {
           {activePage === 'about' && <About />}
           {activePage === 'terms' && <Terms />}
           {activePage === 'contact' && <Contact />}
+          {activePage === 'guides' && <Guides />}
+          {activePage.startsWith('guides/') && <Guides currentSlug={activePage.replace('guides/', '')} />}
         </Suspense>
       </main>
 

@@ -1001,6 +1001,145 @@ const routes = [
         </div>
       </div>
     `
+  },
+  {
+    path: 'guides',
+    title: 'Financial Guides & Industry Articles | FinCalc Flow',
+    description: 'In-depth financial articles, mathematical formulas, trucking cost calculations, debt payoff strategies, and AdSense revenue planning guides.',
+    canonical: 'https://www.fincalcflow.com/guides',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Financial Guides & Knowledge Base",
+      "url": "https://www.fincalcflow.com/guides"
+    },
+    body: `
+      <div class="max-w-7xl mx-auto px-4 py-12 space-y-12 text-left">
+        <div class="text-center space-y-4 max-w-3xl mx-auto">
+          <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-black tracking-wider uppercase inline-block">
+            Knowledge Base & Insights
+          </span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Financial Guides & Industry Articles
+          </h1>
+          <p class="text-slate-500 text-sm sm:text-base">
+            In-depth financial analysis, mathematical formulas, logistics economics, and web monetization tutorials.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-3xl border border-slate-100 p-8 shadow-lg space-y-4">
+            <h2 class="text-xl font-bold text-slate-900"><a href="/guides/trucking-cost-per-mile-guide" class="hover:text-indigo-600">Complete Guide to Calculating Trucking Cost Per Mile for Owner-Operators (2026)</a></h2>
+            <p class="text-slate-500 text-sm">Master fixed vs variable trucking expenses, deadhead mileage formulas, fuel efficiency impacts, and breakeven rate calculations.</p>
+          </div>
+          <div class="bg-white rounded-3xl border border-slate-100 p-8 shadow-lg space-y-4">
+            <h2 class="text-xl font-bold text-slate-900"><a href="/guides/rent-vs-buy-housing-analysis" class="hover:text-indigo-600">Rent vs. Buy Housing Analysis: When Renting Outperforms Owning a Home</a></h2>
+            <p class="text-slate-500 text-sm">Uncover the 5% rule of unrecoverable housing costs, home appreciation trade-offs, and stock market compounding.</p>
+          </div>
+          <div class="bg-white rounded-3xl border border-slate-100 p-8 shadow-lg space-y-4">
+            <h2 class="text-xl font-bold text-slate-900"><a href="/guides/credit-card-debt-payoff-strategies" class="hover:text-indigo-600">Debt Avalanche vs. Debt Snowball vs. Personal Loan Consolidation</a></h2>
+            <p class="text-slate-500 text-sm">Compare mathematical interest minimization against behavioral momentum and fixed-rate installment loans.</p>
+          </div>
+          <div class="bg-white rounded-3xl border border-slate-100 p-8 shadow-lg space-y-4">
+            <h2 class="text-xl font-bold text-slate-900"><a href="/guides/website-adsense-monetization-guide" class="hover:text-indigo-600">Google AdSense RPM Optimization & Niche Earnings Benchmark Guide</a></h2>
+            <p class="text-slate-500 text-sm">Analyze how niche selection, advertiser bidding competition, click-through rates (CTR), and page views dictate ad income.</p>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    path: 'guides/trucking-cost-per-mile-guide',
+    title: 'Complete Guide to Trucking Cost Per Mile (CPM) 2026 | FinCalc',
+    description: 'Master fixed vs variable trucking expenses, deadhead mileage formulas, fuel efficiency impacts, and breakeven rate per mile calculations.',
+    canonical: 'https://www.fincalcflow.com/guides/trucking-cost-per-mile-guide',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Complete Guide to Calculating Trucking Cost Per Mile for Owner-Operators (2026)",
+      "url": "https://www.fincalcflow.com/guides/trucking-cost-per-mile-guide"
+    },
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Complete Guide to Calculating Trucking Cost Per Mile for Owner-Operators (2026)</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>In the commercial transportation industry, operating an independent trucking business or small fleet without knowing your exact Cost Per Mile (CPM) is the fastest path to financial failure. Freight rates fluctuate constantly, and accepting a load that appears high-paying on paper can result in net loss if your operational cost per mile exceeds the gross rate per mile.</p>
+          <h2 class="text-xl font-bold text-slate-900">1. Fixed vs. Variable Costs in Logistics</h2>
+          <p>To compute an accurate CPM, expenses must be split into Fixed Overhead (truck lease payments, insurance, permit fees) and Variable Operational Expenses (diesel fuel, driver wages, tires, maintenance reserves).</p>
+          <h2 class="text-xl font-bold text-slate-900">2. The Deadhead Mileage Danger</h2>
+          <p>Deadhead miles burn fuel and wear out tires without generating revenue. To calculate true CPM: divide total monthly expenses by (Loaded Miles + Deadhead Miles).</p>
+          <p>Calculate your rig's margin using our <a href="/cost-per-mile" class="text-indigo-600 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.</p>
+        </div>
+      </div>
+    `
+  },
+  {
+    path: 'guides/rent-vs-buy-housing-analysis',
+    title: 'Rent vs Buy Housing Analysis 2026: When Renting Wins | FinCalc',
+    description: 'Uncover the 5% rule of unrecoverable housing costs, home appreciation trade-offs, opportunity cost of down payments, and stock market compounding.',
+    canonical: 'https://www.fincalcflow.com/guides/rent-vs-buy-housing-analysis',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Rent vs. Buy Housing Analysis: When Renting Outperforms Owning a Home",
+      "url": "https://www.fincalcflow.com/guides/rent-vs-buy-housing-analysis"
+    },
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Rent vs. Buy Housing Analysis: When Renting Outperforms Owning a Home</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>The traditional wisdom that "renting is throwing money away" is mathematically incomplete. While buying a home builds equity over long horizons, homeownership carries massive unrecoverable costs that do not build asset value—including mortgage interest, property taxes, home insurance, maintenance, and transaction fees.</p>
+          <h2 class="text-xl font-bold text-slate-900">The 5% Rule of Unrecoverable Housing Costs</h2>
+          <p>Financial experts use the 5% Rule to estimate the annual unrecoverable cost of owning a home (1.5% property tax + 1% maintenance + 2.5% cost of equity capital). If renting an equivalent property costs less than 5% of the target home's purchase price annually, renting is mathematically favored over buying.</p>
+          <p>Run full year-by-year simulations on our <a href="/rent-vs-buy" class="text-indigo-600 font-bold hover:underline">Rent vs. Buy Simulator</a>.</p>
+        </div>
+      </div>
+    `
+  },
+  {
+    path: 'guides/credit-card-debt-payoff-strategies',
+    title: 'Debt Avalanche vs Snowball vs Consolidation Loans | FinCalc',
+    description: 'Compare mathematical interest minimization against behavioral momentum and fixed-rate installment loans to find your fastest debt-free path.',
+    canonical: 'https://www.fincalcflow.com/guides/credit-card-debt-payoff-strategies',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Debt Avalanche vs. Debt Snowball vs. Personal Loan Consolidation",
+      "url": "https://www.fincalcflow.com/guides/credit-card-debt-payoff-strategies"
+    },
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Debt Avalanche vs. Debt Snowball vs. Personal Loan Consolidation</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>Carrying multiple high-interest credit card balances is one of the biggest obstacles to building personal wealth. Because credit card issuers calculate minimum payments to cover mostly interest and very little principal, cardholders can remain trapped in debt for decades.</p>
+          <h2 class="text-xl font-bold text-slate-900">Personal Loan Consolidation Benefits</h2>
+          <p>Moving revolving credit card debt into a structured, fixed-rate personal installment loan at a lower APR reduces monthly interest charges and guarantees a fixed debt-free target date.</p>
+          <p>Calculate your consolidation savings with our <a href="/debt-consolidation" class="text-indigo-600 font-bold hover:underline">Debt Consolidation Calculator</a>.</p>
+        </div>
+      </div>
+    `
+  },
+  {
+    path: 'guides/website-adsense-monetization-guide',
+    title: 'Google AdSense RPM Optimization & Earnings Guide | FinCalc',
+    description: 'Analyze how niche selection, advertiser bidding competition, click-through rates (CTR), and page view volume dictate monthly website income.',
+    canonical: 'https://www.fincalcflow.com/guides/website-adsense-monetization-guide',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Google AdSense RPM Optimization & Niche Earnings Benchmark Guide",
+      "url": "https://www.fincalcflow.com/guides/website-adsense-monetization-guide"
+    },
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Google AdSense RPM Optimization & Niche Earnings Benchmark Guide</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>Monetizing website traffic via Google AdSense requires understanding how content niche, audience geography, and user engagement interact to produce publisher revenue.</p>
+          <h2 class="text-xl font-bold text-slate-900">Niche CPC Bidding Dynamics</h2>
+          <p>High-value commercial niches (finance, insurance, enterprise software) attract heavy advertiser competition resulting in high CPC bids ($2.50 to $8.00+), while general news yields much lower rates per click.</p>
+          <p>Simulate income targets on our <a href="/revenue-planner" class="text-indigo-600 font-bold hover:underline">Google AdSense Revenue Planner</a>.</p>
+        </div>
+      </div>
+    `
   }
 ];
 
