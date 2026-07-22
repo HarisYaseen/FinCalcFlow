@@ -56,36 +56,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     </noscript>
 
-    <!-- ==========================================
-         GOOGLE ANALYTICS (GA4) PLACEHOLDER
-         To enable:
-           1. Uncomment the lines below.
-           2. Replace "G-XXXXXXXXXX" with your GA4 Measurement ID.
-         ========================================== -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    -->
-
-    <!-- Facebook Pixel Code Pre-Init -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];}(window, document,'script');
-      fbq('init', '123456789012345'); // Mock Pixel ID for audit detection
-      fbq('track', 'PageView');
-    </script>
-
   </head>
   <body class="bg-slate-50 antialiased">
-    <noscript><img height="1" width="1" class="hidden" src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1" alt="fb-pixel" /></noscript>
     <div id="root">
       <!-- Pre-rendered Static HTML Shell for GEO & LLM Indexing (React replaces this on hydrate) -->
       <div class="min-h-screen flex flex-col bg-slate-50 font-sans">

@@ -131,64 +131,159 @@ export default function App() {
       case 'home':
         title = "Free Financial Calculators & Planners | FinCalc Flow";
         desc = "Free monthly financial calculators by FinCalc Flow. Estimate rent vs buy home equity, trucking cost per mile, debt consolidation, and revenue planner targets.";
-        schemaObj = {
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "FinCalc Flow",
-          "url": "https://www.fincalcflow.com",
-          "description": desc,
-          "applicationCategory": "FinancialApplication",
-          "operatingSystem": "All",
-          "browserRequirements": "Requires JavaScript. Requires HTML5."
-        };
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "FinCalc Flow",
+            "url": "https://www.fincalcflow.com",
+            "description": desc,
+            "applicationCategory": "FinancialApplication",
+            "operatingSystem": "All"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I calculate my trucking cost per mile?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To compute your commercial cost per mile, list all fixed monthly fees (such as lease payments, truck permits, and insurance premiums) and your variable operational expenses (such as diesel fuel, driver wages, toll fees, and maintenance/tire reserves). Sum these expenses together and divide the total by your monthly driven miles."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What parameters dictate a Rent vs. Buy decision?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A Rent vs. Buy simulation models mortgage amortization, upfront down payments, closing costs, and home appreciation rates. It compares this against rent prices, renters insurance, and the opportunity cost of investing your down payment into index funds."
+                }
+              }
+            ]
+          }
+        ];
         break;
       case 'rent-vs-buy':
         title = "Rent vs. Buy Calculator | House Equity & Rent Comparison Simulator";
         desc = "Compare the long-term wealth impact of renting vs. buying a home. Simulates down payments, appreciation, maintenance costs, and investment returns.";
-        schemaObj = {
-          "@context": "https://schema.org",
-          "@type": "FinancialCalculator",
-          "name": "Rent vs. Buy Simulator",
-          "url": "https://www.fincalcflow.com/rent-vs-buy",
-          "description": desc,
-          "category": "Mortgage & Housing Calculator"
-        };
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "FinancialCalculator",
+            "name": "Rent vs. Buy Simulator",
+            "url": "https://www.fincalcflow.com/rent-vs-buy",
+            "description": desc,
+            "category": "Mortgage & Housing Calculator"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is renting ever the smarter long-term choice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Renting is often superior when home transaction costs are high, home appreciation rates are low, or stock market investment returns are strong."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the 5% Rule?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The 5% Rule states that annual unrecoverable costs of homeownership equal roughly 5% of the home's value (1.5% tax, 1% maintenance, 2.5% capital cost). If renting costs less than 5% annually, renting is mathematically favored."
+                }
+              }
+            ]
+          }
+        ];
         break;
       case 'cost-per-mile':
         title = "Trucking Cost Per Mile Calculator | Freight Expense Estimator";
         desc = "Calculate your commercial trucking cost per mile. Accounts for fixed monthly costs, variable operational expenses, fuel efficiency, and driver wages.";
-        schemaObj = {
-          "@context": "https://schema.org",
-          "@type": "FinancialCalculator",
-          "name": "Trucking Cost Per Mile Calculator",
-          "url": "https://www.fincalcflow.com/cost-per-mile",
-          "description": desc,
-          "category": "Business Expense Calculator"
-        };
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "FinancialCalculator",
+            "name": "Trucking Cost Per Mile Calculator",
+            "url": "https://www.fincalcflow.com/cost-per-mile",
+            "description": desc,
+            "category": "Business Expense Calculator"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does deadhead mileage impact my cost per mile?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Deadhead miles burn fuel and wear out tires without generating revenue. To calculate true CPM, divide total monthly expenses by total miles driven (loaded + deadhead)."
+                }
+              }
+            ]
+          }
+        ];
         break;
       case 'debt-consolidation':
         title = "Debt Consolidation Calculator | Credit Card Payoff Optimizer";
         desc = "Find out how much interest you can save by consolidating multiple credit card balances into a single low-interest personal loan.";
-        schemaObj = {
-          "@context": "https://schema.org",
-          "@type": "FinancialCalculator",
-          "name": "Debt Consolidation Calculator",
-          "url": "https://www.fincalcflow.com/debt-consolidation",
-          "description": desc,
-          "category": "Debt Payoff Calculator"
-        };
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "FinancialCalculator",
+            "name": "Debt Consolidation Calculator",
+            "url": "https://www.fincalcflow.com/debt-consolidation",
+            "description": desc,
+            "category": "Debt Payoff Calculator"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does debt consolidation hurt my credit score?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Initially, applying for a loan causes a minor temporary drop. However, moving credit card debt to a personal loan lowers revolving credit utilization, leading to a long-term credit score boost."
+                }
+              }
+            ]
+          }
+        ];
         break;
       case 'revenue-planner':
         title = "Google AdSense Revenue Calculator | Website Traffic Planner";
         desc = "Estimate your website's daily, monthly, and annual ad earnings based on traffic volume, Click-Through Rate (CTR), and Cost-Per-Click (CPC).";
-        schemaObj = {
-          "@context": "https://schema.org",
-          "@type": "FinancialCalculator",
-          "name": "AdSense Traffic & Revenue Planner",
-          "url": "https://www.fincalcflow.com/revenue-planner",
-          "description": desc,
-          "category": "Website Monetization Calculator"
-        };
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "FinancialCalculator",
+            "name": "AdSense Traffic & Revenue Planner",
+            "url": "https://www.fincalcflow.com/revenue-planner",
+            "description": desc,
+            "category": "Website Monetization Calculator"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a realistic Click-Through Rate (CTR) for AdSense?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For informational blogs, CTR ranges between 1% and 2.5%. Utility web tools often achieve 3% to 6% due to high user interaction."
+                }
+              }
+            ]
+          }
+        ];
         break;
       case 'privacy':
         title = "Privacy Policy | FinCalc Flow";
@@ -210,8 +305,7 @@ export default function App() {
           "url": "https://www.fincalcflow.com/about",
           "description": desc,
           "applicationCategory": "FinancialApplication",
-          "operatingSystem": "All",
-          "browserRequirements": "Requires JavaScript. Requires HTML5."
+          "operatingSystem": "All"
         };
         break;
       case 'contact':
