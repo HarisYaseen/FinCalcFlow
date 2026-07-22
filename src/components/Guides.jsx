@@ -1,73 +1,88 @@
 import React from 'react';
-import { BookOpen, ArrowLeft, Clock, User, Calendar, Tag, ChevronRight, Calculator, CheckCircle2 } from 'lucide-react';
+import { BookOpen, ArrowLeft, Clock, User, Calendar, ChevronRight, Lightbulb } from 'lucide-react';
 
 export const guidesData = [
   {
     id: 'trucking-cost-per-mile-guide',
     slug: 'trucking-cost-per-mile-guide',
-    title: 'Complete Guide to Calculating Trucking Cost Per Mile for Owner-Operators (2026)',
+    title: 'How I Calculate Trucking Cost Per Mile: An Owner-Operator\'s Real-World Guide (2026)',
     category: 'Logistics & Freight',
     readTime: '8 min read',
-    author: 'FinCalc Logistics Team',
+    author: 'Haris Yaseen',
     date: 'July 20, 2026',
-    excerpt: 'Master the breakdown of fixed vs variable trucking expenses, deadhead mileage formulas, fuel efficiency impacts, and breakeven rate per mile calculations.',
+    excerpt: 'A practical, no-nonsense breakdown of fixed overhead, fuel spikes, empty deadhead miles, and how to know your exact breakeven rate before taking a load.',
     content: (
       <div className="space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base">
         <p className="text-lg font-medium text-slate-800 leading-relaxed">
-          In the commercial transportation industry, operating an independent trucking business or small fleet without knowing your exact Cost Per Mile (CPM) is the fastest path to financial failure. Freight rates fluctuate constantly, and accepting a load that appears high-paying on paper can result in net loss if your operational cost per mile exceeds the gross rate per mile.
+          If there’s one thing I’ve learned talking to owner-operators and fleet drivers, it’s this: accepting freight without knowing your exact Cost Per Mile (CPM) is a fast track to losing money. A load paying $2.30 a mile might look great at first glance, but if your rig costs $2.10 a mile to run and you have to drive 150 empty miles to pick it up, you’re basically working for free.
         </p>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. Understanding Fixed vs. Variable Costs in Logistics</h2>
         <p>
-          To compute an accurate CPM, your operating expenses must be categorized into two distinct buckets: <strong>Fixed Overhead</strong> and <strong>Variable Operational Expenses</strong>.
+          In this guide, I’ll walk you through how to calculate your true cost per mile so you can bid confidently, catch hidden expense leaks, and protect your hard-earned profit margins.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. Splitting Your Expenses: Fixed vs. Variable Costs</h2>
+        <p>
+          To get an accurate CPM, you have to separate the bills you pay no matter what from the costs that go up as you roll down the highway.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
           <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">📌 Fixed Costs (Month-to-Month)</h3>
-            <p className="text-xs text-slate-500 mb-3">Expenses that remain constant regardless of whether your rig drives 1,000 or 10,000 miles in a month:</p>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">📌 Fixed Overhead (Paid Every Month)</h3>
+            <p className="text-xs text-slate-500 mb-3">Whether your truck runs 500 miles or 10,000 miles this month, these bills don't change:</p>
             <ul className="list-disc pl-5 text-xs sm:text-sm space-y-1.5 text-slate-700">
-              <li>Truck & Trailer Lease or Loan Payments</li>
-              <li>Commercial Auto Physical Damage & Cargo Insurance</li>
-              <li>Annual Permits, IFTA Taxes, & Heavy Highway Vehicle Use Tax (Form 2290)</li>
-              <li>ELD Software Subscriptions, Accounting Services, & License Renewal</li>
+              <li>Truck & trailer lease or loan payments</li>
+              <li>Physical damage and cargo insurance premiums</li>
+              <li>Annual highway use taxes (Form 2290), state permits, & IFTA</li>
+              <li>ELD software, accounting tools, and dispatch subscriptions</li>
             </ul>
           </div>
 
           <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">⚡ Variable Costs (Mileage-Dependent)</h3>
-            <p className="text-xs text-slate-500 mb-3">Expenses that scale directly with the number of miles driven:</p>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">⚡ Variable Costs (Scales With Mileage)</h3>
+            <p className="text-xs text-slate-500 mb-3">Every mile you drive adds directly to these expenses:</p>
             <ul className="list-disc pl-5 text-xs sm:text-sm space-y-1.5 text-slate-700">
-              <li>Diesel Fuel Costs (Fuel Price ÷ MPG)</li>
-              <li>Tires, Oil Changes, & Mechanical Maintenance Reserves</li>
-              <li>Driver Wages (Per-Mile Salary Allocation)</li>
-              <li>Highway Toll Fees, Scales, & Trailer Washouts</li>
+              <li>Diesel fuel (the single biggest ongoing expense)</li>
+              <li>Tires, oil changes, DEF fluid, and maintenance reserves</li>
+              <li>Driver salary allocation (yes, you MUST pay yourself!)</li>
+              <li>Highway tolls, scale fees, and trailer washouts</li>
             </ul>
           </div>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. The Deadhead Mileage Danger</h2>
-        <p>
-          "Deadhead" miles refer to driving with an empty trailer between load drop-offs and new pickups. Because empty miles burn fuel and wear out tires without generating freight revenue, they must be included in your monthly total mileage denominator.
-        </p>
-        <div className="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-indigo-900 font-semibold text-xs sm:text-sm">
-          <strong>True CPM Formula:</strong> <code className="bg-indigo-100 px-2 py-0.5 rounded font-mono">Total Monthly Expenses ÷ (Loaded Miles + Deadhead Miles)</code>
+        {/* Pro Tip Box */}
+        <div className="bg-amber-50 border border-amber-200 p-5 rounded-2xl text-amber-900 space-y-2">
+          <div className="flex items-center gap-2 font-bold text-sm text-amber-800">
+            <Lightbulb className="w-5 h-5 text-amber-600 flex-shrink-0" />
+            Haris's Real-World Advice: Always Pay Yourself First
+          </div>
+          <p className="text-xs sm:text-sm text-amber-900/90 leading-relaxed">
+            A common mistake new owner-operators make is treating whatever cash is left in the bank at the end of the month as their "paycheck." Instead, list a targeted driver wage (for example, 60¢ per mile) directly as an operational expense. That way, your breakeven CPM guarantees your living expenses are covered before you take a trip.
+          </p>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">3. Worked Industry Example</h2>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. Watch Out for Empty "Deadhead" Miles</h2>
+        <p>
+          Deadhead miles are the empty miles you drive to grab your next trailer. Your engine is still burning diesel and your tires are still wearing down, but nobody is paying you for those miles.
+        </p>
+        <p>
+          Always divide your total monthly expenses by your <strong>total miles driven (loaded + deadhead)</strong>. If you only divide by loaded miles, your calculated cost per mile will look artificially low, and you'll end up underbidding freight.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">3. Real-World Numbers: A Worked Example</h2>
         <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 text-xs sm:text-sm">
-          <p><strong>Scenario:</strong> Owner-operator driving 9,500 total miles per month (8,500 loaded + 1,000 deadhead).</p>
+          <p className="font-bold text-slate-800">Let's look at a typical monthly scenario for a single rig driving 9,000 miles (8,000 loaded + 1,000 deadhead):</p>
           <ul className="list-disc pl-5 space-y-1 text-slate-600">
-            <li>Fixed Costs: $4,200/month = <strong>$0.44/mile</strong></li>
-            <li>Diesel Fuel ($4.10/gal @ 6.5 MPG) = <strong>$0.63/mile</strong></li>
-            <li>Maintenance & Tire Reserves = <strong>$0.18/mile</strong></li>
-            <li>Target Driver Salary Allocation = <strong>$0.60/mile</strong></li>
-            <li><strong>Total Break-Even Cost Per Mile: $1.85</strong></li>
+            <li><strong>Fixed Overhead:</strong> $4,050 total ÷ 9,000 miles = <strong>$0.45 / mile</strong></li>
+            <li><strong>Diesel Fuel:</strong> $4.10/gal at 6.5 MPG = <strong>$0.63 / mile</strong></li>
+            <li><strong>Maintenance Reserve:</strong> Tires + oil + wear buffer = <strong>$0.18 / mile</strong></li>
+            <li><strong>Driver Pay Target:</strong> <strong>$0.60 / mile</strong></li>
+            <li><strong className="text-slate-900">Total True Breakeven CPM = $1.86 / mile</strong></li>
           </ul>
         </div>
 
         <p className="pt-4 text-xs text-slate-500">
-          Want to compute your custom operational cost per mile? Use our interactive <a href="/cost-per-mile" className="text-indigo-600 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.
+          Want to plug in your own truck's numbers? Try our free <a href="/cost-per-mile" className="text-indigo-600 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.
         </p>
       </div>
     )
@@ -75,43 +90,57 @@ export const guidesData = [
   {
     id: 'rent-vs-buy-housing-analysis',
     slug: 'rent-vs-buy-housing-analysis',
-    title: 'Rent vs. Buy Housing Analysis: When Renting Outperforms Owning a Home',
+    title: 'Renting vs. Buying a Home: Why Renting Isn\'t "Throwing Money Away"',
     category: 'Housing Economics',
     readTime: '10 min read',
-    author: 'FinCalc Housing Desk',
+    author: 'Haris Yaseen',
     date: 'July 18, 2026',
-    excerpt: 'Uncover the 5% rule of unrecoverable housing costs, home appreciation trade-offs, opportunity cost of down payments, and stock market compounding.',
+    excerpt: 'A honest breakdown of unrecoverable housing expenses, maintenance liabilities, down payment opportunity costs, and when renting actually builds more wealth.',
     content: (
       <div className="space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base">
         <p className="text-lg font-medium text-slate-800 leading-relaxed">
-          The traditional wisdom that "renting is throwing money away" is mathematically incomplete. While buying a home builds equity over long horizons, homeownership carries massive unrecoverable costs that do not build asset value—including mortgage interest, property taxes, home insurance, maintenance, and transaction fees.
+          We’ve all heard the old saying: <em>"Renting is just paying your landlord's mortgage—you're throwing money away."</em> But if you run the actual financial math, that statement is often far from true. While buying a home can be a fantastic way to build wealth over 15 to 30 years, it comes with heavy unrecoverable costs that never build a single dollar of home equity.
         </p>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. The 5% Rule of Unrecoverable Housing Costs</h2>
         <p>
-          Financial experts use the <strong>5% Rule</strong> to estimate the annual unrecoverable cost of owning a home. The 5% is broken down into three components:
+          Whether renting or buying makes sense for you comes down to comparing the <strong>unrecoverable costs</strong> of both options in your local market.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. The "Unrecoverable Costs" of Owning a Home</h2>
+        <p>
+          When you rent, your unrecoverable cost is simple: your monthly rent check. Once you pay it, that money is gone. But homeowners also pay massive unrecoverable costs every single month:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm">
-          <li><strong>Property Tax (~1.5%):</strong> Mandatory municipal taxes based on home assessment.</li>
-          <li><strong>Maintenance & Repairs (~1.0%):</strong> Roof replacements, HVAC repairs, plumbing, painting.</li>
-          <li><strong>Capital Cost / Interest (~2.5%):</strong> The interest paid on your mortgage plus the opportunity cost of tied-up equity.</li>
+          <li><strong>Mortgage Interest:</strong> During the first 10 years of a 30-year loan, the majority of your monthly payment goes directly to bank interest, not principal.</li>
+          <li><strong>Property Taxes:</strong> Local levies that increase over time and never go away.</li>
+          <li><strong>Home Maintenance & Repairs:</strong> Replacing a roof, fixing an HVAC system, or repairing foundation issues (historically averaging 1% to 2% of the home's value per year).</li>
+          <li><strong>HOA Fees & Insurance:</strong> Monthly dues and hazard insurance premiums.</li>
+          <li><strong>Closing & Selling Costs:</strong> Paying 2% to 4% upfront when buying, and 5% to 6% in realtor commissions when selling.</li>
         </ul>
-        <p className="text-xs sm:text-sm bg-slate-50 p-4 rounded-xl border">
-          If renting an equivalent property costs less than 5% of the target home's purchase price annually, renting is mathematically favored over buying.
+
+        {/* Pro Tip Box */}
+        <div className="bg-indigo-50 border border-indigo-200 p-5 rounded-2xl text-indigo-900 space-y-2">
+          <div className="flex items-center gap-2 font-bold text-sm text-indigo-800">
+            <Lightbulb className="w-5 h-5 text-indigo-600 flex-shrink-0" />
+            The 5% Rule of Thumb
+          </div>
+          <p className="text-xs sm:text-sm text-indigo-900/90 leading-relaxed">
+            Financial planners often use the <strong>5% Rule</strong>: total annual unrecoverable homeownership costs equal roughly 5% of the home's value (1.5% tax + 1% maintenance + 2.5% cost of capital). If you can rent an equivalent home for less than 5% of its purchase price per year, renting is mathematically favored.
+          </p>
+        </div>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. The Hidden Superpower of Renters: Investing the Difference</h2>
+        <p>
+          When you buy a home, you might lock up $60,000 or $100,000 in a cash down payment. As a renter, that cash stays in your hands. If you take that down payment and invest it into broad index funds (which have historically returned 7% to 10% annually), that compounding stock portfolio can grow faster than a single house appreciates in value.
         </p>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. Down Payment Opportunity Cost</h2>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">3. How Long Do You Plan to Stay?</h2>
         <p>
-          When you buy a home, putting down $80,000 for a down payment locks that capital into real estate. If a renter instead places that $80,000 into a broad market index fund (yielding an average of 7–9% per year), the compounding growth of that portfolio over 10–20 years often outpaces home equity appreciation.
-        </p>
-
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">3. Time Horizon & Transaction Fees</h2>
-        <p>
-          Purchasing a home incurs 2%–4% in closing fees, while selling incurs 5%–6% in realtor commissions and transfer taxes. Because of these high transaction costs, buying a home typically requires a stay of <strong>at least 5 to 7 years</strong> to break even against renting.
+          Because buying and selling a home carries high transaction fees, buying rarely makes sense if you plan to move in under 5 years. It usually takes 5 to 7 years of property appreciation just to break even on loan closing costs and agent commissions.
         </p>
 
         <p className="pt-4 text-xs text-slate-500">
-          Model your own 10-to-30 year wealth comparison using our interactive <a href="/rent-vs-buy" className="text-indigo-600 font-bold hover:underline">Rent vs. Buy Simulator</a>.
+          Want to see how your local rent and home prices stack up over 10 or 20 years? Run the numbers on our free <a href="/rent-vs-buy" className="text-indigo-600 font-bold hover:underline">Rent vs. Buy Simulator</a>.
         </p>
       </div>
     )
@@ -119,50 +148,60 @@ export const guidesData = [
   {
     id: 'credit-card-debt-payoff-strategies',
     slug: 'credit-card-debt-payoff-strategies',
-    title: 'Debt Avalanche vs. Debt Snowball vs. Personal Loan Consolidation',
+    title: 'How to Pay Off High-Interest Credit Card Debt (Snowball vs. Avalanche vs. Consolidation)',
     category: 'Debt & Credit',
     readTime: '9 min read',
-    author: 'FinCalc Credit Advisors',
+    author: 'Haris Yaseen',
     date: 'July 15, 2026',
-    excerpt: 'Compare mathematical interest minimization against behavioral momentum and fixed-rate installment loans to find your fastest debt-free path.',
+    excerpt: 'An honest guide to crushing credit card balances, saving thousands in interest, and choosing between payoff methods or fixed personal loan consolidation.',
     content: (
       <div className="space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base">
         <p className="text-lg font-medium text-slate-800 leading-relaxed">
-          Carrying multiple high-interest credit card balances is one of the biggest obstacles to building personal wealth. Because credit card issuers calculate minimum payments to cover mostly interest and very little principal, cardholders can remain trapped in debt for decades.
+          High-interest credit card debt is designed to keep you trapped. Card issuers intentionally set minimum monthly payments as low as possible—just enough to cover daily compounding interest and a tiny sliver of your balance. If you only pay the minimums on a $15,000 card balance, it can take over 20 years to pay off and cost you tens of thousands in extra interest!
         </p>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. The Three Primary Payoff Strategies</h2>
+        <p>
+          The good news is that with a clear strategy, you can break free much faster. Here’s a breakdown of the three proven methods to eliminate credit card debt.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. Comparing the Top 3 Payoff Strategies</h2>
         
         <div className="space-y-4">
           <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-            <h3 className="font-bold text-slate-900 text-base">🏔️ The Debt Avalanche Method (Mathematical Winner)</h3>
+            <h3 className="font-bold text-slate-900 text-base">🏔️ Strategy 1: The Debt Avalanche (Saves the Most Money)</h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              Pay minimums on all cards, then direct all extra cash toward the account with the <strong>highest interest rate (APR)</strong>. Once paid off, roll the payment into the next highest rate card. This saves the maximum total interest.
+              Pay minimums on all your cards, then throw every extra dollar at the card with the <strong>highest interest rate (APR)</strong>. Once that card hits zero, move on to the next highest interest rate card. This saves you the maximum amount of cash in interest charges.
             </p>
           </div>
 
           <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-            <h3 className="font-bold text-slate-900 text-base">❄️ The Debt Snowball Method (Behavioral Winner)</h3>
+            <h3 className="font-bold text-slate-900 text-base">❄️ Strategy 2: The Debt Snowball (Best for Quick Wins)</h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              Pay minimums on all cards, then target the card with the <strong>smallest balance</strong> first regardless of interest rate. Clearing small debts quickly builds psychological momentum and reduces the number of monthly bills.
+              Pay minimums on all cards, but focus your extra payments on the card with the <strong>smallest dollar balance</strong> first. Knocking out small balances quickly gives you psychological wins and eliminates extra monthly bills faster.
             </p>
           </div>
 
           <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-            <h3 className="font-bold text-slate-900 text-base">💳 Personal Loan Consolidation (Structural Fix)</h3>
+            <h3 className="font-bold text-slate-900 text-base">💳 Strategy 3: Personal Loan Debt Consolidation</h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              Replace multiple 20%+ APR revolving credit card accounts with a single fixed-rate personal installment loan at 8%–12% APR. This guarantees a fixed monthly payment and a concrete debt-free payoff date.
+              If your credit score is decent, you can take out a single, lower-interest fixed personal loan (e.g. 9% APR) to pay off multiple credit cards (e.g. 22% APR). You replace multiple chaotic monthly bills with one lower monthly payment and a guaranteed payoff date.
             </p>
           </div>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. Impact on Credit Scores</h2>
-        <p>
-          Consolidating credit card debt into a personal loan lowers your <strong>credit utilization ratio</strong> (which accounts for 30% of your FICO score). Moving revolving balances to an installment loan often results in a significant credit score jump within 60 to 90 days.
-        </p>
+        {/* Pro Tip Box */}
+        <div className="bg-emerald-50 border border-emerald-200 p-5 rounded-2xl text-emerald-900 space-y-2">
+          <div className="flex items-center gap-2 font-bold text-sm text-emerald-800">
+            <Lightbulb className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+            Bonus Benefit: Boosting Your Credit Score
+          </div>
+          <p className="text-xs sm:text-sm text-emerald-900/90 leading-relaxed">
+            When you consolidate credit card debt into a personal loan, your credit card utilization drops to zero. Since credit utilization makes up 30% of your FICO score, moving revolving debt into an installment loan often leads to a quick jump in your credit score!
+          </p>
+        </div>
 
         <p className="pt-4 text-xs text-slate-500">
-          Calculate your weighted average APR and consolidation savings with our <a href="/debt-consolidation" className="text-indigo-600 font-bold hover:underline">Debt Consolidation Calculator</a>.
+          Want to calculate your exact interest savings and debt-free date? Use our free <a href="/debt-consolidation" className="text-indigo-600 font-bold hover:underline">Debt Consolidation Calculator</a>.
         </p>
       </div>
     )
@@ -170,38 +209,42 @@ export const guidesData = [
   {
     id: 'website-adsense-monetization-guide',
     slug: 'website-adsense-monetization-guide',
-    title: 'Google AdSense RPM Optimization & Niche Earnings Benchmark Guide',
+    title: 'How Google AdSense Earnings Actually Work: A Website Publisher\'s Guide',
     category: 'Web Monetization',
     readTime: '7 min read',
-    author: 'FinCalc Publisher Team',
+    author: 'Haris Yaseen',
     date: 'July 12, 2026',
-    excerpt: 'Analyze how niche selection, advertiser bidding competition, click-through rates (CTR), and page view volume dictate monthly website income.',
+    excerpt: 'Understand how website traffic, click-through rates (CTR), advertiser cost-per-click (CPC) bids, and niche selection combine to determine ad income.',
     content: (
       <div className="space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base">
         <p className="text-lg font-medium text-slate-800 leading-relaxed">
-          Monetizing website traffic via Google AdSense requires understanding how content niche, audience geography, and user engagement interact to produce publisher revenue.
+          When starting a blog or web tool, many creators think traffic volume is the only thing that matters for ad revenue. But in reality, two websites with the exact same 50,000 monthly pageviews can earn wildly different incomes—one might make $100 a month while the other makes $2,500!
         </p>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. Core Formulas Behind Digital Ad Revenue</h2>
+        <p>
+          In this guide, I’ll explain how ad earnings are calculated and how choosing the right topic impacts your income goals.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. The Core Formulas</h2>
         <div className="bg-slate-900 text-slate-100 p-5 rounded-2xl font-mono text-xs sm:text-sm space-y-2">
-          <p>• Ad Clicks = Monthly Pageviews × (CTR ÷ 100)</p>
-          <p>• Monthly Revenue = Ad Clicks × Average Cost-Per-Click (CPC)</p>
-          <p>• Page RPM = (Monthly Revenue ÷ Monthly Pageviews) × 1,000</p>
+          <p>• Total Ad Clicks = Monthly Pageviews × (CTR % ÷ 100)</p>
+          <p>• Monthly Earnings = Total Ad Clicks × Average Cost-Per-Click (CPC)</p>
+          <p>• Page RPM (Revenue per 1,000 views) = (Earnings ÷ Pageviews) × 1,000</p>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. Niche CPC Benchmarks</h2>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. Why Topic Niche Changes Everything</h2>
         <p>
-          Advertisers bid aggressively for audiences in high-intent industries, while viral entertainment niches yield far lower rates per click:
+          Advertisers bid in auction pools for ad space. If your website covers topics where companies sell high-ticket services (like mortgages, commercial insurance, or software), advertisers are willing to pay several dollars for a single click. On celebrity gossip or memes, ads might pay only pennies per click.
         </p>
         <ul className="list-disc pl-5 text-xs sm:text-sm space-y-2">
-          <li><strong>Personal Finance & Insurance:</strong> $2.50 – $8.00+ CPC</li>
-          <li><strong>B2B Software & Logistics:</strong> $1.80 – $5.00 CPC</li>
-          <li><strong>Health & Wellness:</strong> $0.80 – $2.20 CPC</li>
-          <li><strong>General Lifestyle & News:</strong> $0.10 – $0.45 CPC</li>
+          <li><strong>Finance, Mortgages & Insurance:</strong> $2.00 – $6.00+ per click</li>
+          <li><strong>Business Software & Logistics:</strong> $1.50 – $4.00 per click</li>
+          <li><strong>Health, Tech & Fitness:</strong> $0.60 – $1.80 per click</li>
+          <li><strong>General Entertainment & News:</strong> $0.10 – $0.40 per click</li>
         </ul>
 
         <p className="pt-4 text-xs text-slate-500">
-          Simulate traffic targets for your website with our interactive <a href="/revenue-planner" className="text-indigo-600 font-bold hover:underline">Google AdSense Revenue Planner</a>.
+          Want to simulate traffic goals for your website? Try our free <a href="/revenue-planner" className="text-indigo-600 font-bold hover:underline">Google AdSense Revenue Planner</a>.
         </p>
       </div>
     )
@@ -239,7 +282,7 @@ export default function Guides({ currentSlug }) {
             {guide.title}
           </h1>
           <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 pt-2 border-b pb-6">
-            <User className="w-4 h-4 text-indigo-500" /> Published by <span className="text-slate-800 font-bold">{guide.author}</span>
+            <User className="w-4 h-4 text-indigo-500" /> Written by <span className="text-slate-800 font-bold">{guide.author}</span>
           </div>
         </div>
 
@@ -261,10 +304,10 @@ export default function Guides({ currentSlug }) {
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight flex items-center justify-center gap-3">
           <BookOpen className="w-8 h-8 text-indigo-600" />
-          Financial Guides & Industry Articles
+          Practical Financial Guides & Articles
         </h1>
         <p className="text-slate-500 text-sm sm:text-base">
-          In-depth financial analysis, mathematical formulas, logistics economics, and web monetization tutorials written by our editorial team.
+          Plain-English financial breakdowns, trucking math formulas, housing economics, and website monetization tutorials written to help you make smarter decisions.
         </p>
       </div>
 

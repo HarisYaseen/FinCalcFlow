@@ -720,27 +720,27 @@ const routes = [
       <div class="max-w-4xl mx-auto px-4 py-12 space-y-12 text-left">
         <div class="text-center space-y-4">
           <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-black tracking-wider uppercase inline-block">
-            About Our Hub
+            Behind the Project
           </span>
           <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            About FinCalc Flow – Serverless Financial Calculators & Mathematical Formulas
+            About FinCalc Flow
           </h1>
           <p class="text-slate-500 text-base max-w-xl mx-auto">
-            Welcome to FinCalc Flow, a premier collection of free, high-performance financial calculators built entirely for the modern web. Our mission is to provide clear, actionable financial models with absolute privacy, running all calculations locally in your web browser.
+            The story behind FinCalc Flow, our dedication to client-side data privacy, and the transparent math formulas powering our tools.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-4">
-            <h2 class="text-lg font-bold text-slate-900">Our Mission & Story</h2>
+            <h2 class="text-lg font-bold text-slate-900">Why I Built FinCalc Flow</h2>
             <p class="text-slate-600 text-sm leading-relaxed">
-              FinCalc Flow was created out of frustration with existing online financial tools. Most calculators today are cluttered with heavy ads, pushy popup tracking consent forms, and slow backend servers that track your inputs. We built a completely free, professional-grade financial calculator hub that operates 100% on the client side.
+              Hi, I'm <strong>Haris Yaseen</strong>, the developer behind FinCalc Flow. I built this site out of personal frustration with existing online calculators. Most financial tools on the web today are bogged down by aggressive ad popups, forced account signups, slow backend servers, and cookie trackers that collect your private financial inputs.
             </p>
           </div>
           <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-4">
-            <h2 class="text-lg font-bold text-slate-900">Who We Are</h2>
+            <h2 class="text-lg font-bold text-slate-900">100% Client-Side & Private</h2>
             <p class="text-slate-600 text-sm leading-relaxed">
-              FinCalc Flow is built and maintained by an independent developer dedicated to financial literacy and software excellence. Our focus is to provide standard-compliant mathematical models that require zero sign-ups or user profiles.
+              FinCalc Flow is built as a serverless web app. That means <strong>every single calculation runs locally in your own web browser</strong> using JavaScript. We don't have backend databases storing your numbers, and your financial data never leaves your device.
             </p>
           </div>
         </div>
