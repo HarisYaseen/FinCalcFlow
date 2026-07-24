@@ -478,7 +478,7 @@ export default function DebtConsolidation({ currencySymbol }) {
         <div>
           <h2 className="text-2xl font-bold mb-4 text-slate-900">How the Debt Consolidation Simulation Works</h2>
           <p className="text-slate-600 leading-relaxed mb-6">
-            The optimizer runs two distinct algorithmic calculations using your current credit card inputs ($Balance_i, APR_i$) and proposed loan terms ($APR_{loan}, Term_{months}$):
+            The optimizer runs two distinct algorithmic calculations using your current credit card inputs (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Balance, APR</code>) and proposed loan terms (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Loan APR, Loan Term</code>):
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -488,7 +488,7 @@ export default function DebtConsolidation({ currencySymbol }) {
                 Existing Cards Minimum Amortization
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Simulates month-by-month payments for each credit card individually. Each month, interest is calculated ($Balance \times APR / 12$), and the minimum payment is set to interest plus 1.5% of principal (minimum $25). As balance decreases, minimum payment shrinks, prolonging the timeline.
+                Simulates month-by-month payments for each credit card individually. Each month, interest is calculated (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Balance × APR ÷ 12</code>), and the minimum payment is set to interest plus 1.5% of principal (minimum $25). As balance decreases, minimum payment shrinks, prolonging the timeline.
               </p>
             </div>
 
@@ -498,7 +498,7 @@ export default function DebtConsolidation({ currencySymbol }) {
                 Consolidation Loan Amortization
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Consolidates total card balance into a single installment loan with fixed monthly payments ($PMT_{loan}$) over a chosen term (12 to 72 months). Because payments remain constant while balance declines, principal reduction accelerates rapidly.
+                Consolidates total card balance into a single installment loan with fixed monthly payments (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Fixed Monthly Payment</code>) over a chosen term (12 to 72 months). Because payments remain constant while balance declines, principal reduction accelerates rapidly.
               </p>
             </div>
           </div>
@@ -521,8 +521,8 @@ export default function DebtConsolidation({ currencySymbol }) {
               </div>
               <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
                 <div><strong>APR_weighted:</strong> Effective combined interest rate across all cards</div>
-                <div><strong>Balance_i:</strong> Outstanding balance of card $i$</div>
-                <div><strong>APR_i:</strong> Annual Percentage Rate of card $i$</div>
+                <div><strong>Balance_i:</strong> Outstanding balance of card i</div>
+                <div><strong>APR_i:</strong> Annual Percentage Rate of card i</div>
               </div>
             </div>
 
@@ -532,8 +532,8 @@ export default function DebtConsolidation({ currencySymbol }) {
                 PMT_cc,m = max( 25, Interest_m + 0.015 &times; Balance_m )
               </div>
               <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
-                <div><strong>PMT_cc,m:</strong> Minimum required payment for month $m$</div>
-                <div><strong>Interest_m:</strong> Monthly accrued interest ($Balance_m \times APR / 12$)</div>
+                <div><strong>PMT_cc,m:</strong> Minimum required payment for month m</div>
+                <div><strong>Interest_m:</strong> Monthly accrued interest (Balance × APR ÷ 12)</div>
               </div>
             </div>
 
@@ -544,7 +544,7 @@ export default function DebtConsolidation({ currencySymbol }) {
               </div>
               <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
                 <div><strong>Balance_total:</strong> Sum of all consolidated credit card balances</div>
-                <div><strong>r:</strong> Monthly Loan Rate ($APR_{loan} / 12$)</div>
+                <div><strong>r:</strong> Monthly Loan Rate (Loan APR ÷ 12 ÷ 100)</div>
                 <div><strong>n:</strong> Consolidation Loan Term in Months</div>
               </div>
             </div>

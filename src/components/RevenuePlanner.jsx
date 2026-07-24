@@ -308,7 +308,7 @@ export default function RevenuePlanner() {
                 1. Traffic & Click Conversion Funnel
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Your monthly pageviews are converted into projected ad clicks using your Click-Through Rate ($Clicks = Pageviews \times CTR / 100$). Utility web apps and interactive tools naturally achieve higher CTR rates (2.0%–5.0%) due to prolonged user dwell time.
+                Your monthly pageviews are converted into projected ad clicks using your Click-Through Rate (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Clicks = Pageviews × CTR ÷ 100</code>). Utility web apps and interactive tools naturally achieve higher CTR rates (2.0%–5.0%) due to prolonged user dwell time.
               </p>
             </div>
 
@@ -318,7 +318,7 @@ export default function RevenuePlanner() {
                 2. Monetization & Revenue Allocation
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Each projected click is multiplied by the Cost-Per-Click rate ($Earnings = Clicks \times CPC$). In AdSense, Google pays publishers 68% of the gross advertiser bid. The tool calculates monthly, daily, and annual earnings alongside Page RPM.
+                Each projected click is multiplied by the Cost-Per-Click rate (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Earnings = Clicks × CPC</code>). In AdSense, Google pays publishers 68% of the gross advertiser bid. The tool calculates monthly, daily, and annual earnings alongside Page RPM.
               </p>
             </div>
           </div>

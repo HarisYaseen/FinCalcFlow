@@ -315,7 +315,7 @@ export default function LoanPayoff({ currencySymbol = '$' }) {
                 1. Compound Interest Savings
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Reducing principal balance reduces next month's interest charge ($Interest = Balance \times \frac{APR}{12}$), compounding savings over remaining months.
+                Reducing principal balance reduces next month's interest charge (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Interest = Balance × (APR ÷ 12)</code>), compounding savings over remaining months.
               </p>
             </div>
 

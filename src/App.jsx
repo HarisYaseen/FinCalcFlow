@@ -566,15 +566,70 @@ export default function App() {
                 Home
               </a>
 
-              <a
-                href="/calculators/loan-calculators"
-                onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-calculators'); }}
-                className={`text-sm font-bold transition-all py-2 px-3 bg-indigo-50 rounded-lg border border-indigo-100 ${
-                  activePage.includes('loan') ? 'text-indigo-700 font-extrabold' : 'text-indigo-600 hover:text-indigo-800'
-                }`}
+              {/* Loan Calculators Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setCalcsDropdownOpen(true)}
+                onMouseLeave={() => setCalcsDropdownOpen(false)}
               >
-                Loan Calculators
-              </a>
+                <a
+                  href="/calculators/loan-calculators"
+                  onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-calculators'); setCalcsDropdownOpen(false); }}
+                  className={`text-sm font-bold transition-all py-2 px-3 bg-indigo-50 rounded-lg border border-indigo-100 flex items-center gap-1.5 ${
+                    activePage.includes('loan') || activePage.includes('debt-to-income') ? 'text-indigo-700 font-extrabold shadow-sm' : 'text-indigo-600 hover:text-indigo-800'
+                  }`}
+                >
+                  <span>Loan Calculators</span>
+                  <span className="text-[10px]">▼</span>
+                </a>
+
+                {calcsDropdownOpen && (
+                  <div className="absolute left-0 top-full mt-1 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                    <a
+                      href="/calculators/loan-calculators"
+                      onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-calculators'); setCalcsDropdownOpen(false); }}
+                      className="block px-4 py-2.5 text-xs font-extrabold text-indigo-600 hover:bg-indigo-50/80 border-b border-slate-100"
+                    >
+                      🗂️ Loan Calculators Hub
+                    </a>
+                    <a
+                      href="/calculators/personal-loan-calculator"
+                      onClick={(e) => { e.preventDefault(); setActivePage('calculators/personal-loan-calculator'); setCalcsDropdownOpen(false); }}
+                      className="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-indigo-50/50 hover:text-indigo-600"
+                    >
+                      💳 Personal Loan Calculator
+                    </a>
+                    <a
+                      href="/calculators/home-loan-calculator"
+                      onClick={(e) => { e.preventDefault(); setActivePage('calculators/home-loan-calculator'); setCalcsDropdownOpen(false); }}
+                      className="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-indigo-50/50 hover:text-indigo-600"
+                    >
+                      🏡 Home Loan Calculator
+                    </a>
+                    <a
+                      href="/calculators/car-loan-calculator"
+                      onClick={(e) => { e.preventDefault(); setActivePage('calculators/car-loan-calculator'); setCalcsDropdownOpen(false); }}
+                      className="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-indigo-50/50 hover:text-indigo-600"
+                    >
+                      🚗 Car Loan Calculator
+                    </a>
+                    <a
+                      href="/calculators/loan-payoff-calculator"
+                      onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-payoff-calculator'); setCalcsDropdownOpen(false); }}
+                      className="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-indigo-50/50 hover:text-indigo-600"
+                    >
+                      ⚡ Loan Payoff Calculator
+                    </a>
+                    <a
+                      href="/calculators/debt-to-income-calculator"
+                      onClick={(e) => { e.preventDefault(); setActivePage('calculators/debt-to-income-calculator'); setCalcsDropdownOpen(false); }}
+                      className="block px-4 py-2 text-xs font-bold text-slate-700 hover:bg-indigo-50/50 hover:text-indigo-600"
+                    >
+                      📊 Debt-to-Income (DTI) Calculator
+                    </a>
+                  </div>
+                )}
+              </div>
 
               <a
                 href="/rent-vs-buy"
@@ -681,7 +736,7 @@ export default function App() {
 
         {/* Mobile Navigation Panel */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-100 bg-white px-4 pt-2 pb-4 space-y-1 shadow-inner">
+          <div className="md:hidden border-t border-slate-100 bg-white px-4 pt-2 pb-4 space-y-1 shadow-inner max-h-[80vh] overflow-y-auto">
             <a
               href="/"
               onClick={(e) => { e.preventDefault(); setActivePage('home'); setMobileMenuOpen(false); }}
@@ -691,51 +746,102 @@ export default function App() {
             >
               Dashboard
             </a>
-            <a
-              href="/rent-vs-buy"
-              onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); setMobileMenuOpen(false); }}
-              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
-                activePage === 'rent-vs-buy' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
-              }`}
-            >
-              Rent vs. Buy Simulator
-            </a>
-            <a
-              href="/cost-per-mile"
-              onClick={(e) => { e.preventDefault(); setActivePage('cost-per-mile'); setMobileMenuOpen(false); }}
-              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
-                activePage === 'cost-per-mile' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
-              }`}
-            >
-              Trucking Cost Per Mile
-            </a>
-            <a
-              href="/debt-consolidation"
-              onClick={(e) => { e.preventDefault(); setActivePage('debt-consolidation'); setMobileMenuOpen(false); }}
-              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
-                activePage === 'debt-consolidation' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
-              }`}
-            >
-              Debt Consolidation Optimizer
-            </a>
-            <a
-              href="/revenue-planner"
-              onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); setMobileMenuOpen(false); }}
-              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
-                activePage === 'revenue-planner' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
-              }`}
-            >
-              AdSense Revenue Planner
-            </a>
-            <a
-              href="/about"
-              onClick={(e) => { e.preventDefault(); setActivePage('about'); setMobileMenuOpen(false); }}
-              className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
-                activePage === 'about' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
-              }`}
-            >
-              About Us & Math
-            </a>
+            
+            <div className="pt-2 pb-1 border-t border-slate-100">
+              <span className="px-4 text-[10px] font-black text-indigo-600 uppercase tracking-wider block mb-1">
+                Loan Calculators
+              </span>
+              <a
+                href="/calculators/loan-calculators"
+                onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-calculators'); setMobileMenuOpen(false); }}
+                className="block w-full text-left px-4 py-2 rounded-xl text-xs font-bold text-slate-800 hover:bg-slate-50"
+              >
+                🗂️ All Loan Calculators Hub
+              </a>
+              <a
+                href="/calculators/personal-loan-calculator"
+                onClick={(e) => { e.preventDefault(); setActivePage('calculators/personal-loan-calculator'); setMobileMenuOpen(false); }}
+                className="block w-full text-left px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-50"
+              >
+                💳 Personal Loan Calculator
+              </a>
+              <a
+                href="/calculators/home-loan-calculator"
+                onClick={(e) => { e.preventDefault(); setActivePage('calculators/home-loan-calculator'); setMobileMenuOpen(false); }}
+                className="block w-full text-left px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-50"
+              >
+                🏡 Home Loan Calculator
+              </a>
+              <a
+                href="/calculators/car-loan-calculator"
+                onClick={(e) => { e.preventDefault(); setActivePage('calculators/car-loan-calculator'); setMobileMenuOpen(false); }}
+                className="block w-full text-left px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-50"
+              >
+                🚗 Car Loan Calculator
+              </a>
+              <a
+                href="/calculators/loan-payoff-calculator"
+                onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-payoff-calculator'); setMobileMenuOpen(false); }}
+                className="block w-full text-left px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-50"
+              >
+                ⚡ Loan Payoff Calculator
+              </a>
+              <a
+                href="/calculators/debt-to-income-calculator"
+                onClick={(e) => { e.preventDefault(); setActivePage('calculators/debt-to-income-calculator'); setMobileMenuOpen(false); }}
+                className="block w-full text-left px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-50"
+              >
+                📊 Debt-to-Income (DTI) Calculator
+              </a>
+            </div>
+
+            <div className="pt-2 border-t border-slate-100">
+              <a
+                href="/rent-vs-buy"
+                onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); setMobileMenuOpen(false); }}
+                className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                  activePage === 'rent-vs-buy' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                Rent vs. Buy Simulator
+              </a>
+              <a
+                href="/cost-per-mile"
+                onClick={(e) => { e.preventDefault(); setActivePage('cost-per-mile'); setMobileMenuOpen(false); }}
+                className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                  activePage === 'cost-per-mile' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                Trucking Cost Per Mile
+              </a>
+              <a
+                href="/debt-consolidation"
+                onClick={(e) => { e.preventDefault(); setActivePage('debt-consolidation'); setMobileMenuOpen(false); }}
+                className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                  activePage === 'debt-consolidation' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                Debt Consolidation Optimizer
+              </a>
+              <a
+                href="/revenue-planner"
+                onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); setMobileMenuOpen(false); }}
+                className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                  activePage === 'revenue-planner' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                AdSense Revenue Planner
+              </a>
+              <a
+                href="/about"
+                onClick={(e) => { e.preventDefault(); setActivePage('about'); setMobileMenuOpen(false); }}
+                className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold ${
+                  activePage === 'about' ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+                }`}
+              >
+                About Us & Math
+              </a>
+            </div>
             <a
               href="/terms"
               onClick={(e) => { e.preventDefault(); setActivePage('terms'); setMobileMenuOpen(false); }}

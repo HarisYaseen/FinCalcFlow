@@ -397,7 +397,7 @@ export default function PersonalLoan({ currencySymbol = '$' }) {
                 1. Monthly Interest Accrual
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Interest is computed monthly on the remaining principal balance ($Interest = Balance \times \frac{APR}{12}$). In the early months of the loan, interest accounts for a larger portion of your payment.
+                Interest is computed monthly on the remaining principal balance (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Interest = Balance × (APR / 12)</code>). In the early months of the loan, interest accounts for a larger portion of your payment.
               </p>
             </div>
 
@@ -429,10 +429,10 @@ export default function PersonalLoan({ currencySymbol = '$' }) {
                 M = P &times; [ r(1 + r)ⁿ ] / [ (1 + r)ⁿ - 1 ]
               </div>
               <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
-                <div><strong>M:</strong> Monthly Principal & Interest Payment ($)</div>
-                <div><strong>P:</strong> Principal Loan Amount ($)</div>
-                <div><strong>r:</strong> Monthly Interest Rate ($APR / 12 / 100$)</div>
-                <div><strong>n:</strong> Total Amortization Months ($Years \times 12$)</div>
+                <div><strong>M:</strong> Monthly Principal & Interest Payment</div>
+                <div><strong>P:</strong> Principal Loan Amount</div>
+                <div><strong>r:</strong> Monthly Interest Rate (APR ÷ 12 ÷ 100)</div>
+                <div><strong>n:</strong> Total Amortization Months (Years × 12)</div>
               </div>
             </div>
 

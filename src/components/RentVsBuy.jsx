@@ -585,7 +585,7 @@ export default function RentVsBuy({ currencySymbol }) {
         <div>
           <h2 className="text-2xl font-bold mb-4 text-slate-900">How the Rent vs. Buy Simulation Works</h2>
           <p className="text-slate-600 leading-relaxed mb-6">
-            The simulator projects two parallel economic paths over your selected holding period ($N$ years). Rather than comparing only monthly checkbook costs, it tracks ending net worth by evaluating asset values minus liabilities and transaction fees.
+            The simulator projects two parallel economic paths over your selected holding period (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">N years</code>). Rather than comparing only monthly checkbook costs, it tracks ending net worth by evaluating asset values minus liabilities and transaction fees.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -595,7 +595,7 @@ export default function RentVsBuy({ currencySymbol }) {
                 The Homebuyer Track
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                The homebuyer deploys cash upfront for a down payment ($D$) and closing costs. Each month, the buyer pays mortgage principal & interest ($M$), property tax, and maintenance fees. Home equity grows through principal reduction and home value appreciation ($a$), reduced by a 6% selling commission upon exit.
+                The homebuyer deploys cash upfront for a down payment (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Down Payment</code>) and closing costs. Each month, the buyer pays mortgage principal & interest (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Monthly P&I</code>), property tax, and maintenance fees. Home equity grows through principal reduction and home value appreciation, reduced by a 6% selling commission upon exit.
               </p>
             </div>
 
@@ -605,7 +605,7 @@ export default function RentVsBuy({ currencySymbol }) {
                 The Renter Track
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                The renter starts with a liquid investment portfolio equal to the buyer's down payment ($D$). Monthly rent escalates annually by the rent inflation rate ($i$). Any monthly cash savings (when ownership costs exceed rent) are invested into stock index funds at the market return rate ($s$).
+                The renter starts with a liquid investment portfolio equal to the buyer's down payment. Monthly rent escalates annually by the rent inflation rate. Any monthly cash savings (when ownership costs exceed rent) are invested into stock index funds at the market return rate.
               </p>
             </div>
           </div>
@@ -628,8 +628,8 @@ export default function RentVsBuy({ currencySymbol }) {
               </div>
               <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
                 <div><strong>M:</strong> Monthly Principal & Interest Payment</div>
-                <div><strong>P:</strong> Principal Loan Amount ($Price - Down Payment$)</div>
-                <div><strong>r:</strong> Monthly Interest Rate ($Annual Rate / 12$)</div>
+                <div><strong>P:</strong> Principal Loan Amount (Price - Down Payment)</div>
+                <div><strong>r:</strong> Monthly Interest Rate (Annual Rate ÷ 12 ÷ 100)</div>
                 <div><strong>n:</strong> Total Amortization Months (e.g., 360 for 30 years)</div>
               </div>
             </div>
@@ -640,7 +640,7 @@ export default function RentVsBuy({ currencySymbol }) {
                 NW_Buyer(T) = V_T - Balance_T - (V_T &times; C_sell)
               </div>
               <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
-                <div><strong>V_T:</strong> Compounded Home Value ($Price \times (1 + a)^T$)</div>
+                <div><strong>V_T:</strong> Compounded Home Value [Price &times; (1 + a)^T]</div>
                 <div><strong>Balance_T:</strong> Remaining Mortgage Loan Principal</div>
                 <div><strong>C_sell:</strong> Realtor Commission & Exit Costs (6% default)</div>
                 <div><strong>a:</strong> Annual Home Appreciation Rate</div>
@@ -653,9 +653,9 @@ export default function RentVsBuy({ currencySymbol }) {
                 Portfolio_m = Portfolio_(m-1) &times; (1 + s_m) + (Cost_Buyer,m - Rent_m)
               </div>
               <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
-                <div><strong>Portfolio_0:</strong> Initial Down Payment Capital ($D$)</div>
+                <div><strong>Portfolio_0:</strong> Initial Down Payment Capital</div>
                 <div><strong>s_m:</strong> Monthly Stock Market Return Rate</div>
-                <div><strong>Cost_Buyer,m:</strong> Total Monthly Ownership Cost ($M + Tax + Maint$)</div>
+                <div><strong>Cost_Buyer,m:</strong> Total Monthly Ownership Cost (P&I + Tax + Maint)</div>
                 <div><strong>Rent_m:</strong> Inflation-Adjusted Monthly Rent</div>
               </div>
             </div>
