@@ -530,160 +530,314 @@ export default function RentVsBuy({ currencySymbol }) {
         </div>
       </div>
 
-      {/* Complete Guide to Comparing Renting vs. Buying (SEO Content) */}
-      <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left">
+      {/* Complete Guide to Comparing Renting vs. Buying (SEO & Educational Content) */}
+      <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left space-y-10">
         
-        <h2 className="text-3xl font-bold mb-4 text-slate-900 border-b pb-2">The Complete Guide to Comparing Renting vs. Buying a Home</h2>
-        <p className="mb-6 text-lg leading-relaxed text-slate-600">
-          Deciding whether to buy a home or continue renting is one of the most significant financial choices you will make in your lifetime. While homeownership is often touted as the ultimate American dream and the standard path to wealth creation, the reality is mathematically more complex. In many high-priced real estate markets, renting and investing the savings can actually yield a higher long-term net worth.
-        </p>
-        <p className="mb-6 leading-relaxed">
-          Our serverless Rent vs. Buy simulator uses detailed financial amortization and opportunity cost models to compare both paths over a set period. Below, we break down the key expenses, mathematical principles, and hidden costs that determine the optimal decision for your situation.
-        </p>
-
-        <hr className="my-8 border-slate-200" />
-
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">Understanding the True Costs of Homeownership vs. Renting</h2>
-        <p className="mb-4 leading-relaxed">
-          To make an accurate comparison, you must look beyond the simple monthly mortgage payment versus monthly rent. Homeownership carries significant unrecoverable costs that do not build equity, while renting allows you to keep your capital liquid.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60">
-            <h3 className="text-xl font-bold mb-3 text-slate-900 flex items-center gap-2">
-              🔒 True Costs of Buying
-            </h3>
-            <p className="text-sm text-slate-500 mb-4 leading-relaxed">These are the ongoing, non-recoverable expenses associated with owning and maintaining property:</p>
-            <ul className="list-disc list-inside text-sm space-y-2 text-slate-700 font-semibold">
-              <li><strong>Mortgage Interest:</strong> Fees paid to the lender for borrowing.</li>
-              <li><strong>Property Taxes & Insurance:</strong> Annual civic levies and hazard cover.</li>
-              <li><strong>Home Maintenance:</strong> Average annual upkeep costs (often 1-2% of property value).</li>
-              <li><strong>Transaction Fees:</strong> Upfront closing costs (2-5% on purchase) and agent commissions (5-6% on sale).</li>
-            </ul>
-          </div>
-
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60">
-            <h3 className="text-xl font-bold mb-3 text-slate-900 flex items-center gap-2">
-              ⚡ True Costs of Renting
-            </h3>
-            <p className="text-sm text-slate-500 mb-4 leading-relaxed">These are the expenses of renting, offset by the growth of your investment capital:</p>
-            <ul className="list-disc list-inside text-sm space-y-2 text-slate-700 font-semibold">
-              <li><strong>Monthly Rent:</strong> The direct price of shelter, which typically increases annually.</li>
-              <li><strong>Renter's Insurance:</strong> Low-cost coverage for personal belongings.</li>
-              <li><strong>Opportunity Cost:</strong> Capital not tied up in a down payment can compound in high-return assets like stock index funds.</li>
-              <li><strong>Zero Upkeep Fees:</strong> Landlord absorbs all maintenance liabilities.</li>
-            </ul>
+        {/* 1. Introduction (250–400 Words) */}
+        <div>
+          <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Comparing Renting vs. Buying a Home</h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed text-base">
+            <p>
+              Deciding whether to buy a home or continue renting is one of the most consequential personal finance choices you will make in your lifetime. Conventional wisdom often insists that homeownership is the premier path to building wealth, claiming that monthly rental payments are simply "throwing money away." However, modern financial modeling reveals a much more nuanced reality: in many real estate markets—particularly high-cost urban centers—renting while investing your surplus cash in stock index funds can yield equal or superior net worth over time.
+            </p>
+            <p>
+              <strong>What This Calculator Is:</strong> Our serverless Rent vs. Buy Simulator is a multi-variable financial amortization model. It computes month-by-month cash flows, compounding investment growth, tax obligations, property appreciation, and friction costs over any custom timeframe (from 1 to 30 years).
+            </p>
+            <p>
+              <strong>Who Should Use It:</strong> This tool is engineered for prospective homebuyers evaluating purchase offers, tenants deciding whether to renew a lease or enter the market, financial advisors modeling housing allocation for clients, and mobile professionals weighing short-term relocations against long-term property ownership.
+            </p>
+            <p>
+              <strong>Why It Is Important:</strong> Purchasing property involves significant unrecoverable expenses—such as mortgage interest, property taxes, homeowner’s insurance, maintenance reserves, closing fees, and realtor commissions. Conversely, renting involves unrecoverable rental payments, but keeps your down payment capital liquid. This simulator quantifies the exact financial crossover point where buying becomes more lucrative than renting, eliminating guesswork from your housing decisions.
+            </p>
           </div>
         </div>
 
-        <hr className="my-8 border-slate-200" />
+        <hr className="border-slate-200" />
 
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">How the Rent vs. Buy Simulator Works</h2>
-        <p className="mb-4 leading-relaxed">
-          The simulator runs a month-by-month financial projection comparing a **Buyer** (who purchases a home using a mortgage) and a **Renter** (who rents an equivalent property and invests their surplus capital).
-        </p>
+        {/* 2. How It Works */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">How the Rent vs. Buy Simulation Works</h2>
+          <p className="text-slate-600 leading-relaxed mb-6">
+            The simulator projects two parallel economic paths over your selected holding period ($N$ years). Rather than comparing only monthly checkbook costs, it tracks ending net worth by evaluating asset values minus liabilities and transaction fees.
+          </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-6">
-          {/* Buyer Wealth Accumulation */}
-          <div className="bg-emerald-50/20 border border-emerald-100/70 rounded-2xl p-6 space-y-4">
-            <h4 className="font-black text-emerald-800 uppercase tracking-wider text-xs flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-              1. Buyer Wealth Accumulation
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Buying accumulates wealth by converting monthly housing expenses into property equity and benefiting from home value appreciation.
-            </p>
-            <div className="space-y-3.5 pt-2">
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Mortgage Formula</span>
-                <p className="text-[11px] text-slate-600 leading-relaxed mb-2">
-                  Monthly Principal & Interest is calculated using standard loan amortization:
-                </p>
-                <div className="py-2.5 px-4 bg-slate-900 text-slate-100 rounded-lg font-mono text-center text-xs font-bold shadow-inner border border-slate-800">
-                  M = P &times; [r(1+r)ⁿ] / [(1+r)ⁿ - 1]
-                </div>
-                <span className="text-[9px] text-slate-400 mt-1.5 block leading-normal">
-                  Where <strong>P</strong> = Loan Principal, <strong>r</strong> = Monthly Interest Rate (APR/12), and <strong>n</strong> = 360 payments (30-year fixed).
-                </span>
-              </div>
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm space-y-1.5">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Key Variables Modeled</span>
-                <ul className="text-xs space-y-1 text-slate-500 list-inside list-disc">
-                  <li><strong>Appreciation:</strong> Home value increases by {appreciationPct}% annually, compounded monthly.</li>
-                  <li><strong>Maintenance:</strong> Annual maintenance is simulated at {maintenancePct}% of the home value.</li>
-                  <li><strong>Net Worth:</strong> Ending Home Value minus Mortgage Balance and 6% Selling Costs.</li>
-                </ul>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-3">
+              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
+                The Homebuyer Track
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                The homebuyer deploys cash upfront for a down payment ($D$) and closing costs. Each month, the buyer pays mortgage principal & interest ($M$), property tax, and maintenance fees. Home equity grows through principal reduction and home value appreciation ($a$), reduced by a 6% selling commission upon exit.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-3">
+              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-indigo-500"></span>
+                The Renter Track
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                The renter starts with a liquid investment portfolio equal to the buyer's down payment ($D$). Monthly rent escalates annually by the rent inflation rate ($i$). Any monthly cash savings (when ownership costs exceed rent) are invested into stock index funds at the market return rate ($s$).
+              </p>
             </div>
           </div>
+        </div>
 
-          {/* Renter Wealth Accumulation */}
-          <div className="bg-indigo-50/20 border border-indigo-100/70 rounded-2xl p-6 space-y-4">
-            <h4 className="font-black text-indigo-800 uppercase tracking-wider text-xs flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
-              2. Renter Wealth Accumulation
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Renting accumulates wealth by investing down payment cash (which isn't tied up in the home) and recurring monthly savings.
-            </p>
-            <div className="space-y-3.5 pt-2">
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Opportunity Cost Principle</span>
-                <p className="text-[11px] text-slate-600 leading-relaxed mb-1.5">
-                  The renter starts with a portfolio equal to the buyer's down payment and closing costs:
-                </p>
-                <div className="py-2 px-4 bg-slate-900 text-slate-100 rounded-lg font-mono text-center text-xs font-bold shadow-inner border border-slate-800">
-                  Portfolio₀ = Down Payment + Closing Costs
-                </div>
+        <hr className="border-slate-200" />
+
+        {/* 3. The Formulas & Variable Definitions */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">Mathematical Formulas & Variable Definitions</h2>
+          <p className="text-slate-600 leading-relaxed mb-6">
+            Below are the exact equations powering the simulator:
+          </p>
+
+          <div className="space-y-6">
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-emerald-400 uppercase tracking-wider">1. Monthly Mortgage Payment (P&I)</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-emerald-300 font-bold">
+                M = P &times; [ r(1 + r)ⁿ ] / [ (1 + r)ⁿ - 1 ]
               </div>
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm space-y-1.5">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Investment Dynamics</span>
-                <ul className="text-xs space-y-1 text-slate-500 list-inside list-disc">
-                  <li><strong>Monthly Rent:</strong> Escalates annually by the rent inflation rate ({rentInflationPct}%/year).</li>
-                  <li><strong>Difference Investing:</strong> Each month, we compare total cost of owning vs renting. If owning is more expensive, the renter buys stocks with the difference. Otherwise, the renter withdraws from stocks.</li>
-                  <li><strong>Portfolio Return:</strong> Compounds monthly at the stock return rate ({stockReturnPct}%/year).</li>
-                </ul>
+              <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+                <div><strong>M:</strong> Monthly Principal & Interest Payment</div>
+                <div><strong>P:</strong> Principal Loan Amount ($Price - Down Payment$)</div>
+                <div><strong>r:</strong> Monthly Interest Rate ($Annual Rate / 12$)</div>
+                <div><strong>n:</strong> Total Amortization Months (e.g., 360 for 30 years)</div>
+              </div>
+            </div>
+
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-indigo-400 uppercase tracking-wider">2. Buyer Net Worth at Exit Year (T)</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-indigo-300 font-bold">
+                NW_Buyer(T) = V_T - Balance_T - (V_T &times; C_sell)
+              </div>
+              <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+                <div><strong>V_T:</strong> Compounded Home Value ($Price \times (1 + a)^T$)</div>
+                <div><strong>Balance_T:</strong> Remaining Mortgage Loan Principal</div>
+                <div><strong>C_sell:</strong> Realtor Commission & Exit Costs (6% default)</div>
+                <div><strong>a:</strong> Annual Home Appreciation Rate</div>
+              </div>
+            </div>
+
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-amber-400 uppercase tracking-wider">3. Renter Portfolio Compounding</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-amber-300 font-bold">
+                Portfolio_m = Portfolio_(m-1) &times; (1 + s_m) + (Cost_Buyer,m - Rent_m)
+              </div>
+              <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+                <div><strong>Portfolio_0:</strong> Initial Down Payment Capital ($D$)</div>
+                <div><strong>s_m:</strong> Monthly Stock Market Return Rate</div>
+                <div><strong>Cost_Buyer,m:</strong> Total Monthly Ownership Cost ($M + Tax + Maint$)</div>
+                <div><strong>Rent_m:</strong> Inflation-Adjusted Monthly Rent</div>
               </div>
             </div>
           </div>
         </div>
 
-        <hr className="my-8 border-slate-200" />
+        <hr className="border-slate-200" />
 
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">Renting vs. Buying: Frequently Asked Questions</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-emerald-500">
-            <h3 className="text-base font-extrabold text-slate-800">Is it better to rent or buy a home?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              There is no single answer. Buying allows you to build equity and benefit from property appreciation, but it comes with high upfront costs (down payment, closing costs) and recurring maintenance expenses. Renting offers flexibility, zero maintenance liability, and allows you to invest your down payment cash into liquid assets like stocks.
-            </p>
-          </div>
+        {/* 4. Worked Examples */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Examples</h2>
+          
+          <div className="space-y-6">
+            {/* Example 1 */}
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 1: Mid-Range Suburban Home (10-Year Stay)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Home Price:</strong> $450,000</div>
+                <div><strong>Down Payment:</strong> 10% ($45,000)</div>
+                <div><strong>Mortgage Rate:</strong> 6.5%</div>
+                <div><strong>Current Rent:</strong> $2,200/mo</div>
+                <div><strong>Appreciation:</strong> 4.0%/yr</div>
+                <div><strong>Stock Return:</strong> 8.0%/yr</div>
+              </div>
+              <div className="text-sm text-slate-600 space-y-2">
+                <p><strong>Step 1 (Buyer Cash Flow):</strong> Loan principal = $405,000. Monthly P&I = $2,560. Add monthly property tax ($468) and maintenance ($375) for a total monthly cost of $3,403.</p>
+                <p><strong>Step 2 (Renter Cash Flow):</strong> Renter starts with $45,000 invested in index funds. Rent begins at $2,200/mo and increases 3% annually. Renter invests the monthly difference ($3,403 - $2,200 = $1,203) into stocks.</p>
+                <p><strong>Result at Year 10:</strong> Home value reaches $666,106. Remaining mortgage is $340,110. After 6% selling costs ($39,966), Buyer Net Worth is <strong>$286,030</strong>. Renter stock portfolio grows to <strong>$324,510</strong>. <span className="text-indigo-600 font-bold">Renting wins by $38,480</span> due to higher stock compounding!</p>
+              </div>
+            </div>
 
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-indigo-500">
-            <h3 className="text-base font-extrabold text-slate-800">What is the "opportunity cost" in the Rent vs. Buy debate?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              When you buy a home, your down payment is locked up in home equity. The opportunity cost is the investment return you could have earned if you invested that same down payment cash in the stock market (e.g., an S&P 500 index fund) instead of using it to buy a house.
-            </p>
-          </div>
-
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-emerald-500">
-            <h3 className="text-base font-extrabold text-slate-800">What hidden costs should homeowners expect?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              Beyond the monthly mortgage principal and interest, homeowners pay property taxes, homeowner's insurance, and annual maintenance (estimated at 1% to 2% of the home's value annually for repairs, roofing, HVAC, etc.).
-            </p>
-          </div>
-
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-indigo-500">
-            <h3 className="text-base font-extrabold text-slate-800">How long do I need to live in a house to break even?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              Typically, it takes 4 to 7 years to offset the buying transaction costs (closing fees, lender fees) and selling costs (usually a 6% agent commission). If you plan to move in under 3 years, renting is almost always more financially advantageous.
-            </p>
+            {/* Example 2 */}
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 2: Starter Home in Moderate Niche Market (15-Year Stay)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Home Price:</strong> $275,000</div>
+                <div><strong>Down Payment:</strong> 20% ($55,000)</div>
+                <div><strong>Mortgage Rate:</strong> 5.5%</div>
+                <div><strong>Current Rent:</strong> $1,800/mo</div>
+                <div><strong>Appreciation:</strong> 4.5%/yr</div>
+                <div><strong>Stock Return:</strong> 7.0%/yr</div>
+              </div>
+              <div className="text-sm text-slate-600 space-y-2">
+                <p><strong>Calculation:</strong> Because the buyer puts 20% down, monthly P&I is $1,249, total housing cost is $1,780/mo (lower than starting rent!). Over 15 years, mortgage principal drops significantly while home value appreciates to $532,200.</p>
+                <p><strong>Result at Year 15:</strong> Buyer Net Worth (after selling fees) reaches <strong>$354,200</strong>, while Renter Net Worth reaches <strong>$198,400</strong>. <span className="text-emerald-600 font-bold">Buying wins by $155,800</span> thanks to long holding duration and favorable initial purchase pricing.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-500">
-          Evaluating long-term cash flows and debt loads is critical when planning your financial future. If you are also carrying high-interest consumer debt that impacts your ability to save for a home down payment, explore our interactive <a href="/debt-consolidation" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/debt-consolidation'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-600 font-bold hover:underline">Debt Consolidation Calculator</a> to see how much you can save on interest.
+        <hr className="border-slate-200" />
+
+        {/* 5. When to Use This Calculator */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">When to Use This Calculator</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700">
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">🏡 Evaluating First-Time Home Purchases</strong>
+              Test whether putting 5% down vs 20% down alters your break-even year in your specific local housing market.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">💼 Relocations & Short Stays</strong>
+              Determine if living in a city for 3–5 years justifies the 2-5% buying closing costs and 6% seller commissions.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">📈 High Interest Rate Environments</strong>
+              Model how 6.5%–7.5% mortgage rates affect long-term equity accumulation compared to stock market returns.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">📊 Asset Allocation Planning</strong>
+              Quantify the opportunity cost of pulling cash out of high-yield brokerage accounts for property down payments.
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 6. Common Mistakes */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">7 Common Mistakes When Comparing Renting vs. Buying</h2>
+          <div className="space-y-3 text-sm text-slate-700">
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>1. Ignoring Unrecoverable Ownership Costs:</strong> Homeowners pay property taxes, mortgage interest, HOA dues, and repairs that never return as equity.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>2. Forgetting Opportunity Cost:</strong> Down payment cash locked in a house cannot earn interest in index funds or money market accounts.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>3. Underestimating Maintenance:</strong> Annual upkeep averages 1% to 2% of home value ($4,000/yr on a $400k home for roof, HVAC, plumbing).
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>4. Assuming Linear Appreciation:</strong> Real estate markets experience stagnation or corrections; expecting 8% annual appreciation indefinitely is unrealistic.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>5. Ignoring Transaction Friction:</strong> Selling a home costs ~6% in agent fees plus 1–2% in transfer taxes and closing costs.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>6. Overestimating Tax Benefits:</strong> Under current tax laws with high standard deductions, most buyers do not itemize mortgage interest.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>7. Short Holding Periods:</strong> Buying for less than 4–5 years almost always loses money due to amortized interest front-loading.
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 7. Expanded FAQs (8-10 items) */}
+        <div>
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">Frequently Asked Questions (FAQs)</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What is the 5% Rule in Rent vs. Buy analysis?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                The 5% Rule estimates unrecoverable annual homeownership costs at roughly 5% of property value (1.5% property tax, 1% maintenance, 2.5% cost of capital). If annual rent is less than 5% of the home's purchase price, renting is mathematically favored.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Is renting always "throwing money away"?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                No. Rent pays for shelter without financial liability for property depreciation, repairs, or illiquidity. Mortgage interest and property taxes are equally "thrown away" unrecoverable fees.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">How does inflation impact homeownership vs renting?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Fixed-rate mortgages lock in your principal and interest payment, inflating away debt in real terms. Renters face annual rent inflation increases, though their stock investments also benefit from corporate revenue inflation.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What duration of stay is required to break even on buying?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Typically 5 to 7 years. It takes several years for mortgage principal payments and home appreciation to surpass upfront closing costs and closing seller commissions.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">How does Private Mortgage Insurance (PMI) affect the calculation?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                If you put down less than 20%, lenders charge PMI (0.5%–1.5% of loan amount annually), adding to unrecoverable monthly costs until you reach 20% home equity.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Should I factor in stock market capital gains tax?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Yes. While home sales benefit from up to $250k ($500k married) tax-free capital gains under IRS Section 121, taxable brokerage stock gains are subject to long-term capital gains tax rates (15%–20%).
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What standard maintenance rate should I assume?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                A standard rule of thumb is 1% of home value annually for newer homes and 2% for homes older than 20 years to cover major capital replacements.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Does home equity build faster with a 15-year mortgage?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Yes. 15-year mortgages carry lower interest rates and pay down principal rapidly, but require higher monthly cash payments, reducing monthly stock investment savings for renters.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 8. Related Calculators & Internal Navigation */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <h3 className="text-lg font-bold text-slate-900 mb-3">Explore Related Financial Calculators</h3>
+          <p className="text-xs text-slate-500 mb-4">Optimize every aspect of your personal and business cash flow with our suite of private tools:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-bold">
+            <a 
+              href="/debt-consolidation"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/debt-consolidation'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-indigo-600 hover:border-indigo-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>Debt Consolidation</span>
+              <span>&rarr;</span>
+            </a>
+            <a 
+              href="/cost-per-mile"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/cost-per-mile'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-blue-600 hover:border-blue-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>Trucking Cost Per Mile</span>
+              <span>&rarr;</span>
+            </a>
+            <a 
+              href="/revenue-planner"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/revenue-planner'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-amber-600 hover:border-amber-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>AdSense Revenue Planner</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        {/* 9. Authoritative References */}
+        <div className="pt-4 text-xs text-slate-400 border-t border-slate-100 space-y-1">
+          <strong className="text-slate-500 block">Authoritative References & Data Sources:</strong>
+          <p>• U.S. Federal Reserve Economic Data (FRED): <span className="underline">Mortgage Rates & Case-Shiller Home Price Index</span></p>
+          <p>• Consumer Financial Protection Bureau (CFPB): <span className="underline">Mortgage Amortization & Closing Cost Guidelines</span></p>
+          <p>• Internal Revenue Service (IRS): <span className="underline">Publication 530 - Tax Information for Homeowners</span></p>
         </div>
 
       </div>

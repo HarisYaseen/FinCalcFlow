@@ -243,154 +243,305 @@ export default function RevenuePlanner() {
         </div>
       </div>
 
-      {/* Complete Guide to Google AdSense Traffic & Revenue Planning (SEO Content) */}
-      <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left">
+      {/* Complete Guide to Google AdSense Traffic & Revenue Planning (SEO & Educational Content) */}
+      <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left space-y-10">
         
-        <h2 className="text-3xl font-bold mb-4 text-slate-900 border-b pb-2">The Complete Guide to Google AdSense Traffic & Revenue Planning</h2>
-        <p className="mb-6 text-lg leading-relaxed text-slate-600">
-          For digital publishers, web developers, and content creators, scaling traffic is only half the equation of web monetization. The actual revenue your website generates is heavily dictated by your niche, geographic audience distribution, and ad layout. Many sites with millions of monthly visitors struggle to make a sustainable income, while small, niche utility platforms with targeted tools pull in thousands of dollars per month in high-value CPC ads.
-        </p>
-        <p className="mb-6 leading-relaxed">
-          Our serverless AdSense Revenue calculator lets you model earnings dynamically in your browser. Below, we break down the key performance metrics, cost-per-click dynamics, and optimization math that professional publishers use to estimate their ad revenue.
-        </p>
-
-        <hr className="my-8 border-slate-200" />
-
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">Understanding Website Monetization Metrics: Pageviews, CTR, and CPC</h2>
-        <p className="mb-4 leading-relaxed">
-          To predict your website's ad earnings accurately, you must understand how traffic volume interacts with user behavior and advertiser demand.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60">
-            <h3 className="text-xl font-bold mb-3 text-slate-900 flex items-center gap-2">
-              🔒 High-Traffic, Low-CPC Niches
-            </h3>
-            <p className="text-sm text-slate-500 mb-4 leading-relaxed">These sites (e.g. general news, viral videos, humor content) attract large audiences but low ad budgets:</p>
-            <ul className="list-disc list-inside text-sm space-y-2 text-slate-700 font-semibold">
-              <li><strong>Broad Appeal:</strong> Easy to get high pageview volumes via social media sharing.</li>
-              <li><strong>Low CTR:</strong> Banner blindness and generic ad content result in low clicks.</li>
-              <li><strong>Low CPC:</strong> Advertisers pay minimal amounts ($0.05 to $0.20 per click) for generic impressions.</li>
-              <li><strong>High Traffic Demand:</strong> Millions of pageviews are needed to generate sustainable monthly revenue.</li>
-            </ul>
-          </div>
-
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60">
-            <h3 className="text-xl font-bold mb-3 text-slate-900 flex items-center gap-2">
-              ⚡ High-CPC, Target-Audience Niches
-            </h3>
-            <p className="text-sm text-slate-500 mb-4 leading-relaxed">These sites (e.g. B2B, finance, legal, trucking tools) attract smaller, commercial audiences with large budgets:</p>
-            <ul className="list-disc list-inside text-sm space-y-2 text-slate-700 font-semibold">
-              <li><strong>High CPC:</strong> High advertiser competition drives bids up ($1.00 to $5.00+ per click).</li>
-              <li><strong>High CTR:</strong> Interactive financial calculators and search utilities capture user clicks.</li>
-              <li><strong>Search-Driven:</strong> Traffic originates from search engines, showing strong user intent.</li>
-              <li><strong>Efficient Income:</strong> A few thousand monthly views can yield significant revenue.</li>
-            </ul>
+        {/* 1. Introduction (250–400 Words) */}
+        <div>
+          <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Google AdSense Traffic & Revenue Planning</h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed text-base">
+            <p>
+              For digital publishers, web developers, and online business operators, generating website traffic is only one component of digital monetization. The actual income your website produces is governed by complex ad auction mechanics, user engagement, niche advertiser competition, and Cost-Per-Click (CPC) bidding. High-traffic general entertainment sites with millions of monthly pageviews often make far less ad revenue than focused niche utility tools (such as financial calculators or B2B platforms) with only a fraction of the traffic volume.
+            </p>
+            <p>
+              <strong>What This Calculator Is:</strong> Our serverless AdSense Traffic & Revenue Planner is a real-time web monetization engine. It models the mathematical interaction between search pageviews, ad click-through rate (CTR), advertiser cost-per-click (CPC), and page revenue per thousand impressions (Page RPM) to project your daily, monthly, and yearly digital earnings.
+            </p>
+            <p>
+              <strong>Who Should Use It:</strong> This tool is engineered for web publishers choosing new domain niches, digital marketers establishing traffic goals for passive income targets (e.g. $100/day), website investors conducting due diligence on website acquisition flips, and AdSense publishers optimizing ad viewability.
+            </p>
+            <p>
+              <strong>Why It Is Important:</strong> Many website creators waste months building content in low-CPC niches (such as jokes or general news paying $0.05 per click) only to realize they require 2,000,000 monthly pageviews to earn a living wage. By modeling your niche metrics beforehand, you can target high-value commercial keywords (such as mortgage loans, debt consolidation, or commercial freight insurance paying $1.50 to $5.00+ per click), reaching your revenue goals with significantly lower traffic thresholds.
+            </p>
           </div>
         </div>
 
-        <hr className="my-8 border-slate-200" />
+        <hr className="border-slate-200" />
 
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">How Ad Revenue Calculation Works</h2>
-        <p className="mb-4 leading-relaxed">
-          The revenue planner models ad performance based on standard industry metrics for Google AdSense and competitive programmatic bidding networks.
-        </p>
+        {/* 2. How It Works */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">How the AdSense Revenue Calculation Works</h2>
+          <p className="text-slate-600 leading-relaxed mb-6">
+            The planner evaluates ad performance by simulating user click behavior across your traffic funnel and calculating publisher ad revenue:
+          </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-6">
-          {/* Revenue Formula */}
-          <div className="bg-indigo-50/20 border border-indigo-100/70 rounded-2xl p-6 space-y-4">
-            <h4 className="font-black text-indigo-800 uppercase tracking-wider text-xs flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
-              1. The Revenue Formula
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              AdSense earnings depend on two primary visitor activities: viewing the page (creating ad impressions) and clicking the ads.
-            </p>
-            <div className="space-y-3 pt-2">
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Click Earnings Formula</span>
-                <p className="text-[11px] text-slate-600 leading-relaxed mb-2">
-                  Earnings are calculated by multiplying clicks by cost-per-click:
-                </p>
-                <div className="py-2.5 px-4 bg-slate-900 text-slate-100 rounded-lg font-mono text-center text-xs font-bold shadow-inner border border-slate-800">
-                  Earnings = [Pageviews &times; CTR] &times; CPC
-                </div>
-              </div>
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm space-y-1">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Important Definitions</span>
-                <ul className="text-xs space-y-1 text-slate-500 list-inside list-disc">
-                  <li><strong>CTR (Click-Through Rate):</strong> Ad Clicks divided by Pageviews. A 1% CTR means 1 click per 100 views.</li>
-                  <li><strong>CPC (Cost Per Click):</strong> The price advertisers pay to search engines/publishers for a single click.</li>
-                </ul>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-3">
+              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-indigo-500"></span>
+                1. Traffic & Click Conversion Funnel
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Your monthly pageviews are converted into projected ad clicks using your Click-Through Rate ($Clicks = Pageviews \times CTR / 100$). Utility web apps and interactive tools naturally achieve higher CTR rates (2.0%–5.0%) due to prolonged user dwell time.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-3">
+              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
+                2. Monetization & Revenue Allocation
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Each projected click is multiplied by the Cost-Per-Click rate ($Earnings = Clicks \times CPC$). In AdSense, Google pays publishers 68% of the gross advertiser bid. The tool calculates monthly, daily, and annual earnings alongside Page RPM.
+              </p>
             </div>
           </div>
+        </div>
 
-          {/* RPM calculations Card */}
-          <div className="bg-slate-50/50 border border-slate-150 rounded-2xl p-6 space-y-4">
-            <h4 className="font-black text-slate-800 uppercase tracking-wider text-xs flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-slate-500"></span>
-              2. RPM (Revenue Per Mille)
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              RPM represents your estimated earnings for every 1,000 page views or ad impressions you receive.
-            </p>
-            <div className="space-y-3 pt-2">
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">RPM Formula</span>
-                <p className="text-[11px] text-slate-600 leading-relaxed mb-2">
-                  Used by web publishers to compare performance across different ad categories:
-                </p>
-                <div className="py-2.5 px-4 bg-slate-900 text-slate-100 rounded-lg font-mono text-center text-xs font-bold shadow-inner border border-slate-800">
-                  Page RPM = (Estimated Earnings / Pageviews) &times; 1,000
-                </div>
+        <hr className="border-slate-200" />
+
+        {/* 3. Formulas & Variable Definitions */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">Mathematical Formulas & Variable Definitions</h2>
+          <p className="text-slate-600 leading-relaxed mb-6">
+            The mathematical equations powering the monetization planner are defined below:
+          </p>
+
+          <div className="space-y-6">
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-indigo-400 uppercase tracking-wider">1. Monthly Ad Clicks & Revenue Formula</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-indigo-300 font-bold">
+                Revenue_monthly = [ Pageviews &times; ( CTR / 100 ) ] &times; CPC
               </div>
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">RPM Optimization</span>
-                <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                  To increase your RPM, focus on placing ads near the top fold of the web page, using native-looking link colors, and generating high CPC finance content.
-                </p>
+              <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+                <div><strong>Revenue_monthly:</strong> Projected monthly ad earnings ($)</div>
+                <div><strong>Pageviews:</strong> Total monthly page impressions</div>
+                <div><strong>CTR:</strong> Click-Through Rate percentage (Ad Clicks / Pageviews)</div>
+                <div><strong>CPC:</strong> Cost-Per-Click payout per ad click ($)</div>
+              </div>
+            </div>
+
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-emerald-400 uppercase tracking-wider">2. Page RPM (Revenue Per Mille)</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-emerald-300 font-bold">
+                RPM = ( Revenue_monthly / Pageviews ) &times; 1,000
+              </div>
+              <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+                <div><strong>RPM:</strong> Estimated earnings per 1,000 pageviews</div>
+                <div><strong>Standard RPM Range:</strong> $2.00/RPM (Low Niche) to $35.00+/RPM (High Niche)</div>
+              </div>
+            </div>
+
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-amber-400 uppercase tracking-wider">3. Traffic Required for $100 / Day Goal</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-amber-300 font-bold">
+                Views_target = [ 3,041.70 / ( CPC &times; [ CTR / 100 ] ) ]
+              </div>
+              <div className="text-xs text-slate-300 pt-2">
+                <strong>Goal Calculation:</strong> Calculates total monthly pageviews needed to consistently produce $100 per day ($3,041.70 per average 30.417-day month).
               </div>
             </div>
           </div>
         </div>
 
-        <hr className="my-8 border-slate-200" />
+        <hr className="border-slate-200" />
 
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">Google AdSense & Web Earnings: Frequently Asked Questions</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-indigo-500">
-            <h3 className="text-base font-extrabold text-slate-800">How does Google AdSense pay site owners?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              Google AdSense pays on a monthly basis, usually around the 21st of each month. Payouts are made via direct bank deposit or wire transfer once your account balance reaches the payment threshold (usually $100 or €70).
-            </p>
-          </div>
+        {/* 4. Worked Examples */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Examples</h2>
 
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-emerald-500">
-            <h3 className="text-base font-extrabold text-slate-800">What is a good average CTR for AdSense?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              A standard CTR for display banner ads is between 0.5% and 2.0%. However, interactive utility tool pages (like calculators and conversion apps) often receive significantly higher CTR rates (2.5% to 5.0%) because users are highly engaged and spend more time looking at the page layout.
-            </p>
-          </div>
+          <div className="space-y-6">
+            {/* Example 1 */}
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 1: Niche Financial Tool Website</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Monthly Pageviews:</strong> 150,000</div>
+                <div><strong>CTR:</strong> 2.0%</div>
+                <div><strong>CPC:</strong> $1.20</div>
+                <div><strong>Monthly Clicks:</strong> 3,000</div>
+              </div>
+              <div className="text-sm text-slate-600 space-y-2">
+                <p><strong>Step 1 (Clicks):</strong> 150,000 pageviews &times; 0.02 CTR = <strong>3,000 ad clicks/month</strong>.</p>
+                <p><strong>Step 2 (Earnings):</strong> 3,000 clicks &times; $1.20 CPC = <strong className="text-indigo-600">$3,600 / month ($43,200 / year)</strong>.</p>
+                <p><strong>Page RPM:</strong> ($3,600 / 150,000) &times; 1,000 = <strong>$24.00 Page RPM</strong>. Highlights high earning power of utility finance tools!</p>
+              </div>
+            </div>
 
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-indigo-500">
-            <h3 className="text-base font-extrabold text-slate-800">How can I increase the CPC of my website ads?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              CPC is dictated by advertiser competition. To target high CPC ads, publish content targeting premium niches like finance, insurance, loans, freight shipping, trucking, and debt management. These industries have high client values, so advertisers bid much more per click.
-            </p>
-          </div>
-
-          <div className="bg-slate-50/50 border border-slate-150 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-emerald-500">
-            <h3 className="text-base font-extrabold text-slate-800">How much traffic is needed to make $100 a day?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              At a standard 1.5% CTR and $0.50 CPC, you will need approximately 13,333 pageviews per day (around 400,000 views per month) to make $100/day. If you raise your CPC to $1.20 (by targeting premium finance calculators), the traffic needed drops to only 5,550 views per day.
-            </p>
+            {/* Example 2 */}
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 2: Viral News & Entertainment Portal</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Monthly Pageviews:</strong> 1,000,000</div>
+                <div><strong>CTR:</strong> 0.8%</div>
+                <div><strong>CPC:</strong> $0.15</div>
+                <div><strong>Monthly Clicks:</strong> 8,000</div>
+              </div>
+              <div className="text-sm text-slate-600 space-y-2">
+                <p><strong>Analysis:</strong> 1,000,000 views generate 8,000 clicks. At $0.15 CPC, monthly earnings are <strong>$1,200 / month</strong> ($1.20 Page RPM).</p>
+                <p><strong>Comparison:</strong> Demonstrates why 1,000,000 entertainment views make less than 150,000 financial tool views due to CPC bidding disparity.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-500">
-          Website monetization models can be applied to physical logistics businesses that publish instructional content. If you are exploring how transportation expenses relate to online logistics blogs, utilize our <a href="/cost-per-mile" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/cost-per-mile'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-650 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.
+        <hr className="border-slate-200" />
+
+        {/* 5. When to Use This Calculator */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">When to Use This Calculator</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700">
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">🔍 Niche Selection Before Domain Registration</strong>
+              Test whether chosen keywords support $1.00+ CPC bids before committing to website development.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">🎯 Setting Traffic Milestones for Passive Income</strong>
+              Determine exactly how many organic search visitors you need per day to achieve $50/day or $100/day goals.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">💼 Website Acquisition Due Diligence</strong>
+              Evaluate potential monthly earnings when acquiring existing blogs or web tools on brokerages like Flippa or Empire Flippers.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">📐 Ad Layout & Dwell Time Optimization</strong>
+              Model how raising CTR from 1.0% to 2.5% through better ad placement doubles monthly revenue without increasing traffic.
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 6. Common Mistakes */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">7 Common Mistakes in Web Monetization Planning</h2>
+          <div className="space-y-3 text-sm text-slate-700">
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>1. Confusing Google Ads Bids with AdSense Payouts:</strong> Advertisers pay $10 on Google Search Ads, but AdSense display rates on websites are lower (AdSense pays 68% publisher share).
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>2. Ignoring Ad Blocker Adoption:</strong> Tech-savvy audiences block 20% to 35% of display ads, reducing monetizeable pageviews.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>3. Neglecting Geographic Traffic Splits:</strong> Tier 1 traffic (US, UK, CA, AU) pays 5x–10x higher CPC than Tier 3 geographic traffic.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>4. Cluttering Layouts with Too Many Ads:</strong> Excess ad units slow down site performance, hurt Core Web Vitals, and lower search rankings.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>5. Assuming CTR Scales Linearly:</strong> As traffic expands from search to social, audience intent drops, leading to lower CTR.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>6. Violating AdSense Placement Policy:</strong> Placing ads too close to buttons or misleading users causes invalid traffic bans.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>7. Relying Solely on Display Ad Monetization:</strong> High-traffic utility sites should combine AdSense with affiliate links, lead generation, or premium SaaS tiers.
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 7. Expanded FAQs (8-10 items) */}
+        <div>
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">Frequently Asked Questions (FAQs)</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What revenue percentage does Google AdSense keep?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Google AdSense pays publishers <strong>68% of the revenue</strong> recognized for AdSense for Content ads. Google retains 32% for platform technology and advertiser infrastructure.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What is a realistic Click-Through Rate (CTR) for websites?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Informational blogs average 1.0% to 2.0% CTR. Interactive web tools (like calculators and converters) often reach 2.5% to 5.0% CTR due to high user engagement.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What digital content niches pay the highest CPC?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Financial services, mortgage loans, credit cards, legal services, enterprise software, insurance, logistics/trucking, and digital marketing command the highest CPC rates ($1.50 to $10.00+ per click).
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What is the difference between Page RPM and Impression RPM?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Page RPM is estimated earnings per 1,000 pageviews. Impression RPM is estimated earnings per 1,000 individual ad unit impressions shown.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">How much traffic is required to earn $100 per day?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                At a $1.20 CPC and 2.0% CTR ($24.00 Page RPM), you need ~4,166 pageviews per day (125,000 views/month) to earn $100/day.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">When should publishers upgrade from AdSense to Header Bidding?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                When reaching 50,000 monthly sessions, publishers can join premium programmatic ad networks (e.g. Mediavine, Raptive) which utilize header bidding to increase RPM by 50%–200%.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">How does mobile traffic affect CPC and CTR?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Mobile traffic represents 60%+ of web views. Mobile ads often have higher CTR due to screen proximity, though CPC can be slightly lower than desktop for complex conversion flows.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What causes invalid traffic warnings in AdSense?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Invalid traffic occurs when publishers click their own ads, encourage accidental clicks, or purchase low-quality bot traffic. Always rely on organic search traffic.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 8. Related Calculators & Internal Navigation */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <h3 className="text-lg font-bold text-slate-900 mb-3">Explore Related Financial Calculators</h3>
+          <p className="text-xs text-slate-500 mb-4">Connect web monetization insights with physical logistics and housing asset tools:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-bold">
+            <a 
+              href="/cost-per-mile"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/cost-per-mile'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-blue-600 hover:border-blue-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>Trucking Cost Per Mile</span>
+              <span>&rarr;</span>
+            </a>
+            <a 
+              href="/debt-consolidation"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/debt-consolidation'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-indigo-600 hover:border-indigo-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>Debt Consolidation</span>
+              <span>&rarr;</span>
+            </a>
+            <a 
+              href="/rent-vs-buy"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/rent-vs-buy'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-emerald-600 hover:border-emerald-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>Rent vs. Buy Simulator</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        {/* 9. Authoritative References */}
+        <div className="pt-4 text-xs text-slate-400 border-t border-slate-100 space-y-1">
+          <strong className="text-slate-500 block">Authoritative References & Data Sources:</strong>
+          <p>• Google AdSense Help Center: <span className="underline">AdSense Revenue Share & Page RPM Mechanics</span></p>
+          <p>• Interactive Advertising Bureau (IAB): <span className="underline">Standard Display Ad Specifications & Viewability Guidelines</span></p>
+          <p>• Google Search Central: <span className="underline">Creating Helpful, Reliable, People-First Content</span></p>
         </div>
 
       </div>

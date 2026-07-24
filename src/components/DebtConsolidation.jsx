@@ -423,139 +423,309 @@ export default function DebtConsolidation({ currencySymbol }) {
         </div>
       </div>
 
-      {/* Complete Guide to Credit Card Debt Consolidation (SEO Content) */}
-      <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left">
+      {/* Complete Guide to Credit Card Debt Consolidation (SEO & Educational Content) */}
+      <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left space-y-10">
         
-        <h2 className="text-3xl font-bold mb-4 text-slate-900 border-b pb-2">The Complete Guide to Credit Card Debt Consolidation</h2>
-        <p className="mb-6 text-lg leading-relaxed text-slate-600">
-          Carrying multiple high-interest credit card balances can feel like running on a financial treadmill. Because credit card companies calculate monthly payments based on a percentage of your outstanding balance, your payments decrease as your balance shrinks. This extension of the repayment timeline is known as the <strong>minimum payment trap</strong>, and it often results in paying thousands of dollars in interest over several decades.
-        </p>
-        <p className="mb-6 leading-relaxed">
-          Our serverless Debt Consolidation calculator is built to run entirely in your browser, helping you analyze the interest savings and timeline reduction of combining your debts into a single personal loan. Below, we break down the operational differences, math formulas, and strategies that determine if consolidation is right for you.
-        </p>
-
-        <hr className="my-8 border-slate-200" />
-
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">Understanding Debt Consolidation: Loans vs. Revolving Credit</h2>
-        <p className="mb-4 leading-relaxed">
-          Debt consolidation works by replacing high-interest revolving credit lines with a fixed-term, lower-interest installment loan. This restructures your payments and ensures a guaranteed debt-free target date.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60">
-            <h3 className="text-xl font-bold mb-3 text-slate-900 flex items-center gap-2">
-              🔒 Credit Card Minimum Trap
-            </h3>
-            <p className="text-sm text-slate-500 mb-4 leading-relaxed">The properties of revolving credit cards that delay payoff and maximize interest expense:</p>
-            <ul className="list-disc list-inside text-sm space-y-2 text-slate-700 font-semibold">
-              <li><strong>Variable Payments:</strong> Payments drop as the balance drops, prolonging the loan.</li>
-              <li><strong>High Interest (APR):</strong> Standard credit card rates typically average 18% to 28%+.</li>
-              <li><strong>Compounding Interest:</strong> Interest accrues daily based on your average daily balance.</li>
-              <li><strong>Credit Utilization:</strong> High card balances hurt your credit score (credit utilization ratio).</li>
-            </ul>
-          </div>
-
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/60">
-            <h3 className="text-xl font-bold mb-3 text-slate-900 flex items-center gap-2">
-              ⚡ Consolidated Personal Loan
-            </h3>
-            <p className="text-sm text-slate-500 mb-4 leading-relaxed">The characteristics of structured installment loans that save money and accelerate freedom:</p>
-            <ul className="list-disc list-inside text-sm space-y-2 text-slate-700 font-semibold">
-              <li><strong>Fixed Term:</strong> Guaranteed payoff timeline (typically 12 to 60 months).</li>
-              <li><strong>Lower APR:</strong> Personal loans for creditworthy borrowers average 8% to 15%.</li>
-              <li><strong>Simple Payments:</strong> Single predictable monthly draft replaces multiple card bills.</li>
-              <li><strong>FICO Boost:</strong> Moving revolving card balances to an installment loan lowers credit utilization.</li>
-            </ul>
+        {/* 1. Introduction (250–400 Words) */}
+        <div>
+          <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Credit Card Debt Consolidation</h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed text-base">
+            <p>
+              Carrying high-interest revolving credit card balances is one of the most significant obstacles to long-term wealth accumulation. Because credit card issuers set minimum monthly payments as a shrinking percentage of your total balance (typically interest accrued plus 1.0% to 1.5% of principal), paying only the minimum creates an exponential repayment schedule. This dynamic—commonly known as the <strong>minimum payment trap</strong>—can extend a $10,000 credit card debt over 25 to 30 years and cost tens of thousands of dollars in compounding interest.
+            </p>
+            <p>
+              <strong>What This Calculator Is:</strong> Our serverless Credit Card Debt Consolidation Optimizer is an interactive debt payoff simulator. It aggregates your multiple credit card accounts, computes your weighted average interest rate (weighted APR), models month-by-month credit card minimum payment amortization, and compares that trajectory against a structured, fixed-rate personal consolidation loan.
+            </p>
+            <p>
+              <strong>Who Should Use It:</strong> This tool is designed for consumers carrying multiple credit card balances, individuals evaluating pre-approved personal loan or balance transfer offers, household budget planners, and financial coaches guiding clients out of high-interest debt.
+            </p>
+            <p>
+              <strong>Why It Is Important:</strong> Consolidating debt is only financially beneficial when the new loan's interest rate and fees result in lower net interest paid and a faster zero-balance payoff. If a lender offers a 12% loan rate but charges high origination fees or extends the repayment term to 72 months, you could end up paying more total interest than continuing your card payments. This calculator exposes the exact mathematical difference, empowering you to accept only truly advantageous loan offers.
+            </p>
           </div>
         </div>
 
-        <hr className="my-8 border-slate-200" />
+        <hr className="border-slate-200" />
 
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">How the Debt Consolidation Optimizer Works</h2>
-        <p className="mb-4 leading-relaxed">
-          The simulator runs a mathematical payoff comparison between your existing credit cards (revolving minimum payments) and a structured consolidation loan (fixed-rate installment amortization).
-        </p>
+        {/* 2. How It Works */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">How the Debt Consolidation Simulation Works</h2>
+          <p className="text-slate-600 leading-relaxed mb-6">
+            The optimizer runs two distinct algorithmic calculations using your current credit card inputs ($Balance_i, APR_i$) and proposed loan terms ($APR_{loan}, Term_{months}$):
+          </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-6">
-          <div className="bg-rose-50/20 border border-rose-100/70 rounded-2xl p-6 space-y-4">
-            <h4 className="font-black text-rose-800 uppercase tracking-wider text-xs flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-rose-500"></span>
-              1. Credit Card Payoff Simulation
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Revolving credit card accounts calculate monthly minimum payments as a decreasing function of outstanding balance.
-            </p>
-            <div className="space-y-3 pt-2">
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Minimum Payment Formula</span>
-                <p className="text-[11px] text-slate-600 leading-relaxed mb-2">
-                  Typical card minimum monthly payment is interest plus a small percentage of principal:
-                </p>
-                <div className="py-2.5 px-4 bg-slate-900 text-slate-100 rounded-lg font-mono text-center text-[11px] font-bold shadow-inner border border-slate-800">
-                  Min Payment = Interest Accrued + 1.5% of Principal
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-3">
+              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-rose-500"></span>
+                Existing Cards Minimum Amortization
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Simulates month-by-month payments for each credit card individually. Each month, interest is calculated ($Balance \times APR / 12$), and the minimum payment is set to interest plus 1.5% of principal (minimum $25). As balance decreases, minimum payment shrinks, prolonging the timeline.
+              </p>
             </div>
-          </div>
 
-          <div className="bg-emerald-50/20 border border-emerald-100/70 rounded-2xl p-6 space-y-4">
-            <h4 className="font-black text-emerald-800 uppercase tracking-wider text-xs flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-              2. Fixed Loan Amortization
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Consolidation uses a fixed term installment loan to guarantee a zero-balance payoff date.
-            </p>
-            <div className="space-y-3 pt-2">
-              <div className="bg-white border border-slate-100 rounded-xl p-3.5 shadow-sm">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Fixed Loan Payment Formula</span>
-                <p className="text-[11px] text-slate-600 leading-relaxed mb-2">
-                  Calculated monthly using standard annuity amortization:
-                </p>
-                <div className="py-2.5 px-4 bg-slate-900 text-slate-100 rounded-lg font-mono text-center text-xs font-bold shadow-inner border border-slate-800">
-                  Payment = Balance * [r(1+r)ⁿ] / [(1+r)ⁿ - 1]
-                </div>
-              </div>
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-3">
+              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
+                Consolidation Loan Amortization
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Consolidates total card balance into a single installment loan with fixed monthly payments ($PMT_{loan}$) over a chosen term (12 to 72 months). Because payments remain constant while balance declines, principal reduction accelerates rapidly.
+              </p>
             </div>
           </div>
         </div>
 
-        <hr className="my-8 border-slate-200" />
+        <hr className="border-slate-200" />
 
-        <h2 className="text-2xl font-bold mb-4 text-slate-900">Credit Card Debt Consolidation: Frequently Asked Questions</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-rose-500">
-            <h3 className="text-base font-extrabold text-slate-800">What is credit card debt consolidation?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              Debt consolidation is the process of taking out a single personal loan to pay off multiple credit card balances. This combines several monthly bills into one payment, ideally at a lower interest rate.
-            </p>
-          </div>
+        {/* 3. Formulas & Variable Definitions */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">Mathematical Formulas & Variable Definitions</h2>
+          <p className="text-slate-600 leading-relaxed mb-6">
+            The mathematical equations powering the optimizer are defined as follows:
+          </p>
 
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-emerald-500">
-            <h3 className="text-base font-extrabold text-slate-800">How does consolidation save me money on interest?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              Consolidation saves money when the annual percentage rate (APR) of the personal installment loan is lower than the weighted average APR of the cards you are paying off.
-            </p>
-          </div>
+          <div className="space-y-6">
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-emerald-400 uppercase tracking-wider">1. Weighted Average APR</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-emerald-300 font-bold">
+                APR_weighted = ( &sum; [ Balance_i &times; APR_i ] ) / &sum; Balance_i
+              </div>
+              <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+                <div><strong>APR_weighted:</strong> Effective combined interest rate across all cards</div>
+                <div><strong>Balance_i:</strong> Outstanding balance of card $i$</div>
+                <div><strong>APR_i:</strong> Annual Percentage Rate of card $i$</div>
+              </div>
+            </div>
 
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-rose-500">
-            <h3 className="text-base font-extrabold text-slate-800">Will consolidations harm my credit score?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              Applying for a consolidation loan causes a minor, temporary dip due to a hard inquiry. However, paying off credit cards lowers your credit card utilization, which typically boosts your credit score significantly.
-            </p>
-          </div>
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-rose-400 uppercase tracking-wider">2. Credit Card Minimum Payment Formula</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-rose-300 font-bold">
+                PMT_cc,m = max( 25, Interest_m + 0.015 &times; Balance_m )
+              </div>
+              <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+                <div><strong>PMT_cc,m:</strong> Minimum required payment for month $m$</div>
+                <div><strong>Interest_m:</strong> Monthly accrued interest ($Balance_m \times APR / 12$)</div>
+              </div>
+            </div>
 
-          <div className="bg-slate-50/50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-emerald-500">
-            <h3 className="text-base font-extrabold text-slate-800">What is the "minimum payment trap"?</h3>
-            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-              Credit card companies design minimum payments to be 1% to 2% of the total balance plus interest. As your balance falls, the minimum payment amount falls. This makes it take decades to pay off the card if you only pay the minimum.
-            </p>
+            <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4">
+              <h3 className="text-sm font-bold text-indigo-400 uppercase tracking-wider">3. Fixed Installment Loan Payment</h3>
+              <div className="font-mono text-center text-sm md:text-base py-3 bg-slate-950 rounded-xl border border-slate-800 text-indigo-300 font-bold">
+                PMT_loan = Balance_total &times; [ r(1 + r)ⁿ ] / [ (1 + r)ⁿ - 1 ]
+              </div>
+              <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
+                <div><strong>Balance_total:</strong> Sum of all consolidated credit card balances</div>
+                <div><strong>r:</strong> Monthly Loan Rate ($APR_{loan} / 12$)</div>
+                <div><strong>n:</strong> Consolidation Loan Term in Months</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-500">
-          Freeing up monthly cash flow by optimizing high-interest debt is the first step toward long-term asset building. If you are wondering whether to direct your recovered cash towards buying a home or renting and investing, check out our interactive <a href="/rent-vs-buy" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/rent-vs-buy'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-650 font-bold hover:underline">Rent vs. Buy Calculator</a>.
+        <hr className="border-slate-200" />
+
+        {/* 4. Worked Examples */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Examples</h2>
+
+          <div className="space-y-6">
+            {/* Example 1 */}
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 1: Moderate Credit Card Debt (3 Cards)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Card A:</strong> $6,000 @ 18.9% APR</div>
+                <div><strong>Card B:</strong> $3,000 @ 24.9% APR</div>
+                <div><strong>Card C:</strong> $4,000 @ 21.5% APR</div>
+                <div><strong>Total Debt:</strong> $13,000</div>
+                <div><strong>Weighted APR:</strong> 21.1%</div>
+                <div><strong>Loan Offer:</strong> 10.5% APR (36 Mos)</div>
+              </div>
+              <div className="text-sm text-slate-600 space-y-2">
+                <p><strong>Step 1 (Existing Cards Path):</strong> Paying minimums starts at $356/mo. Because payments shrink, it takes <strong>184 months (15.3 years)</strong> to pay off, incurring <strong>$14,820 in total interest</strong>.</p>
+                <p><strong>Step 2 (Consolidation Loan Path):</strong> Fixed 36-month loan payment = $422.75/mo. Total interest paid over 3 years = <strong>$2,219</strong>.</p>
+                <p><strong>Result:</strong> Consolidation <strong className="text-emerald-600">saves $12,601 in total interest</strong> and clears debt <strong>148 months (12.3 years) faster</strong>!</p>
+              </div>
+            </div>
+
+            {/* Example 2 */}
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 2: High Retail Store Card Debt</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Store Card 1:</strong> $2,500 @ 26.9% APR</div>
+                <div><strong>Store Card 2:</strong> $1,800 @ 28.9% APR</div>
+                <div><strong>Total Debt:</strong> $4,300</div>
+                <div><strong>Weighted APR:</strong> 27.7%</div>
+                <div><strong>Personal Loan:</strong> 12.0% APR (24 Mos)</div>
+              </div>
+              <div className="text-sm text-slate-600 space-y-2">
+                <p><strong>Analysis:</strong> Card minimums total $135/mo taking 112 months with $4,890 in interest. The 24-month consolidation loan payment is $202/mo with $562 total interest.</p>
+                <p><strong>Result:</strong> Saves <strong className="text-emerald-600">$4,328 in interest</strong> and eliminates retail card debt 88 months faster.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 5. When to Use This Calculator */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">When to Use This Calculator</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700">
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">💳 Evaluating Loan Offers vs Balance Transfers</strong>
+              Compare 0% APR balance transfer credit card offers (with 3-5% transfer fees) against fixed personal installment loans.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">📈 Credit Score Improvement Planning</strong>
+              Quantify how moving revolving credit card debt to installment loan debt lowers credit utilization to boost FICO scores.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">🏠 Preparing for Mortgage Qualification</strong>
+              Eliminate multiple high minimum monthly card payments to lower your Debt-to-Income (DTI) ratio before home buying.
+            </div>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+              <strong className="text-slate-900 block mb-1">📅 Setting a Guaranteed Payoff Date</strong>
+              Transform vague, endless credit card balances into a predictable, countdown-style monthly budget.
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 6. Common Mistakes */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">7 Common Mistakes in Debt Consolidation</h2>
+          <div className="space-y-3 text-sm text-slate-700">
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>1. Re-charging Paid-Off Cards:</strong> Consolidating card debt without addressing spending habits leads to double the debt load.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>2. Ignoring Loan Origination Fees:</strong> Lenders often charge 1% to 8% upfront origination fees, which must be added to loan principal.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>3. Extending Loan Terms Unnecessarily:</strong> Choosing a 72-month term to get a low monthly payment can increase total interest paid despite lower APR.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>4. Consolidating Low-Interest Debt:</strong> Combining 0% promo cards or low APR credit union cards into a higher APR loan increases expense.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>5. Closing Oldest Credit Accounts:</strong> Closing paid-off credit cards reduces average credit history age, which can temporarily hurt credit scores.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>6. Missing Hard Inquiry Impact:</strong> Applying for multiple personal loans simultaneously creates multiple hard inquiries; use soft-check pre-qualification.
+            </div>
+            <div className="p-3.5 bg-rose-50/50 border border-rose-100 rounded-xl">
+              <strong>7. Failing to Set Up Auto-Pay:</strong> Missing an installment loan payment incurs late fees and damages payment history on credit reports.
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 7. Expanded FAQs (8-10 items) */}
+        <div>
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">Frequently Asked Questions (FAQs)</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Does debt consolidation hurt my credit score?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Initially, loan application inquiry causes a 5–10 point temporary drop. However, paying off credit card balances drastically lowers credit utilization, typically increasing credit scores by 20–50+ points within 60 days.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What is the difference between debt consolidation and debt settlement?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Debt consolidation pays 100% of your debt at lower interest rates with zero credit damage. Debt settlement negotiates to pay less than owed, requiring account defaults that severely ruin credit scores for 7 years.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What APR can I expect on a personal consolidation loan?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Borrowers with excellent credit (740+) qualify for 7%–11% APR. Good credit (680–739) averages 12%–16% APR. Fair credit (640–679) ranges from 18%–24% APR.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Is a 0% APR balance transfer card better than a personal loan?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Balance transfer cards are superior if you can pay off the entire balance within the 12–21 month promo window. For longer payoff timelines, fixed personal loans are safer to avoid post-promo APR spikes.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Should I close my credit cards after consolidating them?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Generally no. Keep cards open with zero balances to preserve credit history length and available credit limit, unless keeping them open creates temptation to spend.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What is the "minimum payment trap"?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Card minimum payments decrease as your balance falls. Paying only the minimum causes interest compounding to consume 70%–90% of your payments, prolonging payoff for decades.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What credit score is required for a consolidation loan?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Most personal loan lenders require a minimum FICO score of 600–640. Secured loans or co-signers can assist applicants with lower credit scores.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">How does Debt-to-Income (DTI) ratio affect approval?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Lenders prefer a DTI ratio below 36%–40% (total monthly debt payments divided by gross monthly income). Consolidation often lowers monthly debt payments, improving DTI.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* 8. Related Calculators & Internal Navigation */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <h3 className="text-lg font-bold text-slate-900 mb-3">Explore Related Financial Calculators</h3>
+          <p className="text-xs text-slate-500 mb-4">Re-invest your debt savings into long-term equity and digital assets:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-bold">
+            <a 
+              href="/rent-vs-buy"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/rent-vs-buy'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-emerald-600 hover:border-emerald-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>Rent vs. Buy Simulator</span>
+              <span>&rarr;</span>
+            </a>
+            <a 
+              href="/cost-per-mile"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/cost-per-mile'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-blue-600 hover:border-blue-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>Trucking Cost Per Mile</span>
+              <span>&rarr;</span>
+            </a>
+            <a 
+              href="/revenue-planner"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/revenue-planner'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-3 bg-white border border-slate-200 rounded-xl text-amber-600 hover:border-amber-300 hover:shadow-sm transition-all flex items-center justify-between"
+            >
+              <span>AdSense Revenue Planner</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        {/* 9. Authoritative References */}
+        <div className="pt-4 text-xs text-slate-400 border-t border-slate-100 space-y-1">
+          <strong className="text-slate-500 block">Authoritative References & Data Sources:</strong>
+          <p>• Consumer Financial Protection Bureau (CFPB): <span className="underline">Navigating Credit Card Debt & Personal Loan Consolidation</span></p>
+          <p>• Federal Reserve Board (G.19 Report): <span className="underline">Consumer Credit Outstanding & Commercial Bank APR Averages</span></p>
+          <p>• National Foundation for Credit Counseling (NFCC): <span className="underline">Debt Management & Financial Health Guidelines</span></p>
         </div>
 
       </div>
