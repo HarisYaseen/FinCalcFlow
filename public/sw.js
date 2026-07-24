@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fincalc-hub-v1';
+const CACHE_NAME = 'fincalc-hub-v3';
 const ASSETS = [
   '/',
   '/index.html',
