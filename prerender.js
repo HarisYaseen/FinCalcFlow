@@ -652,6 +652,101 @@ const routes = [
     `
   },
   {
+    path: 'calculators/personal-loan-calculator',
+    title: 'Personal Loan Calculator – Monthly Payments & Interest | FinCalc',
+    description: 'Calculate personal loan monthly payments, total interest, and early payoff savings with a full interactive amortization schedule.',
+    canonical: 'https://www.fincalcflow.com/calculators/personal-loan-calculator',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Personal Loan Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication"
+      }
+    ],
+    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Personal Loan Calculator</h1><p class="text-slate-600">Calculate your exact monthly personal loan payments, total interest costs, and early payoff savings with an interactive amortization schedule.</p></div>`
+  },
+  {
+    path: 'calculators/home-loan-calculator',
+    title: 'Home Loan Calculator – Compare 2026 Mortgage Outflows | FinCalc',
+    description: 'Model home loan monthly payments including principal, interest, property tax escrows, home insurance, and HOA fees.',
+    canonical: 'https://www.fincalcflow.com/calculators/home-loan-calculator',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Home Loan Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication"
+      }
+    ],
+    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Home Loan Calculator</h1><p class="text-slate-600">Estimate your total monthly mortgage obligation including principal, interest, property taxes, homeowners insurance, and HOA dues.</p></div>`
+  },
+  {
+    path: 'calculators/car-loan-calculator',
+    title: 'Car Loan Calculator – Auto Financing & Sales Tax | FinCalc',
+    description: 'Calculate monthly auto loan payments, trade-in credits, and sales tax for new or used vehicles with interactive amortization schedules.',
+    canonical: 'https://www.fincalcflow.com/calculators/car-loan-calculator',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Car Loan Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication"
+      }
+    ],
+    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Car Loan Calculator</h1><p class="text-slate-600">Calculate monthly auto loan payments, sales tax, trade-in credits, and total interest for new or used vehicles.</p></div>`
+  },
+  {
+    path: 'calculators/loan-payoff-calculator',
+    title: 'Loan Payoff Calculator – Calculate Early Payoff Savings | FinCalc',
+    description: 'See how extra monthly payments or lump sums shrink loan duration and save thousands in total interest.',
+    canonical: 'https://www.fincalcflow.com/calculators/loan-payoff-calculator',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Loan Payoff Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication"
+      }
+    ],
+    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Loan Payoff Calculator</h1><p class="text-slate-600">Discover how adding extra monthly payments or lump sums accelerates debt freedom and saves interest.</p></div>`
+  },
+  {
+    path: 'calculators/debt-to-income-calculator',
+    title: 'Debt-to-Income (DTI) Calculator – Underwriting Risk | FinCalc',
+    description: 'Calculate front-end and back-end DTI ratios to evaluate mortgage pre-approval odds and lender borrowing limits.',
+    canonical: 'https://www.fincalcflow.com/calculators/debt-to-income-calculator',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Debt-to-Income (DTI) Calculator",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication"
+      }
+    ],
+    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Debt-to-Income (DTI) Calculator</h1><p class="text-slate-600">Calculate your front-end and back-end DTI ratios to evaluate mortgage pre-approval odds and lender risk categories.</p></div>`
+  },
+  {
+    path: 'calculators/loan-calculators',
+    title: 'Loan Calculators Hub – Free Mortgage, Auto, Personal & DTI Tools',
+    description: 'Explore our complete topic cluster of free loan calculators. Model personal loans, home mortgages, car loans, DTI ratios, and payoff acceleration.',
+    canonical: 'https://www.fincalcflow.com/calculators/loan-calculators',
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Loan Calculators Hub",
+        "description": "Topic cluster category hub for free serverless loan calculators."
+      }
+    ],
+    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Loan Calculators Topic Cluster</h1><p class="text-slate-600">Model installment payments, analyze mortgage trade-offs, estimate auto financing taxes, and calculate payoff acceleration schedules.</p></div>`
+  },
+  {
     path: 'about',
     title: 'About Us & Calculator Math Methodology | FinCalc Flow',
     description: 'Learn about FinCalc Flow, our dedication to client-side data privacy, and the mathematical formulas powering our financial tools. Meet the developers.',

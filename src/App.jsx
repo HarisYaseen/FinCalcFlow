@@ -3,6 +3,12 @@ const RentVsBuy = lazy(() => import('./components/RentVsBuy'));
 const CostPerMile = lazy(() => import('./components/CostPerMile'));
 const DebtConsolidation = lazy(() => import('./components/DebtConsolidation'));
 const RevenuePlanner = lazy(() => import('./components/RevenuePlanner'));
+const PersonalLoan = lazy(() => import('./components/PersonalLoan'));
+const HomeLoan = lazy(() => import('./components/HomeLoan'));
+const CarLoan = lazy(() => import('./components/CarLoan'));
+const LoanPayoff = lazy(() => import('./components/LoanPayoff'));
+const DtiCalculator = lazy(() => import('./components/DtiCalculator'));
+const LoanCalculators = lazy(() => import('./components/LoanCalculators'));
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const About = lazy(() => import('./components/About'));
 const Terms = lazy(() => import('./components/Terms'));
@@ -89,8 +95,25 @@ export default function App() {
   useEffect(() => {
     const handleLocationChange = () => {
       const path = window.location.pathname.replace(/^\/|\/$/g, ''); // strip leading/trailing slashes
-      if (['rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner', 'privacy', 'about', 'terms', 'contact', 'guides'].includes(path) || path.startsWith('guides/')) {
-        setActivePage(path);
+      const validPaths = [
+        'rent-vs-buy', 'cost-per-mile', 'debt-consolidation', 'revenue-planner',
+        'calculators/personal-loan-calculator', 'personal-loan-calculator',
+        'calculators/home-loan-calculator', 'home-loan-calculator',
+        'calculators/car-loan-calculator', 'car-loan-calculator',
+        'calculators/loan-payoff-calculator', 'loan-payoff-calculator',
+        'calculators/debt-to-income-calculator', 'debt-to-income-calculator',
+        'calculators/loan-calculators', 'loan-calculators',
+        'privacy', 'about', 'terms', 'contact', 'guides'
+      ];
+      if (validPaths.includes(path) || path.startsWith('guides/')) {
+        // Normalize /personal-loan-calculator to /calculators/personal-loan-calculator if needed
+        if (path === 'personal-loan-calculator') setActivePage('calculators/personal-loan-calculator');
+        else if (path === 'home-loan-calculator') setActivePage('calculators/home-loan-calculator');
+        else if (path === 'car-loan-calculator') setActivePage('calculators/car-loan-calculator');
+        else if (path === 'loan-payoff-calculator') setActivePage('calculators/loan-payoff-calculator');
+        else if (path === 'debt-to-income-calculator') setActivePage('calculators/debt-to-income-calculator');
+        else if (path === 'loan-calculators') setActivePage('calculators/loan-calculators');
+        else setActivePage(path);
       } else {
         setActivePage('home');
       }
@@ -285,6 +308,142 @@ export default function App() {
           }
         ];
         break;
+      case 'calculators/personal-loan-calculator':
+      case 'personal-loan-calculator':
+        title = "Personal Loan Calculator – Monthly Payments & Interest | FinCalc";
+        desc = "Calculate personal loan monthly payments, total interest, and early payoff savings with a full interactive amortization schedule.";
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Personal Loan Calculator",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fincalcflow.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Loan Calculators", "item": "https://www.fincalcflow.com/calculators/loan-calculators" },
+              { "@type": "ListItem", "position": 3, "name": "Personal Loan Calculator", "item": "https://www.fincalcflow.com/calculators/personal-loan-calculator" }
+            ]
+          }
+        ];
+        break;
+      case 'calculators/home-loan-calculator':
+      case 'home-loan-calculator':
+        title = "Home Loan Calculator – Compare 2026 Mortgage Outflows | FinCalc";
+        desc = "Model home loan monthly payments including principal, interest, property tax escrows, home insurance, and HOA fees.";
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Home Loan Calculator",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fincalcflow.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Loan Calculators", "item": "https://www.fincalcflow.com/calculators/loan-calculators" },
+              { "@type": "ListItem", "position": 3, "name": "Home Loan Calculator", "item": "https://www.fincalcflow.com/calculators/home-loan-calculator" }
+            ]
+          }
+        ];
+        break;
+      case 'calculators/car-loan-calculator':
+      case 'car-loan-calculator':
+        title = "Car Loan Calculator – Auto Financing & Sales Tax | FinCalc";
+        desc = "Calculate monthly auto loan payments, trade-in credits, and sales tax for new or used vehicles with interactive amortization schedules.";
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Car Loan Calculator",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fincalcflow.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Loan Calculators", "item": "https://www.fincalcflow.com/calculators/loan-calculators" },
+              { "@type": "ListItem", "position": 3, "name": "Car Loan Calculator", "item": "https://www.fincalcflow.com/calculators/car-loan-calculator" }
+            ]
+          }
+        ];
+        break;
+      case 'calculators/loan-payoff-calculator':
+      case 'loan-payoff-calculator':
+        title = "Loan Payoff Calculator – Calculate Early Payoff Savings | FinCalc";
+        desc = "See how extra monthly payments or lump sums shrink loan duration and save thousands in total interest.";
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Loan Payoff Calculator",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fincalcflow.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Loan Calculators", "item": "https://www.fincalcflow.com/calculators/loan-calculators" },
+              { "@type": "ListItem", "position": 3, "name": "Loan Payoff Calculator", "item": "https://www.fincalcflow.com/calculators/loan-payoff-calculator" }
+            ]
+          }
+        ];
+        break;
+      case 'calculators/debt-to-income-calculator':
+      case 'debt-to-income-calculator':
+        title = "Debt-to-Income (DTI) Calculator – Underwriting Risk | FinCalc";
+        desc = "Calculate front-end and back-end DTI ratios to evaluate mortgage pre-approval odds and lender borrowing limits.";
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Debt-to-Income (DTI) Calculator",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fincalcflow.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Loan Calculators", "item": "https://www.fincalcflow.com/calculators/loan-calculators" },
+              { "@type": "ListItem", "position": 3, "name": "Debt-to-Income Calculator", "item": "https://www.fincalcflow.com/calculators/debt-to-income-calculator" }
+            ]
+          }
+        ];
+        break;
+      case 'calculators/loan-calculators':
+      case 'loan-calculators':
+        title = "Loan Calculators Hub – Free Mortgage, Auto, Personal & DTI Tools";
+        desc = "Explore our complete topic cluster of free loan calculators. Model personal loans, home mortgages, car loans, DTI ratios, and payoff acceleration.";
+        schemaObj = [
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Loan Calculators Hub",
+            "description": desc
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fincalcflow.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Loan Calculators Hub", "item": "https://www.fincalcflow.com/calculators/loan-calculators" }
+            ]
+          }
+        ];
+        break;
       case 'privacy':
         title = "Privacy Policy | FinCalc Flow";
         desc = "Learn how we protect your financial privacy. FinCalc Flow is a serverless application; no financial data is ever collected or sent to servers.";
@@ -405,6 +564,16 @@ export default function App() {
                 }`}
               >
                 Home
+              </a>
+
+              <a
+                href="/calculators/loan-calculators"
+                onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-calculators'); }}
+                className={`text-sm font-bold transition-all py-2 px-3 bg-indigo-50 rounded-lg border border-indigo-100 ${
+                  activePage.includes('loan') ? 'text-indigo-700 font-extrabold' : 'text-indigo-600 hover:text-indigo-800'
+                }`}
+              >
+                Loan Calculators
               </a>
 
               <a
@@ -961,6 +1130,12 @@ export default function App() {
           {activePage === 'cost-per-mile' && <CostPerMile currencySymbol={currencySymbol} />}
           {activePage === 'debt-consolidation' && <DebtConsolidation currencySymbol={currencySymbol} />}
           {activePage === 'revenue-planner' && <RevenuePlanner />}
+          {(activePage === 'calculators/personal-loan-calculator' || activePage === 'personal-loan-calculator') && <PersonalLoan />}
+          {(activePage === 'calculators/home-loan-calculator' || activePage === 'home-loan-calculator') && <HomeLoan />}
+          {(activePage === 'calculators/car-loan-calculator' || activePage === 'car-loan-calculator') && <CarLoan />}
+          {(activePage === 'calculators/loan-payoff-calculator' || activePage === 'loan-payoff-calculator') && <LoanPayoff />}
+          {(activePage === 'calculators/debt-to-income-calculator' || activePage === 'debt-to-income-calculator') && <DtiCalculator />}
+          {(activePage === 'calculators/loan-calculators' || activePage === 'loan-calculators') && <LoanCalculators />}
           {activePage === 'privacy' && <PrivacyPolicy />}
           {activePage === 'about' && <About />}
           {activePage === 'terms' && <Terms />}
@@ -1028,6 +1203,15 @@ export default function App() {
                     className="hover:text-white transition-colors text-left block"
                   >
                     Main Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/calculators/loan-calculators"
+                    onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-calculators'); }}
+                    className="text-emerald-400 font-bold hover:text-emerald-300 transition-colors text-left block"
+                  >
+                    Loan Calculators Hub
                   </a>
                 </li>
                 <li>
