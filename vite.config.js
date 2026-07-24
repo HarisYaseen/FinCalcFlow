@@ -10,11 +10,15 @@ export default defineConfig({
   ],
   esbuild: {
     drop: ['console', 'debugger'],
+    legalComments: 'none',
   },
   build: {
-    target: 'esnext',
+    target: 'es2020',
     cssCodeSplit: true,
     chunkSizeWarningLimit: 500,
+    modulePreload: {
+      polyfill: false
+    },
     rollupOptions: {
       output: {
         manualChunks(id) {
