@@ -870,33 +870,45 @@ export default function App() {
         {activePage === 'home' && (
           <div className="w-full flex flex-col">
             
-            {/* 1. Full-width Hero Banner Image from Mockup */}
+            {/* 1. Fully Mobile Responsive Hero Banner Section */}
             <div 
-              className="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 aspect-[1024/271]"
+              className="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-900 text-white py-12 px-4 sm:px-8 lg:px-12 min-h-[260px] sm:min-h-[300px] flex items-center shadow-md"
             >
-              <div className="sr-only">
-                <h1>Rent vs Buy, Trucking Cost Per Mile, Debt Consolidation & Revenue Planner | FinCalc Flow</h1>
-                <p>Make informed decisions with our easy-to-use, private tools.</p>
+              {/* Background Decorative Pattern & Gradient */}
+              <div className="absolute right-0 top-0 w-full md:w-1/2 h-full opacity-20 md:opacity-30 pointer-events-none">
+                <img
+                  src="/hero-banner.jpg"
+                  alt="FinCalc Flow Tools"
+                  className="w-full h-full object-cover object-right"
+                  fetchPriority="high"
+                  decoding="async"
+                />
               </div>
-              <img
-                src="/hero-banner.jpg"
-                alt="SmartCalc Tools Banner: Powerful Financial Calculators, 100% Free"
-                width={1024}
-                height={271}
-                className="w-full h-auto object-cover aspect-[1024/271]"
-                fetchPriority="high"
-                decoding="async"
-              />
-              
-              {/* Invisible Overlay clickable button matching the position of 'Try Our Calculators' in the mockup banner */}
-              <button
-                onClick={() => {
-                  const target = document.getElementById('our-tools-heading');
-                  if (target) target.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="absolute left-[5%] bottom-[13%] w-[20%] h-[20%] cursor-pointer opacity-0 focus:opacity-10 focus:ring-2 focus:ring-green-400 focus:outline-none rounded-lg"
-                aria-label="Try Our Calculators"
-              />
+
+              <div className="max-w-4xl space-y-4 relative z-10 text-left">
+                <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-black tracking-wider uppercase inline-block border border-emerald-400/30">
+                  100% Free & Private Serverless Tools
+                </span>
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                  Powerful Financial Calculators
+                </h1>
+                <p className="text-blue-100 text-sm sm:text-base max-w-2xl leading-relaxed">
+                  Make informed visual decisions. Model home equity, auto financing, trucking CPM, debt consolidation, and revenue milestones.
+                </p>
+                <div className="pt-2">
+                  <button
+                    onClick={() => {
+                      const target = document.getElementById('our-tools-heading');
+                      if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-extrabold text-sm rounded-xl shadow-lg shadow-green-900/30 hover:shadow-green-900/40 transition-all cursor-pointer min-h-[44px]"
+                    aria-label="Explore All Calculators"
+                  >
+                    <span>Explore Our Calculators</span>
+                    <span className="text-base">↓</span>
+                  </button>
+                </div>
+              </div>
             </div>
 
             {/* 2. Constrained Main Content Section */}
