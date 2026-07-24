@@ -396,6 +396,18 @@ export default function CostPerMile({ currencySymbol }) {
       {/* Complete Guide to Calculating Trucking Cost Per Mile (SEO & Educational Content) */}
       <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left space-y-10">
         
+        {/* Meta Header / Last Updated Bar */}
+        <div className="flex flex-wrap items-center justify-between gap-4 p-4 bg-slate-50 border border-slate-200/80 rounded-2xl text-xs font-semibold text-slate-600">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+            <span><strong>Last Updated:</strong> July 2026</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <span><strong>Methodology:</strong> Two-Stage Fixed/Variable Operating Cost Engine</span>
+            <span className="px-2.5 py-0.5 bg-blue-100 text-blue-800 rounded-full font-bold">100% Client-Side Private</span>
+          </div>
+        </div>
+
         {/* 1. Introduction (250–400 Words) */}
         <div>
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Calculating Trucking Cost Per Mile</h2>
@@ -413,6 +425,21 @@ export default function CostPerMile({ currencySymbol }) {
               <strong>Why It Is Important:</strong> Freight rates on load boards fluctuate based on market demand and regional lane imbalances. If a broker offers a rate of $2.20 per mile, that offer might sound attractive. However, if your true operating CPM is $1.95 and you have to drive 200 uncompensated "deadhead" (empty) miles to reach the shipper, your net profit evaporates completely. Calculating true CPM protects your cash flow and ensures every mile driven contributes to net profitability.
             </p>
           </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* Model Assumptions & Limitations Callout */}
+        <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-6 space-y-3">
+          <h3 className="text-sm font-bold text-amber-900 uppercase tracking-wider flex items-center gap-2">
+            <span className="px-2 py-0.5 bg-amber-200 text-amber-900 rounded-md text-[10px]">E-E-A-T Audit</span>
+            Key Operating Assumptions & Operational Limitations
+          </h3>
+          <ul className="text-xs text-amber-950 space-y-2 list-disc list-inside font-medium leading-relaxed">
+            <li><strong>Diesel Volatility:</strong> The model assumes average diesel fuel price ($P_{diesel}$) over your calculation window. Regional fuel spikes and state IFTA fuel tax surcharges vary across state lines.</li>
+            <li><strong>Linear Maintenance Wear:</strong> Maintenance reserves assume steady wear. Major catastrophic component failures (e.g. transmission overhauls) require emergency capital reserves beyond standard per-mile allocations.</li>
+            <li><strong>Driver Compensation:</strong> Owner-operators must treat driver wages as a separate expense line item to prevent confusing business profit with personal compensation.</li>
+          </ul>
         </div>
 
         <hr className="border-slate-200" />
@@ -651,9 +678,9 @@ export default function CostPerMile({ currencySymbol }) {
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
-              <h3 className="font-extrabold text-slate-900 text-base">Why does IFTA fuel tax affect cost per mile?</h3>
+              <h3 className="font-extrabold text-slate-900 text-base">How often should carrier CPM be recalculated?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                International Fuel Tax Agreement (IFTA) calculates tax based on fuel consumed in each state versus fuel purchased. Quarterly IFTA balances should be factored into variable expenses.
+                We recommend reviewing CPM monthly. Fuel price swings, insurance renewal updates, and seasonal mileage variations change your minimum breakeven rate.
               </p>
             </div>
           </div>
@@ -661,34 +688,38 @@ export default function CostPerMile({ currencySymbol }) {
 
         <hr className="border-slate-200" />
 
-        {/* 8. Related Calculators & Internal Navigation */}
-        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
-          <h3 className="text-lg font-bold text-slate-900 mb-3">Explore Related Business & Finance Tools</h3>
-          <p className="text-xs text-slate-500 mb-4">Integrate financial planning across personal cash flow and digital enterprise channels:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-bold">
-            <a 
-              href="/revenue-planner"
-              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/revenue-planner'); window.dispatchEvent(new Event('popstate')); }}
-              className="p-3 bg-white border border-slate-200 rounded-xl text-amber-600 hover:border-amber-300 hover:shadow-sm transition-all flex items-center justify-between"
-            >
-              <span>AdSense Revenue Planner</span>
-              <span>&rarr;</span>
-            </a>
+        {/* 8. Contextual Scenario-Driven Internal Navigation */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-4">
+          <h3 className="text-lg font-bold text-slate-900">Next Steps for Fleet Managers & Operators</h3>
+          <p className="text-xs text-slate-500 leading-relaxed">
+            Managing commercial transport costs connects directly to equipment financing and digital publishing revenue streams:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <a 
               href="/debt-consolidation"
               onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/debt-consolidation'); window.dispatchEvent(new Event('popstate')); }}
-              className="p-3 bg-white border border-slate-200 rounded-xl text-indigo-600 hover:border-indigo-300 hover:shadow-sm transition-all flex items-center justify-between"
+              className="p-4 bg-white border border-slate-200 rounded-xl hover:border-indigo-300 hover:shadow-sm transition-all text-left block group"
             >
-              <span>Debt Consolidation</span>
-              <span>&rarr;</span>
+              <div className="font-bold text-indigo-600 group-hover:text-indigo-700 flex items-center justify-between mb-1">
+                <span>Refinance Rig & Equipment Loans</span>
+                <span>&rarr;</span>
+              </div>
+              <p className="text-xs text-slate-500">
+                High monthly truck lease or credit line payments driving up your fixed overhead? Model lower interest consolidation loans using our <strong>Debt Consolidation Optimizer</strong>.
+              </p>
             </a>
             <a 
-              href="/rent-vs-buy"
-              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/rent-vs-buy'); window.dispatchEvent(new Event('popstate')); }}
-              className="p-3 bg-white border border-slate-200 rounded-xl text-emerald-600 hover:border-emerald-300 hover:shadow-sm transition-all flex items-center justify-between"
+              href="/revenue-planner"
+              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/revenue-planner'); window.dispatchEvent(new Event('popstate')); }}
+              className="p-4 bg-white border border-slate-200 rounded-xl hover:border-amber-300 hover:shadow-sm transition-all text-left block group"
             >
-              <span>Rent vs. Buy Simulator</span>
-              <span>&rarr;</span>
+              <div className="font-bold text-amber-600 group-hover:text-amber-700 flex items-center justify-between mb-1">
+                <span>Monetize Trucking & Logistics Content</span>
+                <span>&rarr;</span>
+              </div>
+              <p className="text-xs text-slate-500">
+                Publishing freight market guides, YouTube driver logs, or logistics blogs? Calculate high-CPC digital ad payouts with our <strong>AdSense Revenue Planner</strong>.
+              </p>
             </a>
           </div>
         </div>
@@ -697,8 +728,8 @@ export default function CostPerMile({ currencySymbol }) {
         <div className="pt-4 text-xs text-slate-400 border-t border-slate-100 space-y-1">
           <strong className="text-slate-500 block">Authoritative References & Data Sources:</strong>
           <p>• American Transportation Research Institute (ATRI): <span className="underline">An Analysis of the Operational Costs of Trucking</span></p>
-          <p>• Federal Motor Carrier Safety Administration (FMCSA): <span className="underline">Commercial Motor Vehicle Operating Guidelines & Regulations</span></p>
-          <p>• U.S. Energy Information Administration (EIA): <span className="underline">Weekly Retail Gasoline and Diesel Prices</span></p>
+          <p>• Federal Motor Carrier Safety Administration (FMCSA): <span className="underline">Carrier Registration & Regulatory Guidelines</span></p>
+          <p>• U.S. Energy Information Administration (EIA): <span className="underline">Weekly Retail On-Highway Diesel Prices</span></p>
         </div>
 
       </div>

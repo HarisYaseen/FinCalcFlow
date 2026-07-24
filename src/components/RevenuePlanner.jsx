@@ -246,6 +246,18 @@ export default function RevenuePlanner() {
       {/* Complete Guide to Google AdSense Traffic & Revenue Planning (SEO & Educational Content) */}
       <div className="seo-content-container max-w-7xl mx-auto px-4 py-8 text-slate-800 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 mt-12 text-left space-y-10">
         
+        {/* Meta Header / Last Updated Bar */}
+        <div className="flex flex-wrap items-center justify-between gap-4 p-4 bg-slate-50 border border-slate-200/80 rounded-2xl text-xs font-semibold text-slate-600">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+            <span><strong>Last Updated:</strong> July 2026</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <span><strong>Methodology:</strong> Programmatic Ad Auction & CTR/CPC Yield Model</span>
+            <span className="px-2.5 py-0.5 bg-amber-100 text-amber-800 rounded-full font-bold">100% Client-Side Private</span>
+          </div>
+        </div>
+
         {/* 1. Introduction (250–400 Words) */}
         <div>
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Google AdSense Traffic & Revenue Planning</h2>
@@ -263,6 +275,21 @@ export default function RevenuePlanner() {
               <strong>Why It Is Important:</strong> Many website creators waste months building content in low-CPC niches (such as jokes or general news paying $0.05 per click) only to realize they require 2,000,000 monthly pageviews to earn a living wage. By modeling your niche metrics beforehand, you can target high-value commercial keywords (such as mortgage loans, debt consolidation, or commercial freight insurance paying $1.50 to $5.00+ per click), reaching your revenue goals with significantly lower traffic thresholds.
             </p>
           </div>
+        </div>
+
+        <hr className="border-slate-200" />
+
+        {/* Model Assumptions & Limitations Callout */}
+        <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-6 space-y-3">
+          <h3 className="text-sm font-bold text-amber-900 uppercase tracking-wider flex items-center gap-2">
+            <span className="px-2 py-0.5 bg-amber-200 text-amber-900 rounded-md text-[10px]">E-E-A-T Audit</span>
+            Key Model Assumptions & Monetization Limitations
+          </h3>
+          <ul className="text-xs text-amber-950 space-y-2 list-disc list-inside font-medium leading-relaxed">
+            <li><strong>Ad Blocker Penetration:</strong> 15% to 30% of desktop users run ad blockers, reducing actual monetizeable ad impressions below total Analytics pageviews.</li>
+            <li><strong>Geographic Audience Tiering:</strong> Tier 1 search traffic (US, UK, CA, AU) commands 5x–10x higher CPC rates than Tier 3 international traffic due to advertiser budget constraints.</li>
+            <li><strong>Publisher Revenue Share:</strong> In AdSense for Content, Google pays publishers 68% of gross advertiser bids. Programmatic header bidding networks can increase net yields.</li>
+          </ul>
         </div>
 
         <hr className="border-slate-200" />
@@ -504,34 +531,38 @@ export default function RevenuePlanner() {
 
         <hr className="border-slate-200" />
 
-        {/* 8. Related Calculators & Internal Navigation */}
-        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
-          <h3 className="text-lg font-bold text-slate-900 mb-3">Explore Related Financial Calculators</h3>
-          <p className="text-xs text-slate-500 mb-4">Connect web monetization insights with physical logistics and housing asset tools:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-bold">
+        {/* 8. Contextual Scenario-Driven Internal Navigation */}
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-4">
+          <h3 className="text-lg font-bold text-slate-900">Connect Digital Publishing to High-CPC Verticals</h3>
+          <p className="text-xs text-slate-500 leading-relaxed">
+            The highest paying ad niches center around commercial logistics, real estate equity, and personal financial services:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <a 
               href="/cost-per-mile"
               onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/cost-per-mile'); window.dispatchEvent(new Event('popstate')); }}
-              className="p-3 bg-white border border-slate-200 rounded-xl text-blue-600 hover:border-blue-300 hover:shadow-sm transition-all flex items-center justify-between"
+              className="p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all text-left block group"
             >
-              <span>Trucking Cost Per Mile</span>
-              <span>&rarr;</span>
-            </a>
-            <a 
-              href="/debt-consolidation"
-              onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/debt-consolidation'); window.dispatchEvent(new Event('popstate')); }}
-              className="p-3 bg-white border border-slate-200 rounded-xl text-indigo-600 hover:border-indigo-300 hover:shadow-sm transition-all flex items-center justify-between"
-            >
-              <span>Debt Consolidation</span>
-              <span>&rarr;</span>
+              <div className="font-bold text-blue-600 group-hover:text-blue-700 flex items-center justify-between mb-1">
+                <span>Explore Trucking & Freight Logistics Verticals</span>
+                <span>&rarr;</span>
+              </div>
+              <p className="text-xs text-slate-500">
+                Commercial freight shipping keywords pay $2.50 to $8.00+ CPC. Calculate real-world carrier cost floors using our <strong>Trucking Cost Per Mile Calculator</strong>.
+              </p>
             </a>
             <a 
               href="/rent-vs-buy"
               onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/rent-vs-buy'); window.dispatchEvent(new Event('popstate')); }}
-              className="p-3 bg-white border border-slate-200 rounded-xl text-emerald-600 hover:border-emerald-300 hover:shadow-sm transition-all flex items-center justify-between"
+              className="p-4 bg-white border border-slate-200 rounded-xl hover:border-emerald-300 hover:shadow-sm transition-all text-left block group"
             >
-              <span>Rent vs. Buy Simulator</span>
-              <span>&rarr;</span>
+              <div className="font-bold text-emerald-600 group-hover:text-emerald-700 flex items-center justify-between mb-1">
+                <span>Explore Real Estate & Mortgage Keywords</span>
+                <span>&rarr;</span>
+              </div>
+              <p className="text-xs text-slate-500">
+                Mortgages and home equity loans rank among the top 5 highest-bidding Google Ad keywords. Model housing net worth with our <strong>Rent vs. Buy Simulator</strong>.
+              </p>
             </a>
           </div>
         </div>
