@@ -436,7 +436,7 @@ export default function CostPerMile({ currencySymbol }) {
             Key Operating Assumptions & Operational Limitations
           </h3>
           <ul className="text-xs text-amber-950 space-y-2 list-disc list-inside font-medium leading-relaxed">
-            <li><strong>Diesel Volatility:</strong> The model assumes average diesel fuel price ($P_{diesel}$) over your calculation window. Regional fuel spikes and state IFTA fuel tax surcharges vary across state lines.</li>
+            <li><strong>Diesel Volatility:</strong> The model assumes average diesel fuel price over your calculation window. Regional fuel spikes and state IFTA fuel tax surcharges vary across state lines.</li>
             <li><strong>Linear Maintenance Wear:</strong> Maintenance reserves assume steady wear. Major catastrophic component failures (e.g. transmission overhauls) require emergency capital reserves beyond standard per-mile allocations.</li>
             <li><strong>Driver Compensation:</strong> Owner-operators must treat driver wages as a separate expense line item to prevent confusing business profit with personal compensation.</li>
           </ul>
@@ -448,7 +448,7 @@ export default function CostPerMile({ currencySymbol }) {
         <div>
           <h2 className="text-2xl font-bold mb-4 text-slate-900">How the Cost Per Mile Calculation Works</h2>
           <p className="text-slate-600 leading-relaxed mb-6">
-            The calculator processes your financial inputs through a two-stage expense aggregation model, dividing total monthly expenditures by the total odometer distance traveled ($M_{total}$).
+            The calculator processes your financial inputs through a two-stage expense aggregation model, dividing total monthly expenditures by the total odometer distance traveled.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -468,7 +468,7 @@ export default function CostPerMile({ currencySymbol }) {
                 Variable Mileage Expenses
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Variable costs increase in direct proportion to mileage. Diesel fuel is calculated dynamically based on price per gallon divided by truck MPG ($P_{fuel} / MPG$). Maintenance and tire reserves ($CPM_{maint}$) are saved on a per-mile basis for repairs, oil changes, and DOT inspections.
+                Variable costs increase in direct proportion to mileage. Diesel fuel is calculated dynamically based on price per gallon divided by truck MPG (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Fuel Price ÷ MPG</code>). Maintenance and tire reserves are saved on a per-mile basis for repairs, oil changes, and DOT inspections.
               </p>
             </div>
           </div>
@@ -491,8 +491,8 @@ export default function CostPerMile({ currencySymbol }) {
               </div>
               <div className="text-xs text-slate-300 grid grid-cols-1 md:grid-cols-2 gap-2 pt-2">
                 <div><strong>CPM:</strong> Total Operating Cost Per Mile</div>
-                <div><strong>FC_total:</strong> Total Monthly Fixed Expenses ($Truck + Insurance + Permits$)</div>
-                <div><strong>VC_total:</strong> Total Monthly Variable Expenses ($Fuel + Maintenance$)</div>
+                <div><strong>FC_total:</strong> Total Monthly Fixed Expenses (Truck + Insurance + Permits)</div>
+                <div><strong>VC_total:</strong> Total Monthly Variable Expenses (Fuel + Maintenance)</div>
                 <div><strong>M_total:</strong> Total Miles Driven (Loaded Miles + Deadhead Miles)</div>
               </div>
             </div>
@@ -515,7 +515,7 @@ export default function CostPerMile({ currencySymbol }) {
                 CPM_fixed = FC_total / M_total
               </div>
               <div className="text-xs text-slate-300 pt-2">
-                <strong>Insight:</strong> As total monthly driven miles ($M_{total}$) increase, the fixed cost burden per mile ($CPM_{fixed}$) decreases, significantly improving profit margin efficiency.
+                <strong>Insight:</strong> As total monthly driven miles increase, the fixed cost burden per mile decreases, significantly improving profit margin efficiency.
               </div>
             </div>
           </div>

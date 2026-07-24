@@ -405,7 +405,7 @@ export default function HomeLoan({ currencySymbol = '$' }) {
                 1. Principal & Interest (P&I)
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Calculated using standard monthly amortization ($M = P \times \frac{r(1+r)^n}{(1+r)^n-1}$). Interest dominates early payments, while principal reduction dominates later years.
+                Calculated using standard monthly amortization (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">M = P × [ r(1 + r)ⁿ ] ÷ [ (1 + r)ⁿ - 1 ]</code>). Interest dominates early payments, while principal reduction dominates later years.
               </p>
             </div>
 

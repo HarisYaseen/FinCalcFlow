@@ -380,7 +380,7 @@ export default function CarLoan({ currencySymbol = '$' }) {
                 1. Net Amount Financed
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                $Financed = (Vehicle Price - Down Payment - Trade In) \times (1 + Sales Tax)$. Trade-in equity reduces taxable purchase amount in most jurisdictions.
+                <code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Financed = (Price - Down - TradeIn) × (1 + Sales Tax %)</code>. Trade-in equity reduces taxable purchase amount in most jurisdictions.
               </p>
             </div>
 
