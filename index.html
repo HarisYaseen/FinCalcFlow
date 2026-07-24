@@ -5,10 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-adsense-account" content="ca-pub-7307272587384576">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7307272587384576" crossorigin="anonymous"></script>
     <link rel="canonical" href="https://www.fincalcflow.com/" />
     <link rel="preload" href="/hero-banner.jpg" as="image" type="image/jpeg" fetchpriority="high" />
     
+    <!-- Critical CSS Baseline to guarantee 0.00 CLS (Zero Layout Shift) -->
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      header { min-height: 64px; }
+      .hero-responsive-banner { min-height: 260px; }
+      @media (min-width: 640px) { .hero-responsive-banner { min-height: 300px; } }
+      img { content-visibility: auto; }
+      ins.adsbygoogle { min-height: 90px; display: block; }
+    </style>
+
     <!-- PWA Mobile Theme Color and Capability -->
     <meta name="theme-color" content="#4f46e5" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -477,14 +487,23 @@
 
     <!-- Register Service Worker & Lazy Load Third Party Scripts for Mobile PageSpeed Score -->
     <script>
-      // Register Service Worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
+      // Register Service Worker & Deferred AdSense Loading
+      window.addEventListener('load', () => {
+        if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/sw.js')
             .then(reg => console.log('Service Worker registered. Scope:', reg.scope))
             .catch(err => console.error('Service Worker registration failed:', err));
-        });
-      }
+        }
+
+        // Lazy-load AdSense script after primary paint to eliminate 0.733 CLS layout shifts
+        setTimeout(() => {
+          const adsScript = document.createElement('script');
+          adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7307272587384576';
+          adsScript.async = true;
+          adsScript.crossOrigin = 'anonymous';
+          document.head.appendChild(adsScript);
+        }, 1500);
+      });
     </script>
   </body>
 </html>
