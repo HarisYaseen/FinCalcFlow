@@ -34,17 +34,112 @@
     <meta name="twitter:description" content="Calculate Rent vs. Buy equity, Trucking Cost Per Mile, and Credit Card Debt Consolidation instantly in your browser. 100% private, serverless financial tools." />
     <meta name="twitter:image" content="https://www.fincalcflow.com/hero-banner.jpg" />
     
-    <!-- JSON-LD Structured Data for Google Rich Snippets -->
+    <!-- JSON-LD Structured Data for Generative Engine Optimization (GEO) & Search Engine Crawlers -->
     <script id="dynamic-schema" type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "FinCalc Flow",
-      "url": "https://www.fincalcflow.com",
-      "description": "Free serverless financial tools to model rent vs. buy equity, evaluate freight pricing, and optimize high-interest credit card debt.",
-      "applicationCategory": "FinancialApplication",
-      "operatingSystem": "All",
-      "browserRequirements": "Requires JavaScript. Requires HTML5."
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.fincalcflow.com/#organization",
+          "name": "FinCalc Flow",
+          "url": "https://www.fincalcflow.com",
+          "logo": "https://www.fincalcflow.com/favicon.svg",
+          "sameAs": [
+            "https://www.facebook.com/fincalcflow",
+            "https://twitter.com/fincalcflow",
+            "https://www.linkedin.com/company/fincalcflow",
+            "https://github.com/HarisYaseen/FinCalcFlow"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.fincalcflow.com/#website",
+          "url": "https://www.fincalcflow.com",
+          "name": "FinCalc Flow",
+          "description": "Free serverless financial calculators for mortgage, auto loans, rent vs buy equity, trucking cost per mile, and debt payoff.",
+          "publisher": { "@id": "https://www.fincalcflow.com/#organization" }
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://www.fincalcflow.com/#webapp",
+          "name": "FinCalc Flow Financial Tools Suite",
+          "url": "https://www.fincalcflow.com",
+          "description": "Free client-side financial tools to model rent vs. buy equity, auto loan financing, personal loans, trucking cost per mile, and credit card debt consolidation.",
+          "applicationCategory": "FinancialApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5."
+        },
+        {
+          "@type": "ItemList",
+          "name": "Financial Calculators & Decision Tools",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Personal Loan Calculator", "url": "https://www.fincalcflow.com/calculators/personal-loan-calculator" },
+            { "@type": "ListItem", "position": 2, "name": "Home Loan Calculator", "url": "https://www.fincalcflow.com/calculators/home-loan-calculator" },
+            { "@type": "ListItem", "position": 3, "name": "Car Loan Calculator", "url": "https://www.fincalcflow.com/calculators/car-loan-calculator" },
+            { "@type": "ListItem", "position": 4, "name": "Loan Payoff Calculator", "url": "https://www.fincalcflow.com/calculators/loan-payoff-calculator" },
+            { "@type": "ListItem", "position": 5, "name": "Debt-to-Income (DTI) Calculator", "url": "https://www.fincalcflow.com/calculators/debt-to-income-calculator" },
+            { "@type": "ListItem", "position": 6, "name": "Rent vs. Buy Calculator", "url": "https://www.fincalcflow.com/rent-vs-buy" },
+            { "@type": "ListItem", "position": 7, "name": "Trucking Cost Per Mile Calculator", "url": "https://www.fincalcflow.com/cost-per-mile" },
+            { "@type": "ListItem", "position": 8, "name": "Credit Card Debt Consolidation Optimizer", "url": "https://www.fincalcflow.com/debt-consolidation" },
+            { "@type": "ListItem", "position": 9, "name": "Google AdSense Revenue Planner", "url": "https://www.fincalcflow.com/revenue-planner" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.fincalcflow.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I calculate my trucking cost per mile?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To compute your commercial cost per mile, list all fixed monthly fees (such as lease payments, truck permits, and insurance premiums) and your variable operational expenses (such as diesel fuel, driver wages, toll fees, and maintenance/tire reserves). Sum these expenses together and divide the total by your monthly driven miles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What parameters dictate a Rent vs. Buy decision?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Rent vs. Buy simulation models mortgage amortization, upfront down payments, closing costs, and home appreciation rates. It also incorporates hidden homeownership costs such as property tax, HOA fees, insurance, and annual maintenance overhead, comparing them against renting and investing the down payment in index funds."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does credit card debt consolidation work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Debt consolidation merges multiple high-interest credit card balances into a single personal loan with a lower interest rate (APR). This lowers your monthly interest charges, meaning a larger portion of your monthly payment goes toward paying down the principal balance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I forecast Google AdSense earnings?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AdSense income is modeled using three core variables: daily or monthly pageviews, click-through rate (CTR), and average cost-per-click (CPC). The formula is: pageviews × (CTR / 100) × CPC."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the opportunity cost of buying a home?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "When you buy a home, the money used for down payment and closing costs is no longer available to invest. Over 15 or 30 years, if that capital had been placed in index funds yielding 7% to 10% annually, it would compound significantly. This foregone growth is the opportunity cost."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why should trucking fleet operators monitor cost per mile regularly?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Trucking is a low-margin industry where operational costs fluctuate constantly. Monitoring cost per mile monthly allows owner-operators to identify expense leaks and adjust freight rate per mile (RPM) bids to ensure driving profitably."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     
