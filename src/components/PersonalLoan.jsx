@@ -281,7 +281,7 @@ export default function PersonalLoan({ currencySymbol = '$' }) {
           {/* Interactive Chart */}
           <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-xl space-y-4">
             <h3 className="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Principal vs. Interest Breakdown</h3>
-            <div className="h-48 flex items-center justify-center">
+            <div className="pt-1">
               <PieChart data={pieChartData} currencySymbol={currencySymbol} />
             </div>
           </div>

@@ -555,11 +555,11 @@ export default function App() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-5">
+            <nav className="hidden xl:flex items-center gap-2 lg:gap-4 text-xs lg:text-sm font-bold">
               <a
                 href="/"
                 onClick={(e) => { e.preventDefault(); setActivePage('home'); }}
-                className={`text-sm font-bold transition-all py-2 ${
+                className={`whitespace-nowrap transition-all py-2 px-1 ${
                   activePage === 'home' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -575,7 +575,7 @@ export default function App() {
                 <a
                   href="/calculators/loan-calculators"
                   onClick={(e) => { e.preventDefault(); setActivePage('calculators/loan-calculators'); setCalcsDropdownOpen(false); }}
-                  className={`text-sm font-bold transition-all py-2 px-3 bg-indigo-50 rounded-lg border border-indigo-100 flex items-center gap-1.5 ${
+                  className={`whitespace-nowrap transition-all py-1.5 px-2.5 bg-indigo-50 rounded-lg border border-indigo-100 flex items-center gap-1.5 ${
                     activePage.includes('loan') || activePage.includes('debt-to-income') ? 'text-indigo-700 font-extrabold shadow-sm' : 'text-indigo-600 hover:text-indigo-800'
                   }`}
                 >
@@ -634,7 +634,7 @@ export default function App() {
               <a
                 href="/rent-vs-buy"
                 onClick={(e) => { e.preventDefault(); setActivePage('rent-vs-buy'); }}
-                className={`text-sm font-bold transition-all py-2 ${
+                className={`whitespace-nowrap transition-all py-2 px-1 ${
                   activePage === 'rent-vs-buy' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -644,7 +644,7 @@ export default function App() {
               <a
                 href="/cost-per-mile"
                 onClick={(e) => { e.preventDefault(); setActivePage('cost-per-mile'); }}
-                className={`text-sm font-bold transition-all py-2 ${
+                className={`whitespace-nowrap transition-all py-2 px-1 ${
                   activePage === 'cost-per-mile' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -654,7 +654,7 @@ export default function App() {
               <a
                 href="/debt-consolidation"
                 onClick={(e) => { e.preventDefault(); setActivePage('debt-consolidation'); }}
-                className={`text-sm font-bold transition-all py-2 ${
+                className={`whitespace-nowrap transition-all py-2 px-1 ${
                   activePage === 'debt-consolidation' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -664,7 +664,7 @@ export default function App() {
               <a
                 href="/revenue-planner"
                 onClick={(e) => { e.preventDefault(); setActivePage('revenue-planner'); }}
-                className={`text-sm font-bold transition-all py-2 ${
+                className={`whitespace-nowrap transition-all py-2 px-1 ${
                   activePage === 'revenue-planner' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -674,32 +674,32 @@ export default function App() {
               <a
                 href="/guides"
                 onClick={(e) => { e.preventDefault(); setActivePage('guides'); }}
-                className={`text-sm font-bold transition-all py-2 ${
+                className={`whitespace-nowrap transition-all py-2 px-1 ${
                   activePage === 'guides' || activePage.startsWith('guides/') ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                Financial Guides
+                Guides
               </a>
 
               <a
                 href="/about"
                 onClick={(e) => { e.preventDefault(); setActivePage('about'); }}
-                className={`text-sm font-bold transition-all py-2 ${
+                className={`whitespace-nowrap transition-all py-2 px-1 ${
                   activePage === 'about' ? 'text-blue-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                About Us
+                About
               </a>
             </nav>
 
             {/* Currency Selector */}
-            <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-1 bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-xl">
+            <div className="hidden xl:flex items-center gap-4">
+              <div className="flex items-center gap-1 bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-xl">
                 <IconGlobe className="w-4 h-4 text-slate-500" />
                 <select
                   value={currencySymbol}
                   onChange={(e) => setCurrencySymbol(e.target.value)}
-                  className="bg-transparent text-sm font-bold text-slate-700 focus:outline-none cursor-pointer"
+                  className="bg-transparent text-xs font-bold text-slate-700 focus:outline-none cursor-pointer"
                 >
                   {currencyOptions.map((opt) => (
                     <option key={opt.symbol} value={opt.symbol}>
@@ -710,8 +710,8 @@ export default function App() {
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="flex md:hidden items-center gap-2">
+            {/* Mobile / Tablet Menu Button */}
+            <div className="flex xl:hidden items-center gap-2">
               <select
                 value={currencySymbol}
                 onChange={(e) => setCurrencySymbol(e.target.value)}
