@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { PieChart } from './Charts';
 import { ShieldCheck, DollarSign, Percent, AlertTriangle, CheckCircle, HelpCircle, AlertCircle } from 'lucide-react';
 
-export default function DtiCalculator() {
+export default function DtiCalculator({ currencySymbol = '$' }) {
   const [grossIncomeMonthly, setGrossIncomeMonthly] = useState(7500);
   const [housingExpense, setHousingExpense] = useState(1800);
   const [autoLoans, setAutoLoans] = useState(450);
@@ -236,7 +236,7 @@ export default function DtiCalculator() {
           <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-xl space-y-4">
             <h3 className="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Gross Income Allocation</h3>
             <div className="h-48 flex items-center justify-center">
-              <PieChart data={pieChartData} size={160} />
+              <PieChart data={pieChartData} currencySymbol={currencySymbol} />
             </div>
           </div>
         </div>

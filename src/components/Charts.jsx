@@ -3,14 +3,17 @@ import React, { useState, useRef } from 'react';
 /**
  * Helper to format currency values nicely
  */
-const formatVal = (val, currencySymbol) => {
-  if (val >= 1000000) {
-    return `${currencySymbol}${(val / 1000000).toFixed(1)}M`;
+const formatVal = (val, currencySymbol = '$') => {
+  const num = Number(val);
+  const sym = currencySymbol || '$';
+  if (isNaN(num) || num === undefined || num === null) return `${sym}0`;
+  if (num >= 1000000) {
+    return `${sym}${(num / 1000000).toFixed(1)}M`;
   }
-  if (val >= 1000) {
-    return `${currencySymbol}${(val / 1000).toFixed(0)}k`;
+  if (num >= 1000) {
+    return `${sym}${(num / 1000).toFixed(0)}k`;
   }
-  return `${currencySymbol}${val.toFixed(0)}`;
+  return `${sym}${num.toFixed(0)}`;
 };
 
 /**
@@ -18,7 +21,7 @@ const formatVal = (val, currencySymbol) => {
  * Visualizes Buyer Net Worth vs Renter Net Worth over time.
  * Supports hover tooltips and area gradients.
  */
-export const LineChart = ({ data, currencySymbol, xKey, yKeys, labels, colors }) => {
+export const LineChart = ({ data, currencySymbol = '$', xKey, yKeys, labels, colors }) => {
   const [hoverIndex, setHoverIndex] = useState(null);
   const svgRef = useRef(null);
 
@@ -236,13 +239,21 @@ export const LineChart = ({ data, currencySymbol, xKey, yKeys, labels, colors })
  * Visualizes Cost breakdown (e.g. Fuel vs Fixed vs Maintenance).
  * Uses SVG circles/arcs for clean rendering.
  */
-export const PieChart = ({ data, currencySymbol }) => {
-  const total = data.reduce((acc, curr) => acc + curr.value, 0);
-
-  if (total === 0) {
+export const PieChart = ({ data = [], currencySymbol = '$' }) => {
+  if (!data || !Array.isArray(data) || data.length === 0) {
     return (
-      <div className="flex items-center justify-center h-48 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-dashed border-slate-200 text-slate-400">
-        No costs to display. Enter operations details.
+      <div className="flex items-center justify-center h-48 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-dashed border-slate-200 text-slate-400 text-xs">
+        No costs to display. Enter details above.
+      </div>
+    );
+  }
+
+  const total = data.reduce((acc, curr) => acc + (Number(curr?.value) || 0), 0);
+
+  if (total <= 0) {
+    return (
+      <div className="flex items-center justify-center h-48 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-dashed border-slate-200 text-slate-400 text-xs">
+        No costs to display. Enter details above.
       </div>
     );
   }
@@ -252,8 +263,11 @@ export const PieChart = ({ data, currencySymbol }) => {
   const cx = 100;
   const cy = 100;
 
-  const slices = data.map((slice) => {
-    const percentage = slice.value / total;
+  const validSlices = data.filter(slice => Number(slice?.value) > 0);
+
+  const slices = validSlices.map((slice) => {
+    const val = Number(slice.value) || 0;
+    const percentage = val / total;
     const angle = percentage * 360;
     
     // Convert polar coordinates to Cartesian coordinates
@@ -281,7 +295,9 @@ export const PieChart = ({ data, currencySymbol }) => {
 
     return {
       ...slice,
+      value: val,
       percentage: (percentage * 100).toFixed(1),
+      isSingleFull: percentage >= 0.999,
       pathData,
     };
   });
@@ -291,14 +307,27 @@ export const PieChart = ({ data, currencySymbol }) => {
       <div className="relative w-48 h-48">
         <svg viewBox="0 0 200 200" className="w-full h-full transform -rotate-90">
           {slices.map((slice, idx) => (
-            <path
-              key={idx}
-              d={slice.pathData}
-              fill={slice.color}
-              className="transition-all duration-300 hover:opacity-90 cursor-pointer"
-            >
-              <title>{`${slice.name}: ${formatVal(slice.value, currencySymbol)} (${slice.percentage}%)`}</title>
-            </path>
+            slice.isSingleFull ? (
+              <circle
+                key={idx}
+                cx={cx}
+                cy={cy}
+                r={radius}
+                fill={slice.color}
+                className="transition-all duration-300 hover:opacity-90 cursor-pointer"
+              >
+                <title>{`${slice.name}: ${formatVal(slice.value, currencySymbol)} (${slice.percentage}%)`}</title>
+              </circle>
+            ) : (
+              <path
+                key={idx}
+                d={slice.pathData}
+                fill={slice.color}
+                className="transition-all duration-300 hover:opacity-90 cursor-pointer"
+              >
+                <title>{`${slice.name}: ${formatVal(slice.value, currencySymbol)} (${slice.percentage}%)`}</title>
+              </path>
+            )
           ))}
           {/* Inner hole for a donut chart style */}
           <circle cx={cx} cy={cy} r="45" fill="white" className="dark:fill-slate-900" />

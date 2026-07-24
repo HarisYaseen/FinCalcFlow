@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { PieChart } from './Charts';
 import { Calculator, DollarSign, Percent, Sparkles, AlertCircle } from 'lucide-react';
 
-export default function LoanPayoff() {
+export default function LoanPayoff({ currencySymbol = '$' }) {
   const [currentBalance, setCurrentBalance] = useState(25000);
   const [interestRate, setInterestRate] = useState(8.5);
   const [basePayment, setBasePayment] = useState(512);
@@ -248,7 +248,7 @@ export default function LoanPayoff() {
           <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-xl space-y-4">
             <h3 className="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Interest Paid vs. Interest Saved</h3>
             <div className="h-48 flex items-center justify-center">
-              <PieChart data={pieChartData} size={160} />
+              <PieChart data={pieChartData} currencySymbol={currencySymbol} />
             </div>
           </div>
         </div>

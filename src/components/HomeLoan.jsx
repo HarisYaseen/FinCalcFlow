@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { PieChart } from './Charts';
 import { Home, DollarSign, Calendar, Percent, Shield, ChevronDown, ChevronUp, AlertCircle } from 'lucide-react';
 
-export default function HomeLoan() {
+export default function HomeLoan({ currencySymbol = '$' }) {
   const [homePrice, setHomePrice] = useState(400000);
   const [downPaymentPercent, setDownPaymentPercent] = useState(20);
   const [interestRate, setInterestRate] = useState(6.5);
@@ -290,7 +290,7 @@ export default function HomeLoan() {
           <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-xl space-y-4">
             <h3 className="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Monthly Payment Breakdown</h3>
             <div className="h-48 flex items-center justify-center">
-              <PieChart data={pieChartData} size={160} />
+              <PieChart data={pieChartData} currencySymbol={currencySymbol} />
             </div>
           </div>
         </div>

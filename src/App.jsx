@@ -1130,11 +1130,11 @@ export default function App() {
           {activePage === 'cost-per-mile' && <CostPerMile currencySymbol={currencySymbol} />}
           {activePage === 'debt-consolidation' && <DebtConsolidation currencySymbol={currencySymbol} />}
           {activePage === 'revenue-planner' && <RevenuePlanner />}
-          {(activePage === 'calculators/personal-loan-calculator' || activePage === 'personal-loan-calculator') && <PersonalLoan />}
-          {(activePage === 'calculators/home-loan-calculator' || activePage === 'home-loan-calculator') && <HomeLoan />}
-          {(activePage === 'calculators/car-loan-calculator' || activePage === 'car-loan-calculator') && <CarLoan />}
-          {(activePage === 'calculators/loan-payoff-calculator' || activePage === 'loan-payoff-calculator') && <LoanPayoff />}
-          {(activePage === 'calculators/debt-to-income-calculator' || activePage === 'debt-to-income-calculator') && <DtiCalculator />}
+          {(activePage === 'calculators/personal-loan-calculator' || activePage === 'personal-loan-calculator') && <PersonalLoan currencySymbol={currencySymbol} />}
+          {(activePage === 'calculators/home-loan-calculator' || activePage === 'home-loan-calculator') && <HomeLoan currencySymbol={currencySymbol} />}
+          {(activePage === 'calculators/car-loan-calculator' || activePage === 'car-loan-calculator') && <CarLoan currencySymbol={currencySymbol} />}
+          {(activePage === 'calculators/loan-payoff-calculator' || activePage === 'loan-payoff-calculator') && <LoanPayoff currencySymbol={currencySymbol} />}
+          {(activePage === 'calculators/debt-to-income-calculator' || activePage === 'debt-to-income-calculator') && <DtiCalculator currencySymbol={currencySymbol} />}
           {(activePage === 'calculators/loan-calculators' || activePage === 'loan-calculators') && <LoanCalculators />}
           {activePage === 'privacy' && <PrivacyPolicy />}
           {activePage === 'about' && <About />}

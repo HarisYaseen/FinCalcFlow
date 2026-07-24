@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { PieChart } from './Charts';
 import { Truck, DollarSign, Calendar, Percent, ChevronDown, ChevronUp, AlertCircle } from 'lucide-react';
 
-export default function CarLoan() {
+export default function CarLoan({ currencySymbol = '$' }) {
   const [vehiclePrice, setVehiclePrice] = useState(35000);
   const [downPayment, setDownPayment] = useState(5000);
   const [tradeInValue, setTradeInValue] = useState(2000);
@@ -269,7 +269,7 @@ export default function CarLoan() {
           <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-xl space-y-4">
             <h3 className="text-sm font-extrabold text-slate-900 uppercase tracking-wider">Financed Principal vs. Interest vs. Tax</h3>
             <div className="h-48 flex items-center justify-center">
-              <PieChart data={pieChartData} size={160} />
+              <PieChart data={pieChartData} currencySymbol={currencySymbol} />
             </div>
           </div>
         </div>
