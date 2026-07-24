@@ -879,6 +879,8 @@ export default function App() {
                 <img
                   src="/hero-banner.jpg"
                   alt="FinCalc Flow Tools"
+                  width={1024}
+                  height={271}
                   className="w-full h-full object-cover object-right"
                   fetchPriority="high"
                   decoding="async"

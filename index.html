@@ -143,13 +143,10 @@
     }
     </script>
     
-    <!-- Google Fonts Inter -->
+    <!-- Google Fonts Inter (Synchronous loading to prevent 0.733 CLS Layout Shifts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   </head>
   <body class="bg-slate-50 antialiased">
@@ -212,7 +209,7 @@
             <!-- 1. Fully Mobile Responsive Hero Banner Section -->
             <div class="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-900 text-white py-12 px-4 sm:px-8 lg:px-12 min-h-[260px] sm:min-h-[300px] flex items-center shadow-md">
               <div class="absolute right-0 top-0 w-full md:w-1/2 h-full opacity-20 md:opacity-30 pointer-events-none">
-                <img src="/hero-banner.jpg" alt="FinCalc Flow Tools" class="w-full h-full object-cover object-right" fetchpriority="high" decoding="async" />
+                <img src="/hero-banner.jpg" alt="FinCalc Flow Tools" width="1024" height="271" class="w-full h-full object-cover object-right" fetchpriority="high" decoding="async" />
               </div>
               <div class="max-w-4xl space-y-4 relative z-10 text-left">
                 <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-black tracking-wider uppercase inline-block border border-emerald-400/30">
