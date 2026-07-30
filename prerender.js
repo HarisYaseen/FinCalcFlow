@@ -665,7 +665,44 @@ const routes = [
         "applicationCategory": "FinanceApplication"
       }
     ],
-    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Personal Loan Calculator</h1><p class="text-slate-600">Calculate your exact monthly personal loan payments, total interest costs, and early payoff savings with an interactive amortization schedule.</p></div>`
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Personal Loan Calculator</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>Personal loans are fixed-rate installment products. When you take out a personal loan, you borrow a fixed lump sum of money and agree to repay it in equal monthly installments over a set period—typically ranging from 12 to 84 months.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-2 border-b pb-2">How Personal Loan Calculation Works</h2>
+          <p>Personal loan payments follow standard installment loan amortization, where each monthly payment is divided into interest charges and principal reduction. Interest is computed monthly on the remaining principal balance (<code>Interest = Balance × (APR / 12)</code>). In the early months, interest accounts for a larger portion of your payment, while principal reduction dominates later months.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Mathematical Formulas & Amortization</h2>
+          <div class="my-4 p-4 bg-slate-50 border border-slate-200 rounded-2xl font-mono text-center font-bold text-indigo-700 text-xs sm:text-sm">
+            Monthly Payment M = P × [ r(1 + r)ⁿ ] ÷ [ (1 + r)ⁿ - 1 ]
+          </div>
+          <p>Where <strong>P</strong> is the principal loan amount, <strong>r</strong> is the monthly interest rate (APR ÷ 12 ÷ 100), and <strong>n</strong> is the total number of amortization months.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Worked Step-by-Step Example</h2>
+          <p>Consider a <strong>$15,000 loan at 9.5% APR</strong> comparing a 3-year term versus a 5-year term:</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-2 my-4 text-xs sm:text-sm">
+            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+              <li><strong>3-Year Term:</strong> Monthly payment is <strong>$480.46/mo</strong> with total interest paid of <strong>$2,296</strong>.</li>
+              <li><strong>5-Year Term:</strong> Monthly payment drops to <strong>$315.00/mo</strong>, but total interest paid jumps to <strong>$3,900</strong>.</li>
+              <li><strong>Takeaway:</strong> Selecting the 3-year term saves <strong>$1,604 in total interest</strong> over the life of the loan.</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">7 Common Personal Loan Mistakes to Avoid</h2>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li><strong>Ignoring Origination Fees:</strong> A 5% fee on a $20,000 loan reduces received cash to $19,000 while you still repay $20,000 plus interest.</li>
+            <li><strong>Selecting Terms Solely by Monthly Outflow:</strong> Stretching term length lowers monthly payments but multiplies overall interest costs.</li>
+            <li><strong>Borrowing for Discretionary Expenses:</strong> Use personal loans for high-interest debt consolidation or value-adding improvements, not vacations.</li>
+            <li><strong>Not Shopping Multiple Lenders:</strong> Interest rates vary widely; always request soft-pull pre-qualifications from multiple institutions.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
+          <p>Explore our complete cluster of loan tools: <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/home-loan-calculator" class="text-indigo-600 font-bold hover:underline">Home Loan Calculator</a>, <a href="/calculators/car-loan-calculator" class="text-indigo-600 font-bold hover:underline">Car Loan Calculator</a>, <a href="/calculators/loan-payoff-calculator" class="text-indigo-600 font-bold hover:underline">Loan Payoff Calculator</a>, and <a href="/calculators/debt-to-income-calculator" class="text-indigo-600 font-bold hover:underline">Debt-to-Income Calculator</a>.</p>
+        </div>
+      </div>
+    `
   },
   {
     path: 'calculators/home-loan-calculator',
@@ -681,7 +718,36 @@ const routes = [
         "applicationCategory": "FinanceApplication"
       }
     ],
-    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Home Loan Calculator</h1><p class="text-slate-600">Estimate your total monthly mortgage obligation including principal, interest, property taxes, homeowners insurance, and HOA dues.</p></div>`
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Home Loan Calculator</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>Securing a home loan is the single largest financial commitment most individuals undertake. A mortgage enables buyers to acquire residential property by putting down a cash deposit upfront while borrowing the remaining balance. The true monthly cost of homeownership extends beyond principal and interest (P&I) to include property taxes, homeowners insurance, and HOA dues.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-2 border-b pb-2">Understanding PITI + HOA Components</h2>
+          <p>Your total monthly mortgage payment consists of four core elements often referred to as PITI:</p>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li><strong>Principal:</strong> The portion of your payment that directly reduces your loan balance.</li>
+            <li><strong>Interest:</strong> The cost charged by the lender for borrowing funds.</li>
+            <li><strong>Taxes:</strong> Annual municipal property taxes collected monthly into an escrow account.</li>
+            <li><strong>Insurance:</strong> Homeowners property insurance and potential Private Mortgage Insurance (PMI) if down payment is under 20%.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Worked Comparison: 20% Down vs 5% Down</h2>
+          <p>Consider a <strong>$400,000 home purchase at 6.5% interest</strong> over 30 years:</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-2 my-4 text-xs sm:text-sm">
+            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+              <li><strong>20% Down ($80,000):</strong> Loan balance is $320,000. Monthly P&I is <strong>$2,022/mo</strong>. PMI is $0.</li>
+              <li><strong>5% Down ($20,000):</strong> Loan balance is $380,000. Monthly P&I is <strong>$2,401/mo</strong>. Requires monthly PMI.</li>
+              <li><strong>Result:</strong> Putting 20% down lowers monthly P&I by <strong>$379/mo</strong> and saves <strong>$136,800 in total interest</strong> over 30 years.</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
+          <p>Model related borrowing options with our <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/debt-to-income-calculator" class="text-indigo-600 font-bold hover:underline">DTI Calculator</a>, and <a href="/rent-vs-buy" class="text-indigo-600 font-bold hover:underline">Rent vs. Buy Simulator</a>.</p>
+        </div>
+      </div>
+    `
   },
   {
     path: 'calculators/car-loan-calculator',
@@ -697,7 +763,23 @@ const routes = [
         "applicationCategory": "FinanceApplication"
       }
     ],
-    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Car Loan Calculator</h1><p class="text-slate-600">Calculate monthly auto loan payments, sales tax, trade-in credits, and total interest for new or used vehicles.</p></div>`
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Car Loan Calculator</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>Auto financing allows buyers to acquire new or used vehicles by spreading the purchase price over loan terms ranging from 24 to 84 months. Calculating an accurate car loan payment requires accounting for cash down payments, vehicle trade-in credits, state sales tax, and annual interest rates.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-2 border-b pb-2">How Auto Sales Tax & Trade-Ins Work</h2>
+          <p>In most states, trading in an existing vehicle reduces your taxable purchase price. If you purchase a $35,000 car and trade in a vehicle valued at $10,000, you only pay sales tax on the remaining $25,000 net difference. This tax credit saves hundreds of dollars upfront.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">The Danger of 72-Month and 84-Month Auto Loans</h2>
+          <p>While 72 and 84-month loans lower your monthly payment, they significantly increase total interest charges and leave borrowers "underwater" (owing more on the loan than the depreciated car is worth) for years.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
+          <p>Check out our <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/personal-loan-calculator" class="text-indigo-600 font-bold hover:underline">Personal Loan Calculator</a>, and <a href="/cost-per-mile" class="text-indigo-600 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.</p>
+        </div>
+      </div>
+    `
   },
   {
     path: 'calculators/loan-payoff-calculator',
@@ -713,7 +795,29 @@ const routes = [
         "applicationCategory": "FinanceApplication"
       }
     ],
-    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Loan Payoff Calculator</h1><p class="text-slate-600">Discover how adding extra monthly payments or lump sums accelerates debt freedom and saves interest.</p></div>`
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Loan Payoff Calculator</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>Accelerating loan repayment by adding extra monthly principal payments or one-time lump-sum contributions is one of the most effective strategies for saving on total interest and achieving debt freedom early.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-2 border-b pb-2">The Power of Extra Principal Contributions</h2>
+          <p>Because interest is calculated on your remaining balance each month, every extra dollar paid directly toward principal permanently reduces future monthly interest accrual. This compounds over time, shaving months or years off your amortization schedule.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Worked Payoff Acceleration Example</h2>
+          <p>On a <strong>$20,000 loan at 11% APR</strong> with a 5-year standard term ($434.85/mo payment):</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-2 my-4 text-xs sm:text-sm">
+            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+              <li>Adding an extra <strong>$100/month</strong> ($534.85/mo total payment) clears the loan in <strong>47 months</strong> instead of 60.</li>
+              <li><strong>Result:</strong> Saves <strong>13 months of payments</strong> and <strong>$1,382 in total interest</strong>!</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
+          <p>Explore our complete cluster of loan tools: <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/personal-loan-calculator" class="text-indigo-600 font-bold hover:underline">Personal Loan Calculator</a>, and <a href="/debt-consolidation" class="text-indigo-600 font-bold hover:underline">Debt Consolidation Optimizer</a>.</p>
+        </div>
+      </div>
+    `
   },
   {
     path: 'calculators/debt-to-income-calculator',
@@ -729,7 +833,26 @@ const routes = [
         "applicationCategory": "FinanceApplication"
       }
     ],
-    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Debt-to-Income (DTI) Calculator</h1><p class="text-slate-600">Calculate your front-end and back-end DTI ratios to evaluate mortgage pre-approval odds and lender risk categories.</p></div>`
+    body: `
+      <div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Debt-to-Income (DTI) Calculator</h1>
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>Your Debt-to-Income (DTI) ratio is the primary metric lenders use to evaluate credit risk and borrowing capacity. Expressed as a percentage, DTI compares your total monthly debt payments against your gross monthly income before taxes.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-2 border-b pb-2">Front-End vs. Back-End DTI Ratios</h2>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li><strong>Front-End DTI (Housing Ratio):</strong> Calculates the percentage of gross monthly income spent strictly on housing expenses (mortgage principal, interest, taxes, insurance, HOA). Mortgage lenders typically target 28% or lower.</li>
+            <li><strong>Back-End DTI (Total Debt Ratio):</strong> Calculates the percentage of gross income allocated to ALL monthly debt obligations (housing + car loans + credit card minimums + student loans + personal loans). Conventional underwriting caps back-end DTI at 36% to 43%.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">The 28/36 Rule of Mortgage Underwriting</h2>
+          <p>Financial planners recommend adhering to the 28/36 rule: spend no more than 28% of gross monthly income on housing costs, and no more than 36% on total debt obligations combined.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
+          <p>Explore our complete cluster of loan tools: <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/home-loan-calculator" class="text-indigo-600 font-bold hover:underline">Home Loan Calculator</a>, and <a href="/calculators/personal-loan-calculator" class="text-indigo-600 font-bold hover:underline">Personal Loan Calculator</a>.</p>
+        </div>
+      </div>
+    `
   },
   {
     path: 'calculators/loan-calculators',
@@ -744,7 +867,103 @@ const routes = [
         "description": "Topic cluster category hub for free serverless loan calculators."
       }
     ],
-    body: `<div class="max-w-4xl mx-auto px-4 py-12 space-y-8 text-left"><h1 class="text-3xl font-extrabold text-slate-900">Loan Calculators Topic Cluster</h1><p class="text-slate-600">Model installment payments, analyze mortgage trade-offs, estimate auto financing taxes, and calculate payoff acceleration schedules.</p></div>`
+    body: `
+      <div class="max-w-7xl mx-auto px-4 py-12 space-y-12 text-left text-slate-800">
+        <div class="text-center space-y-4 max-w-3xl mx-auto">
+          <span class="px-3.5 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black tracking-wider uppercase inline-block border border-indigo-100">
+            Loans & Borrowing Topic Cluster
+          </span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Free Serverless Loan Calculators
+          </h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+            Model installment payments, analyze mortgage trade-offs, estimate auto financing taxes, and calculate payoff acceleration schedules with 100% client-side privacy.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl flex flex-col justify-between">
+            <div class="space-y-4">
+              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-full text-[10px] font-bold uppercase">Fixed Installment</span>
+              <h2 class="text-xl font-bold text-slate-900"><a href="/calculators/personal-loan-calculator" class="hover:text-indigo-600">Personal Loan Calculator</a></h2>
+              <p class="text-slate-500 text-xs sm:text-sm">Calculate monthly payments, total interest, and early payoff savings for fixed installment personal loans with full amortization schedules.</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100"><a href="/calculators/personal-loan-calculator" class="text-indigo-600 font-bold text-xs hover:underline">Launch Calculator &rarr;</a></div>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl flex flex-col justify-between">
+            <div class="space-y-4">
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-full text-[10px] font-bold uppercase">Mortgage & Housing</span>
+              <h2 class="text-xl font-bold text-slate-900"><a href="/calculators/home-loan-calculator" class="hover:text-indigo-600">Home Loan Calculator</a></h2>
+              <p class="text-slate-500 text-xs sm:text-sm">Model your complete monthly mortgage obligation including principal, interest, property taxes, home insurance, and HOA dues.</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100"><a href="/calculators/home-loan-calculator" class="text-indigo-600 font-bold text-xs hover:underline">Launch Calculator &rarr;</a></div>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl flex flex-col justify-between">
+            <div class="space-y-4">
+              <span class="px-2.5 py-1 bg-cyan-50 text-cyan-700 rounded-full text-[10px] font-bold uppercase">Auto Financing</span>
+              <h2 class="text-xl font-bold text-slate-900"><a href="/calculators/car-loan-calculator" class="hover:text-indigo-600">Car Loan Calculator</a></h2>
+              <p class="text-slate-500 text-xs sm:text-sm">Calculate auto loan payments for new or used vehicles factoring in trade-in allowances, cash down payments, and state sales taxes.</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100"><a href="/calculators/car-loan-calculator" class="text-indigo-600 font-bold text-xs hover:underline">Launch Calculator &rarr;</a></div>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl flex flex-col justify-between">
+            <div class="space-y-4">
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-full text-[10px] font-bold uppercase">Debt Acceleration</span>
+              <h2 class="text-xl font-bold text-slate-900"><a href="/calculators/loan-payoff-calculator" class="hover:text-indigo-600">Loan Payoff Calculator</a></h2>
+              <p class="text-slate-500 text-xs sm:text-sm">Discover how adding extra monthly payments or one-time lump-sum contributions accelerates debt freedom and saves interest.</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100"><a href="/calculators/loan-payoff-calculator" class="text-indigo-600 font-bold text-xs hover:underline">Launch Calculator &rarr;</a></div>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl flex flex-col justify-between">
+            <div class="space-y-4">
+              <span class="px-2.5 py-1 bg-amber-50 text-amber-700 rounded-full text-[10px] font-bold uppercase">Underwriting Risk</span>
+              <h2 class="text-xl font-bold text-slate-900"><a href="/calculators/debt-to-income-calculator" class="hover:text-indigo-600">Debt-to-Income (DTI) Calculator</a></h2>
+              <p class="text-slate-500 text-xs sm:text-sm">Calculate front-end and back-end DTI ratios to evaluate mortgage pre-approval odds and lender underwriting risk categories.</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100"><a href="/calculators/debt-to-income-calculator" class="text-indigo-600 font-bold text-xs hover:underline">Launch Calculator &rarr;</a></div>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl flex flex-col justify-between">
+            <div class="space-y-4">
+              <span class="px-2.5 py-1 bg-purple-50 text-purple-700 rounded-full text-[10px] font-bold uppercase">Credit Card Payoff</span>
+              <h2 class="text-xl font-bold text-slate-900"><a href="/debt-consolidation" class="hover:text-indigo-600">Debt Consolidation Optimizer</a></h2>
+              <p class="text-slate-500 text-xs sm:text-sm">Evaluate moving multiple high-interest credit card balances into a single lower-interest fixed-rate personal installment loan.</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100"><a href="/debt-consolidation" class="text-indigo-600 font-bold text-xs hover:underline">Launch Calculator &rarr;</a></div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-slate-100 shadow-xl p-8 space-y-6 text-slate-700 text-sm leading-relaxed">
+          <h2 class="text-2xl font-bold text-slate-900 pt-2 border-b pb-2">Navigating Consumer Borrowing & Loan Structures</h2>
+          <p>Loans are fundamental building blocks of modern personal finance, empowering individuals to achieve homeownership, acquire vehicles, fund higher education, or consolidate high-interest debt. However, borrowing comes at a cost—interest accrued over time. Understanding how different loan structures operate is essential for protecting your long-term net worth.</p>
+          <p>Consumer loans generally fall into two primary structural categories: <strong>Secured Installment Loans</strong> and <strong>Unsecured Installment Loans</strong>. Secured loans (such as mortgages and auto loans) are backed by physical collateral (your home or vehicle). Because the lender holds a legal lien on the underlying asset, secured loans carry lower interest rates (typically 4% to 8% APR). Unsecured loans (such as personal loans and debt consolidation loans) require no collateral, relying instead on your credit history and income stability. Consequently, unsecured loan rates are higher (ranging from 8% to 24% APR).</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Which Calculator Should You Choose?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl">
+              <strong class="text-indigo-600 font-bold block mb-1">🏡 Purchasing or Refinancing Property?</strong>
+              <p>Use the <a href="/calculators/home-loan-calculator" class="font-bold underline text-indigo-600">Home Loan Calculator</a> to factor in down payments, 30-year fixed amortization, property tax escrows, homeowners insurance, and HOA fees.</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl">
+              <strong class="text-indigo-600 font-bold block mb-1">🚗 Buying a New or Used Car?</strong>
+              <p>Use the <a href="/calculators/car-loan-calculator" class="font-bold underline text-indigo-600">Car Loan Calculator</a> to model 24–84 month financing terms, state sales taxes, cash down payments, and trade-in vehicle credits.</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl">
+              <strong class="text-indigo-600 font-bold block mb-1">💳 Borrowing a Lump Sum or Fixing Debt?</strong>
+              <p>Use the <a href="/calculators/personal-loan-calculator" class="font-bold underline text-indigo-600">Personal Loan Calculator</a> for fixed monthly payment schedules, or the <a href="/debt-consolidation" class="font-bold underline text-indigo-600">Debt Consolidation Optimizer</a> to eliminate high-interest card debt.</p>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl">
+              <strong class="text-indigo-600 font-bold block mb-1">⚡ Accelerating Existing Debt Payoff?</strong>
+              <p>Use the <a href="/calculators/loan-payoff-calculator" class="font-bold underline text-indigo-600">Loan Payoff Calculator</a> to see how adding extra monthly payments or lump sums shrinks interest costs and speeds up debt freedom.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },
   {
     path: 'about',
