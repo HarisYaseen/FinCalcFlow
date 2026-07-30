@@ -42,7 +42,7 @@ export default function About() {
             Hi, I’m <strong>Haris Yaseen</strong>, the developer behind FinCalc Flow. I built this site out of personal frustration with existing online calculators. Most financial tools on the web today are bogged down by aggressive ad popups, forced account signups, slow backend servers, and cookie trackers that collect your private financial inputs.
           </p>
           <p className="text-slate-600 text-sm leading-relaxed">
-            I wanted a clean, fast, 100% free hub where anyone can calculate mortgage trade-offs, trucking cost margins, or credit card payoff schedules without sacrificing their data privacy.
+            I wanted a clean, fast, 100% free hub where anyone can calculate mortgage trade-offs, trucking cost margins, or credit card payoff schedules without sacrificing their data privacy. Have questions or feedback? Visit our <a href="/contact" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/contact'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-600 font-bold hover:underline">Contact Us</a> page.
           </p>
         </div>
 

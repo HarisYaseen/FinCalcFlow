@@ -909,13 +909,13 @@ const routes = [
             <div>
               <h4 class="font-extrabold text-slate-800 text-sm">How can I request a new calculator or report a bug?</h4>
               <p class="text-slate-550 text-xs sm:text-sm leading-relaxed">
-                We love feedback and suggestions for new tools! You can submit request forms or report errors directly through our dedicated <a href="/contact" class="text-indigo-650 font-bold hover:underline">Contact Us</a> page, and our developer will review it.
+                We love feedback and suggestions for new tools! You can submit request forms or report errors directly through our dedicated <a href="/contact" class="text-indigo-600 font-bold hover:underline">Contact Us</a> page, and our developer will review it.
               </p>
             </div>
           </div>
 
           <div class="pt-6 border-t border-slate-100 text-xs text-slate-500">
-            We are constantly expanding our collection of visual tools to help you make smarter financial decisions. If you are currently dealing with credit card balances and want to see how these math formulas can help you save on interest, visit our <a href="/debt-consolidation" class="text-indigo-650 font-bold hover:underline">Debt Consolidation Calculator</a>.
+            We are constantly expanding our collection of visual tools to help you make smarter financial decisions. If you are currently dealing with credit card balances and want to see how these math formulas can help you save on interest, visit our <a href="/debt-consolidation" class="text-indigo-600 font-bold hover:underline">Debt Consolidation Calculator</a>.
           </div>
         </div>
       </div>
