@@ -117,73 +117,93 @@ export const guidesData = [
     excerpt: 'An honest financial breakdown of unrecoverable housing expenses, property maintenance liabilities, down payment opportunity costs, and stock market compounding.',
     content: (
       <div className="space-y-8 text-slate-700 leading-relaxed text-sm sm:text-base">
-        <p className="text-lg font-medium text-slate-800 leading-relaxed">
-          We’ve all heard the old real estate saying: <em>"Renting is just paying your landlord's mortgage—you're throwing your money away."</em> But if you analyze housing economics with detailed financial modeling, that claim is often mathematically inaccurate. While purchasing a home can build substantial equity over a 15 to 30 year period, homeownership carries massive unrecoverable costs that do not build a single dollar of asset value.
-        </p>
-
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-2 border-b pb-2">Why This Decision Is More Complicated Than It Looks</h2>
         <p>
-          Whether buying or renting makes more sense for your financial situation depends on comparing the <strong>unrecoverable costs</strong> of both choices in your local housing market.
+          "Should I rent or buy?" is one of the most consequential financial questions most people ever face, yet it's frequently reduced to a single, misleading comparison: monthly rent versus monthly mortgage payment. That comparison ignores almost everything that actually determines which option makes better financial sense — appreciation, opportunity cost, maintenance, transaction costs, and how long you actually plan to stay in the home.
         </p>
-
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. Understanding Unrecoverable Housing Costs</h2>
         <p>
-          For renters, the unrecoverable cost is straightforward: monthly rent payments. Once paid, that capital is gone. For homeowners, however, unrecoverable costs are spread across several categories:
+          This guide walks through the full framework for thinking about rent versus buy decisions, independent of any single calculator, so you understand not just what the numbers say but why they say it.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">🏠 Unrecoverable Homeowner Costs</h3>
-            <ul className="list-disc pl-5 text-xs sm:text-sm space-y-2 text-slate-700">
-              <li><strong>Mortgage Interest:</strong> Bank interest fees (making up the vast majority of early monthly mortgage payments).</li>
-              <li><strong>Property Taxes:</strong> Municipal taxes assessed on property value that never end.</li>
-              <li><strong>Maintenance & Upkeep:</strong> Roof replacements, plumbing, HVAC maintenance (commonly estimated as an industry guideline of 1% to 2% of home value annually).</li>
-              <li><strong>HOA & Insurance Fees:</strong> Homeowner association dues and property insurance premiums.</li>
-              <li><strong>Selling Friction:</strong> Paying 5% to 6% in realtor commissions and transfer fees when selling.</li>
-            </ul>
-          </div>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">The Real Cost of Renting</h2>
+        <p>
+          Renting is often framed as "throwing money away," but that framing misses an important detail: renting also frees up capital. If buying requires a $60,000 down payment plus $10,000 in closing costs, a renter keeps that $70,000 invested rather than tied up in home equity. Over a 10-year holding period, $70,000 invested at a conservative 6% average annual return grows to roughly $125,000 — money a homeowner doesn't have access to, because it's locked into their down payment instead.
+        </p>
+        <p>
+          Renting also means predictable costs. Rent may rise annually, but renters don't bear the risk of a failed HVAC system, a roof replacement, or a spike in property taxes. That predictability has real value, especially for people with tight monthly budgets or uncertain job situations.
+        </p>
 
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">🏢 Unrecoverable Renter Costs</h3>
-            <ul className="list-disc pl-5 text-xs sm:text-sm space-y-2 text-slate-700">
-              <li><strong>Monthly Rent Payments:</strong> Your monthly cost of shelter (which increases with annual rent inflation).</li>
-              <li><strong>Renter's Insurance:</strong> Low-cost personal property insurance policy.</li>
-              <li><strong>Opportunity Cost Benefit:</strong> Down payment cash remains in your hands, allowing you to invest it in liquid growth assets like stock index funds.</li>
-            </ul>
-          </div>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">The Real Cost of Buying</h2>
+        <p>
+          Homeownership builds equity through two mechanisms: principal paydown (the portion of your mortgage payment that reduces your loan balance) and appreciation (increases in the home's market value over time). Over a typical 30-year mortgage, principal paydown alone transforms a portion of every monthly payment into an asset rather than an expense — something renting never does.
+        </p>
+        <p>
+          But buying carries costs that are easy to underestimate. Closing costs typically run 2–5% of the purchase price. Ongoing maintenance is commonly estimated at 1% of home value annually. Property taxes and homeowners insurance add to the monthly burden beyond principal and interest. And when you eventually sell, agent commissions (historically around 5–6% combined) and other selling costs eat directly into your equity gain.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">The Break-Even Timeline</h2>
+        <p>
+          The single most important variable in any rent vs. buy analysis is <strong>how long you plan to stay in the home</strong>. Because buying carries high upfront and back-end transaction costs, it typically takes several years of principal paydown and appreciation just to "break even" against the cost of those transactions plus what you would have earned investing the difference as a renter.
+        </p>
+        <p>As a general pattern (though this varies significantly by local market conditions, interest rates, and home price appreciation):</p>
+        <ul className="list-disc pl-6 space-y-2 text-slate-700">
+          <li><strong>Staying 1–3 years:</strong> Renting usually wins financially, since transaction costs on a home purchase rarely get recovered in such a short window.</li>
+          <li><strong>Staying 4–7 years:</strong> The decision becomes highly dependent on local rent-to-price ratios, mortgage rates, and expected appreciation.</li>
+          <li><strong>Staying 8+ years:</strong> Buying often wins financially, as equity buildup and appreciation compound over a longer horizon, increasingly outweighing the upfront transaction costs.</li>
+        </ul>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">The Price-to-Rent Ratio</h2>
+        <p>
+          One useful shortcut for gauging whether a specific market favors renting or buying is the price-to-rent ratio: the home's purchase price divided by its annual rent.
+        </p>
+        <div className="my-4 p-4 bg-slate-50 border border-slate-200 rounded-2xl font-mono text-center font-bold text-indigo-700 text-sm sm:text-base">
+          Price-to-Rent Ratio = Home Price ÷ (Monthly Rent × 12)
         </div>
+        <p>As a rough (not universal) guideline:</p>
+        <ul className="list-disc pl-6 space-y-2 text-slate-700">
+          <li><strong>Below 15:</strong> Buying is often favorable</li>
+          <li><strong>15–20:</strong> Market is roughly balanced; other factors should decide</li>
+          <li><strong>Above 20:</strong> Renting is often more favorable, since home prices are elevated relative to rental costs in that market</li>
+        </ul>
+        <p>This ratio varies enormously by city and neighborhood, and should be treated as a starting signal rather than a definitive answer.</p>
 
-        <div className="bg-indigo-50 border border-indigo-200 p-5 rounded-2xl text-indigo-900 space-y-2">
-          <div className="flex items-center gap-2 font-bold text-sm text-indigo-800">
-            <Lightbulb className="w-5 h-5 text-indigo-600 flex-shrink-0" />
-            The 5% Rule Benchmark
-          </div>
-          <p className="text-xs sm:text-sm text-indigo-900/90 leading-relaxed">
-            Financial planners often reference a commonly cited rule of thumb called the <strong>5% Rule</strong>. This rule estimates annual unrecoverable costs of homeownership at roughly 5% of the home's value (1.5% property tax + 1% maintenance + 2.5% cost of equity capital). If you can rent an equivalent home for less than 5% of its purchase price per year, renting is mathematically favored.
-          </p>
-        </div>
-
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. Down Payment Opportunity Cost & Index Fund Compounding</h2>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Worked Comparison Scenario</h2>
         <p>
-          When you buy a home, locking up $70,000 or $100,000 in a down payment ties that cash into real estate equity. If a renter instead places that same $100,000 into stock index funds (which have historically achieved commonly cited average annual returns of 7% to 10% before inflation), that compounding stock portfolio can grow faster than single-property appreciation.
+          Consider a household deciding between renting a <strong>$2,200/month apartment</strong> or buying a <strong>$400,000 home</strong> with a <strong>15% down payment ($60,000)</strong> at <strong>6.5% interest</strong> over 30 years, planning to stay <strong>7 years</strong>.
         </p>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">3. Length of Stay dictates Breakeven</h2>
-        <p>
-          Because purchasing a home involves closing costs (2% to 4% upfront) and selling fees (5% to 6% on sale), buying rarely makes sense if you plan to relocate within 3 to 5 years. It typically takes 5 to 7 years of home price growth just to break even on transaction costs.
-        </p>
-
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">4. Numeric 10-Year Case Study Comparison</h2>
-        <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3 text-xs sm:text-sm leading-relaxed">
-          <p><strong>Scenario:</strong> $400,000 home purchase (10% down = $40,000) vs. Renting an equivalent property for $1,800/month over 10 years.</p>
-          <ul className="list-disc pl-5 space-y-1 text-slate-600">
-            <li><strong>Buyer Net Worth (Year 10):</strong> Assuming 3.5% annual home appreciation and 6% realtor selling fee, net home equity reaches ~$245,000.</li>
-            <li><strong>Renter Net Worth (Year 10):</strong> Investing the $40,000 down payment and monthly cost savings in an index fund returning 8% yields ~$310,000.</li>
-            <li><strong>Outcome:</strong> Renting yields $65,000 more net wealth under these parameters due to opportunity cost growth.</li>
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3 my-4">
+          <h3 className="font-bold text-slate-900 text-base">Buying Scenario (7-year hold):</h3>
+          <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-700">
+            <li>Monthly P&I payment: ≈ $2,150</li>
+            <li>Adding estimated property tax + insurance: ≈ $2,650/month total housing cost</li>
+            <li>Estimated equity built after 7 years (principal paydown + 3%/year appreciation): ≈ $145,000</li>
+            <li>Estimated selling costs at year 7 (6% of appreciated value): ≈ $29,700</li>
+            <li><strong>Net equity position after selling costs: ≈ $115,300</strong></li>
           </ul>
         </div>
 
-        <p className="pt-4 text-xs text-slate-500">
-          Want to test your own local mortgage rates and rent prices? Model your scenario on our <a href="/rent-vs-buy" className="text-indigo-600 font-bold hover:underline">Rent vs. Buy Simulator</a>.
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3 my-4">
+          <h3 className="font-bold text-slate-900 text-base">Renting Scenario (7-year hold):</h3>
+          <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-700">
+            <li>Monthly rent (assume 3% annual increases): averages ≈ $2,410/month over the period</li>
+            <li>The $60,000 down payment + closing costs instead invested at 6% average annual return: grows to ≈ $90,200</li>
+            <li><strong>Net investment position after 7 years: ≈ $90,200</strong></li>
+          </ul>
+        </div>
+
+        <p>
+          In this scenario, buying comes out roughly $25,000 ahead after 7 years — but that advantage depends heavily on the assumed 3% home appreciation rate and 6% investment return; changing either assumption meaningfully shifts the outcome. This is exactly why running your own numbers with your specific local rent, price, and rate assumptions — rather than relying on generic rules of thumb — matters so much.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Non-Financial Factors Worth Weighing</h2>
+        <p>
+          Not every consideration in this decision is financial. Homeownership offers stability, the freedom to renovate, and freedom from a landlord's decisions — but it also reduces flexibility to relocate quickly for a job opportunity or life change. Renting offers mobility and simplicity, but no equity building and less control over your living space. A financially "optimal" answer isn't always the right answer for your specific life circumstances, career trajectory, or family plans.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">How to Use This Alongside Our Calculator</h2>
+        <p>
+          This guide is meant to build the conceptual framework behind the decision. Our <a href="/rent-vs-buy" className="text-indigo-600 font-bold hover:underline">Rent vs. Buy Simulator</a> lets you plug in your specific numbers — your local rent, target home price, expected down payment, mortgage rate, and planned length of stay — to generate a personalized break-even analysis rather than relying on generic market averages like the ones used in this guide.
         </p>
       </div>
     )
