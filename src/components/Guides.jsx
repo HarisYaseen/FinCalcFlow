@@ -13,95 +13,159 @@ export const guidesData = [
     excerpt: 'A practical, step-by-step breakdown of fixed overhead, fuel price fluctuations, deadhead mileage formulas, driver salary allocations, and operational breakeven calculations.',
     content: (
       <div className="space-y-8 text-slate-700 leading-relaxed text-sm sm:text-base">
-        <p className="text-lg font-medium text-slate-800 leading-relaxed">
-          If there’s one number that dictates whether an owner-operator stays in business or files for bankruptcy, it’s <strong>Cost Per Mile (CPM)</strong>. Freight markets move quickly, and accepting a spot market load that pays $2.30 a mile might seem profitable at first glance. However, if your truck costs $2.05 per mile to operate and you have to drive 150 unpaid "deadhead" miles just to pick up the load, that trip will net you a loss.
-        </p>
-
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-2 border-b pb-2">Why Cost Per Mile Is the Most Important Number in Trucking</h2>
         <p>
-          In this guide, I'll walk you through how to calculate your true operational cost per mile step-by-step. We'll cover how to separate fixed overhead from variable driving expenses, how to factor in empty deadhead miles, and how to set freight rates that ensure your business stays profitable.
+          For owner-operators and small fleet managers, cost per mile (CPM) is the single most important metric for understanding whether a load, a lane, or an entire operation is actually profitable. Revenue per mile tells you what you're being paid; cost per mile tells you what it actually costs to deliver that mile. The gap between the two — your operating margin — is the only number that determines whether you're building a sustainable business or slowly losing money on every load you haul.
         </p>
-
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. Categorizing Your Expenses: Fixed vs. Variable Costs</h2>
         <p>
-          To calculate an accurate cost per mile, you must divide your monthly expenses into two primary categories: <strong>Fixed Costs</strong> and <strong>Variable Costs</strong>.
+          Many new owner-operators focus heavily on rate per mile when evaluating loads, without a clear, current picture of their own cost per mile. This leads to a common and costly mistake: accepting loads that look profitable on paper (high rate per mile) but are actually break-even or loss-making once true operating costs are factored in.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">📌 Fixed Costs (Monthly Overhead)</h3>
-            <p className="text-xs text-slate-500 mb-3">These are expenses you must pay every month, whether your rig drives 500 miles or 12,000 miles:</p>
-            <ul className="list-disc pl-5 text-xs sm:text-sm space-y-2 text-slate-700">
-              <li><strong>Truck & Trailer Payments:</strong> Monthly lease or commercial loan installments.</li>
-              <li><strong>Commercial Insurance:</strong> Primary liability, physical damage, and cargo insurance.</li>
-              <li><strong>Permits & Licenses:</strong> Heavy Highway Vehicle Use Tax (Form 2290), IFTA registration, and state permits.</li>
-              <li><strong>Technology & Administrative Overhead:</strong> Electronic Logging Device (ELD) subscriptions, dispatch fees, accounting software, and legal services.</li>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">The Two Categories of Trucking Costs</h2>
+        <p>
+          Trucking costs break down into two fundamentally different categories, and understanding the difference matters for how you think about profitability.
+        </p>
+        <p>
+          <strong>Fixed costs</strong> don't change based on how many miles you drive. These include truck payments, insurance premiums, permits and licensing, and often a portion of maintenance reserves. Fixed costs accrue whether your truck is loaded and moving or sitting idle — which is exactly why idle time is so damaging to an owner-operator's margins.
+        </p>
+        <p>
+          <strong>Variable costs</strong> scale directly with miles driven. Fuel is the largest variable cost for most operations, followed by tires, routine maintenance tied to mileage (oil changes, brake wear), and driver pay if you're not the one driving.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">The Core Cost Per Mile Formula</h2>
+        <div className="my-4 p-4 bg-slate-50 border border-slate-200 rounded-2xl font-mono text-center font-bold text-indigo-700 text-sm sm:text-base">
+          Cost Per Mile = (Total Fixed Costs + Total Variable Costs) ÷ Total Miles Driven
+        </div>
+        <p>
+          The critical detail here is the time period and mileage you use for this calculation. Calculating CPM over a single week with unusually low miles will produce an inflated, unrepresentative cost per mile, since fixed costs get spread across fewer miles. Most experienced operators calculate CPM on a monthly or quarterly basis to smooth out these fluctuations.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">A Detailed Fixed Cost Breakdown</h2>
+        <p>For a typical owner-operator running a Class 8 truck, monthly fixed costs commonly include:</p>
+
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-left text-xs sm:text-sm border-collapse border border-slate-200">
+            <thead>
+              <tr className="bg-slate-100 text-slate-900 font-bold border-b border-slate-200">
+                <th className="p-3 border-r border-slate-200">Fixed Cost Category</th>
+                <th className="p-3">Typical Monthly Range</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-200">
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">Truck payment</td>
+                <td class="p-3">$1,800 – $2,800</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">Primary liability + cargo insurance</td>
+                <td class="p-3">$800 – $1,500</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">Permits, licensing, IFTA/IRP fees</td>
+                <td class="p-3">$150 – $300</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">ELD/tech subscriptions</td>
+                <td class="p-3">$30 – $80</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">Maintenance reserve (proactive saving)</td>
+                <td class="p-3">$400 – $700</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-slate-500 italic">*Ranges vary significantly by equipment age, driving record, freight type, and operating region.</p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">A Detailed Variable Cost Breakdown</h2>
+        
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-left text-xs sm:text-sm border-collapse border border-slate-200">
+            <thead>
+              <tr className="bg-slate-100 text-slate-900 font-bold border-b border-slate-200">
+                <th className="p-3 border-r border-slate-200">Variable Cost Category</th>
+                <th className="p-3">Typical Cost Basis</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-200">
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">Fuel</td>
+                <td class="p-3">Largest variable expense; depends heavily on MPG (typically 5.5–7.5 for a loaded Class 8 truck) and regional diesel prices</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">Tires</td>
+                <td class="p-3">Amortized cost per mile based on tread life and replacement cost</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">Routine maintenance (oil, filters, brakes)</td>
+                <td class="p-3">Scales directly with mileage driven</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold border-r border-slate-200">Tolls</td>
+                <td class="p-3">Route-dependent, highly variable</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Worked Numeric Example</h2>
+        <p>Consider an owner-operator with the following monthly figures, having driven <strong>9,500 miles</strong> in the month:</p>
+
+        <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4 my-4">
+          <div>
+            <h3 className="font-bold text-slate-900 text-base mb-1">Fixed costs:</h3>
+            <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-700">
+              <li>Truck payment: $2,200</li>
+              <li>Insurance: $1,100</li>
+              <li>Permits/licensing: $200</li>
+              <li>ELD subscription: $50</li>
+              <li>Maintenance reserve: $550</li>
+              <li><strong>Total fixed costs: $4,100</strong></li>
             </ul>
           </div>
 
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-            <h3 className="text-lg font-bold text-slate-900 mb-2">⚡ Variable Costs (Mileage-Dependent)</h3>
-            <p className="text-xs text-slate-500 mb-3">These expenses scale directly with every single mile registered on your odometer:</p>
-            <ul className="list-disc pl-5 text-xs sm:text-sm space-y-2 text-slate-700">
-              <li><strong>Diesel Fuel:</strong> The largest single variable expense (calculated as Fuel Price ÷ Truck MPG).</li>
-              <li><strong>Preventative Maintenance & Repairs:</strong> Oil changes, tire wear reserve, filter replacements, and mechanical reserves.</li>
-              <li><strong>Driver Compensation:</strong> Your targeted personal driver salary allocation per mile.</li>
-              <li><strong>Tolls & Road Fees:</strong> Highway tolls, scale weigh-in fees, and trailer washout costs.</li>
+          <div>
+            <h3 className="font-bold text-slate-900 text-base mb-1">Variable costs:</h3>
+            <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-700">
+              <li>Fuel (9,500 miles ÷ 6.2 MPG × $3.85/gallon): ≈ $5,900</li>
+              <li>Tires (amortized): $475</li>
+              <li>Routine maintenance: $380</li>
+              <li>Tolls: $145</li>
+              <li><strong>Total variable costs: $6,900</strong></li>
             </ul>
           </div>
-        </div>
 
-        <div className="bg-amber-50 border border-amber-200 p-5 rounded-2xl text-amber-900 space-y-2">
-          <div className="flex items-center gap-2 font-bold text-sm text-amber-800">
-            <Lightbulb className="w-5 h-5 text-amber-600 flex-shrink-0" />
-            Haris's Advice: Always Pay Yourself First
-          </div>
-          <p className="text-xs sm:text-sm text-amber-900/90 leading-relaxed">
-            A common mistake made by new independent drivers is treating whatever cash remains in the bank account at month-end as their "salary." Instead, treat your targeted driver wage (such as $0.60 per mile) as a mandatory variable expense in your calculation. That way, your breakeven CPM guarantees your personal household expenses are met before your truck turns a wheel.
-          </p>
-        </div>
-
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. The Danger of Ignoring Deadhead Miles</h2>
-        <p>
-          "Deadhead" miles refer to driving an empty trailer between load drop-offs and new pickups. Your semi-truck burns fuel and wears out tires during these stretches just like it does under load, but no shipper pays you directly for deadhead distance.
-        </p>
-        <p>
-          When computing your cost per mile, always divide your total monthly expenses by your <strong>total miles driven (loaded miles + deadhead miles)</strong>. If you only divide by revenue-generating loaded miles, your cost per mile will look artificially low, leading to underpriced load acceptance.
-        </p>
-
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">3. Worked Numeric Breakdown Example</h2>
-        <p>
-          Let's review a realistic monthly scenario for a single owner-operator driving 9,500 total miles (8,500 loaded miles + 1,000 deadhead miles):
-        </p>
-
-        <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl space-y-4 font-mono text-xs sm:text-sm shadow-xl">
-          <div className="border-b border-slate-800 pb-3 font-bold text-blue-400">Monthly Expense Summary (9,500 Total Miles):</div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-300">
-            <div>• Truck Payment: $1,600</div>
-            <div>• Insurance & Permits: $1,050</div>
-            <div>• ELD & Software: $200</div>
-            <div>• Diesel Fuel ($4.10/gal @ 6.5 MPG): $5,992</div>
-            <div>• Maintenance Reserve ($0.15/mi): $1,425</div>
-            <div>• Driver Salary Target ($0.60/mi): $5,700</div>
-          </div>
-          <div className="border-t border-slate-800 pt-3 text-emerald-400 font-bold">
-            Total Monthly Outflow: $15,967 ÷ 9,500 Miles = $1.68 / Mile Breakeven CPM
+          <div className="pt-2 border-t border-slate-200 text-slate-900 font-mono font-bold text-sm">
+            Total costs: $4,100 + $6,900 = $11,000<br />
+            <span className="text-indigo-700">Cost Per Mile = $11,000 ÷ 9,500 miles = $1.16/mile</span>
           </div>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">4. Strategies to Lower Your Cost Per Mile</h2>
-        <ul className="list-disc pl-5 space-y-3 text-xs sm:text-sm">
-          <li><strong>Optimize Fuel Efficiency:</strong> Improving truck aerodynamics and lowering cruise speed from 70 MPH to 63 MPH can boost fuel economy from 6.0 MPG to 7.0 MPG, cutting annual diesel costs by over $4,000.</li>
-          <li><strong>Minimize Deadhead Trips:</strong> Use freight load boards and broker relationships to schedule backhaul trips before departing on your outbound leg.</li>
-          <li><strong>Maintain Maintenance Buffers:</strong> Setting aside $0.15 to $0.20 per mile in a dedicated repair account prevents emergency roadside repairs from forcing you into high-interest credit card debt.</li>
+        <p>
+          This means any load paying less than roughly $1.16/mile in revenue is a loss for this operator before accounting for driver pay (if applicable) or profit margin. If this operator is targeting a $0.30/mile profit margin on top of covering costs, they need to be securing freight at a minimum of <strong>$1.46/mile</strong> to hit that target.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">How Fuel Efficiency Changes Your Break-Even Point</h2>
+        <p>
+          Fuel is typically the single largest lever an operator can influence. Using the example above, if fuel efficiency improved from 6.2 MPG to 6.8 MPG through better driving habits, aerodynamic upgrades, or reduced idling:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-slate-700">
+          <li>New fuel cost: 9,500 ÷ 6.8 × $3.85 ≈ <strong>$5,378</strong> (a savings of ≈ $522/month)</li>
+          <li>New total costs: $11,000 − $522 = <strong>$10,478</strong></li>
+          <li>New cost per mile: $10,478 ÷ 9,500 = <strong>$1.10/mile</strong></li>
         </ul>
-
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">5. Operational Benchmarks Summary</h2>
         <p>
-          According to industry guidelines published by the American Transportation Research Institute (ATRI), total commercial truck operational costs typically range between $1.60 and $2.15 per mile depending on fleet size, fuel market conditions, and equipment financing terms.
+          A 0.6 MPG improvement — achievable through driving behavior alone in many cases — lowered this operator's break-even cost per mile by 6 cents, which compounds significantly across tens of thousands of annual miles.
         </p>
 
-        <p className="pt-4 text-xs text-slate-500">
-          Ready to model your own rig's exact operational expenses? Calculate your numbers with our free <a href="/cost-per-mile" className="text-indigo-600 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Why Idle Time Is a Silent Profit Killer</h2>
+        <p>
+          Because fixed costs accrue regardless of miles driven, any month with lower-than-typical mileage inflates your effective cost per mile. An operator with $4,100 in monthly fixed costs who only drives 6,000 miles instead of 9,500 sees their fixed cost per mile jump from about $0.43/mile to $0.68/mile — a 58% increase — even though nothing about their actual operating costs changed. This is why minimizing deadhead miles and downtime between loads is just as important to profitability as negotiating better rates.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">How to Use This Alongside Our Calculator</h2>
+        <p>
+          This guide covers the concepts and cost categories behind trucking profitability. Our <a href="/cost-per-mile" className="text-indigo-600 font-bold hover:underline">Trucking Cost Per Mile Calculator</a> lets you enter your actual fixed and variable costs and mileage to calculate your real, current cost per mile — the number you should be using to evaluate every load offer.
         </p>
       </div>
     )
