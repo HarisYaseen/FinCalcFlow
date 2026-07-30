@@ -406,52 +406,108 @@ export const guidesData = [
     excerpt: 'Understand how website traffic volume, click-through rates (CTR), advertiser cost-per-click (CPC) bids, and content niche selection dictate publisher income.',
     content: (
       <div className="space-y-8 text-slate-700 leading-relaxed text-sm sm:text-base">
-        <p className="text-lg font-medium text-slate-800 leading-relaxed">
-          When launching a blog or web utility, many webmasters believe that traffic volume is the only variable determining ad earnings. In reality, two websites receiving the exact same 50,000 monthly pageviews can produce dramatically different incomes—one site might earn $120 per month while the other generates over $2,500!
-        </p>
-
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-2 border-b pb-2">How AdSense Revenue Actually Works</h2>
         <p>
-          In this guide, I'll break down the mathematical formulas behind ad monetization and explain how selecting the right content niche dictates your ad revenue.
+          Google AdSense revenue is driven by three core variables: <strong>traffic</strong> (how many people visit your site), <strong>RPM</strong> (revenue per thousand impressions or pageviews), and <strong>ad viewability/engagement</strong> (how effectively your ad placements actually get seen and interacted with). Many new site owners fixate on traffic alone, assuming more visitors automatically means more revenue — but two sites with identical traffic can generate wildly different AdSense income if their RPMs differ significantly, which is extremely common across different niches.
+        </p>
+        <p>
+          <strong>RPM (Revenue Per Mille)</strong> represents how much revenue you earn per 1,000 pageviews, and it's most commonly cited as <strong>RPM</strong>, distinct from <strong>CPM (Cost Per Mille)</strong>, which is what advertisers pay per 1,000 ad impressions before the platform's revenue share is deducted.
         </p>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">1. The Core Formulas Behind Digital Ad Income</h2>
-        <div className="bg-slate-900 text-slate-100 p-5 rounded-2xl font-mono text-xs sm:text-sm space-y-2 shadow-xl">
-          <p>• Total Ad Clicks = Monthly Pageviews × (CTR % ÷ 100)</p>
-          <p>• Monthly Earnings = Total Ad Clicks × Average Cost-Per-Click (CPC)</p>
-          <p>• Page RPM (Revenue per 1,000 views) = (Monthly Revenue ÷ Monthly Pageviews) × 1,000</p>
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Why Niche Matters So Much</h2>
+        <p>
+          Advertiser demand — and therefore RPM — varies enormously by content niche, because different industries have vastly different customer lifetime values and are willing to pay correspondingly different amounts to reach relevant readers.
+        </p>
+
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-left text-xs sm:text-sm border-collapse border border-slate-200">
+            <thead>
+              <tr className="bg-slate-100 text-slate-900 font-bold border-b border-slate-200">
+                <th className="p-3 border-r border-slate-200">Niche Category</th>
+                <th className="p-3 border-r border-slate-200">Typical RPM Range</th>
+                <th className="p-3">Why</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-200">
+              <tr>
+                <td className="p-3 font-semibold border-r border-slate-200">Personal Finance / Insurance</td>
+                <td className="p-3 border-r border-slate-200 font-mono text-emerald-700 font-bold">$15 – $50+</td>
+                <td className="p-3">High customer lifetime value (loans, insurance, credit cards) drives intense advertiser competition</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold border-r border-slate-200">Technology / SaaS</td>
+                <td className="p-3 border-r border-slate-200 font-mono font-semibold">$8 – $25</td>
+                <td className="p-3">B2B and software advertisers pay well for engaged, high-intent traffic</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold border-r border-slate-200">Health / Wellness</td>
+                <td className="p-3 border-r border-slate-200 font-mono font-semibold">$6 – $20</td>
+                <td className="p-3">Strong advertiser demand, though more regulated ad categories</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold border-r border-slate-200">General Lifestyle / Entertainment</td>
+                <td className="p-3 border-r border-slate-200 font-mono font-semibold">$2 – $8</td>
+                <td className="p-3">Broad appeal but lower advertiser value per reader</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold border-r border-slate-200">News / Current Events</td>
+                <td className="p-3 border-r border-slate-200 font-mono font-semibold">$1 – $5</td>
+                <td className="p-3">High volume, low per-reader advertiser value</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-slate-500 italic">*Ranges are illustrative and vary significantly by traffic geography (US/UK/CA traffic typically commands notably higher RPMs than traffic from lower-advertiser-demand regions), device mix, and seasonality.</p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Geography's Outsized Impact on RPM</h2>
+        <p>
+          Advertiser bidding is heavily concentrated in a handful of high-purchasing-power countries. A website with predominantly U.S., U.K., Canadian, or Australian traffic will typically see RPMs several times higher than an identical site with traffic concentrated in regions with lower average advertiser spend — even within the exact same content niche. This is one reason two similarly-trafficked finance blogs can report dramatically different monthly AdSense earnings.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Worked Revenue Projection Example</h2>
+        <p>Consider a personal finance website with <strong>40,000 monthly pageviews</strong>, operating in a niche with an estimated <strong>$22 RPM</strong> (a reasonable mid-range figure for finance content with primarily U.S. traffic):</p>
+
+        <div className="my-4 p-4 bg-slate-50 border border-slate-200 rounded-2xl font-mono text-center font-bold text-slate-900 text-sm sm:text-base">
+          Monthly Revenue = (Pageviews ÷ 1,000) × RPM<br />
+          <span className="text-indigo-700">(40,000 ÷ 1,000) × $22 = 40 × $22 = $880 / month</span>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">2. How Topic Niche Dictates Cost-Per-Click (CPC) Bids</h2>
-        <p>
-          Google AdSense operates an automated advertiser bidding auction. Advertisers bid aggressively for ad placements in high-intent industries where customer lifetime value is high (such as personal loans, insurance, or enterprise software), driving CPC bids to several dollars per click. General entertainment topics attract lower commercial bidding competition.
-        </p>
+        <p>Now compare the same 40,000 pageviews on a general lifestyle site with a <strong>$4 RPM</strong>:</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 text-xs sm:text-sm">
-          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <span className="font-bold text-slate-900 block mb-1">High-CPC Niches ($1.50 – $6.00+ / click)</span>
-            <ul className="list-disc pl-4 text-slate-600 space-y-1">
-              <li>Personal Finance, Mortgages & Insurance</li>
-              <li>B2B Logistics & SaaS Software</li>
-              <li>Legal Services & Real Estate</li>
-            </ul>
-          </div>
-          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <span className="font-bold text-slate-900 block mb-1">Lower-CPC Niches ($0.10 – $0.45 / click)</span>
-            <ul className="list-disc pl-4 text-slate-600 space-y-1">
-              <li>General News & Viral Entertainment</li>
-              <li>Social Media Gossip & Gaming Memes</li>
-              <li>Casual Cooking Recipes</li>
-            </ul>
-          </div>
+        <div className="my-4 p-4 bg-slate-50 border border-slate-200 rounded-2xl font-mono text-center font-bold text-slate-900 text-sm sm:text-base">
+          (40,000 ÷ 1,000) × $4 = 40 × $4 = <span className="text-rose-700">$160 / month</span>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">3. Practical Monetization Simulation</h2>
         <p>
-          To generate $3,000 per month in ad income, a finance tool site averaging $2.20 CPC at 1.5% CTR needs approximately <strong>90,000 monthly pageviews</strong>. A viral entertainment blog averaging $0.15 CPC at 1.2% CTR needs over <strong>1,600,000 monthly pageviews</strong> to hit the exact same revenue.
+          Identical traffic, but a <strong>5.5x revenue difference</strong> — purely from niche and the advertiser demand that comes with it. This illustrates why growing traffic in a low-RPM niche often produces disappointing revenue growth compared to the same traffic effort applied to a higher-RPM niche.
         </p>
 
-        <p className="pt-4 text-xs text-slate-500">
-          Want to project your website's earnings targets? Simulate traffic requirements on our free <a href="/revenue-planner" className="text-indigo-600 font-bold hover:underline">Google AdSense Revenue Planner</a>.
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Traffic Growth vs. RPM Optimization</h2>
+        <p>
+          Site owners have two levers to increase AdSense revenue: growing traffic, and improving RPM through better ad placement, viewability, and page experience. Both matter, but they compound — doubling your traffic while also improving your RPM by 25% doesn't just add those gains, it multiplies them.
+        </p>
+
+        <p className="font-semibold text-slate-900">Common RPM-improving practices include:</p>
+        <ul className="list-disc pl-6 space-y-2 text-slate-700">
+          <li><strong>Ensuring ad viewability:</strong> Placing ads where readers actually spend time (above the fold or within high-engagement editorial paragraphs).</li>
+          <li><strong>Balancing ad density:</strong> Too many ads increase short-term RPM but increase bounce rate, reducing pageviews per session and long-term overall earnings.</li>
+          <li><strong>Optimizing page speed:</strong> Slow page loads depress ad viewability metrics and negatively impact both SEO rankings and advertiser bids.</li>
+          <li><strong>Targeting commercial intent:</strong> Focusing content topics on user queries with high advertiser intent within your industry.</li>
+        </ul>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Seasonality in Ad Revenue</h2>
+        <p>
+          AdSense RPMs fluctuate meaningfully throughout the year, driven by advertiser budget cycles. Q4 (October–December) typically sees the highest RPMs across most niches, driven by holiday shopping season advertiser spend, while January often sees a noticeable dip as advertiser budgets reset. Finance-niche sites often see additional RPM strength around tax season (Q1) due to tax-related advertiser campaigns. Projecting annual revenue using only a single month's RPM can significantly over- or under-estimate full-year earnings.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">Realistic Expectations for New Sites</h2>
+        <p>
+          New websites — particularly those without an established backlink profile or search ranking history — often see a "trust-building" period before organic traffic and RPM stabilize. It's common for RPMs to be lower and less consistent in a site's first several months, even within a high-value niche, as ad exchanges have less historical data to optimize bidding for that specific traffic. Combined with typically lower initial traffic while a site is still building search visibility, this means early monetization figures are usually a poor predictor of a mature site's eventual revenue potential.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 pt-4 border-b pb-2">How to Use This Alongside Our Calculator</h2>
+        <p>
+          This guide explains the variables driving AdSense revenue. Our <a href="/revenue-planner" className="text-indigo-600 font-bold hover:underline">AdSense Revenue Planner</a> lets you model projected monthly revenue using your own traffic estimates and niche-specific RPM assumptions, rather than relying on the generalized ranges used in this guide.
         </p>
       </div>
     )
