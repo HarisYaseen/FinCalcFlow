@@ -698,6 +698,26 @@ const routes = [
             <li><strong>Not Shopping Multiple Lenders:</strong> Interest rates vary widely; always request soft-pull pre-qualifications from multiple institutions.</li>
           </ul>
 
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Frequently Asked Questions</h2>
+          <div class="space-y-4 text-slate-700">
+            <div>
+              <strong class="text-slate-900 block font-bold">Does this calculator account for origination fees?</strong>
+              <p class="text-xs sm:text-sm">No — this calculator computes payments based purely on the loan principal, rate, and term. Many personal loans carry a 1–8% origination fee, deducted from disbursed funds or added to your balance. Always confirm with your lender whether the quoted principal already reflects fees.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Is a shorter loan term always better?</strong>
+              <p class="text-xs sm:text-sm">Not necessarily. A shorter term reduces total interest paid but increases your monthly payment. If a shorter term would strain your monthly cash flow, a longer term with a slightly higher total cost may be the safer choice.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">How does my credit score affect my rate?</strong>
+              <p class="text-xs sm:text-sm">Lenders price risk using your credit score, credit history, income, and existing debt load. Borrowers above 720 typically qualify for the lowest rates, while those below 650 often see rates in the high teens to high 20s.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Can I pay off a personal loan early without penalty?</strong>
+              <p class="text-xs sm:text-sm">Most personal loans allow penalty-free early payoff, though some lenders charge prepayment penalties — check your loan agreement before making large extra payments.</p>
+            </div>
+          </div>
+
           <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
           <p>Explore our complete cluster of loan tools: <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/home-loan-calculator" class="text-indigo-600 font-bold hover:underline">Home Loan Calculator</a>, <a href="/calculators/car-loan-calculator" class="text-indigo-600 font-bold hover:underline">Car Loan Calculator</a>, <a href="/calculators/loan-payoff-calculator" class="text-indigo-600 font-bold hover:underline">Loan Payoff Calculator</a>, and <a href="/calculators/debt-to-income-calculator" class="text-indigo-600 font-bold hover:underline">Debt-to-Income Calculator</a>.</p>
         </div>
@@ -743,6 +763,40 @@ const routes = [
             </ul>
           </div>
 
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Key Model Assumptions & Limitations</h2>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li><strong>Fixed-Rate Assumption:</strong> Assumes a fixed annual mortgage rate for the entire 15 or 30-year duration.</li>
+            <li><strong>PMI Thresholds:</strong> If down payment is less than 20%, lenders require Private Mortgage Insurance until equity reaches 20%.</li>
+            <li><strong>Escrow Volatility:</strong> Local property taxes and insurance premiums escalate over time with local tax reassessments and inflation.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Common Mistakes When Buying a Home</h2>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li><strong>Forgetting Closing Costs:</strong> Lender fees, title insurance, and escrow reserves require an additional 2% to 5% of purchase price in cash.</li>
+            <li><strong>Draining Emergency Savings for Down Payment:</strong> Keep 3–6 months of living expenses liquid post-closing for unexpected home repairs.</li>
+            <li><strong>Maxing Out Lender Qualification Limits:</strong> Lenders approve up to 43% DTI; borrowing at your max limit leaves no room for financial surprises.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Frequently Asked Questions</h2>
+          <div class="space-y-4 text-slate-700">
+            <div>
+              <strong class="text-slate-900 block font-bold">Does this calculator include property taxes and insurance?</strong>
+              <p class="text-xs sm:text-sm">Yes, when you include them in your inputs — but if left blank, the calculator shows only principal and interest. Property tax and insurance costs vary significantly by location, so check your local rates for an accurate full monthly estimate.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">What is PMI and when does it apply?</strong>
+              <p class="text-xs sm:text-sm">Private Mortgage Insurance (PMI) is typically required when your down payment is below 20% of the home's price. It protects the lender if you default, and is usually removed once you reach 20% equity.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Is a 15-year or 30-year mortgage better?</strong>
+              <p class="text-xs sm:text-sm">Neither is universally better. A 15-year mortgage builds equity faster with far less total interest, but requires a higher monthly payment. A 30-year mortgage offers lower, more flexible monthly payments at a higher total interest cost.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">How does making extra principal payments affect my mortgage?</strong>
+              <p class="text-xs sm:text-sm">Extra payments reduce the balance your interest is calculated on going forward, shortening your loan term and cutting total interest — most powerfully when made early in the loan.</p>
+            </div>
+          </div>
+
           <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
           <p>Model related borrowing options with our <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/debt-to-income-calculator" class="text-indigo-600 font-bold hover:underline">DTI Calculator</a>, and <a href="/rent-vs-buy" class="text-indigo-600 font-bold hover:underline">Rent vs. Buy Simulator</a>.</p>
         </div>
@@ -774,6 +828,48 @@ const routes = [
 
           <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">The Danger of 72-Month and 84-Month Auto Loans</h2>
           <p>While 72 and 84-month loans lower your monthly payment, they significantly increase total interest charges and leave borrowers "underwater" (owing more on the loan than the depreciated car is worth) for years.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Worked Numeric Example</h2>
+          <p>Suppose you're financing a <strong>$32,000 new vehicle</strong> with a <strong>$4,000 down payment</strong>, at <strong>7.2% APR</strong> over <strong>60 months</strong>:</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-2 my-4 text-xs sm:text-sm">
+            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+              <li><strong>Loan Principal:</strong> $32,000 − $4,000 = <strong>$28,000</strong></li>
+              <li><strong>Monthly Payment:</strong> <strong>≈ $555.65/mo</strong></li>
+              <li><strong>Total Interest Paid (60 Mos):</strong> <strong>≈ $5,339</strong></li>
+              <li><strong>72-Month Payment:</strong> <strong>≈ $476.51/mo</strong> (Total Interest: <strong>≈ $6,309</strong>)</li>
+              <li><strong>Takeaway:</strong> Stretching the loan to 72 months drops monthly outflow by $79.14/mo but costs <strong>≈ $970 more in total interest</strong>.</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">How Vehicle Depreciation Impacts Loan Value</h2>
+          <p>New vehicles lose approximately 20% of their market value during the first year of ownership and roughly 15% to 20% each subsequent year. Borrowing with a low down payment on a long 72-month loan creates a severe negative equity gap where your vehicle's market value drops faster than your principal loan balance declines. Utilizing cash down payments and trading in equity helps protect borrowers against negative vehicle equity.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Key Model Assumptions & Practical Limitations</h2>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li><strong>Sales Tax Basis:</strong> Calculated on purchase price minus trade-in credit in supported states.</li>
+            <li><strong>Exclusion of Registration Fees:</strong> Title, registration, and dealer documentation fees ($200–$800) vary by state.</li>
+            <li><strong>Fixed Simple Interest:</strong> Auto loans utilize simple interest computed on declining principal.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Frequently Asked Questions</h2>
+          <div class="space-y-4 text-slate-700">
+            <div>
+              <strong class="text-slate-900 block font-bold">Does this calculator include sales tax and fees?</strong>
+              <p class="text-xs sm:text-sm">No — it calculates payments based on the amount financed. If tax or fees are rolled into your loan, add them to the vehicle price before calculating for an accurate payment.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">What's a good auto loan interest rate in 2026?</strong>
+              <p class="text-xs sm:text-sm">Well-qualified buyers often see 5–8% APR on new vehicles; used vehicle loans and subprime borrowers can see notably higher rates, sometimes exceeding 15%.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Should I choose a longer term to lower my payment?</strong>
+              <p class="text-xs sm:text-sm">It lowers your monthly payment but increases total interest paid and extends the period you may owe more than the car is worth. Worth running the total-cost comparison first.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Is dealer financing or a bank/credit union loan better?</strong>
+              <p class="text-xs sm:text-sm">It depends — dealers sometimes offer promotional low-APR financing, while banks and credit unions often have competitive rates too. Getting pre-approved before visiting the dealership gives you a rate to compare against.</p>
+            </div>
+          </div>
 
           <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
           <p>Check out our <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/personal-loan-calculator" class="text-indigo-600 font-bold hover:underline">Personal Loan Calculator</a>, and <a href="/cost-per-mile" class="text-indigo-600 font-bold hover:underline">Trucking Cost Per Mile Calculator</a>.</p>
@@ -813,6 +909,36 @@ const routes = [
             </ul>
           </div>
 
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Debt Avalanche vs. Debt Snowball Payoff Strategies</h2>
+          <p>When clearing multiple loans, borrowers generally choose between two structured methodologies:</p>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li><strong>Debt Avalanche:</strong> Pay extra toward the debt with the highest interest rate first. Mathematically optimal, saving the maximum amount of total interest.</li>
+            <li><strong>Debt Snowball:</strong> Pay extra toward the debt with the smallest principal balance first. Provides quick psychological wins as accounts are completely closed out.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Rules for Successful Debt Acceleration</h2>
+          <p>To maximize early loan payoff success, adhere to key financial principles: maintain a 3-month liquid emergency fund before making aggressive lump-sum debt payments, automate extra monthly principal drafts to avoid spending cash, and ensure your lender applies extra funds strictly toward principal rather than future monthly payment reserves. By prioritizing high-interest obligations first, you preserve maximum cash flow and lower your overall lifetime interest burden.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Frequently Asked Questions</h2>
+          <div class="space-y-4 text-slate-700">
+            <div>
+              <strong class="text-slate-900 block font-bold">Will my lender automatically apply extra payments to principal?</strong>
+              <p class="text-xs sm:text-sm">Not always — some lenders apply extra payments toward future scheduled payments rather than reducing principal immediately unless instructed otherwise. Confirm your lender's process, and note "apply to principal" on any extra payment.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Are there penalties for paying off a loan early?</strong>
+              <p class="text-xs sm:text-sm">Most mortgages, auto loans, and personal loans no longer carry prepayment penalties, but some loans still do. Check your agreement or ask your lender directly.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Is it better to pay extra toward my loan or invest the difference?</strong>
+              <p class="text-xs sm:text-sm">This depends on your loan's rate versus expected investment returns and your risk tolerance. Paying down debt offers a guaranteed, risk-free "return" equal to your interest rate.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">How much time can extra payments realistically save on a 30-year mortgage?</strong>
+              <p class="text-xs sm:text-sm">It varies by amount and timing, but even modest extra payments of $100–$300/month commonly cut 3 to 8 years off a 30-year mortgage while saving tens of thousands in interest.</p>
+            </div>
+          </div>
+
           <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
           <p>Explore our complete cluster of loan tools: <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/personal-loan-calculator" class="text-indigo-600 font-bold hover:underline">Personal Loan Calculator</a>, and <a href="/debt-consolidation" class="text-indigo-600 font-bold hover:underline">Debt Consolidation Optimizer</a>.</p>
         </div>
@@ -847,6 +973,50 @@ const routes = [
 
           <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">The 28/36 Rule of Mortgage Underwriting</h2>
           <p>Financial planners recommend adhering to the 28/36 rule: spend no more than 28% of gross monthly income on housing costs, and no more than 36% on total debt obligations combined.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Worked Numeric Example</h2>
+          <p>Consider a borrower with <strong>$6,500 gross monthly income</strong> and these obligations:</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-2 my-4 text-xs sm:text-sm">
+            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+              <li><strong>Housing (Mortgage/Rent):</strong> $1,800/mo</li>
+              <li><strong>Auto Loan:</strong> $420/mo</li>
+              <li><strong>Student Loan:</strong> $250/mo</li>
+              <li><strong>Credit Card Minimums:</strong> $180/mo</li>
+              <li><strong>Front-End DTI:</strong> $1,800 ÷ $6,500 = <strong>27.7%</strong></li>
+              <li><strong>Back-End DTI:</strong> ($1,800 + $420 + $250 + $180) ÷ $6,500 = <strong>40.8%</strong></li>
+              <li><strong>Assessment:</strong> Sits just under the common 43% conventional ceiling, but above the ideal 36% threshold for prime rates.</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">How to Lower Your DTI Ratio Before Applying</h2>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li><strong>Pay Off Small Revolving Balances:</strong> Eliminating small credit card balances completely zeroes out their required monthly minimum payments.</li>
+            <li><strong>Avoid Taking New Installment Debt:</strong> Do not finance vehicles or furniture in the 6 months prior to mortgage application.</li>
+            <li><strong>Increase Verifiable Gross Income:</strong> Include side hustle income, alimony, or bonuses if supported by two years of tax returns.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Understanding Lender Underwriting Thresholds</h2>
+          <p>While standard Fannie Mae and Freddie Mac conventional mortgage guidelines establish a 43% back-end DTI cap, automated underwriting systems (DU/LP) can grant approvals up to 45% or 50% for applicants possessing strong compensating factors, such as high credit scores (740+), 20%+ down payments, or 6+ months of liquid cash reserves. Monitoring your DTI ratio before mortgage application ensures smooth pre-approval and better borrowing terms.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Frequently Asked Questions</h2>
+          <div class="space-y-4 text-slate-700">
+            <div>
+              <strong class="text-slate-900 block font-bold">Does DTI include utilities, groceries, or insurance not related to housing?</strong>
+              <p class="text-xs sm:text-sm">No. DTI only counts recurring debt obligations, not general living expenses like groceries, utilities, or subscriptions.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Can I lower my DTI quickly before applying for a mortgage?</strong>
+              <p class="text-xs sm:text-sm">Yes — paying down smaller debts (a car loan or credit card balance) before applying can meaningfully reduce your back-end DTI.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">Do lenders use gross or net income for DTI?</strong>
+              <p class="text-xs sm:text-sm">Gross (pre-tax) monthly income, not take-home pay.</p>
+            </div>
+            <div>
+              <strong class="text-slate-900 block font-bold">What DTI do I need for an FHA loan versus a conventional loan?</strong>
+              <p class="text-xs sm:text-sm">FHA loans often allow back-end DTI up to around 50% with strong compensating factors, while conventional loans typically cap at 43–45%. Requirements vary by lender.</p>
+            </div>
+          </div>
 
           <h2 class="text-2xl font-bold text-slate-900 pt-4 border-b pb-2">Explore Related Loan Calculators</h2>
           <p>Explore our complete cluster of loan tools: <a href="/calculators/loan-calculators" class="text-indigo-600 font-bold hover:underline">Loan Calculators Hub</a>, <a href="/calculators/home-loan-calculator" class="text-indigo-600 font-bold hover:underline">Home Loan Calculator</a>, and <a href="/calculators/personal-loan-calculator" class="text-indigo-600 font-bold hover:underline">Personal Loan Calculator</a>.</p>

@@ -334,18 +334,40 @@ export default function DtiCalculator({ currencySymbol = '$' }) {
 
         <hr className="border-slate-200" />
 
-        {/* 4. Worked Example */}
+        {/* 4. Worked Step-by-Step Examples */}
         <div>
-          <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Example</h2>
-          <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
-            <h3 className="text-lg font-bold text-slate-900">Example: $7,500 Gross Income with $2,800 Monthly Debt</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
-              <div><strong>Gross Income:</strong> $7,500/mo</div>
-              <div><strong>Housing:</strong> $1,800/mo</div>
-              <div><strong>Other Debt:</strong> $1,000/mo</div>
-              <div><strong>Front-End DTI:</strong> 24.0%</div>
-              <div><strong>Back-End DTI:</strong> 37.3%</div>
-              <div><strong>Category:</strong> Manageable</div>
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Examples</h2>
+          <div className="space-y-4">
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 1: $7,500 Gross Income with $2,800 Monthly Debt</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Gross Income:</strong> $7,500/mo</div>
+                <div><strong>Housing:</strong> $1,800/mo</div>
+                <div><strong>Other Debt:</strong> $1,000/mo</div>
+                <div><strong>Front-End DTI:</strong> 24.0%</div>
+                <div><strong>Back-End DTI:</strong> 37.3%</div>
+                <div><strong>Category:</strong> Manageable</div>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 2: $6,500 Gross Income with $2,650 Total Obligations</h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Consider a borrower with <strong>$6,500 gross monthly income</strong> and these obligations:
+              </p>
+              <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-600 space-y-1">
+                <li>Mortgage/rent: $1,800</li>
+                <li>Auto loan: $420</li>
+                <li>Student loan: $250</li>
+                <li>Credit card minimums: $180</li>
+              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Front-end DTI:</strong> $1,800 ÷ $6,500 = <strong>27.7%</strong></div>
+                <div><strong>Back-end DTI:</strong> ($1,800 + $420 + $250 + $180) ÷ $6,500 = <strong>40.8%</strong></div>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                This sits just under the common 43% conventional mortgage ceiling, but above the 36% threshold associated with the best rates — likely to qualify, but possibly with less favorable terms.
+              </p>
             </div>
           </div>
         </div>
@@ -366,6 +388,30 @@ export default function DtiCalculator({ currencySymbol = '$' }) {
               <h3 className="font-extrabold text-slate-900 text-base">How can I quickly lower my DTI ratio?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
                 Pay off small credit card balances to eliminate minimum payments, or consolidate high-payment debt using personal loans.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Does DTI include utilities, groceries, or insurance not related to housing?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                No. DTI only counts recurring debt obligations, not general living expenses like groceries, utilities, or subscriptions.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Can I lower my DTI quickly before applying for a mortgage?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Yes — paying down smaller debts (a car loan or credit card balance) before applying can meaningfully reduce your back-end DTI.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Do lenders use gross or net income for DTI?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Gross (pre-tax) monthly income, not take-home pay.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What DTI do I need for an FHA loan versus a conventional loan?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                FHA loans often allow back-end DTI up to around 50% with strong compensating factors, while conventional loans typically cap at 43–45%. Requirements vary by lender.
               </p>
             </div>
           </div>

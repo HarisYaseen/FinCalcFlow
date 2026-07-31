@@ -606,6 +606,34 @@ export default function PersonalLoan({ currencySymbol = '$' }) {
                 Personal loan interest is generally not tax deductible unless funds are strictly used for qualified business operations.
               </p>
             </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Does this calculator account for origination fees?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                No — this calculator computes payments based purely on the loan principal, rate, and term. Many personal loans carry a 1–8% origination fee, deducted from disbursed funds or added to your balance. Always confirm with your lender whether the quoted principal already reflects fees.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Is a shorter loan term always better?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Not necessarily. A shorter term reduces total interest paid but increases your monthly payment. If a shorter term would strain your monthly cash flow, a longer term with a slightly higher total cost may be the safer choice.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">How does my credit score affect my rate?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Lenders price risk using your credit score, credit history, income, and existing debt load. Borrowers above 720 typically qualify for the lowest rates, while those below 650 often see rates in the high teens to high 20s.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Can I pay off a personal loan early without penalty?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Most personal loans allow penalty-free early payoff, though some lenders charge prepayment penalties — check your loan agreement before making large extra payments.
+              </p>
+            </div>
           </div>
         </div>
 

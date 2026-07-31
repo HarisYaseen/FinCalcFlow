@@ -380,6 +380,30 @@ export default function LoanPayoff({ currencySymbol = '$' }) {
                 Specify "Apply to Principal" when making extra payments online or by check to prevent lenders from treating extra funds as advance future monthly payments.
               </p>
             </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Will my lender automatically apply extra payments to principal?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Not always — some lenders apply extra payments toward future scheduled payments rather than reducing principal immediately unless instructed otherwise. Confirm your lender's process, and note "apply to principal" on any extra payment.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Are there penalties for paying off a loan early?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Most mortgages, auto loans, and personal loans no longer carry prepayment penalties, but some loans still do. Check your agreement or ask your lender directly.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Is it better to pay extra toward my loan or invest the difference?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                This depends on your loan's rate versus expected investment returns and your risk tolerance. Paying down debt offers a guaranteed, risk-free "return" equal to your interest rate.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">How much time can extra payments realistically save on a 30-year mortgage?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                It varies by amount and timing, but even modest extra payments of $100–$300/month commonly cut 3 to 8 years off a 30-year mortgage while saving tens of thousands in interest.
+              </p>
+            </div>
           </div>
         </div>
 

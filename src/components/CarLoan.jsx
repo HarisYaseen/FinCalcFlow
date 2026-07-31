@@ -411,18 +411,38 @@ export default function CarLoan({ currencySymbol = '$' }) {
 
         <hr className="border-slate-200" />
 
-        {/* 4. Worked Examples */}
+        {/* 4. Worked Step-by-Step Examples */}
         <div>
           <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Examples</h2>
-          <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
-            <h3 className="text-lg font-bold text-slate-900">Example: $35,000 Vehicle (60 Months @ 6.9% APR)</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
-              <div><strong>Down Payment:</strong> $5,000</div>
-              <div><strong>Trade-In:</strong> $2,000</div>
-              <div><strong>Sales Tax (7%):</strong> $1,960</div>
-              <div><strong>Financed:</strong> $29,960</div>
-              <div><strong>Monthly Payment:</strong> $592.50/mo</div>
-              <div><strong>Total Interest:</strong> $5,590</div>
+          <div className="space-y-4">
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 1: $35,000 Vehicle (60 Months @ 6.9% APR)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Down Payment:</strong> $5,000</div>
+                <div><strong>Trade-In:</strong> $2,000</div>
+                <div><strong>Sales Tax (7%):</strong> $1,960</div>
+                <div><strong>Financed:</strong> $29,960</div>
+                <div><strong>Monthly Payment:</strong> $592.50/mo</div>
+                <div><strong>Total Interest:</strong> $5,590</div>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
+              <h3 className="text-lg font-bold text-slate-900">Example 2: $32,000 Vehicle (60 Months vs. 72 Months @ 7.2% APR)</h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Suppose you're financing a <strong>$32,000 new vehicle</strong> with a <strong>$4,000 down payment</strong>, at <strong>7.2% APR</strong> over <strong>60 months</strong>:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Loan Principal:</strong> $32,000 − $4,000 = $28,000</div>
+                <div><strong>60-Mo Payment:</strong> ≈ $555.65/mo</div>
+                <div><strong>60-Mo Interest:</strong> ≈ $5,339</div>
+                <div><strong>72-Mo Payment:</strong> ≈ $476.51/mo</div>
+                <div><strong>72-Mo Interest:</strong> ≈ $6,309</div>
+                <div><strong>Difference:</strong> +$970 Total Interest</div>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Stretching the same $28,000 loan to <strong>72 months</strong> instead drops the payment to <strong>≈ $476.51/mo</strong>, but raises total interest to <strong>≈ $6,309</strong> — about <strong>$970 more</strong>, in exchange for a lower monthly payment.
+              </p>
             </div>
           </div>
         </div>
@@ -443,6 +463,30 @@ export default function CarLoan({ currencySymbol = '$' }) {
               <h3 className="font-extrabold text-slate-900 text-base">What is negative equity (being "underwater")?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
                 Negative equity occurs when you owe more on your car loan than the vehicle is currently worth on trade-in or resale.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Does this calculator include sales tax and fees?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                No — it calculates payments based on the amount financed. If tax or fees are rolled into your loan, add them to the vehicle price before calculating for an accurate payment.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What's a good auto loan interest rate in 2026?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Well-qualified buyers often see 5–8% APR on new vehicles; used vehicle loans and subprime borrowers can see notably higher rates, sometimes exceeding 15%.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Should I choose a longer term to lower my payment?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                It lowers your monthly payment but increases total interest paid and extends the period you may owe more than the car is worth. Worth running the total-cost comparison first.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Is dealer financing or a bank/credit union loan better?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                It depends — dealers sometimes offer promotional low-APR financing, while banks and credit unions often have competitive rates too. Getting pre-approved before visiting the dealership gives you a rate to compare against.
               </p>
             </div>
           </div>

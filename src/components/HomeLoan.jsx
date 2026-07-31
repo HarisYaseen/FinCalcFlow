@@ -519,6 +519,34 @@ export default function HomeLoan({ currencySymbol = '$' }) {
                 Conventional loans require as little as 3% to 5% down; 20% down avoids PMI fees entirely.
               </p>
             </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Does this calculator include property taxes and insurance?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Yes, when you include them in your inputs — but if left blank, the calculator shows only principal and interest. Property tax and insurance costs vary significantly by location, so check your local rates for an accurate full monthly estimate.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">What is PMI and when does it apply?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Private Mortgage Insurance (PMI) is typically required when your down payment is below 20% of the home's price. It protects the lender if you default, and is usually removed once you reach 20% equity.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
+              <h3 className="font-extrabold text-slate-900 text-base">Is a 15-year or 30-year mortgage better?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Neither is universally better. A 15-year mortgage builds equity faster with far less total interest, but requires a higher monthly payment. A 30-year mortgage offers lower, more flexible monthly payments at a higher total interest cost.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
+              <h3 className="font-extrabold text-slate-900 text-base">How does making extra principal payments affect my mortgage?</h3>
+              <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                Extra payments reduce the balance your interest is calculated on going forward, shortening your loan term and cutting total interest — most powerfully when made early in the loan.
+              </p>
+            </div>
           </div>
         </div>
 
