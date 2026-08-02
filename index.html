@@ -9,6 +9,8 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <meta name="google-adsense-account" content="ca-pub-7307272587384576">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7307272587384576"
+     crossorigin="anonymous"></script>
     <link rel="canonical" href="https://www.fincalcflow.com/" />
     <link rel="preload" href="/hero-banner.jpg" as="image" type="image/jpeg" fetchpriority="high" />
     
@@ -490,24 +492,14 @@
       </div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Register Service Worker & Lazy Load Third Party Scripts for Mobile PageSpeed Score -->
+    <!-- Register Service Worker -->
     <script>
-      // Register Service Worker & Deferred AdSense Loading
       window.addEventListener('load', () => {
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/sw.js')
             .then(reg => console.log('Service Worker registered. Scope:', reg.scope))
             .catch(err => console.error('Service Worker registration failed:', err));
         }
-
-        // Lazy-load AdSense script after primary paint to eliminate 0.733 CLS layout shifts
-        setTimeout(() => {
-          const adsScript = document.createElement('script');
-          adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7307272587384576';
-          adsScript.async = true;
-          adsScript.crossOrigin = 'anonymous';
-          document.head.appendChild(adsScript);
-        }, 1500);
       });
     </script>
   </body>
