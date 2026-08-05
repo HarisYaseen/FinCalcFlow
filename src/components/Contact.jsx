@@ -36,29 +36,37 @@ export default function Contact() {
         <div className="md:col-span-4 bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-100/50 flex flex-col justify-between text-left space-y-6">
           <div className="space-y-6">
             <div>
-              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">General Inquiries</h3>
+              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Direct Email</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                For partnerships, mathematical questions, or suggestions on how to improve our calculators.
+                For support, partnerships, or custom calculator requests.
               </p>
-              <a href="mailto:contact@fincalcflow.com" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
-                contact@fincalcflow.com
+              <a href="mailto:fincalcflow@gmail.com" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
+                fincalcflow@gmail.com
               </a>
             </div>
 
             <div>
-              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Legal & Privacy</h3>
+              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Phone Number</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                Questions regarding our client-side storage policies, cookie audits, or GDPR/COPPA parameters.
+                Reach us via phone or WhatsApp:
               </p>
-              <a href="mailto:privacy@fincalcflow.com" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
-                privacy@fincalcflow.com
+              <a href="tel:+923179708450" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
+                +92 317 9708450
               </a>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Location & Address</h3>
+              <p className="text-xs text-slate-600 font-semibold leading-relaxed">
+                Baja, Swabi, KP, Pakistan<br />
+                Postal Code: 22230
+              </p>
             </div>
           </div>
 
           <div className="pt-6 border-t border-slate-50">
-            <span className="text-[11px] font-bold text-emerald-500 uppercase tracking-widest block">✦ 100% Secure</span>
-            <p className="text-[10px] text-slate-400 mt-1">Your message is securely transmitted directly to our inbox.</p>
+            <span className="text-[11px] font-bold text-emerald-500 uppercase tracking-widest block">✦ 100% Verified Contact</span>
+            <p className="text-[10px] text-slate-400 mt-1">Your message is securely transmitted directly to our team.</p>
           </div>
         </div>
 

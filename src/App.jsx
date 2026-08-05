@@ -1456,7 +1456,7 @@ export default function App() {
             <div className="space-y-4 text-left">
               <h3 className="text-2xl font-black text-slate-900">Contact Us</h3>
               <p className="text-xs text-slate-500">
-                Have questions or feedback? Drop us a line below or reach out directly at <a href="mailto:support@fincalcflow.com" className="text-blue-600 hover:underline">support@fincalcflow.com</a>.
+                Have questions or feedback? Drop us a line below or reach out directly at <a href="mailto:fincalcflow@gmail.com" className="text-blue-600 hover:underline font-semibold">fincalcflow@gmail.com</a>.
               </p>
               
               {contactFormSubmitted ? (

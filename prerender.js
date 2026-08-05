@@ -1429,7 +1429,17 @@ const routes = [
       "@type": "ContactPage",
       "name": "Contact FinCalc Flow",
       "url": "https://www.fincalcflow.com/contact",
-      "description": "Get in touch with FinCalc Flow support for general inquiries, legal issues, or calculator feedback."
+      "description": "Get in touch with FinCalc Flow support for general inquiries, calculator feedback, or partnership requests.",
+      "email": "fincalcflow@gmail.com",
+      "telephone": "+923179708450",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Baja",
+        "addressLocality": "Swabi",
+        "addressRegion": "KPK",
+        "postalCode": "22230",
+        "addressCountry": "PK"
+      }
     },
     body: `
       <div class="max-w-4xl mx-auto px-4 py-12 space-y-12 text-left">
@@ -1449,16 +1459,23 @@ const routes = [
           <div class="md:col-span-4 bg-white rounded-3xl p-8 border border-slate-100 shadow-xl flex flex-col justify-between space-y-6">
             <div class="space-y-6">
               <div>
-                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">General Inquiries</h3>
-                <a href="mailto:contact@fincalcflow.com" class="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
-                  contact@fincalcflow.com
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Direct Email</h3>
+                <a href="mailto:fincalcflow@gmail.com" class="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
+                  fincalcflow@gmail.com
                 </a>
               </div>
               <div>
-                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Legal & Privacy</h3>
-                <a href="mailto:privacy@fincalcflow.com" class="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
-                  privacy@fincalcflow.com
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Phone Number</h3>
+                <a href="tel:+923179708450" class="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
+                  +92 317 9708450
                 </a>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Location & Address</h3>
+                <p class="text-xs text-slate-600 font-semibold leading-relaxed">
+                  Baja, Swabi, KP, Pakistan<br />
+                  Postal Code: 22230
+                </p>
               </div>
             </div>
           </div>
