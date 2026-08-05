@@ -947,7 +947,7 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">
-                  Renting isn't throwing money away, and buying isn't always a guaranteed investment. This simulator compares the real costs of renting vs. buying by modeling mortgage payments, home appreciation, property tax, maintenance, and the opportunity cost of investing your down payment in index funds.
+                  Renting doesn't mean throwing away money, and purchasing doesn't necessarily mean an assured investment. This simulator evaluates the actual cost of renting vs. purchasing by factoring in mortgage repayments, home appreciation, property tax, maintenance cost, and also the opportunity cost of using the down payment on index funds.
                 </p>
                 <div className="pt-2 border-t border-slate-50">
                   <a
@@ -973,7 +973,7 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">
-                  In trucking, guessing your operating costs is a direct route to running at a loss. This calculator helps you break down every fixed monthly overhead payment and variable operational expense to find your exact cost per mile (CPM) threshold, ensuring you always price your freight routes for profitability.
+                  In trucking, estimation of your expenses is the way to incur losses directly. The tool will help you to calculate each cost you incur monthly and in operation so that you can determine the precise CPM, thereby ensuring that you always price your hauls profitably.
                 </p>
                 <div className="pt-2 border-t border-slate-50">
                   <a
@@ -999,7 +999,7 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">
-                  High-interest credit card debt can feel like quicksand. See exactly how much interest you can save and how many months you can shave off by moving multiple card balances to a single, lower-interest fixed-rate personal loan.
+                  Credit card debt at a high interest rate can be akin to quicksand. Discover how much interest savings you can achieve by transferring your debts from several credit cards into one lower interest rate fixed loan.
                 </p>
                 <div className="pt-2 border-t border-slate-50">
                   <a
@@ -1025,7 +1025,7 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">
-                  Stop guessing how much your website's traffic is worth. This planner lets you simulate different search traffic volumes, ad click-through rates (CTR), and cost-per-click (CPC) bids to forecast daily, monthly, and yearly income milestones, letting you optimize your niche selection strategy.
+                  Cease speculating about the value of your website's traffic. This tool will enable you to experiment with various levels of search traffic, CTR, and CPC bid values, allowing you to predict your income levels for a day, month, and year, optimizing your niche strategy.
                 </p>
                 <div className="pt-2 border-t border-slate-50">
                   <a
@@ -1056,13 +1056,13 @@ export default function App() {
 
                 <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
                   <p>
-                    At <strong className="text-white font-bold">FinCalc Flow</strong>, our mission is to make complex financial decision-making accessible, intuitive, and 100% free for everyone. Whether you are deciding between renting or buying a home, calculating your business cost per mile, optimizing credit card debt payoff schedules, or planning online revenue growth, our goal is to provide clear, actionable mathematical insight without hidden fees or forced subscriptions.
+                    FinCalc Flow's objective is to make decision making on various financial matters easy, understandable, and fully free for everyone. When you need to figure out whether you should buy or rent a house, find out how much it costs to operate your car for business purposes, repay your credit card debt most efficiently, or grow income online, we will help you.
                   </p>
                   <p>
-                    We strictly adhere to a <strong className="text-emerald-300 font-bold">privacy-first, client-side approach</strong>. Unlike traditional financial tools that require you to create accounts, enter personal details, or upload sensitive financial records to remote servers, every calculation on FinCalc Flow runs locally inside your web browser. Your inputs, income figures, and loan balances remain completely private to you and never leave your device.
+                    We rigorously follow our privacy-centric, client-side philosophy. While other financial software requires you to make an account, provide personal information, or submit your finances remotely on distant servers, all computations made using FinCalc Flow take place locally within your browser. Your data, earnings, and debt information is completely kept confidential and not sent to any external entity.
                   </p>
                   <p>
-                    We believe financial literacy starts with objective data. By combining rigorous mathematical formulas—such as full amortization modeling, stock market opportunity cost comparisons, and real-world tax credit factors—with clean, visual interfaces, we help you replace guesswork with confidence so you can build long-term wealth on your terms.
+                    We know that financial literacy is rooted in hard facts. That's why we have combined complex mathematical calculations such as complete amortization models, stock market opportunity costs, and practical tax credits, all within simple and clear interfaces, so that you can have the confidence to create your own wealth.
                   </p>
                 </div>
               </div>
@@ -1081,7 +1081,6 @@ export default function App() {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                
                 {/* Detail Block 1: Rent vs Buy */}
                 <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-md hover:shadow-lg transition-all text-left space-y-4">
                   <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2 border-b border-slate-50 pb-2">
@@ -1090,7 +1089,7 @@ export default function App() {
                   </h3>
                   <div className="space-y-3 text-sm text-slate-600">
                     <p>
-                      <strong>Why It Matters:</strong> Homeownership is often considered a guaranteed wealth generator, but buying carries massive upfront costs (down payments, closing fees) and ongoing unrecoverable expenses (property taxes, homeowner insurance, HOA fees, and maintenance). Renting keeps your cash liquid, allowing you to invest it in high-yield assets like index funds. This tool models the opportunity cost of both paths.
+                      <strong>Why It Matters:</strong> Housing is frequently viewed as a surefire wealth creator, but housing purchases involve huge upfront expenditures (down payment and closing costs), and continuous expenditures that can never be recovered (property taxes, homeowners’ insurance, HOA fees, and maintenance). By renting, one can remain liquid and invest the money elsewhere – say, in index funds which pay higher returns.
                     </p>
                     <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs font-semibold">
                       <p className="text-slate-700 font-bold uppercase tracking-wider text-[10px]">Core Inputs & Calculations:</p>
@@ -1111,7 +1110,7 @@ export default function App() {
                   </h3>
                   <div className="space-y-3 text-sm text-slate-600">
                     <p>
-                      <strong>Why It Matters:</strong> Trucking is a low-margin business where expenses change daily. Owner-operators fail when they don't know their baseline cost per mile (CPM). If a driver accepts a load paying $2.20 per mile but has an operating CPM of $1.90, they might think they are profiting. However, if they have to drive 200 unpaid "deadhead" miles to get that load, their true profit margin evaporates.
+                      <strong>Why It Matters:</strong> Trucking businesses operate with tight margins where any mistakes in budgeting of fuel, insurance, and maintenance can erase any profits. The exact knowledge of breakeven CPM allows negotiating profitable freight rates with brokers.
                     </p>
                     <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs font-semibold">
                       <p className="text-slate-700 font-bold uppercase tracking-wider text-[10px]">Core Inputs & Calculations:</p>
@@ -1132,7 +1131,7 @@ export default function App() {
                   </h3>
                   <div className="space-y-3 text-sm text-slate-600">
                     <p>
-                      <strong>Why It Matters:</strong> Credit card issuers profit by setting minimum monthly payments as a small percentage of your balance. As your balance drops, your payment drops, extending the payoff timeline and maximizing interest charges. By moving revolving debt to a structured, fixed-term personal loan, you secure a lower fixed interest rate and guarantee a fixed date where you will be 100% debt-free.
+                      <strong>Why It Matters:</strong> Credit card APRs are between 20% and 28%. If you make minimum payments every month on your credit card, interest accumulates quickly; it may take you more than 30 years to repay your debt. Refinancing several credit card payments into one loan at 10%–12% reduces interest costs significantly.
                     </p>
                     <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs font-semibold">
                       <p className="text-slate-700 font-bold uppercase tracking-wider text-[10px]">Core Inputs & Calculations:</p>
@@ -1153,7 +1152,7 @@ export default function App() {
                   </h3>
                   <div className="space-y-3 text-sm text-slate-600">
                     <p>
-                      <strong>Why It Matters:</strong> Digital monetization is highly dependent on niche selection. High-volume niches (general entertainment/news) have cheap advertiser competition, resulting in low Cost Per Click (CPC). Target utility niches (like B2B, SaaS tools, and finance calculators) attract intense bidding, giving high CPC rates. This planner lets you project traffic requirements to hit your revenue goals.
+                      <strong>Why It Matters:</strong> Neither traffic alone determines advertisement revenue. In industries with a higher CPC, a niche website receiving only 50,000 views can make more money than an entertainment site receiving 1,000,000 pageviews.
                     </p>
                     <div className="bg-slate-50 p-4 rounded-xl space-y-2 text-xs font-semibold">
                       <p className="text-slate-700 font-bold uppercase tracking-wider text-[10px]">Core Inputs & Calculations:</p>
@@ -1180,28 +1179,28 @@ export default function App() {
                 <div className="space-y-2">
                   <h4 className="font-extrabold text-slate-800 text-base">How do I calculate my trucking cost per mile?</h4>
                   <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
-                    To compute your commercial cost per mile, list all fixed monthly fees (such as lease payments, truck permits, and insurance premiums) and your variable operational expenses (such as diesel fuel, driver wages, toll fees, and maintenance/tire reserves). Sum these expenses together and divide the total by your monthly driven miles. Our trucking calculator handles this instantly to help owner-operators maintain a healthy profit margin.
+                    For calculating the business cost per mile, the fixed monthly costs (including lease costs, truck licenses, and insurance costs) must be summed, followed by the variable operating costs (diesel, labor, tolls, and tires). Once you sum all these costs, divide by the number of miles driven per month.
                   </p>
                 </div>
                 
                 <div className="space-y-2">
                   <h4 className="font-extrabold text-slate-800 text-base">What parameters dictate a Rent vs. Buy decision?</h4>
                   <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
-                    A Rent vs. Buy simulation models mortgage amortization, upfront down payments, closing costs, and home appreciation rates. It also incorporates hidden homeownership costs such as property tax, homeowners association (HOA) fees, insurance, and annual maintenance overhead. It compares this against rent prices, renters insurance, and the opportunity cost of investing your home down payment into index funds.
+                    An application named ‘Rent or Buy’ simulates the mortgage payoff process, initial down payment, closing costs, and home appreciation rates. In addition to all this, it even takes into consideration the invisible costs of being a homeowner which include property taxes, HOA charges, insurance, and yearly maintenance costs. All of this is compared to rental rates and insurance premiums as well.
                   </p>
                 </div>
 
                 <div className="space-y-2">
                   <h4 className="font-extrabold text-slate-800 text-base">How does credit card debt consolidation work?</h4>
                   <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
-                    Debt consolidation merges multiple high-interest credit card balances into a single personal loan with a lower interest rate (APR). This lowers your monthly interest charges, meaning a larger portion of your monthly payment goes toward paying down the principal balance. Use our debt consolidation tool to calculate exact savings, monthly payment reductions, and your accelerated debt-free milestone.
+                    Consolidation loans combine many debts on your credit cards, which carry higher interest rates, to one low-interest rate (APR) personal loan. As a result, you pay less monthly interest on debt, which means more money from your monthly payments is used to pay off the principle.
                   </p>
                 </div>
 
                 <div className="space-y-2">
                   <h4 className="font-extrabold text-slate-800 text-base">How can I forecast Google AdSense earnings?</h4>
                   <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
-                    AdSense income is modeled using three core variables: daily or monthly pageviews, click-through rate (CTR), and average cost-per-click (CPC). The formula is: pageviews × (CTR / 100) × CPC. For example, a blog with 50,000 monthly pageviews, a 1.5% CTR (750 clicks), and an average CPC of $0.60 yields $450 in monthly revenue. Run simulations with our planner to set traffic and monetization goals.
+                    The calculation of AdSense earnings depends on three main factors: pageviews per day or month, click-through rate (CTR), and cost per click (CPC). The equation is: pageviews × (CTR / 100) × CPC. For instance, a site that gets 50,000 pageviews a month, with a CTR of 1.5% (750 clicks), and an average CPC of $0.60 earns $450 monthly.
                   </p>
                 </div>
 
