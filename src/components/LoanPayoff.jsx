@@ -316,16 +316,16 @@ export default function LoanPayoff({ currencySymbol = '$' }) {
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Loan Payoff & Interest Acceleration</h2>
           <div className="space-y-4 text-slate-600 leading-relaxed text-base">
             <p>
-              Paying off debts early is one of the most guaranteed ways to earn a risk-free return on your money. When you make extra principal payments on a personal loan, mortgage, or auto loan, every extra dollar directly reduces your remaining principal balance, preventing future compound interest from accruing.
+              Earning money by paying down loans ahead of schedule is one of the most secure ways for people to make money in their finances. If you have a mortgage, student loan, personal loan, or car loan, making payments that cover extra principal will result in reduced loan balance which earns interest over time and save you lots of money and time paying down debt.
             </p>
             <p>
-              <strong>What This Calculator Is:</strong> Our serverless Loan Payoff Calculator is an interactive debt acceleration simulator. It compares your current standard loan amortization against an accelerated repayment schedule powered by extra monthly payments or one-time lump-sum contributions.
+              <strong>What This Calculator Is:</strong> Our loan payoff and extra payment calculator without a server shows your savings from the extra payments on interest and how fast you can get rid of your debt using the loan balance you have currently, APR and remaining loan term.
             </p>
             <p>
               <strong>Who Should Use It:</strong> Designed for borrowers seeking to become debt-free faster, individuals who received a tax refund or work bonus, and budgeters optimizing debt avalanche or debt snowball strategies.
             </p>
             <p>
-              <strong>Why It Is Important:</strong> Many borrowers do not realize how even small extra payments ($50 or $100/mo) dramatically shorten loan duration. On a 5-year loan, extra principal payments can slice 12 to 18 months off your payoff timeline and save thousands in interest. This calculator quantifies those exact time and interest savings.
+              <strong>Why It Is Important:</strong> Amortizing loans always put an emphasis on paying more interest during the early period of the loan. Extra payments in any amount ($50 or $100 monthly) add up and significantly reduce loan payoff time. You can calculate the gain from the extra payments on this page.
             </p>
           </div>
         </div>
@@ -356,7 +356,7 @@ export default function LoanPayoff({ currencySymbol = '$' }) {
                 1. Compound Interest Savings
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Reducing principal balance reduces next month's interest charge (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Interest = Balance × (APR ÷ 12)</code>), compounding savings over remaining months.
+                Additional repayments lead to reduced principal balance, which means lower interest accumulation in the coming months.
               </p>
             </div>
 
@@ -366,7 +366,7 @@ export default function LoanPayoff({ currencySymbol = '$' }) {
                 2. Term Reduction
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Because principal declines faster, the loan reaches zero balance months or years ahead of the original contractual maturity date.
+                Since the decline in principal occurs sooner, the loan ends up becoming fully repaid earlier than the contracted period.
               </p>
             </div>
           </div>
@@ -391,14 +391,17 @@ export default function LoanPayoff({ currencySymbol = '$' }) {
         <div>
           <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Example</h2>
           <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
-            <h3 className="text-lg font-bold text-slate-900">Example: $25,000 Loan at 8.5% APR ($150/mo Extra + $1,000 Lump Sum)</h3>
+            <h3 className="text-lg font-bold text-slate-900">Example: $25,000 Loan at 8.5% APR ($100/mo Extra Payment)</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
               <div><strong>Original Balance:</strong> $25,000</div>
-              <div><strong>Standard Term:</strong> 60 Months</div>
-              <div><strong>Standard Interest:</strong> $5,720</div>
-              <div><strong>Accelerated Term:</strong> 42 Months</div>
-              <div><strong>Accelerated Interest:</strong> $3,580</div>
-              <div><strong>Total Interest Saved:</strong> $2,140</div>
+              <div><strong>Standard Term:</strong> 60 Months ($513/mo)</div>
+              <div><strong>Accelerated Term:</strong> 47 Months ($613/mo)</div>
+              <div><strong>Total Interest Savings:</strong> $1,280</div>
+            </div>
+            <div className="text-sm text-slate-600 space-y-2">
+              <p>
+                The example below illustrates a loan amount of $25,000 in 5 years at 8.5% interest with $513 repayments per month. Extra repayments by $100 per month will result in a total repayment of $613 per month and an early repayment of the loan in 47 months with total savings of $1,280 in interest.
+              </p>
             </div>
           </div>
         </div>
@@ -412,37 +415,37 @@ export default function LoanPayoff({ currencySymbol = '$' }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Is paying off a loan early always smart?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Paying off high-interest loans (8%+) is almost always smart. For low-interest loans (under 4%), investing surplus cash in index funds may yield higher returns.
+                Extra payments towards high-interest loans (8%+) is usually good for you. If you have low-interest loans (below 4%) it's better to invest additional money in the index funds as they will give you more profit.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">How do I ensure extra payments go to principal?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Specify "Apply to Principal" when making extra payments online or by check to prevent lenders from treating extra funds as advance future monthly payments.
+                Indicate that 'extra payment applies to principal' when paying additional money via online payment or check, otherwise lenders can treat the extra money as a pre-payment of future monthly payments.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Will my lender automatically apply extra payments to principal?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Not always — some lenders apply extra payments toward future scheduled payments rather than reducing principal immediately unless instructed otherwise. Confirm your lender's process, and note "apply to principal" on any extra payment.
+                Not necessarily, there are lenders who treat additional payments as a pre-payment of future monthly payments unless you tell them otherwise. Write down 'apply to principal' on your additional payment form.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Are there penalties for paying off a loan early?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Most mortgages, auto loans, and personal loans no longer carry prepayment penalties, but some loans still do. Check your agreement or ask your lender directly.
+                The majority of mortgages, auto loans, and personal loans do not have any pre-payment penalties anymore, but some of them still do. Find out whether your loan has one.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Is it better to pay extra toward my loan or invest the difference?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                This depends on your loan's rate versus expected investment returns and your risk tolerance. Paying down debt offers a guaranteed, risk-free "return" equal to your interest rate.
+                This really depends on your loan's interest rate and how much you earn with other investments. Repayment of the loan gives a guaranteed risk-free return which equals to your interest rate.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">How much time can extra payments realistically save on a 30-year mortgage?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                It varies by amount and timing, but even modest extra payments of $100–$300/month commonly cut 3 to 8 years off a 30-year mortgage while saving tens of thousands in interest.
+                Usually, even small additional payments of $100-$300 per month reduce repayment period of a 30 year mortgage by 3 to 8 years.
               </p>
             </div>
           </div>

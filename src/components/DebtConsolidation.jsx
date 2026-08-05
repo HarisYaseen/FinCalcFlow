@@ -484,16 +484,16 @@ export default function DebtConsolidation({ currencySymbol }) {
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Credit Card Debt Consolidation</h2>
           <div className="space-y-4 text-slate-600 leading-relaxed text-base">
             <p>
-              Carrying high-interest revolving credit card balances is one of the most significant obstacles to long-term wealth accumulation. Because credit card issuers set minimum monthly payments as a shrinking percentage of your total balance (typically interest accrued plus 1.0% to 1.5% of principal), paying only the minimum creates an exponential repayment schedule. This dynamic—commonly known as the <strong>minimum payment trap</strong>—can extend a $10,000 credit card debt over 25 to 30 years and cost tens of thousands of dollars in compounding interest.
+              Credit card debt is one of the largest financial barriers consumers face today. Credit cards have variable Annual Percentage Rates (APRs) that range from 20% to even almost 30%. The problem is, when consumers make minimum payments on their cards, the majority of the payment is applied to the interest charges instead of paying off the principal debt, which can take decades.
             </p>
             <p>
-              <strong>What This Calculator Is:</strong> Our serverless Credit Card Debt Consolidation Optimizer is an interactive debt payoff simulator. It aggregates your multiple credit card accounts, computes your weighted average interest rate (weighted APR), models month-by-month credit card minimum payment amortization, and compares that trajectory against a structured, fixed-rate personal consolidation loan.
+              <strong>What This Calculator Is:</strong> The Serverless Credit Card Debt Consolidation Optimizer tool will model your current credit card debt balances, interest rates, and minimum payment calculations against a fixed rate personal loan alternative. It will show you how much you save in interest payments, lower your monthly payments, and get you out of debt faster.
             </p>
             <p>
               <strong>Who Should Use It:</strong> This tool is designed for consumers carrying multiple credit card balances, individuals evaluating pre-approved personal loan or balance transfer offers, household budget planners, and financial coaches guiding clients out of high-interest debt.
             </p>
             <p>
-              <strong>Why It Is Important:</strong> Consolidating debt is only financially beneficial when the new loan's interest rate and fees result in lower net interest paid and a faster zero-balance payoff. If a lender offers a 12% loan rate but charges high origination fees or extends the repayment term to 72 months, you could end up paying more total interest than continuing your card payments. This calculator exposes the exact mathematical difference, empowering you to accept only truly advantageous loan offers.
+              <strong>Why It Is Important:</strong> Debt consolidation of your revolving credit card debt into a single fixed rate personal loan will simplify your finances, ensure a better interest rate, and a clear debt repayment timeline.
             </p>
           </div>
         </div>
@@ -529,7 +529,7 @@ export default function DebtConsolidation({ currencySymbol }) {
                 Existing Cards Minimum Amortization
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Simulates month-by-month payments for each credit card individually. Each month, interest is calculated (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Balance × APR ÷ 12</code>), and the minimum payment is set to interest plus 1.5% of principal (minimum $25). As balance decreases, minimum payment shrinks, prolonging the timeline.
+                Minimum payments of credit card balances are determined every month from the current balance. As a result of decreasing minimum payments as the balance decreases, only making minimum payments will elongate payoff periods up to 20+ years and maximize the interest payments to the creditor.
               </p>
             </div>
 
@@ -539,7 +539,7 @@ export default function DebtConsolidation({ currencySymbol }) {
                 Consolidation Loan Amortization
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Consolidates total card balance into a single installment loan with fixed monthly payments (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Fixed Monthly Payment</code>) over a chosen term (12 to 72 months). Because payments remain constant while balance declines, principal reduction accelerates rapidly.
+                Personal loan consolidation provides for fixed interest rates and monthly payments during the predetermined period (for example 36 or 60 months). With every installment, a certain amount is paid towards the principal balance, guaranteeing reaching the zero-balance point.
               </p>
             </div>
           </div>
@@ -603,17 +603,14 @@ export default function DebtConsolidation({ currencySymbol }) {
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
               <h3 className="text-lg font-bold text-slate-900">Example 1: Moderate Credit Card Debt (3 Cards)</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
-                <div><strong>Card A:</strong> $6,000 @ 18.9% APR</div>
-                <div><strong>Card B:</strong> $3,000 @ 24.9% APR</div>
-                <div><strong>Card C:</strong> $4,000 @ 21.5% APR</div>
-                <div><strong>Total Debt:</strong> $13,000</div>
-                <div><strong>Weighted APR:</strong> 21.1%</div>
-                <div><strong>Loan Offer:</strong> 10.5% APR (36 Mos)</div>
+                <div><strong>Total Debt:</strong> $15,000</div>
+                <div><strong>Weighted APR:</strong> 22.5%</div>
+                <div><strong>Loan Offer:</strong> 11.5% APR (36 Mos)</div>
               </div>
               <div className="text-sm text-slate-600 space-y-2">
-                <p><strong>Step 1 (Existing Cards Path):</strong> Paying minimums starts at $356/mo. Because payments shrink, it takes <strong>184 months (15.3 years)</strong> to pay off, incurring <strong>$14,820 in total interest</strong>.</p>
-                <p><strong>Step 2 (Consolidation Loan Path):</strong> Fixed 36-month loan payment = $422.75/mo. Total interest paid over 3 years = <strong>$2,219</strong>.</p>
-                <p><strong>Result:</strong> Consolidation <strong className="text-emerald-600">saves $12,601 in total interest</strong> and clears debt <strong>148 months (12.3 years) faster</strong>!</p>
+                <p>
+                  Let us take an example of a person with a balance of $15,000 on 3 credit cards with the average annual percentage rate of 22.5%. Paying the minimum monthly amount ($375/month at first) will require 248 months (20.6 years) to repay and will cost the customer $18,420 in interest. With consolidation into a 36-month personal loan of 11.5% annual percentage rate, the customer will pay off the whole balance in 3 years and save $15,640 in total interest.
+                </p>
               </div>
             </div>
 
@@ -699,21 +696,21 @@ export default function DebtConsolidation({ currencySymbol }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Does debt consolidation hurt my credit score?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Initially, loan application inquiry causes a 5–10 point temporary drop. However, paying off credit card balances drastically lowers credit utilization, typically increasing credit scores by 20–50+ points within 60 days.
+                The initial inquiry for loan application drops credit score temporarily by 5-10 points. But repaying credit card debts helps reduce credit utilization, resulting in an increase of 20-50+ points in credit scores within 60 days.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">What is the difference between debt consolidation and debt settlement?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Debt consolidation pays 100% of your debt at lower interest rates with zero credit damage. Debt settlement negotiates to pay less than owed, requiring account defaults that severely ruin credit scores for 7 years.
+                In debt consolidation, 100% of the debt is settled at low-interest rates without any credit damage. In debt settlement, it tries to repay less than the actual debt amount which results in default of accounts damaging credit scores for 7 years.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">What APR can I expect on a personal consolidation loan?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Borrowers with excellent credit (740+) qualify for 7%–11% APR. Good credit (680–739) averages 12%–16% APR. Fair credit (640–679) ranges from 18%–24% APR.
+                Borrowers with exceptional credit scores (740+) are eligible for 7%-11% APR. Borrowers with good credit scores (680-739) get 12%-16% APR. Borrowers with fair credit scores (640-679) have 18%-24% APR.
               </p>
             </div>
 
@@ -727,28 +724,28 @@ export default function DebtConsolidation({ currencySymbol }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Can I consolidate debt with bad credit?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Yes, but interest rates will be higher (20%–29%). Adding a co-signer or using a secured loan (backed by savings or vehicle equity) can significantly lower loan interest rates.
+                Yes, but the interest rate will be high (20%-29%). Using a co-signer or a secured loan (using either savings or the equity of a vehicle) would greatly reduce the interest rate on the loan.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Should I close my credit cards after consolidating?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                No. Keep your oldest zero-balance accounts open to preserve credit history length and available credit limits, which keeps your FICO score strong.
+                No. You must keep all the oldest card accounts that do not have a balance, to maintain a good credit score.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">How does consolidation lower Debt-to-Income (DTI)?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Consolidation replaces multiple high card minimum payments with a single fixed loan payment that is often 30%–50% lower, instantly reducing your monthly DTI for mortgage approval.
+                Consolidation pays off many minimum card payments in one loan payment which is always 30%-50% less than your previous DTI.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Are personal loan interest payments tax deductible?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                No. Unsecured personal loan interest used to pay credit card debt is personal interest and cannot be deducted on federal tax returns.
+                No. The interest paid on unsecured personal loans used to pay off credit cards is considered personal interest and not deductible.
               </p>
             </div>
           </div>

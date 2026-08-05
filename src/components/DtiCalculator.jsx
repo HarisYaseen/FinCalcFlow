@@ -304,16 +304,16 @@ export default function DtiCalculator({ currencySymbol = '$' }) {
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Debt-to-Income (DTI) Ratios</h2>
           <div className="space-y-4 text-slate-600 leading-relaxed text-base">
             <p>
-              Your Debt-to-Income (DTI) ratio is the single most critical financial metric used by mortgage underwriters, auto lenders, and personal loan providers to assess borrowing risk. While your credit score measures payment history, your DTI ratio measures your capacity to manage monthly debt payments relative to your income.
+              The Debt-to-Income (DTI) ratio is one of the most crucial indicators that mortgage lenders, banks, and credit card providers consider in determining your creditworthiness. DTI ratio is a percentage, which represents your recurring debt expenses (credit card payments, car payments, education loans, and rent) compared to your gross income prior to deductions.
             </p>
             <p>
-              <strong>What This Calculator Is:</strong> Our serverless Debt-to-Income (DTI) Calculator is a lender underwriting simulator. It computes both front-end (housing-only) and back-end (total debt) DTI percentages to categorize your borrowing risk profile.
+              <strong>What This Calculator Is:</strong> Our no-server Debt-to-Income (DTI) Calculator calculates your precise Front End DTI ratio (your housing costs to gross income) and Back-End DTI ratio (your all debts to gross income) and assesses your chances of approval based on typical underwriting criteria.
             </p>
             <p>
               <strong>Who Should Use It:</strong> Essential for prospective homebuyers preparing for mortgage pre-approval, individuals planning personal or auto loan applications, and financial coaches guiding debt management plans.
             </p>
             <p>
-              <strong>Why It Is Important:</strong> Conventional mortgage rules (such as Fannie Mae and Freddie Mac guidelines) capped standard back-end DTI at 43%. If your monthly debt commitments exceed 43% of gross income, loan applications face automatic denial or require costly compensating reserves.
+              <strong>Why It Is Important:</strong> Mortgage and loan lenders have stringent limits on DTI ratios when considering people for loan approvals. For conventional mortgages, lenders require a Back-End DTI lower than 36% (maximum 43% with some compensating factors). If you know your actual DTI ratio before applying for a loan, you can make adjustments to qualify for loan approvals.
             </p>
           </div>
         </div>
@@ -344,7 +344,7 @@ export default function DtiCalculator({ currencySymbol = '$' }) {
                 Front-End DTI (Housing Ratio)
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                <code className="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-xs">(Housing Expense ÷ Gross Income) × 100</code>. Mortgage lenders prefer front-end housing DTI below 28%.
+                Front-End DTI measures the portion of your gross income that goes towards paying for housing (mortgage/rent, taxes, insurance, HOA). Lenders like to see a Front-End DTI under 28%.
               </p>
             </div>
 
@@ -354,7 +354,7 @@ export default function DtiCalculator({ currencySymbol = '$' }) {
                 Back-End DTI (Total Debt Ratio)
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                <code className="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-xs">(Total Monthly Debts ÷ Gross Income) × 100</code>. Includes mortgage/rent, auto loans, card minimums, and student loans. Lenders prefer under 36%.
+                Back-End DTI determines the portion of your gross income that is used in paying your recurring debts per month (housing + credit cards + car payments + student loans). Lenders like to see a Back-End DTI under 36%.
               </p>
             </div>
           </div>
@@ -380,35 +380,20 @@ export default function DtiCalculator({ currencySymbol = '$' }) {
           <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Examples</h2>
           <div className="space-y-4">
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
-              <h3 className="text-lg font-bold text-slate-900">Example 1: $7,500 Gross Income with $2,800 Monthly Debt</h3>
+              <h3 className="text-lg font-bold text-slate-900">Example: $7,500 Gross Income with $2,600 Monthly Debt</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
                 <div><strong>Gross Income:</strong> $7,500/mo</div>
-                <div><strong>Housing:</strong> $1,800/mo</div>
-                <div><strong>Other Debt:</strong> $1,000/mo</div>
+                <div><strong>Housing (Mortgage):</strong> $1,800/mo</div>
+                <div><strong>Other Debt:</strong> $800/mo</div>
                 <div><strong>Front-End DTI:</strong> 24.0%</div>
-                <div><strong>Back-End DTI:</strong> 37.3%</div>
-                <div><strong>Category:</strong> Manageable</div>
+                <div><strong>Back-End DTI:</strong> 34.7%</div>
+                <div><strong>Category:</strong> Ideal Approval Tier</div>
               </div>
-            </div>
-
-            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
-              <h3 className="text-lg font-bold text-slate-900">Example 2: $6,500 Gross Income with $2,650 Total Obligations</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Consider a borrower with <strong>$6,500 gross monthly income</strong> and these obligations:
-              </p>
-              <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-600 space-y-1">
-                <li>Mortgage/rent: $1,800</li>
-                <li>Auto loan: $420</li>
-                <li>Student loan: $250</li>
-                <li>Credit card minimums: $180</li>
-              </ul>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
-                <div><strong>Front-end DTI:</strong> $1,800 ÷ $6,500 = <strong>27.7%</strong></div>
-                <div><strong>Back-end DTI:</strong> ($1,800 + $420 + $250 + $180) ÷ $6,500 = <strong>40.8%</strong></div>
+              <div className="text-sm text-slate-600 space-y-2">
+                <p>
+                  Let us consider an example where the gross income per month of a borrower is $7,500 ($90,000 per year). Their monthly payments are: mortgage - $1,800; car loan payment - $400; student loan payments - $250; credit cards - $150 ($2,600 in total monthly payments). The Front-End DTI would be 24.0% ($1,800 ÷ $7,500) and the Back-End DTI would be 34.7% ($2,600 ÷ $7,500)—placing them safely within the ideal lending approval tier.
+                </p>
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                This sits just under the common 43% conventional mortgage ceiling, but above the 36% threshold associated with the best rates — likely to qualify, but possibly with less favorable terms.
-              </p>
             </div>
           </div>
         </div>
@@ -422,37 +407,37 @@ export default function DtiCalculator({ currencySymbol = '$' }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
               <h3 className="font-extrabold text-slate-900 text-base">What is a good DTI ratio for mortgage approval?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                36% or lower is ideal. 43% is the standard maximum limit for conventional mortgages.
+                The target should be 36% or below. The maximum threshold of 43% applies to normal mortgages.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">How can I quickly lower my DTI ratio?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Pay off small credit card balances to eliminate minimum payments, or consolidate high-payment debt using personal loans.
+                Paying off small credit card balances will get rid of minimum payments or consolidation through personal loans of high-paying debt.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
               <h3 className="font-extrabold text-slate-900 text-base">Does DTI include utilities, groceries, or insurance not related to housing?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                No. DTI only counts recurring debt obligations, not general living expenses like groceries, utilities, or subscriptions.
+                Not really. The DTI ratio only includes debt payments, not any other expenses, including food, bills, or any subscription services.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Can I lower my DTI quickly before applying for a mortgage?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Yes — paying down smaller debts (a car loan or credit card balance) before applying can meaningfully reduce your back-end DTI.
+                Yes – you could reduce your back-end DTI by paying off smaller debts such as a car loan or a credit card debt prior to the application.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
               <h3 className="font-extrabold text-slate-900 text-base">Do lenders use gross or net income for DTI?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Gross (pre-tax) monthly income, not take-home pay.
+                Monthly gross (before tax) income.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">What DTI do I need for an FHA loan versus a conventional loan?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                FHA loans often allow back-end DTI up to around 50% with strong compensating factors, while conventional loans typically cap at 43–45%. Requirements vary by lender.
+                FHA mortgage allows 50% DTI on the back end with strong compensating factors, whereas conventional allows 43-45% back-end DTI.
               </p>
             </div>
           </div>

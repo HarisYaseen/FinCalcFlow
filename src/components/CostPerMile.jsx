@@ -453,16 +453,16 @@ export default function CostPerMile({ currencySymbol }) {
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Calculating Trucking Cost Per Mile</h2>
           <div className="space-y-4 text-slate-600 leading-relaxed text-base">
             <p>
-              In commercial trucking and logistics, knowing your exact <strong>Cost Per Mile (CPM)</strong> is the fundamental threshold between managing a thriving transportation business and falling into financial insolvency. Operating a Class 8 semi-truck, box truck, or hotshot rig involves complex expense structures where fuel prices fluctuate daily, insurance premiums increase, and vehicle depreciation accumulates with every turn of the odometer. Without a rigorous understanding of your per-mile operating expenses, accepting freight loads from brokers or spot boards becomes a gamble.
+              For truck owners, owner-operators, fleet management, and independent drivers of freight, figuring out your real cost per mile (CPM) is the key consideration for ensuring sustainability of your business in the long run. This is because trucking business runs on high volume and low margins with constant changes in costs due to changing prices of diesel fuel, mechanical issues, and insurance.
             </p>
             <p>
-              <strong>What This Calculator Is:</strong> Our serverless Trucking Cost Per Mile Calculator is an operational expense engine designed specifically for commercial freight carriers. It categorizes your monthly fixed overhead commitments (leases, insurance, permits) alongside your variable operational costs (diesel fuel, maintenance reserves, tire wear) to determine your exact minimum cost floor per mile.
+              <strong>What This Calculator Is:</strong> Trucking CPM calculator of our serverless application calculates your breakeven point of CPM using your monthly expenses divided into two parts - fixed overhead (those which occur whether your truck is running or not) and variable cost per mile (those which depend on every mile you drive).
             </p>
             <p>
               <strong>Who Should Use It:</strong> This tool is essential for independent owner-operators, fleet managers overseeing multi-truck carriers, freight dispatchers evaluating load profitability, and commercial logistics consultants auditing carrier operations.
             </p>
             <p>
-              <strong>Why It Is Important:</strong> Freight rates on load boards fluctuate based on market demand and regional lane imbalances. If a broker offers a rate of $2.20 per mile, that offer might sound attractive. However, if your true operating CPM is $1.95 and you have to drive 200 uncompensated "deadhead" (empty) miles to reach the shipper, your net profit evaporates completely. Calculating true CPM protects your cash flow and ensures every mile driven contributes to net profitability.
+              <strong>Why It Is Important:</strong> The mistake that many people commit while booking freight is taking only gross revenue per mile (say $2.50 per mile) while ignoring the actual cost floor of your CPM. If your CPM comes out to be $2.15 per mile but in order to take the load you have to drive deadhead miles 200, then your actual revenue per mile goes below your cost floor, and you lose money unknowingly.
             </p>
           </div>
         </div>
@@ -498,7 +498,7 @@ export default function CostPerMile({ currencySymbol }) {
                 Fixed Monthly Overhead
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Fixed costs are recurring monthly obligations that remain constant regardless of truck usage. These include monthly truck lease/loan payments, physical damage & liability insurance, ELD subscriptions, annual IFTA/IRP permits (amortized monthly), and Heavy Highway Vehicle Use Tax (Form 2290).
+                The fixed costs are the regular monthly expenditures that do not depend on the mileage done during a certain period of time; they are constant whether you drive one thousand miles per month or twelve thousand miles per month. The fixed cost will be made up of truck and trailer lease or loan payment, commercial auto liability insurance, annual IFTA filings and permits, ELD compliance software, and overhead.
               </p>
             </div>
 
@@ -508,7 +508,7 @@ export default function CostPerMile({ currencySymbol }) {
                 Variable Mileage Expenses
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Variable costs increase in direct proportion to mileage. Diesel fuel is calculated dynamically based on price per gallon divided by truck MPG (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Fuel Price ÷ MPG</code>). Maintenance and tire reserves are saved on a per-mile basis for repairs, oil changes, and DOT inspections.
+                The variable cost, however, increases or decreases depending on the mileage run. It includes diesel fuel costs (Fuel price / MPG), pay-per-mile for drivers, maintenance reserves (usually $0.15-$0.25 per mile), tires, tolls, and scales.
               </p>
             </div>
           </div>
@@ -573,17 +573,17 @@ export default function CostPerMile({ currencySymbol }) {
               <h3 className="text-lg font-bold text-slate-900">Example 1: Regional Over-The-Road (OTR) Owner-Operator</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
                 <div><strong>Miles / Month:</strong> 10,000 mi</div>
-                <div><strong>Truck Payment:</strong> $1,500/mo</div>
-                <div><strong>Insurance:</strong> $800/mo</div>
-                <div><strong>Annual Permits:</strong> $1,200 ($100/mo)</div>
-                <div><strong>Diesel Price:</strong> $3.89/gal</div>
+                <div><strong>Fixed Costs:</strong> $4,500/mo ($0.45/mi)</div>
+                <div><strong>Diesel Price:</strong> $3.90/gal</div>
                 <div><strong>Truck MPG:</strong> 6.5 MPG</div>
-                <div><strong>Maintenance Reserve:</strong> $0.15/mi</div>
+                <div><strong>Driver Pay:</strong> $0.55/mi</div>
+                <div><strong>Maintenance Reserve:</strong> $0.18/mi</div>
+                <div><strong>Tolls:</strong> $0.07/mi</div>
               </div>
               <div className="text-sm text-slate-600 space-y-2">
-                <p><strong>Step 1 (Fixed Costs):</strong> $1,500 + $800 + $100 = <strong>$2,400 monthly fixed overhead</strong>.</p>
-                <p><strong>Step 2 (Variable Costs):</strong> Fuel per mile = $3.89 / 6.5 = $0.60/mi. Monthly fuel (10,000 mi &times; $0.60) = $6,000. Maintenance reserve (10,000 mi &times; $0.15) = $1,500. Total variable = <strong>$7,500</strong>.</p>
-                <p><strong>Step 3 (Total CPM):</strong> Total monthly expense = $2,400 + $7,500 = $9,900. Divide by 10,000 miles = <strong className="text-blue-600">$0.99 per mile CPM</strong> (excluding driver salary).</p>
+                <p>
+                  For instance, an owner-operator who hauls 10,000 miles per month will have $4,500 fixed monthly overhead, which means that fixed costs will come to around $0.45 per mile. With truck fuel efficiency of 6.5 miles per gallon and diesel price of $3.90 per gallon, the fuel cost will be roughly $0.60 per mile. In addition, pay-per-mile for the driver will be approximately $0.55 per mile, maintenance reserve is $0.18 per mile, and tolls will be around $0.07 per mile. That results in CPM of $1.85. In order to get 25% profit margin, the carrier will have to offer a rate of $2.31 per mile.
+                </p>
               </div>
             </div>
 
@@ -671,56 +671,56 @@ export default function CostPerMile({ currencySymbol }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-blue-500">
               <h3 className="font-extrabold text-slate-900 text-base">What is the national average cost per mile for Class 8 trucks?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                According to ATRI industry reports, average operating costs for Class 8 commercial trucks range between <strong>$1.70 and $2.25 per mile</strong>, including driver wages and benefits.
+                The ATRI industry reports indicate that average operating costs for Class 8 commercial trucks are $1.70 to $2.25 per mile, inclusive of driver pay.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
               <h3 className="font-extrabold text-slate-900 text-base">How do deadhead miles impact my overall CPM?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Deadhead miles consume fuel and wear tires without generating revenue. Driving 200 deadhead miles on a 800-mile load expands your total mileage to 1,000, increasing required rate per loaded mile.
+                Deadhead miles burn fuel and tire rubber without creating revenue. Driving 200 deadhead miles with an 800-mile load means you have 1,000 total miles to cover with your rate.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-blue-500">
               <h3 className="font-extrabold text-slate-900 text-base">How should owner-operators account for driver wages?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                You should budget a competitive market wage rate (e.g. $0.55–$0.70 per mile) as a variable operating cost. True business profit is cash left over after paying driver wages.
+                The variable operating cost that you must factor in would be your competitive market wage rate of pay (such as $0.55 to $0.70 per mile). True business profit is what remains after driver pay.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
               <h3 className="font-extrabold text-slate-900 text-base">What maintenance rate per mile is recommended?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                New trucks under manufacturer warranty require $0.08–$0.12 per mile. Older trucks out of warranty should reserve $0.15–$0.22 per mile for engine overhauls and tires.
+                Trucks still under warranty from the manufacturer need $0.08-$0.12 per mile. Out of warranty trucks will need $0.15 to $0.22 per mile for engine rebuilds and tires.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-blue-500">
               <h3 className="font-extrabold text-slate-900 text-base">How do I calculate fuel surcharge (FSC)?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                FSC is calculated as: <code className="bg-slate-100 px-1 py-0.5 rounded text-slate-800">(Current Diesel Price - Base Diesel Price) ÷ Benchmark MPG</code>. It reimburses drivers when fuel exceeds baseline contracts.
+                FSC = (Current Diesel Price - Base Diesel Price) ÷ Benchmark MPG. FSC compensates for extra cost over baseline agreements.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
               <h3 className="font-extrabold text-slate-900 text-base">What are fixed costs vs variable costs in trucking?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Fixed costs (leases, insurance, permits) remain constant regardless of driving distance. Variable costs (fuel, tires, toll fees) scale directly with miles traveled.
+                The fixed costs (leasing, insuring, permits) do not vary depending on miles driven. The variable costs (diesel, tires, tolls) vary in direct proportion to miles driven.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-blue-500">
               <h3 className="font-extrabold text-slate-900 text-base">How does truck aerodynamic profiling affect CPM?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Aerodynamic skirts, fairings, and low-rolling-resistance tires can improve fuel economy by 0.5 to 1.0 MPG, cutting per-mile fuel costs by $0.06 to $0.12/mi.
+                Aerodynamic skirts, fairings, and low rolling resistance tires can increase miles per gallon by 0.5 to 1.0 MPG, saving $0.06 to $0.12 per mile spent on fuel.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-amber-500">
               <h3 className="font-extrabold text-slate-900 text-base">How often should carrier CPM be recalculated?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                We recommend reviewing CPM monthly. Fuel price swings, insurance renewal updates, and seasonal mileage variations change your minimum breakeven rate.
+                It is suggested that you review CPM monthly. Variations in fuel prices, insuring updates, and changes in annual miles driven affect your minimum breakeven.
               </p>
             </div>
           </div>

@@ -380,16 +380,16 @@ export default function CarLoan({ currencySymbol = '$' }) {
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Car Loans & Auto Financing</h2>
           <div className="space-y-4 text-slate-600 leading-relaxed text-base">
             <p>
-              Purchasing a vehicle is the second-largest purchase most households make after homeownership. Whether buying a new sedan, an electric vehicle, or a reliable used truck, car loans provide structured installment financing over terms ranging from 24 to 84 months.
+              Getting a new or used car financed is all about finding the right balance between the car's cost, down payment, trade-in value, interest rate, loan terms, and sales taxes. Since vehicles are very prone to depreciation, making a mistake in your loan term choice (such as 72 or 84 months) will result in you being 'upside-down' on the deal, which means that you owe more than what the car is worth.
             </p>
             <p>
-              <strong>What This Calculator Is:</strong> Our serverless Car Loan Calculator is a complete auto financing engine. It factors in vehicle purchase price, cash down payments, trade-in allowances, state sales tax percentages, and interest rates to calculate your net financed principal and exact monthly payment.
+              <strong>What This Calculator Is:</strong> Our server-based Car Loan Calculator computes your monthly payments, total interest paid, total car expenses, and a full repayment schedule based on the car cost, down payment amount, trade-in value, sales tax rate, interest rate, and term (from 24 to 84 months).
             </p>
             <p>
               <strong>Who Should Use It:</strong> This tool is engineered for car shoppers evaluating dealership financing options against credit union quotes, vehicle owners calculating trade-in equity impact, and budget planners determining maximum vehicle price thresholds.
             </p>
             <p>
-              <strong>Why It Is Important:</strong> Dealership finance offices often negotiate based on monthly payment targets rather than total loan cost. Extending loan duration to 72 or 84 months lowers your monthly payment but drastically expands interest expense and leaves you "upside down" (owing more on the loan than the car is worth) as the vehicle depreciates. This calculator reveals the true cost of auto financing.
+              <strong>Why It Is Important:</strong> Car dealers often concentrate on negotiating buyers' deals in order to hit a certain target of monthly payments. Using longer loan periods (from 7 or 8 years) helps them make even very expensive cars appear affordable, while leaving thousands of dollars for additional interest expenses hidden. This calculator helps you understand the mechanics of auto loans and negotiate from strength.
             </p>
           </div>
         </div>
@@ -421,7 +421,7 @@ export default function CarLoan({ currencySymbol = '$' }) {
                 1. Net Amount Financed
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                <code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Financed = (Price - Down - TradeIn) × (1 + Sales Tax %)</code>. Trade-in equity reduces taxable purchase amount in most jurisdictions.
+                Sales tax is included in the cost of the vehicle, while down payment and trade-in allowance decrease the principal being financed: Net Financed Principal = (Cost of Vehicle - Trade-in Allowance) × (1 + Tax Rate) - Down Payment.
               </p>
             </div>
 
@@ -431,7 +431,7 @@ export default function CarLoan({ currencySymbol = '$' }) {
                 2. Monthly Payment Amortization
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Uses standard monthly installment math over your chosen term (24 to 84 months).
+                Choosing a 48-month term results in higher payments but allows the quick creation of equity, along with low interest. Choosing a 72-month term leads to lower payments but may result in negative equity.
               </p>
             </div>
           </div>
@@ -457,33 +457,20 @@ export default function CarLoan({ currencySymbol = '$' }) {
           <h2 className="text-2xl font-bold mb-4 text-slate-900">Worked Step-by-Step Examples</h2>
           <div className="space-y-4">
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
-              <h3 className="text-lg font-bold text-slate-900">Example 1: $35,000 Vehicle (60 Months @ 6.9% APR)</h3>
+              <h3 className="text-lg font-bold text-slate-900">Example: $35,000 Vehicle (48 Months vs 72 Months at 6.5% APR)</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
+                <div><strong>Car Price:</strong> $35,000</div>
                 <div><strong>Down Payment:</strong> $5,000</div>
-                <div><strong>Trade-In:</strong> $2,000</div>
-                <div><strong>Sales Tax (7%):</strong> $1,960</div>
-                <div><strong>Financed:</strong> $29,960</div>
-                <div><strong>Monthly Payment:</strong> $592.50/mo</div>
-                <div><strong>Total Interest:</strong> $5,590</div>
+                <div><strong>Trade-In:</strong> $4,000</div>
+                <div><strong>Net Financed (7% Tax):</strong> $28,170</div>
+                <div><strong>48-Mo Payment:</strong> $668/mo ($3,875 interest)</div>
+                <div><strong>72-Mo Payment:</strong> $474/mo ($5,948 interest)</div>
               </div>
-            </div>
-
-            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
-              <h3 className="text-lg font-bold text-slate-900">Example 2: $32,000 Vehicle (60 Months vs. 72 Months @ 7.2% APR)</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Suppose you're financing a <strong>$32,000 new vehicle</strong> with a <strong>$4,000 down payment</strong>, at <strong>7.2% APR</strong> over <strong>60 months</strong>:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
-                <div><strong>Loan Principal:</strong> $32,000 − $4,000 = $28,000</div>
-                <div><strong>60-Mo Payment:</strong> ≈ $555.65/mo</div>
-                <div><strong>60-Mo Interest:</strong> ≈ $5,339</div>
-                <div><strong>72-Mo Payment:</strong> ≈ $476.51/mo</div>
-                <div><strong>72-Mo Interest:</strong> ≈ $6,309</div>
-                <div><strong>Difference:</strong> +$970 Total Interest</div>
+              <div className="text-sm text-slate-600 space-y-2">
+                <p>
+                  Take into account buying a vehicle worth $35,000 with $5,000 down payment, $4,000 trade-in allowance, 7% sales tax, and 6.5% interest. The net amount being financed is $28,170. If choosing a 48-month financing term, the payments will be $668 per month, with $3,875 in total interest. However, if opting for a 72-month term, payments will drop to $474 per month, while total interest will increase to $5,948.
+                </p>
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Stretching the same $28,000 loan to <strong>72 months</strong> instead drops the payment to <strong>≈ $476.51/mo</strong>, but raises total interest to <strong>≈ $6,309</strong> — about <strong>$970 more</strong>, in exchange for a lower monthly payment.
-              </p>
             </div>
           </div>
         </div>
@@ -497,37 +484,37 @@ export default function CarLoan({ currencySymbol = '$' }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Is 72 or 84 month car financing a good idea?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Long 72-84 month terms lower monthly payments but lead to high interest expense and negative equity due to vehicle depreciation.
+                72-84 month terms decrease monthly payment but result in large interest cost and negative equity owing to vehicle depreciation.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">What is negative equity (being "underwater")?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Negative equity occurs when you owe more on your car loan than the vehicle is currently worth on trade-in or resale.
+                Negative equity is when the value of your car loan is higher than the current value of your car at the time of trade in.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Does this calculator include sales tax and fees?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                No — it calculates payments based on the amount financed. If tax or fees are rolled into your loan, add them to the vehicle price before calculating for an accurate payment.
+                Not necessarily – the calculation is based on the amount financed. If tax/fees go into your loan, then include them in the vehicle price before the calculation.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">What's a good auto loan interest rate in 2026?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Well-qualified buyers often see 5–8% APR on new vehicles; used vehicle loans and subprime borrowers can see notably higher rates, sometimes exceeding 15%.
+                Very good buyers get 5-8% APRs for new cars; used car loans and subprime consumers face much higher APRs, which sometimes exceed 15%.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Should I choose a longer term to lower my payment?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                It lowers your monthly payment but increases total interest paid and extends the period you may owe more than the car is worth. Worth running the total-cost comparison first.
+                It will reduce your monthly payment but will increase total interest cost and extend the term during which you will be upside down. Total cost analysis might come first.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Is dealer financing or a bank/credit union loan better?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                It depends — dealers sometimes offer promotional low-APR financing, while banks and credit unions often have competitive rates too. Getting pre-approved before visiting the dealership gives you a rate to compare against.
+                Depends on – the dealer might offer financing at low APRs, and there are also competitive APRs offered by the banks and credit unions. Pre-approval is better prior to dealership visit.
               </p>
             </div>
           </div>

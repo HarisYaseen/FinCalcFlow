@@ -401,16 +401,16 @@ export default function HomeLoan({ currencySymbol = '$' }) {
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Home Loans & Mortgage Amortization</h2>
           <div className="space-y-4 text-slate-600 leading-relaxed text-base">
             <p>
-              Securing a home loan is the single largest financial commitment most individuals undertake. A mortgage enables buyers to acquire residential property by putting down a portion of the purchase price upfront while borrowing the remainder from a financial institution. However, the true monthly cost of homeownership extends far beyond principal and interest payments.
+              The purchase of a home is the single largest financial transaction that many people will make in their lifetimes. A mortgage loan is a long-term secured loan that is backed by the real estate property. As much as people pay keen attention to interest rates, it is important to consider PITI: principal, interest, property taxes, and homeowners' insurance along with HOA and PMI.
             </p>
             <p>
-              <strong>What This Calculator Is:</strong> Our serverless Home Loan Calculator is an all-inclusive mortgage amortization and property tax modeling engine. It computes your principal and interest (P&I) payments across 15-year or 30-year fixed terms while incorporating property taxes, homeowners insurance, and HOA fees to determine your total monthly outflow.
+              <strong>What This Calculator Is:</strong> Our serverless Home Loan and Mortgage Calculator will calculate for you the exact monthly payment details, provide you with an entire 30-year amortization schedule, show the down payment percentage and PMI calculations according to home price, down payment, APR on loan, and term of mortgage.
             </p>
             <p>
               <strong>Who Should Use It:</strong> This tool is essential for prospective homebuyers determining purchase budgets, homeowners considering mortgage refinancing, real estate agents estimating buyer affordability, and financial planners evaluating housing ratios.
             </p>
             <p>
-              <strong>Why It Is Important:</strong> Many buyers calculate affordability based solely on the mortgage principal and interest payment. Failing to budget for property tax assessments, homeowners insurance premiums, and HOA dues can lead to severe housing cost distress. This calculator exposes your total monthly housing obligation (PITI + HOA) so you can purchase with confidence.
+              <strong>Why It Is Important:</strong> A small fluctuation of mortgage interest rate or down payment percentages will affect you financially in a huge way over a period of 30 years. Making the down payment of 20% will allow you to avoid PMI and a 0.50% less interest rate on your loan may save you more than $40,000 in interest over 30 years.
             </p>
           </div>
         </div>
@@ -446,7 +446,7 @@ export default function HomeLoan({ currencySymbol = '$' }) {
                 1. Principal & Interest (P&I)
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Calculated using standard monthly amortization (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">M = P × [ r(1 + r)ⁿ ] ÷ [ (1 + r)ⁿ - 1 ]</code>). Interest dominates early payments, while principal reduction dominates later years.
+                The principal is the amount that you owe or the real amount that was borrowed from the bank. The interest is the cost that you need to repay to the bank for using its money to buy the property. With a 30-year fixed rate mortgage, the majority of the initial payments will be for interest only, and then after that will be for principal.
               </p>
             </div>
 
@@ -456,7 +456,7 @@ export default function HomeLoan({ currencySymbol = '$' }) {
                 2. Property Taxes & Escrows
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Annual property taxes and home insurance are divided by 12 and collected monthly by lenders into escrow accounts to ensure bill payments.
+                The homeowner needs to pay the property tax and homeowners insurance as part of his monthly payments into an escrow account. In case your down payment is less than 20% of the value of the home, the borrower will have to take private mortgage insurance (PMI) until you build up enough equity in the home.
               </p>
             </div>
           </div>
@@ -491,17 +491,19 @@ export default function HomeLoan({ currencySymbol = '$' }) {
 
           <div className="space-y-6">
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
-              <h3 className="text-lg font-bold text-slate-900">Example: $400,000 Purchase at 20% Down vs 5% Down</h3>
+              <h3 className="text-lg font-bold text-slate-900">Example: $400,000 Purchase at 10% Down (6.5% APR)</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
-                <div><strong>20% Down:</strong> $80,000 Cash</div>
-                <div><strong>Loan Amount:</strong> $320,000</div>
-                <div><strong>P&I (6.5%):</strong> $2,022/mo</div>
-                <div><strong>5% Down:</strong> $20,000 Cash</div>
-                <div><strong>Loan Amount:</strong> $380,000</div>
-                <div><strong>P&I (6.5%):</strong> $2,401/mo</div>
+                <div><strong>Purchase Price:</strong> $400,000</div>
+                <div><strong>Down Payment (10%):</strong> $40,000</div>
+                <div><strong>P&I Payment:</strong> $2,275/mo</div>
+                <div><strong>Taxes & Insurance:</strong> $550/mo</div>
+                <div><strong>PMI Fee:</strong> $150/mo</div>
+                <div><strong>Total PITI:</strong> $2,975/mo</div>
               </div>
               <div className="text-sm text-slate-600 space-y-2">
-                <p><strong>Analysis:</strong> Putting 20% down lowers monthly payment by <strong>$379/mo</strong> and saves <strong>$136,800 in total interest</strong> over 30 years while avoiding PMI fees entirely!</p>
+                <p>
+                  Think about buying a $400,000 house and making a 10% down payment, which is $40,000, thus leaving $360,000 to pay off over 30 years at 6.5%. The payment per month just for the principal and interest amounts to $2,275. Plus, $400 for property tax, $150 for the homeowners insurance and $150 for PMI equals $2,975 per month.
+                </p>
               </div>
             </div>
           </div>
@@ -551,41 +553,41 @@ export default function HomeLoan({ currencySymbol = '$' }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">What is PITI?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                PITI stands for Principal, Interest, Taxes, and Insurance—the four core components of a total monthly mortgage payment.
+                PITI stands for Principal, Interest, Taxes, and Insurance and these make up the four key elements of a monthly mortgage payment.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">How much down payment do I really need?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Conventional loans require as little as 3% to 5% down; 20% down avoids PMI fees entirely.
+                Conventional mortgages have down payments as low as 3% to 5%; a 20% down payment means no PMI charges whatsoever.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Does this calculator include property taxes and insurance?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Yes, when you include them in your inputs — but if left blank, the calculator shows only principal and interest. Property tax and insurance costs vary significantly by location, so check your local rates for an accurate full monthly estimate.
+                Yes, if included in the inputs—though otherwise just principal and interest will be shown. Property taxes and insurance premiums can vary greatly by area; consult your local figures to find out the complete monthly figure.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">What is PMI and when does it apply?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Private Mortgage Insurance (PMI) is typically required when your down payment is below 20% of the home's price. It protects the lender if you default, and is usually removed once you reach 20% equity.
+                Private Mortgage Insurance (PMI) is normally required if the down payment is less than 20% of the home's cost. It guarantees the bank in case you do not pay back the loan and can be dropped at 20% equity.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">Is a 15-year or 30-year mortgage better?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Neither is universally better. A 15-year mortgage builds equity faster with far less total interest, but requires a higher monthly payment. A 30-year mortgage offers lower, more flexible monthly payments at a higher total interest cost.
+                Neither one of them is necessarily better. The 15-year loan makes equity faster and much cheaper by paying a lot less in interest but also by having higher monthly payments. The 30-year loan provides smaller monthly payments but ends up costing you more in interest.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">How does making extra principal payments affect my mortgage?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Extra payments reduce the balance your interest is calculated on going forward, shortening your loan term and cutting total interest — most powerfully when made early in the loan.
+                It lowers the amount of interest that the money can be charged on because the principal becomes lower.
               </p>
             </div>
           </div>

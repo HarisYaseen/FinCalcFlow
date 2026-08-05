@@ -591,16 +591,16 @@ export default function RentVsBuy({ currencySymbol }) {
           <h2 className="text-3xl font-extrabold mb-4 text-slate-900 border-b pb-3">The Complete Guide to Comparing Renting vs. Buying a Home</h2>
           <div className="space-y-4 text-slate-600 leading-relaxed text-base">
             <p>
-              Deciding whether to buy a home or continue renting is one of the most consequential personal finance choices you will make in your lifetime. Conventional wisdom often insists that homeownership is the premier path to building wealth, claiming that monthly rental payments are simply "throwing money away." However, modern financial modeling reveals a much more nuanced reality: in many real estate markets—particularly high-cost urban centers—renting while investing your surplus cash in stock index funds can yield equal or superior net worth over time.
+              The decision of whether or not to own a property is among the most important decisions regarding personal finance that an individual will have to make in their life time. The popular belief is that home ownership is the best way of accumulating wealth where the money used for paying rent is viewed as being wasted. Modern financial analysis shows that there is actually a lot more to it: In certain housing markets, especially in expensive urban markets, renting and investing money in stocks can provide similar or better net worth.
             </p>
             <p>
-              <strong>What This Calculator Is:</strong> Our serverless Rent vs. Buy Simulator is a multi-variable financial amortization model. It computes month-by-month cash flows, compounding investment growth, tax obligations, property appreciation, and friction costs over any custom timeframe (from 1 to 30 years).
+              <strong>What This Calculator Is:</strong> Rent vs. Buy Simulator is an interactive serverless multi-variables model that calculates monthly cash flows, investment returns, taxes, appreciation of properties, and friction costs based on different user-defined timelines between 1 and 30 years.
             </p>
             <p>
               <strong>Who Should Use It:</strong> This tool is engineered for prospective homebuyers evaluating purchase offers, tenants deciding whether to renew a lease or enter the market, financial advisors modeling housing allocation for clients, and mobile professionals weighing short-term relocations against long-term property ownership.
             </p>
             <p>
-              <strong>Why It Is Important:</strong> Purchasing property involves significant unrecoverable expenses—such as mortgage interest, property taxes, homeowner’s insurance, maintenance reserves, closing fees, and realtor commissions. Conversely, renting involves unrecoverable rental payments, but keeps your down payment capital liquid. This simulator quantifies the exact financial crossover point where buying becomes more lucrative than renting, eliminating guesswork from your housing decisions.
+              <strong>Why It Is Important:</strong> There are significant unrecoverable expenses associated with purchasing a property. They include mortgage interest, property taxes, insurance, funds for repair and maintenance, closing costs, and realtors' fees. However, renting is associated with its own unrecoverable expenses such as monthly rental, but the benefit with renting is that it leaves the money invested in the down payment in liquid form. This calculator provides the specific cost point when purchasing a house becomes more beneficial than renting a house.
             </p>
           </div>
         </div>
@@ -636,7 +636,7 @@ export default function RentVsBuy({ currencySymbol }) {
                 The Homebuyer Track
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                The homebuyer deploys cash upfront for a down payment (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Down Payment</code>) and closing costs. Each month, the buyer pays mortgage principal & interest (<code className="bg-slate-100 px-1 py-0.5 rounded font-mono text-xs">Monthly P&I</code>), property tax, and maintenance fees. Home equity grows through principal reduction and home value appreciation, reduced by a 6% selling commission upon exit.
+                The buyer first puts down some money for the down payment and the cost of closing necessary to conclude the purchase transaction. Thereafter, each month, the buyer will make payments including the principle and interest on the mortgage, along with taxes and other maintenance costs. Gradually, equity rises due to the reduction in the principle as well as the increase in the value of the property; however, equity drops 6% upon the sale of the property.
               </p>
             </div>
 
@@ -646,7 +646,7 @@ export default function RentVsBuy({ currencySymbol }) {
                 The Renter Track
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                The renter starts with a liquid investment portfolio equal to the buyer's down payment. Monthly rent escalates annually by the rent inflation rate. Any monthly cash savings (when ownership costs exceed rent) are invested into stock index funds at the market return rate.
+                This is done when the renter first divides his down payment money among his index stock market mutual funds. The renter pays his rent and his renter’s insurance on a monthly basis. The remainder amount, which would be the total cost minus the above-mentioned bills, would then be diverted for reinvestment in his portfolio.
               </p>
             </div>
           </div>
@@ -714,17 +714,20 @@ export default function RentVsBuy({ currencySymbol }) {
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl space-y-4">
               <h3 className="text-lg font-bold text-slate-900">Example 1: Mid-Range Suburban Home (10-Year Stay)</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold text-slate-700 bg-white p-4 rounded-xl border border-slate-100">
-                <div><strong>Home Price:</strong> $450,000</div>
-                <div><strong>Down Payment:</strong> 10% ($45,000)</div>
+                <div><strong>Home Price:</strong> $400,000</div>
+                <div><strong>Down Payment:</strong> 20% ($80,000)</div>
                 <div><strong>Mortgage Rate:</strong> 6.5%</div>
-                <div><strong>Current Rent:</strong> $2,200/mo</div>
-                <div><strong>Appreciation:</strong> 4.0%/yr</div>
-                <div><strong>Stock Return:</strong> 8.0%/yr</div>
+                <div><strong>Current Rent:</strong> $1,800/mo</div>
+                <div><strong>Appreciation:</strong> 3.5%/yr</div>
+                <div><strong>Stock Return:</strong> 7.0%/yr</div>
               </div>
               <div className="text-sm text-slate-600 space-y-2">
-                <p><strong>Step 1 (Buyer Cash Flow):</strong> Loan principal = $405,000. Monthly P&I = $2,560. Add monthly property tax ($468) and maintenance ($375) for a total monthly cost of $3,403.</p>
-                <p><strong>Step 2 (Renter Cash Flow):</strong> Renter starts with $45,000 invested in index funds. Rent begins at $2,200/mo and increases 3% annually. Renter invests the monthly difference ($3,403 - $2,200 = $1,203) into stocks.</p>
-                <p><strong>Result at Year 10:</strong> Home value reaches $666,106. Remaining mortgage is $340,110. After 6% selling costs ($39,966), Buyer Net Worth is <strong>$286,030</strong>. Renter stock portfolio grows to <strong>$324,510</strong>. <span className="text-indigo-600 font-bold">Renting wins by $38,480</span> due to higher stock compounding!</p>
+                <p>
+                  Take for example an individual purchasing a house worth $400,000. Here, the individual makes a 20% down payment, equal to $80,000 and financing the rest through a mortgage at a rate of 6.5%. The monthly carrying costs include $2,022 towards the repayment of the mortgage including interest, $400 for paying property taxes, and $333 towards maintenance expenses. After ten years, with an annual home appreciation rate of 3.5%, the expected market value of the house is estimated to be worth $564,240. Subtracting the mortgage and other selling costs of 6% from the total market value of the home, one gets net home equity of $263,400.
+                </p>
+                <p>
+                  On the other hand, let us assume there is a renter with an investment of $80,000. The renter invests the money in a portfolio that is focused on the index, and earns a growth rate of 7% each year. In case the renter also spends $1,800 per month in rent, then the investor will earn a portfolio worth of about $241,800 after 10 years.
+                </p>
               </div>
             </div>
 
@@ -811,28 +814,28 @@ export default function RentVsBuy({ currencySymbol }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">What is the 5% Rule in Rent vs. Buy analysis?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                The 5% Rule estimates unrecoverable annual homeownership costs at roughly 5% of property value (1.5% property tax, 1% maintenance, 2.5% cost of capital). If annual rent is less than 5% of the home's purchase price, renting is mathematically favored.
+                The 5% rule serves as a rough measure of the cost per year that is not recoverable due to owning a house. In doing so, it approximates these costs to 5% of the value of the property on a yearly basis, which consists of 1.5% property tax costs, 1% maintenance costs, and 2.5% capital costs. With this rule in place, it can be said that if the yearly rent of the home is less than 5% of its purchase price, then it makes sense to rent.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Is renting always "throwing money away"?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                No. Rent pays for shelter without financial liability for property depreciation, repairs, or illiquidity. Mortgage interest and property taxes are equally "thrown away" unrecoverable fees.
+                No. Renting will take care of your shelter needs without making you responsible for the financial burden of depreciation of property, repair needs, and illiquidity. On the contrary, the mortgage interest payment and property taxes are also lost payments that resemble costs incurred that you will never recover back.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">How does inflation impact homeownership vs renting?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Fixed-rate mortgages lock in your principal and interest payment, inflating away debt in real terms. Renters face annual rent inflation increases, though their stock investments also benefit from corporate revenue inflation.
+                The fixed rate mortgage locks in the interest and principal payment. The cumulative effect of this will be an effective reduction in the level of debts because of inflation. However, renting results in increasing payments each year for the rental due to inflation even though their stocks benefit from the inflation in terms of corporate profits.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">What duration of stay is required to break even on buying?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Typically 5 to 7 years. It takes several years for mortgage principal payments and home appreciation to surpass upfront closing costs and closing seller commissions.
+                In general, the break-even period is 5-7 years. It takes some time for the combination of principal mortgage repayments and appreciation in the house value to surpass the initial cost of closing costs and the selling commissions at the time of closing.
               </p>
             </div>
 
@@ -846,21 +849,21 @@ export default function RentVsBuy({ currencySymbol }) {
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Should I factor in stock market capital gains tax?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Yes. While home sales benefit from up to $250k ($500k married) tax-free capital gains under IRS Section 121, taxable brokerage stock gains are subject to long-term capital gains tax rates (15%–20%).
+                Yes. Although the sale of a home can benefit from capital gains tax-free treatment of up to $250,000 for the individual or $500,000 for married couples according to the IRS section 121, the gains realized from the sale of brokerage stocks are taxable. These stocks incur a long-term capital gains tax rate of 15%-20%.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-indigo-500">
               <h3 className="font-extrabold text-slate-900 text-base">What standard maintenance rate should I assume?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                A standard rule of thumb is 1% of home value annually for newer homes and 2% for homes older than 20 years to cover major capital replacements.
+                An estimate that can be considered practical is that for the relatively new homes, a 1% allocation each year of the value of the home will be sufficient to cater for major capital replacements. The same applies to homes that are more than 20 years old but 2% each year.
               </p>
             </div>
 
             <div className="bg-slate-50 border border-slate-150 p-5 rounded-2xl text-left border-l-4 border-l-emerald-500">
               <h3 className="font-extrabold text-slate-900 text-base">Does home equity build faster with a 15-year mortgage?</h3>
               <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                Yes. 15-year mortgages carry lower interest rates and pay down principal rapidly, but require higher monthly cash payments, reducing monthly stock investment savings for renters.
+                Yes. A 15-year mortgage incurs a relatively low-interest rate with faster repayment of the principal; however, it incurs high monthly payments, hence lowering the cash that can be saved each month in stocks as a renter.
               </p>
             </div>
           </div>
