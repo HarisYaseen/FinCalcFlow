@@ -872,49 +872,106 @@ export default function App() {
             
             {/* 1. Fully Mobile Responsive Hero Banner Section */}
             <div 
-              className="w-full relative overflow-hidden select-none bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-900 text-white py-12 px-4 sm:px-8 lg:px-12 min-h-[260px] sm:min-h-[300px] flex items-center shadow-md"
+              className="w-full relative overflow-hidden select-none bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white py-12 px-4 sm:px-8 lg:px-12 min-h-[280px] sm:min-h-[340px] flex items-center shadow-lg border-b border-indigo-900/40"
             >
-              {/* Background Decorative Pattern & Gradient */}
-              <div className="absolute right-0 top-0 w-full md:w-1/2 h-full opacity-20 md:opacity-30 pointer-events-none">
+              {/* Background Decorative Pattern & Graphic */}
+              <div className="absolute right-0 top-0 w-full md:w-7/12 h-full opacity-40 md:opacity-60 pointer-events-none">
                 <img
                   src="/hero-banner.jpg"
-                  alt="FinCalc Flow Tools"
-                  width={1024}
-                  height={271}
-                  className="w-full h-full object-cover object-right"
+                  alt="FinCalc Flow Financial Analytics Tools"
+                  width={1200}
+                  height={400}
+                  className="w-full h-full object-cover object-center"
                   fetchPriority="high"
                   decoding="async"
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/70 to-transparent"></div>
               </div>
 
               <div className="max-w-4xl space-y-4 relative z-10 text-left">
-                <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-black tracking-wider uppercase inline-block border border-emerald-400/30">
+                <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-black tracking-wider uppercase inline-block border border-emerald-400/30 shadow-sm">
                   100% Free & Private Serverless Tools
                 </span>
-                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight drop-shadow-md">
                   Powerful Financial Calculators
                 </h1>
-                <p className="text-blue-100 text-sm sm:text-base max-w-2xl leading-relaxed">
+                <p className="text-blue-100 text-sm sm:text-base max-w-2xl leading-relaxed drop-shadow">
                   Make informed visual decisions. Model home equity, auto financing, trucking CPM, debt consolidation, and revenue milestones.
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 flex flex-wrap gap-4 items-center">
                   <button
                     onClick={() => {
                       const target = document.getElementById('our-tools-heading');
                       if (target) target.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#22c55e] hover:bg-[#16a34a] text-white font-extrabold text-sm rounded-xl shadow-lg shadow-green-900/30 hover:shadow-green-900/40 transition-all cursor-pointer min-h-[44px]"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm rounded-xl shadow-lg shadow-emerald-900/30 hover:shadow-emerald-900/50 transition-all cursor-pointer min-h-[44px]"
                     aria-label="Explore All Calculators"
                   >
                     <span>Explore Our Calculators</span>
                     <span className="text-base">↓</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      const target = document.getElementById('our-mission-section');
+                      if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="inline-flex items-center gap-2 px-5 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-sm rounded-xl border border-white/20 transition-all cursor-pointer min-h-[44px]"
+                  >
+                    <span>Our Mission</span>
                   </button>
                 </div>
               </div>
             </div>
 
             {/* 2. Constrained Main Content Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+              
+              {/* Our Mission Section */}
+              <div id="our-mission-section" className="bg-gradient-to-b from-slate-900 to-indigo-950 text-white py-12 px-6 sm:px-10 relative overflow-hidden rounded-3xl border border-slate-800 shadow-2xl">
+                <div className="max-w-4xl mx-auto space-y-8 text-center relative z-10">
+                  <span className="px-3.5 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-black tracking-widest uppercase inline-block border border-emerald-400/30">
+                    Transparency & Privacy First
+                  </span>
+                  <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white">
+                    Our Mission: Empowering Smarter Financial Decisions
+                  </h2>
+                  <p className="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
+                    FinCalc Flow was created to provide accessible, 100% free, and private financial planning tools for everyone. We believe complex lifetime financial decisions—such as buying vs. renting a home, accelerating loan payoffs, or calculating business operating margins—should be straightforward, mathematically transparent, and accessible without paywalls or data mining.
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 text-left">
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-3 backdrop-blur-sm">
+                      <div className="w-10 h-10 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center font-bold text-lg">
+                        🔒
+                      </div>
+                      <h3 className="text-base font-extrabold text-white">100% Private & Local</h3>
+                      <p className="text-xs text-slate-300 leading-relaxed">
+                        All calculations execute entirely inside your browser. Your sensitive loan amounts, income figures, and interest rates never leave your device.
+                      </p>
+                    </div>
+
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-3 backdrop-blur-sm">
+                      <div className="w-10 h-10 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center font-bold text-lg">
+                        ⚡
+                      </div>
+                      <h3 className="text-base font-extrabold text-white">Zero Paywalls</h3>
+                      <p className="text-xs text-slate-300 leading-relaxed">
+                        We offer full functionality with zero gated features, mandatory sign-ups, or invasive popups. Get instant answers in seconds.
+                      </p>
+                    </div>
+
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-3 backdrop-blur-sm">
+                      <div className="w-10 h-10 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center font-bold text-lg">
+                        📊
+                      </div>
+                      <h3 className="text-base font-extrabold text-white">Mathematical Precision</h3>
+                      <p className="text-xs text-slate-300 leading-relaxed">
+                        Our models factor in real-world variables—including stock market opportunity costs, sales tax credits, amortization schedules, and CPM overheads.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               
               {/* Section Header */}
               <div id="our-tools-heading" className="text-center space-y-2">
