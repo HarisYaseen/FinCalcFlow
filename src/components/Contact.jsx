@@ -50,8 +50,8 @@ export default function Contact() {
               <p className="text-xs text-slate-500 leading-relaxed">
                 Reach us via phone or WhatsApp:
               </p>
-              <a href="tel:+923179708450" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
-                +92 317 9708450
+              <a href="tel:+923179708350" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
+                +92 317 9708350
               </a>
             </div>
 

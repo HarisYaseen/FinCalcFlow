@@ -1431,7 +1431,7 @@ const routes = [
       "url": "https://www.fincalcflow.com/contact",
       "description": "Get in touch with FinCalc Flow support for general inquiries, calculator feedback, or partnership requests.",
       "email": "fincalcflow@gmail.com",
-      "telephone": "+923179708450",
+      "telephone": "+923179708350",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Baja",
@@ -1466,8 +1466,8 @@ const routes = [
               </div>
               <div>
                 <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Phone Number</h3>
-                <a href="tel:+923179708450" class="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
-                  +92 317 9708450
+                <a href="tel:+923179708350" class="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
+                  +92 317 9708350
                 </a>
               </div>
               <div>
