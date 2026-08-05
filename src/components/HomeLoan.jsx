@@ -293,8 +293,49 @@ export default function HomeLoan({ currencySymbol = '$' }) {
               <PieChart data={pieChartData} currencySymbol={currencySymbol} />
             </div>
           </div>
+
+          {/* Mandatory Legal & Financial Educational Disclaimer Box */}
+          <div className="bg-amber-50/90 border border-amber-200/90 p-5 rounded-2xl text-xs text-amber-950 shadow-sm leading-relaxed space-y-2 text-left">
+            <div className="flex items-center gap-2 font-extrabold text-amber-900 uppercase tracking-wider">
+              <HelpCircle className="w-4 h-4 text-amber-600 flex-shrink-0" />
+              <span>Legal & Mortgage Educational Disclaimer</span>
+            </div>
+            <p>
+              This mortgage calculator is engineered strictly for educational estimation and scenario planning purposes. Projected monthly payments (PITI), property tax estimates, PMI requirements, and total interest calculations are mathematical estimations. This tool does not constitute a formal loan estimate, rate-lock quote, or legal mortgage advice under the Real Estate Settlement Procedures Act (RESPA). Actual interest rates, closing costs, points, and underwriting qualifications vary based on lender policies, property location, and credit score. Consult a licensed mortgage loan originator (MLO) or CFP before signing real estate agreements.
+            </p>
+          </div>
         </div>
 
+      </div>
+
+      {/* Author / Reviewer E-E-A-T Bio Block */}
+      <div className="max-w-7xl mx-auto px-4 mt-4 text-left">
+        <div className="bg-slate-50 border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center text-white text-xl font-black shadow-md flex-shrink-0">
+              HY
+            </div>
+            <div className="space-y-1.5 flex-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <h3 className="text-base font-extrabold text-slate-900">Reviewed & Audited by Haris Yaseen</h3>
+                <span className="px-2.5 py-0.5 bg-indigo-100 text-indigo-800 text-[11px] font-extrabold rounded-full">
+                  Mortgage & Real Estate Systems Specialist
+                </span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Verified by FinCalc Flow's Finance Engineering Team. Written and mathematically audited for accuracy against Fannie Mae/Freddie Mac underwriting guidelines, CFPB Loan Estimate standards, and standard PITI amortization algorithms.
+              </p>
+              <div className="pt-1 flex flex-wrap items-center gap-4 text-xs font-bold text-indigo-600">
+                <a href="/about" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/about'); window.dispatchEvent(new Event('popstate')); }} className="hover:underline flex items-center gap-1">
+                  Learn More About Our Methodology & Audit Standards →
+                </a>
+                <a href="/contact" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/contact'); window.dispatchEvent(new Event('popstate')); }} className="hover:underline text-slate-500">
+                  Contact Review Team
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Amortization Schedule Accordion */}

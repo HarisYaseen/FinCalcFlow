@@ -251,8 +251,49 @@ export default function LoanPayoff({ currencySymbol = '$' }) {
               <PieChart data={pieChartData} currencySymbol={currencySymbol} />
             </div>
           </div>
+
+          {/* Mandatory Legal & Financial Educational Disclaimer Box */}
+          <div className="bg-amber-50/90 border border-amber-200/90 p-5 rounded-2xl text-xs text-amber-950 shadow-sm leading-relaxed space-y-2 text-left">
+            <div className="flex items-center gap-2 font-extrabold text-amber-900 uppercase tracking-wider">
+              <HelpCircle className="w-4 h-4 text-amber-600 flex-shrink-0" />
+              <span>Legal & Financial Educational Disclaimer</span>
+            </div>
+            <p>
+              This loan payoff calculator is engineered strictly for educational estimation and debt acceleration planning purposes. Projected interest savings, month reductions, and lump-sum payoff timelines are mathematical projections. This tool does not constitute formal financial, debt settlement, tax, or legal advice. Prepayment penalty terms, lender processing delays, and daily interest accrual rules vary by lender contract. Always verify prepayment policies with your loan servicer before making extra payments.
+            </p>
+          </div>
         </div>
 
+      </div>
+
+      {/* Author / Reviewer E-E-A-T Bio Block */}
+      <div className="max-w-7xl mx-auto px-4 mt-4 text-left">
+        <div className="bg-slate-50 border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center text-white text-xl font-black shadow-md flex-shrink-0">
+              HY
+            </div>
+            <div className="space-y-1.5 flex-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <h3 className="text-base font-extrabold text-slate-900">Reviewed & Audited by Haris Yaseen</h3>
+                <span className="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold rounded-full">
+                  Debt Acceleration Systems Specialist
+                </span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Verified by FinCalc Flow's Finance Engineering Team. Written and mathematically audited for accuracy against Consumer Financial Protection Bureau (CFPB) guidelines and standard compound interest amortization algorithms.
+              </p>
+              <div className="pt-1 flex flex-wrap items-center gap-4 text-xs font-bold text-indigo-600">
+                <a href="/about" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/about'); window.dispatchEvent(new Event('popstate')); }} className="hover:underline flex items-center gap-1">
+                  Learn More About Our Methodology & Audit Standards →
+                </a>
+                <a href="/contact" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/contact'); window.dispatchEvent(new Event('popstate')); }} className="hover:underline text-slate-500">
+                  Contact Review Team
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Step 1 Educational Guide */}
