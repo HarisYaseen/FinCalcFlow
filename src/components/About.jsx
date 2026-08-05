@@ -39,7 +39,7 @@ export default function About() {
             Why I Built FinCalc Flow
           </h2>
           <p className="text-slate-600 text-sm leading-relaxed">
-            Hi, I’m <strong>Haris Yaseen</strong>, the developer behind FinCalc Flow. I built this site out of personal frustration with existing online calculators. Most financial tools on the web today are bogged down by aggressive ad popups, forced account signups, slow backend servers, and cookie trackers that collect your private financial inputs.
+            Hello, I am <strong>Haris Yaseen</strong>, the person who developed FinCalc Flow. This website was created due to my personal frustration with calculators found on other websites. They are all plagued with intrusive ads, required sign-ups, backend servers that are slow to load and track you with cookies.
           </p>
           <p className="text-slate-600 text-sm leading-relaxed">
             I wanted a clean, fast, 100% free hub where anyone can calculate mortgage trade-offs, trucking cost margins, or credit card payoff schedules without sacrificing their data privacy. Have questions or feedback? Visit our <a href="/contact" onClick={(e) => { e.preventDefault(); window.history.pushState(null, '', '/contact'); window.dispatchEvent(new Event('popstate')); }} className="text-indigo-600 font-bold hover:underline">Contact Us</a> page.
@@ -53,11 +53,11 @@ export default function About() {
             100% Client-Side & Private
           </h2>
           <p className="text-slate-600 text-sm leading-relaxed">
-            FinCalc Flow is built as a serverless web app. That means <strong>every single calculation runs locally in your own web browser</strong> using JavaScript. We don't have backend databases storing your numbers, and your financial data never leaves your device.
+            FinCalc Flow is created as a serverless web app, which means that each and every calculation performed will be done locally on your own web browser via JavaScript. There is no backend database on which we keep your calculations or any of your financial information.
           </p>
           <h3 className="text-sm font-bold text-slate-900 pt-2">Our Commitment to Accuracy</h3>
           <p className="text-slate-600 text-xs leading-relaxed">
-            Every formula used across our simulators (from 30-year fixed loan amortization to logistics cost per mile) is double-checked against official banking formulas and industry benchmarks.
+            All formulas in use in our various simulators (including 30-year fixed loan amortization calculator and logistics cost per mile) are compared and verified against bank-formulated formulas.
           </p>
         </div>
       </div>

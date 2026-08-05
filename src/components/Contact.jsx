@@ -27,7 +27,7 @@ export default function Contact() {
           Contact FinCalc Flow
         </h1>
         <p className="text-slate-500 text-base max-w-xl mx-auto">
-          Have a feature suggestion, feedback, or a customized calculator request? Send us a message and we'll get back to you as soon as possible.
+          If you have any suggestion for a feature, feedback, or a personalized calculator, then feel free to contact us.
         </p>
       </div>
 
@@ -38,7 +38,7 @@ export default function Contact() {
             <div>
               <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Direct Email</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                For support, partnerships, or custom calculator requests.
+                Need help, partnership, or personalized calculator?
               </p>
               <a href="mailto:fincalcflow@gmail.com" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
                 fincalcflow@gmail.com
@@ -46,20 +46,16 @@ export default function Contact() {
             </div>
 
             <div>
-              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Phone Number</h3>
+              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Phone & Location</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                Reach us via phone or WhatsApp:
+                You can contact us through telephone or WhatsApp:
               </p>
-              <a href="tel:+923179708350" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline">
+              <a href="tel:+923179708350" className="text-indigo-600 text-sm font-bold block mt-1 hover:underline mb-2">
                 +92 317 9708350
               </a>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Location & Address</h3>
               <p className="text-xs text-slate-600 font-semibold leading-relaxed">
-                Baja, Swabi, KP, Pakistan<br />
-                Postal Code: 22230
+                We are situated at Baja, Swabi, KP, Pakistan<br />
+                Zip Code: 23230
               </p>
             </div>
           </div>

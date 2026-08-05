@@ -30,10 +30,7 @@ export default function PrivacyPolicy() {
             1. Client-Side Processing & Privacy
           </h2>
           <p className="text-slate-600 text-sm leading-relaxed">
-            FinCalc Flow is built as a serverless application. All financial estimations, inputs, slider modifications, and values calculated on this site are processed <strong>exclusively in your web browser</strong> using client-side JavaScript. 
-          </p>
-          <p className="text-slate-600 text-sm leading-relaxed">
-            We do not maintain backend databases, web portal logins, or cloud APIs that collect, capture, or store your personal financial data.
+            FinCalc Flow has been designed as a serverless application. All the calculations, estimations, slider changes, and values which have been generated here will be done completely within your browser through client-side JavaScript. No back-end databases or APIs in the cloud are used to collect or store any of your financial information.
           </p>
         </section>
 
@@ -55,7 +52,7 @@ export default function PrivacyPolicy() {
             3. Google AdSense & Cookie Usage
           </h2>
           <p className="text-slate-600 text-sm leading-relaxed">
-            We display advertisements served by Google AdSense to fund our website operations and keep our financial tools 100% free. Please review the following mandatory disclosures regarding Google AdSense advertising:
+            The third party companies, including Google, use cookies to serve the advertisements to users after their visit to FinCalc Flow or other websites. You can opt-out from receiving such customized advertisements at Google Ad Settings.
           </p>
           <ul className="list-disc pl-5 text-slate-600 text-sm space-y-2 leading-relaxed">
             <li>
