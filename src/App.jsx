@@ -926,33 +926,6 @@ export default function App() {
             {/* 2. Constrained Main Content Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
               
-              {/* Our Mission Section */}
-              <div id="our-mission-section" className="bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-900 text-white py-14 px-6 sm:px-12 relative overflow-hidden rounded-3xl border border-slate-800 shadow-2xl text-left">
-                <div className="max-w-4xl mx-auto space-y-6 relative z-10">
-                  <div className="flex items-center gap-3">
-                    <span className="px-3.5 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-black tracking-widest uppercase inline-block border border-emerald-400/30">
-                      Transparency & Privacy First
-                    </span>
-                  </div>
-
-                  <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight">
-                    Our Mission: Empowering Smarter Financial Decisions
-                  </h2>
-
-                  <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-                    <p>
-                      At <strong className="text-white font-bold">FinCalc Flow</strong>, our mission is to make complex financial decision-making accessible, intuitive, and 100% free for everyone. Whether you are deciding between renting or buying a home, calculating your business cost per mile, optimizing credit card debt payoff schedules, or planning online revenue growth, our goal is to provide clear, actionable mathematical insight without hidden fees or forced subscriptions.
-                    </p>
-                    <p>
-                      We strictly adhere to a <strong className="text-emerald-300 font-bold">privacy-first, client-side approach</strong>. Unlike traditional financial tools that require you to create accounts, enter personal details, or upload sensitive financial records to remote servers, every calculation on FinCalc Flow runs locally inside your web browser. Your inputs, income figures, and loan balances remain completely private to you and never leave your device.
-                    </p>
-                    <p>
-                      We believe financial literacy starts with objective data. By combining rigorous mathematical formulas—such as full amortization modeling, stock market opportunity cost comparisons, and real-world tax credit factors—with clean, visual interfaces, we help you replace guesswork with confidence so you can build long-term wealth on your terms.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
               {/* Section Header */}
               <div id="our-tools-heading" className="text-center space-y-2">
                 <h2 className="text-3xl font-black text-slate-900 tracking-tight">Our Tools</h2>
@@ -1066,6 +1039,33 @@ export default function App() {
                 </div>
               </div>
 
+            </div>
+
+            {/* Our Mission Section (Below Tools) */}
+            <div id="our-mission-section" className="bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-900 text-white py-14 px-6 sm:px-12 relative overflow-hidden rounded-3xl border border-slate-800 shadow-2xl text-left my-12">
+              <div className="max-w-4xl mx-auto space-y-6 relative z-10">
+                <div className="flex items-center gap-3">
+                  <span className="px-3.5 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-black tracking-widest uppercase inline-block border border-emerald-400/30">
+                    Transparency & Privacy First
+                  </span>
+                </div>
+
+                <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight">
+                  Our Mission: Empowering Smarter Financial Decisions
+                </h2>
+
+                <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                  <p>
+                    At <strong className="text-white font-bold">FinCalc Flow</strong>, our mission is to make complex financial decision-making accessible, intuitive, and 100% free for everyone. Whether you are deciding between renting or buying a home, calculating your business cost per mile, optimizing credit card debt payoff schedules, or planning online revenue growth, our goal is to provide clear, actionable mathematical insight without hidden fees or forced subscriptions.
+                  </p>
+                  <p>
+                    We strictly adhere to a <strong className="text-emerald-300 font-bold">privacy-first, client-side approach</strong>. Unlike traditional financial tools that require you to create accounts, enter personal details, or upload sensitive financial records to remote servers, every calculation on FinCalc Flow runs locally inside your web browser. Your inputs, income figures, and loan balances remain completely private to you and never leave your device.
+                  </p>
+                  <p>
+                    We believe financial literacy starts with objective data. By combining rigorous mathematical formulas—such as full amortization modeling, stock market opportunity cost comparisons, and real-world tax credit factors—with clean, visual interfaces, we help you replace guesswork with confidence so you can build long-term wealth on your terms.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* 3. Deep-Dive Details Section (Below the grid) */}
